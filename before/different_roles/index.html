@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>不同角色 - PagerDuty 事件响应文档</title>
+
+    <!-- Author and License -->
+    <meta name="dcterms.license"      content="http://www.apache.org/licenses/LICENSE-2.0" />
+    <meta name="author"               content="PagerDuty, Inc." />
+    <meta name="dcterms.rightsHolder" content="PagerDuty, Inc." />
+    <meta name="dcterms.rights"       content="版权所有 &copy; PagerDuty, Inc." />
+    <!-- Page Description -->
+    <meta name="description" content="PagerDuty 的事故响应团队有几种主要角色。本页详细描述了每个角色，为什么需要这些角色，以及他们的职责是什么。" />
+    <meta name="robots"      content="index, follow, archive" />
+    <meta name="generator"   content="mkdocs-1.6.0, mkdocs-theme-pagerduty" />
+
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://response.pagerduty.com/before/different_roles/">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon"    href="/assets/images/favicon.png" type="image/png" />
+    <link rel="icon"             href="/assets/images/favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/assets/images/favicon.png" />
+
+    <!-- Mobile -->
+    <meta name="viewport"    content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+    <meta name="theme-color" content="#005a24" />
+
+    <!-- Apple -->
+    <meta name="apple-mobile-web-app-title"            content="PagerDuty 事件响应文档" />
+    <meta name="apple-mobile-web-app-capable"          content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <!-- Open Graph -->
+    <meta property="og:url"         content="https://response.pagerduty.com/before/different_roles/" />
+    <meta property="og:title"       content="不同角色 - PagerDuty 事件响应文档" />
+    <meta property="og:site_name"   content="PagerDuty 事件响应文档" />
+    <meta property="og:description" content="PagerDuty 的事故响应团队有几种主要角色。本页详细描述了每个角色，为什么需要这些角色，以及他们的职责是什么。" />
+    <meta property="og:image"       content="https://response.pagerduty.com/assets/img/covers/roles.png" />
+    <meta property="og:locale"      content="en_US" />
+    <meta property="og:type"        content="website" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card"        content="summary_large_image" />
+    <meta name="twitter:title"       content="不同角色 - PagerDuty 事件响应文档" />
+    <meta name="twitter:description" content="PagerDuty 的事故响应团队有几种主要角色。本页详细描述了每个角色，为什么需要这些角色，以及他们的职责是什么。" />
+    <meta name="twitter:image"       content="https://response.pagerduty.com/assets/img/covers/roles.png" />
+        <!-- Style -->
+    <link rel="stylesheet" href="../../assets/stylesheets/fonts.css" />
+    <link rel="stylesheet" href="../../assets/stylesheets/reset.css" />
+    <link rel="stylesheet" href="../../assets/stylesheets/pagerduty.css" />
+    <link rel="stylesheet" href="../../assets/stylesheets/code.css" />
+    
+    
+      <link rel="stylesheet" href="../../../../assets/css/custom.css" />
+    
+  </head>
+  <body class="">
+    <header>
+        <div class="content-wrapper">
+    <div id="logo">
+      <a href="../.." title="Go to 事件响应 homepage.">
+        <img src="../../assets/images/logo.png" title="PagerDuty" />
+      </a>
+      <span class="subtitle">
+        事件响应
+      </span>
+    </div>
+
+    
+<!-- This is a cheat for mobile search, allowing us to store state in a checkbox. -->
+<input id="mobile-search-link" type="checkbox"  />
+<label id="mobile-search-link-selector" for="mobile-search-link" role="button"></label>
+<div id="search">
+  <input name="q" id="mkdocs-search-query" type="search" placeholder="Search..." />
+  <div id="mkdocs-search-results"><p>No results found</p></div>
+</div>
+
+<!-- This is used for MkDocs search. Hardcoding to '/' so CSP is easier. -->
+<script>var base_url = '/';</script>
+
+  </div>
+    </header>
+
+      <nav id="breadcrumbs">
+    <div class="content-wrapper">
+      <p><a href="../..">事件响应</a></p>
+      
+        
+          
+            <p>事件前</p>
+          
+        
+        <h1>不同角色</h1>
+      
+    </div>
+  </nav>
+    
+
+    <main>
+      <!-- This is a cheat for mobile navigation, allowing us to store state in a checkbox. -->
+<input id="mobile-nav-link" type="checkbox"  />
+<label id="mobile-nav-link-selector" for="mobile-nav-link" role="button"></label>
+<nav>
+  <div id="nav-title">事件响应</div>
+<ul>
+          <li>
+          <a title="首页" href="../..">首页</a>
+          </li>
+            <li>
+          <a title="入门指南" href="../../getting_started/">入门指南</a>
+          </li>
+    <li>
+        <span class="subsection">待命</span>
+        <ul>
+                <li>
+          <a title="待命职责" href="../../oncall/being_oncall/">待命职责</a>
+          </li>
+                <li>
+          <a title="谁在待命?" href="../../oncall/whos_oncall/">谁在待命?</a>
+          </li>
+                <li>
+          <a title="告警原则" href="../../oncall/alerting_principles/">告警原则</a>
+          </li>
+        </ul>
+      </li>
+    <li>
+        <span class="subsection">事件前</span>
+        <ul>
+                <li>
+          <a title="什么是事件?" href="../what_is_an_incident/">什么是事件?</a>
+          </li>
+                <li>
+          <a title="严重性级别" href="../severity_levels/">严重性级别</a>
+          </li>
+                <li class="active">
+          <a title="不同角色" href="./">不同角色</a>
+          <ul id="toc">
+            <li class="anchor">
+                  <a title="事故指挥官 (IC)" href="#ic">事故指挥官 (IC)</a>
+                </li>
+            <li class="anchor">
+                  <a title="副指挥官" href="#_6">副指挥官</a>
+                </li>
+            <li class="anchor">
+                  <a title="记录员" href="#_12">记录员</a>
+                </li>
+            <li class="anchor">
+                  <a title="主题专家" href="#_18">主题专家</a>
+                </li>
+            <li class="anchor">
+                  <a title="客户联络员" href="#_24">客户联络员</a>
+                </li>
+            <li class="anchor">
+                  <a title="内部联络员" href="#_31">内部联络员</a>
+                </li>
+            </ul>
+          </li>
+                <li>
+          <a title="通话礼仪" href="../call_etiquette/">通话礼仪</a>
+          </li>
+                <li>
+          <a title="复杂事件" href="../complex_incidents/">复杂事件</a>
+          </li>
+        </ul>
+      </li>
+    <li>
+        <span class="subsection">事件中</span>
+        <ul>
+                <li>
+          <a title="事件处理" href="../../during/during_an_incident/">事件处理</a>
+          </li>
+                <li>
+          <a title="外部沟通指南" href="../../during/external_communication_guidelines/">外部沟通指南</a>
+          </li>
+                <li>
+          <a title="安全事件" href="../../during/security_incident_response/">安全事件</a>
+          </li>
+        </ul>
+      </li>
+    <li>
+        <span class="subsection">事件后</span>
+        <ul>
+                <li>
+          <a title="事件后处理" href="../../after/after_an_incident/">事件后处理</a>
+          </li>
+                <li>
+          <a title="事后分析流程" href="../../after/post_mortem_process/">事后分析流程</a>
+          </li>
+                <li>
+          <a title="事后分析模板" href="../../after/post_mortem_template/">事后分析模板</a>
+          </li>
+                <li>
+          <a title="有效的事后分析" href="../../after/effective_post_mortems/">有效的事后分析</a>
+          </li>
+        </ul>
+      </li>
+    <li>
+        <span class="subsection">危机响应</span>
+        <ul>
+                <li>
+          <a title="危机响应介绍" href="../../crisis/crisis_intro/">危机响应介绍</a>
+          </li>
+                <li>
+          <a title="术语" href="../../crisis/terms/">术语</a>
+          </li>
+                <li>
+          <a title="危机领导" href="../../crisis/leadership/">危机领导</a>
+          </li>
+                <li>
+          <a title="危机响应操作" href="../../crisis/operations/">危机响应操作</a>
+          </li>
+                <li>
+          <a title="危机前阶段" href="../../crisis/prework/">危机前阶段</a>
+          </li>
+                <li>
+          <a title="PagerDuty 用于危机响应操作" href="../../crisis/pagerduty/">PagerDuty 用于危机响应操作</a>
+          </li>
+        </ul>
+      </li>
+    <li>
+        <span class="subsection">培训</span>
+        <ul>
+                <li>
+          <a title="培训概览" href="../../training/overview/">培训概览</a>
+          </li>
+                <li>
+          <a title="事件指挥官" href="../../training/incident_commander/">事件指挥官</a>
+          </li>
+                <li>
+          <a title="副指挥官" href="../../training/deputy/">副指挥官</a>
+          </li>
+                <li>
+          <a title="记录员" href="../../training/scribe/">记录员</a>
+          </li>
+                <li>
+          <a title="主题专家" href="../../training/subject_matter_expert/">主题专家</a>
+          </li>
+                <li>
+          <a title="客户联络员" href="../../training/customer_liaison/">客户联络员</a>
+          </li>
+                <li>
+          <a title="内部联络员" href="../../training/internal_liaison/">内部联络员</a>
+          </li>
+                <li>
+          <a title="术语表" href="../../training/glossary/">术语表</a>
+          </li>
+        </ul>
+      </li>
+    <li>
+        <span class="subsection">培训课程</span>
+        <ul>
+                <li>
+          <a title="事件响应" href="../../training/courses/incident_response/">事件响应</a>
+          </li>
+        </ul>
+      </li>
+    <li>
+        <span class="subsection">其他资源</span>
+        <ul>
+                <li>
+          <a title="阅读材料" href="../../resources/reading/">阅读材料</a>
+          </li>
+                <li>
+          <a title="ChatOps" href="../../resources/chatops/">ChatOps</a>
+          </li>
+                <li>
+          <a title="反模式" href="../../resources/anti_patterns/">反模式</a>
+          </li>
+        </ul>
+      </li>
+            <li>
+          <a title="关于" href="../../about/">关于</a>
+          </li>
+    </ul>
+</nav>
+
+      <article>
+        <h1>不同角色</h1>
+        <section id="downloads">
+  
+  
+</section>
+        
+        <p>PagerDuty 的事故响应团队有几种主要角色。某些角色在每次事故中只有一个人（例如 IC），而其他角色可以有多个人（例如主题专家，SME）。关键在于作为一个团队共同努力，解决问题，并迅速找到解决方案。</p>
+<p>以下是我们角色层次的大致概述，每个角色将在本页其余部分详细讨论。</p>
+<p><img alt="事故响应结构" src="../../assets/img/misc/incident_response_roles.png" /></p>
+<p>在处理更大更复杂的事故时，角色结构可能会调整，以适应子团队的创建。更多信息请阅读我们如何处理<a href="../complex_incidents/">复杂事故</a>。</p>
+<div class="admonition tip">
+<p class="admonition-title">灵活结构</p>
+<p>并不是每次事故都需要每个角色由不同的人来担任。例如，如果事故的范围足够小，副指挥官可能也会承担记录员和内部联络员的职责。结构应该是灵活的，并根据事故的大小和范围进行调整。</p>
+</div>
+<hr />
+<h2 id="ic">事故指挥官 (IC)<a class="headerlink" href="#ic" title="Permanent link">#</a></h2>
+<h3 id="_1">是什么？<a class="headerlink" href="#_1" title="Permanent link">#</a></h3>
+<p>事故指挥官在重大事故期间充当当前发生情况和即将发生情况的唯一真实来源。他们来自各种背景，形态和颜色。</p>
+<h3 id="_2">为什么需要？<a class="headerlink" href="#_2" title="Permanent link">#</a></h3>
+<p>随着任何软件系统的大小和复杂性增加，事情会出错并导致事故。事故指挥官需要帮助推动重大事故解决。</p>
+<h3 id="_3">职责是什么？<a class="headerlink" href="#_3" title="Permanent link">#</a></h3>
+<ol>
+<li>帮助准备重大事故，<ul>
+<li>为重大事故设置通信渠道。</li>
+<li>在发生重大事故时引导人们到这些通信渠道。</li>
+<li>培训团队成员如何在重大事故期间沟通，并培训其他事故指挥官。</li>
+</ul>
+</li>
+<li>推动重大事故解决，<ul>
+<li>让所有人都在同一个通信渠道上。</li>
+<li>从团队成员那里收集他们服务/所有权区域的状态信息。</li>
+<li>收集提议的修复行动，然后推荐采取的修复行动。</li>
+<li>委派所有修复行动，事故指挥官不是解决者。</li>
+<li>成为系统状态的单一权威</li>
+</ul>
+</li>
+<li>重大事故期间的沟通，<ul>
+<li>及时提醒客户联络员在需要时起草外部沟通信息。</li>
+<li>审查，提供反馈并批准起草的外部沟通</li>
+<li>要求客户联络员发布审查过的外部沟通草案</li>
+<li>询问所有响应者是否有强烈反对发布外部沟通的做法是好的，但不是强制性的</li>
+<li>如果客户没有受到影响，重大事故被证明是误报，批准移除临时调查信息</li>
+<li>如果客户联络员无法在状态页面上发布信息，IC 负责委派某人在其位置上公开发布。</li>
+</ul>
+</li>
+<li>事后回顾，<ul>
+<li>在事故后立即创建初始模板，以便人们在新鲜时可以放入他们的想法。</li>
+<li>在事件结束后分配事后回顾，这可以在通话后完成。</li>
+<li>与团队领导/经理一起安排预防行动。</li>
+</ul>
+</li>
+</ol>
+<h3 id="_4">他们是谁？<a class="headerlink" href="#_4" title="Permanent link">#</a></h3>
+<p>任何在事故指挥官待命计划上的人。受训者通常在事故指挥官影子计划上。</p>
+<h3 id="_5">如何成为？<a class="headerlink" href="#_5" title="Permanent link">#</a></h3>
+<p>查看我们的<a href="../../training/incident_commander/">事故指挥官培训指南</a>。</p>
+<hr />
+<h2 id="_6">副指挥官<a class="headerlink" href="#_6" title="Permanent link">#</a></h2>
+<h3 id="_7">是什么？<a class="headerlink" href="#_7" title="Permanent link">#</a></h3>
+<p>副指挥官是事故指挥官的直接支持角色。这不是一个观察者的影子角色。副指挥官在事故期间需要执行重要任务。</p>
+<h3 id="_8">为什么需要？<a class="headerlink" href="#_8" title="Permanent link">#</a></h3>
+<p>IC 需要专注于手头的问题，而不是担心记录步骤或监控计时器。副指挥官帮助支持 IC 并让他们专注于事故。</p>
+<h3 id="_9">职责是什么？<a class="headerlink" href="#_9" title="Permanent link">#</a></h3>
+<p>副指挥官需要：</p>
+<ol>
+<li>向事故指挥官提出可能未被注意的问题（关注已启动的计时器，回顾呼叫中遗漏的项目等）。</li>
+<li>成为“热备用”事故指挥官，如果主要需要过渡到 SME，或其他原因需要离开 IC 角色。</li>
+<li>管理事故通话，并准备好在事故指挥官指示下移除通话中的人员。</li>
+</ol>
+<h3 id="_10">他们是谁？<a class="headerlink" href="#_10" title="Permanent link">#</a></h3>
+<p>任何事故指挥官都可以担任副指挥官。副指挥官需要接受事故指挥官的培训，因为他们可能需要接管指挥。</p>
+<h3 id="_11">如何成为？<a class="headerlink" href="#_11" title="Permanent link">#</a></h3>
+<p>查看我们的<a href="../../training/deputy/">副指挥官培训指南</a>。副指挥官也需要接受<a href="../../training/incident_commander/">事故指挥官的培训</a>。</p>
+<hr />
+<h2 id="_12">记录员<a class="headerlink" href="#_12" title="Permanent link">#</a></h2>
+<h3 id="_13">是什么？<a class="headerlink" href="#_13" title="Permanent link">#</a></h3>
+<p>记录员记录事故进展的时间线，并确保所有重要决策和数据都被捕获以供后续审查。</p>
+<h3 id="_14">为什么需要？<a class="headerlink" href="#_14" title="Permanent link">#</a></h3>
+<p>事故指挥官需要专注于手头的问题，主题专家需要专注于解决事故。捕获事件发生的时间线非常重要，以便在事后回顾中审查我们的表现，并准确确定我们当时可能没有注意到的任何额外影响。</p>
+<h3 id="_15">职责是什么？<a class="headerlink" href="#_15" title="Permanent link">#</a></h3>
+<p>记录员需要：</p>
+<ol>
+<li>确保事故通话被记录。</li>
+<li>在 Slack 中记录重要数据，事件和行动，具体如下：<ul>
+<li>关键行动（例如：“prod-server-387723 正在重启以尝试移除卡住的锁”）</li>
+<li>状态报告（例如：“我们处于 SEV-1，服务 A 目前由于卡住的锁而未处理事件，X 正在重启应用堆栈，下一次检查在 3 分钟内”）</li>
+<li>任何关键呼叫或在结束审查时的呼叫（例如：“注意：（Bob B）我们应该有一个更好的方法来确定卡住的锁。”）</li>
+</ul>
+</li>
+</ol>
+<h3 id="_16">他们是谁？<a class="headerlink" href="#_16" title="Permanent link">#</a></h3>
+<p>任何人都可以在事故期间担任记录员，并在通话开始时由事故指挥官选择。通常副指挥官会担任记录员，但这不一定需要发生，对于更大的事故可能不现实。</p>
+<h3 id="_17">如何成为？<a class="headerlink" href="#_17" title="Permanent link">#</a></h3>
+<p>遵循我们的<a href="../../training/scribe/">记录员培训指南</a>，然后通知事故指挥官您希望在下一次事故中被考虑担任记录员。</p>
+<hr />
+<h2 id="_18">主题专家<a class="headerlink" href="#_18" title="Permanent link">#</a></h2>
+<h3 id="_19">是什么？<a class="headerlink" href="#_19" title="Permanent link">#</a></h3>
+<p>主题专家（SME），有时称为“解决者”，是 PagerDuty 软件堆栈中某个组件或服务领域的专家或指定所有者。</p>
+<h3 id="_20">为什么需要？<a class="headerlink" href="#_20" title="Permanent link">#</a></h3>
+<p>IC 和副指挥官不是无所不知的超人。当服务出现问题时，需要该服务的专家能够快速帮助识别和修复问题。</p>
+<h3 id="_21">职责是什么？<a class="headerlink" href="#_21" title="Permanent link">#</a></h3>
+<ol>
+<li>能够诊断服务中的常见问题。</li>
+<li>能够快速修复事故中发现的问题。</li>
+<li>简洁的沟通技巧，特别是对于 CAN 报告：<ul>
+<li>条件：服务的当前状态是什么？它是否健康？</li>
+<li>行动：如果服务不健康，需要采取什么行动？</li>
+<li>需求：解决者需要什么支持来执行行动？</li>
+</ul>
+</li>
+</ol>
+<h3 id="_22">他们是谁？<a class="headerlink" href="#_22" title="Permanent link">#</a></h3>
+<p>任何被认为是“领域专家”的人都可以在事故中担任解决者。通常服务的初级待命人员将担任该服务的 SME。</p>
+<h3 id="_23">如何成为？<a class="headerlink" href="#_23" title="Permanent link">#</a></h3>
+<p>查看我们的<a href="../../training/subject_matter_expert/">主题专家培训指南</a>。您还应该与您的团队和服务所有者讨论，以确定您特定服务的要求。</p>
+<hr />
+<h2 id="_24">客户联络员<a class="headerlink" href="#_24" title="Permanent link">#</a></h2>
+<h3 id="_25">是什么？<a class="headerlink" href="#_25" title="Permanent link">#</a></h3>
+<p>负责与客户互动的人，无论是直接互动，还是通过我们的公共沟通渠道。通常是客户支持团队的成员。</p>
+<h3 id="_26">为什么需要？<a class="headerlink" href="#_26" title="Permanent link">#</a></h3>
+<p>所有其他角色将积极致力于识别原因并解决问题，我们需要一个专注于客户互动方面的角色，以便能够正确地完成这项工作，并给予应有的关注和照顾。</p>
+<h3 id="_27">职责是什么？<a class="headerlink" href="#_27" title="Permanent link">#</a></h3>
+<ol>
+<li>在需要时起草<a href="../../during/external_communication_guidelines/">外部沟通</a>信息，选择适当的模板，无论是由 IC 要求还是自行发起</li>
+<li>如果需要，请求更多信息/澄清以进行清晰沟通</li>
+<li>定期通知 IC 报告受事故影响的客户数量。这可以包括提供特定客户参考或示例以供调查目的。</li>
+<li>在 IC 批准后发布任何关于事故的公开信息（Twitter，StatusPage 等）</li>
+<li>在 IC 批准后移除临时调查信息</li>
+<li>在事后回顾完成后向客户提供外部信息。</li>
+</ol>
+<h3 id="_28">他们是谁？<a class="headerlink" href="#_28" title="Permanent link">#</a></h3>
+<p>任何支持团队的成员都可以担任客户联络员。</p>
+<h3 id="_29">如何成为？<a class="headerlink" href="#_29" title="Permanent link">#</a></h3>
+<p>遵循我们的<a href="../../training/customer_liaison/">客户联络员培训指南</a>，并与支持团队讨论成为我们的下一个客户联络员。</p>
+<h3 id="_30">如何了解更多关于外部沟通的信息？<a class="headerlink" href="#_30" title="Permanent link">#</a></h3>
+<p>查看我们的<a href="../../during/external_communication_guidelines/">外部沟通指南</a>。</p>
+<hr />
+<h2 id="_31">内部联络员<a class="headerlink" href="#_31" title="Permanent link">#</a></h2>
+<h3 id="_32">是什么？<a class="headerlink" href="#_32" title="Permanent link">#</a></h3>
+<p>负责与内部利益相关者互动的人。无论是通知内部团队事故，还是在组织内动员其他响应者。</p>
+<h3 id="_33">为什么需要？<a class="headerlink" href="#_33" title="Permanent link">#</a></h3>
+<p>对于更大的事故，我们可能会有组织内多个团队参与。拥有一个专门的联络员来动员这些团队并让他们跟上速度，可以让其他响应者处理事故。</p>
+<h3 id="_34">职责是什么？<a class="headerlink" href="#_34" title="Permanent link">#</a></h3>
+<ol>
+<li>根据事故指挥官的指示呼叫 SME 或其他待命工程师。</li>
+<li>根据事故指挥官的指示通知组织内的其他团队（例如财务，法律，营销）。</li>
+<li>与利益相关者联络并提供必要的状态更新。</li>
+<li>与内部利益相关者互动，回答他们的问题，以保持主要通话不受干扰。</li>
+</ol>
+<h3 id="_35">他们是谁？<a class="headerlink" href="#_35" title="Permanent link">#</a></h3>
+<p>任何在事故响应期间由事故指挥官指定的人。</p>
+<h3 id="_36">如何成为？<a class="headerlink" href="#_36" title="Permanent link">#</a></h3>
+<p>遵循我们的<a href="../../training/internal_liaison/">内部联络员培训</a>。</p>
+        
+      </article>
+    </main>
+
+      <nav id="pagination">
+    <div class="content-wrapper">
+      <div class="previous">
+        
+          <a href="../severity_levels/" title="严重性级别">
+            <span class="label">Previous</span>
+            <div class="page">
+              <div class="button" role="button" aria-label="Previous">
+                <i class="icon icon-previous"></i>
+              </div>
+              <div class="title">
+                严重性级别
+              </div>
+            </div>
+          </a>
+        
+      </div>
+
+      <div class="next">
+        
+          <a href="../call_etiquette/" title="通话礼仪">
+            <span class="label">Next</span>
+            <div class="page">
+              <div class="title">
+                通话礼仪
+              </div>
+              <div class="button" role="button" aria-label="Next">
+                <i class="icon icon-next"></i>
+              </div>
+            </div>
+          </a>
+        
+      </div>
+    </div>
+  </nav>
+
+    <footer>
+        <div class="content-wrapper">
+        <ul id="ops-guides">
+      <h2>Ops Guides</h2>
+      <p>Explore our other guides!</p>
+      <li id="og-incident-response" class="ops-guide">
+        <a href="https://response.pagerduty.com">Incident Response</a>
+        <p>A detailed outline of response processes for technical incidents practices by PagerDuty and our leading customers.</p>
+      </li>
+
+      <li id="og-security-training" class="ops-guide">
+        <a href="https://sudo.pagerduty.com">Security Training</a>
+        <p>Open source security training used at PagerDuty - adaptable for your own technical and non-technical teams.</p>
+      </li>
+
+      <li id="og-postmortems" class="ops-guide">
+        <a href="https://postmortems.pagerduty.com/">Postmortems</a>
+        <p>Comprehensive guide on how to conduct effective postmortems. Learn how to build a culture of blamelessness.</p>
+      </li>
+
+      <li id="og-operational-reviews" class="ops-guide">
+        <a href="https://reviews.pagerduty.com/">Operational Reviews</a>
+        <p>Gauge incident impact using data-driven regularly scheduled reviews to better manage the hidden cost of real-time ops.</p>
+      </li>
+
+      <li id="og-business-response" class="ops-guide">
+        <a href="https://business-response.pagerduty.com/">Business Response</a>
+        <p>Learn how to align the business needs with technical needs when severe technical incidents occur.</p>
+      </li>
+
+      <li id="og-stakeholder-comms" class="ops-guide">
+        <a href="https://stakeholders.pagerduty.com/">Stakeholder Comms</a>
+        <p>Build an effective communiction strategy for your internal stakeholders during major incidents.</p>
+      </li>
+
+      <li id="og-retrospectives" class="ops-guide">
+        <a href="https://retrospectives.pagerduty.com/">Retrospectives</a>
+        <p>Iteratively learn from working processes and behaviors while cultivating a culture of continuous improvement.</p>
+      </li>
+
+      <li id="og-ownership" class="ops-guide">
+        <a href="https://ownership.pagerduty.com">Ownership</a>
+        <p>Ensure the reliability of systems & services through a deeper understanding of how code functions in production.</p>
+      </li>
+
+      <li id="og-devsecops" class="ops-guide">
+        <a href="https://devsecops.pagerduty.com/">DevSecOps</a>
+        <p>New to DevSecOps, or wondering what it is and how to implement it? This guide will help you get started.</p>
+      </li>
+
+      <li id="og-goingoncall" class="ops-guide">
+        <a href="https://goingoncall.pagerduty.com/">Going On-Call</a>
+        <p>The complete resource to going on call for teams and managers.</p>
+      </li>
+
+      <li id="og-autoremediation" class="ops-guide">
+        <a href="https://autoremediation.pagerduty.com/">Auto Remediation</a>
+        <p>This guide will help you to leverage automation in your Incident Response process.</p>
+      </li>
+
+      <li id="og-customerservice" class="ops-guide">
+        <a href="https://customerserviceops.pagerduty.com/">Customer Service</a>
+        <p>Excellent Customer Service means excellent customer experience, even during incidents.</p>
+      </li>
+    </ul>
+
+    <p id="outro">
+      Made with <span class="material-icons love" aria-label="Love">favorite</span> at PagerDuty.
+    </p>
+
+    <p id="github-repo-link">
+      <a target="_blank"
+         title="View the source for this documentation on GitHub."
+         href="https://github.com/pagerduty/incident-response-docs">View Source on GitHub</a>
+    </p>
+
+    <!-- It's our theme, so we can just hardcode these :p -->
+    <ul id="social-links">
+      <li class="twitter">
+        <a title="View the @PagerDuty Twitter feed."
+           href="https://twitter.com/PagerDuty">Twitter</a>
+      </li>
+      <li class="github">
+        <a title="View PagerDuty on GitHub"
+           href="https://github.com/PagerDuty">GitHub</a>
+      </li>
+      <li class="pagerduty">
+        <a title="View the PagerDuty website."
+          href="https://www.pagerduty.com/">PagerDuty</a>
+      </li>
+    </ul>
+  </div>
+    </footer>
+
+        
+      <script src="../../../../search/main.js"></script>
+    
+    
+    
+      <script>
+        /* Google Analytics */
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-8759953-1', 'auto');
+        ga('send', 'pageview');
+
+        /* Track outbound links */
+        var buttons = document.querySelectorAll('a');
+        Array.prototype.map.call(buttons, function(item) {
+          if (item.host != document.location.host) {
+            item.addEventListener('click', function() {
+              var action = item.getAttribute('data-action') || 'follow';
+              ga('send', 'event', 'outbound', action, item.href);
+            });
+          }
+        });
+
+        /* Register handler to log search on blur */
+        var query = document.querySelector('#mkdocs-search-query');
+        query.addEventListener('blur', function() {
+          if (this.value) {
+            var path = document.location.pathname;
+            ga('send', 'pageview', path + '?q=' + this.value);
+          }
+        });
+      </script>
+    
+  </body>
+</html>

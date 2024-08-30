@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>危机领导 - PagerDuty 事件响应文档</title>
+
+    <!-- Author and License -->
+    <meta name="dcterms.license"      content="http://www.apache.org/licenses/LICENSE-2.0" />
+    <meta name="author"               content="PagerDuty, Inc." />
+    <meta name="dcterms.rightsHolder" content="PagerDuty, Inc." />
+    <meta name="dcterms.rights"       content="版权所有 &copy; PagerDuty, Inc." />
+    <!-- Page Description -->
+    <meta name="description" content="关于 PagerDuty 事件响应流程的一系列信息。不仅包括如何为新员工准备待命职责，还包括如何处理重大事件，包括准备和事后工作。" />
+    <meta name="robots"      content="index, follow, archive" />
+    <meta name="generator"   content="mkdocs-1.6.0, mkdocs-theme-pagerduty" />
+
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://response.pagerduty.com/crisis/leadership/">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon"    href="/assets/images/favicon.png" type="image/png" />
+    <link rel="icon"             href="/assets/images/favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/assets/images/favicon.png" />
+
+    <!-- Mobile -->
+    <meta name="viewport"    content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+    <meta name="theme-color" content="#005a24" />
+
+    <!-- Apple -->
+    <meta name="apple-mobile-web-app-title"            content="PagerDuty 事件响应文档" />
+    <meta name="apple-mobile-web-app-capable"          content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <!-- Open Graph -->
+    <meta property="og:url"         content="https://response.pagerduty.com/crisis/leadership/" />
+    <meta property="og:title"       content="危机领导 - PagerDuty 事件响应文档" />
+    <meta property="og:site_name"   content="PagerDuty 事件响应文档" />
+    <meta property="og:description" content="关于 PagerDuty 事件响应流程的一系列信息。不仅包括如何为新员工准备待命职责，还包括如何处理重大事件，包括准备和事后工作。" />
+    <meta property="og:image"       content="https://response.pagerduty.com/assets/img/covers/default.png" />
+    <meta property="og:locale"      content="en_US" />
+    <meta property="og:type"        content="website" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card"        content="summary_large_image" />
+    <meta name="twitter:title"       content="危机领导 - PagerDuty 事件响应文档" />
+    <meta name="twitter:description" content="关于 PagerDuty 事件响应流程的一系列信息。不仅包括如何为新员工准备待命职责，还包括如何处理重大事件，包括准备和事后工作。" />
+    <meta name="twitter:image"       content="https://response.pagerduty.com/assets/img/covers/default.png" />
+        <!-- Style -->
+    <link rel="stylesheet" href="../../assets/stylesheets/fonts.css" />
+    <link rel="stylesheet" href="../../assets/stylesheets/reset.css" />
+    <link rel="stylesheet" href="../../assets/stylesheets/pagerduty.css" />
+    <link rel="stylesheet" href="../../assets/stylesheets/code.css" />
+    
+    
+      <link rel="stylesheet" href="../../../../assets/css/custom.css" />
+    
+  </head>
+  <body class="">
+    <header>
+        <div class="content-wrapper">
+    <div id="logo">
+      <a href="../.." title="Go to 事件响应 homepage.">
+        <img src="../../assets/images/logo.png" title="PagerDuty" />
+      </a>
+      <span class="subtitle">
+        事件响应
+      </span>
+    </div>
+
+    
+<!-- This is a cheat for mobile search, allowing us to store state in a checkbox. -->
+<input id="mobile-search-link" type="checkbox"  />
+<label id="mobile-search-link-selector" for="mobile-search-link" role="button"></label>
+<div id="search">
+  <input name="q" id="mkdocs-search-query" type="search" placeholder="Search..." />
+  <div id="mkdocs-search-results"><p>No results found</p></div>
+</div>
+
+<!-- This is used for MkDocs search. Hardcoding to '/' so CSP is easier. -->
+<script>var base_url = '/';</script>
+
+  </div>
+    </header>
+
+      <nav id="breadcrumbs">
+    <div class="content-wrapper">
+      <p><a href="../..">事件响应</a></p>
+      
+        
+          
+            <p>危机响应</p>
+          
+        
+        <h1>危机领导</h1>
+      
+    </div>
+  </nav>
+    
+
+    <main>
+      <!-- This is a cheat for mobile navigation, allowing us to store state in a checkbox. -->
+<input id="mobile-nav-link" type="checkbox"  />
+<label id="mobile-nav-link-selector" for="mobile-nav-link" role="button"></label>
+<nav>
+  <div id="nav-title">事件响应</div>
+<ul>
+          <li>
+          <a title="首页" href="../..">首页</a>
+          </li>
+            <li>
+          <a title="入门指南" href="../../getting_started/">入门指南</a>
+          </li>
+    <li>
+        <span class="subsection">待命</span>
+        <ul>
+                <li>
+          <a title="待命职责" href="../../oncall/being_oncall/">待命职责</a>
+          </li>
+                <li>
+          <a title="谁在待命?" href="../../oncall/whos_oncall/">谁在待命?</a>
+          </li>
+                <li>
+          <a title="告警原则" href="../../oncall/alerting_principles/">告警原则</a>
+          </li>
+        </ul>
+      </li>
+    <li>
+        <span class="subsection">事件前</span>
+        <ul>
+                <li>
+          <a title="什么是事件?" href="../../before/what_is_an_incident/">什么是事件?</a>
+          </li>
+                <li>
+          <a title="严重性级别" href="../../before/severity_levels/">严重性级别</a>
+          </li>
+                <li>
+          <a title="不同角色" href="../../before/different_roles/">不同角色</a>
+          </li>
+                <li>
+          <a title="通话礼仪" href="../../before/call_etiquette/">通话礼仪</a>
+          </li>
+                <li>
+          <a title="复杂事件" href="../../before/complex_incidents/">复杂事件</a>
+          </li>
+        </ul>
+      </li>
+    <li>
+        <span class="subsection">事件中</span>
+        <ul>
+                <li>
+          <a title="事件处理" href="../../during/during_an_incident/">事件处理</a>
+          </li>
+                <li>
+          <a title="外部沟通指南" href="../../during/external_communication_guidelines/">外部沟通指南</a>
+          </li>
+                <li>
+          <a title="安全事件" href="../../during/security_incident_response/">安全事件</a>
+          </li>
+        </ul>
+      </li>
+    <li>
+        <span class="subsection">事件后</span>
+        <ul>
+                <li>
+          <a title="事件后处理" href="../../after/after_an_incident/">事件后处理</a>
+          </li>
+                <li>
+          <a title="事后分析流程" href="../../after/post_mortem_process/">事后分析流程</a>
+          </li>
+                <li>
+          <a title="事后分析模板" href="../../after/post_mortem_template/">事后分析模板</a>
+          </li>
+                <li>
+          <a title="有效的事后分析" href="../../after/effective_post_mortems/">有效的事后分析</a>
+          </li>
+        </ul>
+      </li>
+    <li>
+        <span class="subsection">危机响应</span>
+        <ul>
+                <li>
+          <a title="危机响应介绍" href="../crisis_intro/">危机响应介绍</a>
+          </li>
+                <li>
+          <a title="术语" href="../terms/">术语</a>
+          </li>
+                <li class="active">
+          <a title="危机领导" href="./">危机领导</a>
+          <ul id="toc">
+            <li class="anchor">
+                  <a title="为什么危机领导对您的组织重要" href="#_1">为什么危机领导对您的组织重要</a>
+                </li>
+            <li class="anchor">
+                  <a title="危机领导的考虑因素" href="#_2">危机领导的考虑因素</a>
+                </li>
+            <li class="anchor">
+                  <a title="领导危机时的注意事项" href="#_3">领导危机时的注意事项</a>
+                </li>
+            <li class="anchor">
+                  <a title="危机情景规划" href="#_4">危机情景规划</a>
+                </li>
+            <li class="anchor">
+                  <a title="组建执行危机领导团队" href="#_5">组建执行危机领导团队</a>
+                </li>
+            <li class="anchor">
+                  <a title="危机团队领导者" href="#_6">危机团队领导者</a>
+                </li>
+            <li class="anchor">
+                  <a title="继任计划" href="#_7">继任计划</a>
+                </li>
+            </ul>
+          </li>
+                <li>
+          <a title="危机响应操作" href="../operations/">危机响应操作</a>
+          </li>
+                <li>
+          <a title="危机前阶段" href="../prework/">危机前阶段</a>
+          </li>
+                <li>
+          <a title="PagerDuty 用于危机响应操作" href="../pagerduty/">PagerDuty 用于危机响应操作</a>
+          </li>
+        </ul>
+      </li>
+    <li>
+        <span class="subsection">培训</span>
+        <ul>
+                <li>
+          <a title="培训概览" href="../../training/overview/">培训概览</a>
+          </li>
+                <li>
+          <a title="事件指挥官" href="../../training/incident_commander/">事件指挥官</a>
+          </li>
+                <li>
+          <a title="副指挥官" href="../../training/deputy/">副指挥官</a>
+          </li>
+                <li>
+          <a title="记录员" href="../../training/scribe/">记录员</a>
+          </li>
+                <li>
+          <a title="主题专家" href="../../training/subject_matter_expert/">主题专家</a>
+          </li>
+                <li>
+          <a title="客户联络员" href="../../training/customer_liaison/">客户联络员</a>
+          </li>
+                <li>
+          <a title="内部联络员" href="../../training/internal_liaison/">内部联络员</a>
+          </li>
+                <li>
+          <a title="术语表" href="../../training/glossary/">术语表</a>
+          </li>
+        </ul>
+      </li>
+    <li>
+        <span class="subsection">培训课程</span>
+        <ul>
+                <li>
+          <a title="事件响应" href="../../training/courses/incident_response/">事件响应</a>
+          </li>
+        </ul>
+      </li>
+    <li>
+        <span class="subsection">其他资源</span>
+        <ul>
+                <li>
+          <a title="阅读材料" href="../../resources/reading/">阅读材料</a>
+          </li>
+                <li>
+          <a title="ChatOps" href="../../resources/chatops/">ChatOps</a>
+          </li>
+                <li>
+          <a title="反模式" href="../../resources/anti_patterns/">反模式</a>
+          </li>
+        </ul>
+      </li>
+            <li>
+          <a title="关于" href="../../about/">关于</a>
+          </li>
+    </ul>
+</nav>
+
+      <article>
+        <h1>危机领导</h1>
+        <section id="downloads">
+  
+  
+</section>
+        
+        <p>有效的危机管理需要领导力。危机领导强调企业领导者如何将组织价值观应用于危机的所有阶段。</p>
+<h2 id="_1">为什么危机领导对您的组织重要<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
+<p>每一次危机都蕴含着危险与机遇。在公司历史的关键时刻，正确的领导至关重要。正确的危机领导是价值观驱动的，并在谨慎、深思熟虑地回应问题与基于应对效果有意吸引关注或获取新业务之间保持平衡。</p>
+<p>当公司的价值观置于首位时，您的利益相关者沟通和公开声明保持一致。您的受众总能察觉到您是否在倒退或随大流。通过保持一致，您避免了加剧局势。没有两次危机是相同的，正如没有两个组织是相同的。危机领导的核心在于您——而不是其他人——向您的利益相关者讲述您的组织从一次危机到下一次危机的故事。</p>
+<h2 id="_2">危机领导的考虑因素<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
+<p>危机不可预测且变化多端的性质需要情境意识。了解您知道什么和不知道什么是至关重要的。持续监控局势，预测状态，并准备好适应变化的环境，使您的公司在危机应对中变得熟练，并为您的团队提供目标，即每个人都在同步并朝着相同的目标努力。</p>
+<p>危机领导的一个越来越重要的方面是照顾好自己和团队。您的危机应对团队成员可能受到事件影响，但仍在努力解决。您的团队中有些人可能已经连续工作了24小时，需要有人允许他们暂时离开。疲劳可能正在累积等等。利用PagerDuty平台内置的功能来建立值班轮换、交接，并整合Zoom或Teams等视频会议技术，可以帮助在应对可能持续的局势时为您的团队创造一个安全健康<a href="https://goingoncall.pagerduty.com/culture/">值班文化</a>。</p>
+<p><img alt="按日和小时设置值班限制" src="../../assets/img/crisis/01_oncallrestrictions.png" /></p>
+<h2 id="_3">领导危机时的注意事项<a class="headerlink" href="#_3" title="Permanent link">#</a></h2>
+<p>成功和不成功的公司危机应对案例随处可见。事实上，很有可能在你阅读本指南时，新闻中就有一个成功和一个不成功的案例。重要的是从他人的公开错误中学习，并以注意事项列表的形式制定您的核心原则。其中一些可能是显而易见的，但仍然值得记录。以下是一些常见的例子：</p>
+<ul>
+<li>
+<p><strong>应做</strong>准备一组通用的暂定声明，可以轻松定制以适应特定情况（例如，供应商破产、网络事件、产品召回、高层离职等）</p>
+</li>
+<li>
+<p><strong>应做</strong>谨慎考虑何时以及如何回应，因为总是存在新闻可能在您评论之前就曝光的风险</p>
+</li>
+<li>
+<p><strong>应做</strong>在回应中保持克制，避免试图对每一个负面帖子、询问或攻击做出回应</p>
+</li>
+<li>
+<p><strong>不应</strong>假设同时发生的多个危机或事件是相关的</p>
+</li>
+<li>
+<p><strong>不应</strong>复制粘贴——即采取仅基于您组织价值观、历史和风险概况的独特行动，并在您的能力范围内，否则您将面临更大的暴露风险</p>
+</li>
+<li>
+<p><strong>不应</strong>假设主动发布非义务性公开声明没有重大风险——您需要在此方面与法律团队仔细权衡您的决定</p>
+</li>
+<li>
+<p><strong>不应</strong>假设您在内部或对部分客户或投资者所说的话不会公开</p>
+</li>
+</ul>
+<h2 id="_4">危机情景规划<a class="headerlink" href="#_4" title="Permanent link">#</a></h2>
+<p>危机领导者应始终在危机成为现实之前为公司的最坏日子做好准备。如果2020年的大流行是您的第一次生存危机，墨菲定律说它不会是最后一次。在您在组织中的任期内，很可能会经历多次危机。参考公司历史上的危机是规划的一部分。然而，情景规划是前瞻性的，专注于对组织最可能和最具破坏性的危机情景，以主动发展团队、计划和剧本。有无数的情景可供选择，但以下是一些例子：</p>
+<ul>
+<li>关键基础设施攻击（例如，电力、水、交通）</li>
+<li>网络事件（例如，勒索软件、数据泄露）</li>
+<li>大流行（例如，传染病）</li>
+<li>环境灾难（例如，地震、飓风、干旱）</li>
+<li>人力资源危机（例如，工会罢工、抗议、劳动力短缺）</li>
+<li>地缘政治灾难（例如，战争、政变）</li>
+<li>恐怖主义（例如，政治暴力、破坏）</li>
+<li>经济灾难（例如，股市崩盘、货币危机）</li>
+<li>工业事故（例如，气体泄漏、建筑物倒塌）</li>
+</ul>
+<p>如果时间无限且世界静止，您可以为世界上所有的情景做准备。然而，目标是选择您列表中的一小部分情景，并建立可转移的原则和技能，为更广泛的危机做好准备。另一种方法是关注情景之间的后果，并通过添加控制措施（如剧本、运行手册或预定义的战术响应团队）来解决这些能力差距。您还可能发现，随着运营环境的变化，关键性顺序也会变化，因此定期审查您的顶级情景及其相关计划和团队是重要的。</p>
+<h2 id="_5">组建执行危机领导团队<a class="headerlink" href="#_5" title="Permanent link">#</a></h2>
+<p>在考虑危机应对团队的规模、范围和角色时，制定一个执行危机领导团队是一个良好的起点。这个团队将包括来自组织各个领域的功能业务负责人，从沟通到法律、人力资源等等。考虑从以下一些或所有功能角色开始：</p>
+<ul>
+<li>首席执行官</li>
+<li>首席法律官</li>
+<li>首席沟通官</li>
+<li>首席财务官</li>
+<li>首席信息安全官</li>
+<li>首席人力资源官</li>
+<li>首席运营官</li>
+<li>首席信息官</li>
+<li>首席韧性官</li>
+<li>首席收入官</li>
+<li>首席营销官</li>
+<li>首席安全官</li>
+</ul>
+<p>没有一种尺寸适合所有情况，您可能不需要执行危机领导团队中的所有这些角色。同样重要的是考虑您的董事会——如果有的话——作为执行危机领导团队的延伸。同样，外部资源如公共关系/危机管理公司、灾难恢复服务、保险公司、数字取证专家或地方/联邦当局不应被忽视，应作为重要联系人记录。</p>
+<h2 id="_6">危机团队领导者<a class="headerlink" href="#_6" title="Permanent link">#</a></h2>
+<p>在危机中，重要的是要有一个面孔和一个单一的声音。危机团队领导者是负责领导组织度过危机的个人，基于其专业领域的整体责任。他们类似于危机情况下的事件指挥官。然而，在复杂情况下，危机团队领导者可能更像是一个区域指挥官，如果有多个事件指挥官需要监督。</p>
+<p>一旦您构建了您的一小部分情景，下一步是分配组织成员作为团队领导者及其备份。以下是一个示例表格：</p>
+<table>
+<thead>
+<tr>
+<th><strong>危机情景</strong></th>
+<th><strong>情景示例</strong></th>
+<th><strong>危机团队领导者</strong></th>
+<th><strong>潜在备份</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>关键基础设施攻击</td>
+<td>能源电网、供水、电信</td>
+<td>首席运营官</td>
+<td>物流主管</td>
+</tr>
+<tr>
+<td>环境灾难</td>
+<td>地震、飓风、火山</td>
+<td>首席韧性官</td>
+<td>安全主管</td>
+</tr>
+<tr>
+<td>人力资源危机</td>
+<td>劳工罢工、抗议、劳工违规</td>
+<td>首席人力资源官</td>
+<td>运营主管</td>
+</tr>
+<tr>
+<td>营销活动失败</td>
+<td>打字错误、不实产品声明、错误语气</td>
+<td>首席数字官</td>
+<td>沟通主管</td>
+</tr>
+</tbody>
+</table>
+<p>使用PagerDuty，您可以在平台内构建您的<a href="https://support.pagerduty.com/docs/schedule-basics">值班计划</a>，提供关于谁在值班以及业务领域在危机情况下发生时的可见性和问责制。您还可以使用升级策略添加备份，在自定义时间延迟后通知下一个人。</p>
+<p><img alt="设置升级超时" src="../../assets/img/crisis/02_escalationtimeout.png" /></p>
+<p>如果您想平衡值班团队的负载，<a href="https://support.pagerduty.com/docs/round-robin-scheduling">循环调度</a>可以帮助通过轮流通知谁是每个危机通知的主要团队成员。</p>
+<p><img alt="使用循环调度" src="../../assets/img/crisis/03_roundrobin.png" /></p>
+<h2 id="_7">继任计划<a class="headerlink" href="#_7" title="Permanent link">#</a></h2>
+<p>在审视您的执行危机领导团队、危机团队领导者和他们的备份时，您应该从继任计划或故障转移映射的角度来看待它。根据您组织的组成和地理集中度，您可能希望进一步多样化您的成员以分散风险。如果每个人都位于相近的位置，对该地区的影响将导致失败和延长的平均修复时间（MTTR）。您希望您的PagerDuty轮换和/或升级策略反映这一战略。</p>
+        
+      </article>
+    </main>
+
+      <nav id="pagination">
+    <div class="content-wrapper">
+      <div class="previous">
+        
+          <a href="../terms/" title="术语">
+            <span class="label">Previous</span>
+            <div class="page">
+              <div class="button" role="button" aria-label="Previous">
+                <i class="icon icon-previous"></i>
+              </div>
+              <div class="title">
+                术语
+              </div>
+            </div>
+          </a>
+        
+      </div>
+
+      <div class="next">
+        
+          <a href="../operations/" title="危机响应操作">
+            <span class="label">Next</span>
+            <div class="page">
+              <div class="title">
+                危机响应操作
+              </div>
+              <div class="button" role="button" aria-label="Next">
+                <i class="icon icon-next"></i>
+              </div>
+            </div>
+          </a>
+        
+      </div>
+    </div>
+  </nav>
+
+    <footer>
+        <div class="content-wrapper">
+        <ul id="ops-guides">
+      <h2>Ops Guides</h2>
+      <p>Explore our other guides!</p>
+      <li id="og-incident-response" class="ops-guide">
+        <a href="https://response.pagerduty.com">Incident Response</a>
+        <p>A detailed outline of response processes for technical incidents practices by PagerDuty and our leading customers.</p>
+      </li>
+
+      <li id="og-security-training" class="ops-guide">
+        <a href="https://sudo.pagerduty.com">Security Training</a>
+        <p>Open source security training used at PagerDuty - adaptable for your own technical and non-technical teams.</p>
+      </li>
+
+      <li id="og-postmortems" class="ops-guide">
+        <a href="https://postmortems.pagerduty.com/">Postmortems</a>
+        <p>Comprehensive guide on how to conduct effective postmortems. Learn how to build a culture of blamelessness.</p>
+      </li>
+
+      <li id="og-operational-reviews" class="ops-guide">
+        <a href="https://reviews.pagerduty.com/">Operational Reviews</a>
+        <p>Gauge incident impact using data-driven regularly scheduled reviews to better manage the hidden cost of real-time ops.</p>
+      </li>
+
+      <li id="og-business-response" class="ops-guide">
+        <a href="https://business-response.pagerduty.com/">Business Response</a>
+        <p>Learn how to align the business needs with technical needs when severe technical incidents occur.</p>
+      </li>
+
+      <li id="og-stakeholder-comms" class="ops-guide">
+        <a href="https://stakeholders.pagerduty.com/">Stakeholder Comms</a>
+        <p>Build an effective communiction strategy for your internal stakeholders during major incidents.</p>
+      </li>
+
+      <li id="og-retrospectives" class="ops-guide">
+        <a href="https://retrospectives.pagerduty.com/">Retrospectives</a>
+        <p>Iteratively learn from working processes and behaviors while cultivating a culture of continuous improvement.</p>
+      </li>
+
+      <li id="og-ownership" class="ops-guide">
+        <a href="https://ownership.pagerduty.com">Ownership</a>
+        <p>Ensure the reliability of systems & services through a deeper understanding of how code functions in production.</p>
+      </li>
+
+      <li id="og-devsecops" class="ops-guide">
+        <a href="https://devsecops.pagerduty.com/">DevSecOps</a>
+        <p>New to DevSecOps, or wondering what it is and how to implement it? This guide will help you get started.</p>
+      </li>
+
+      <li id="og-goingoncall" class="ops-guide">
+        <a href="https://goingoncall.pagerduty.com/">Going On-Call</a>
+        <p>The complete resource to going on call for teams and managers.</p>
+      </li>
+
+      <li id="og-autoremediation" class="ops-guide">
+        <a href="https://autoremediation.pagerduty.com/">Auto Remediation</a>
+        <p>This guide will help you to leverage automation in your Incident Response process.</p>
+      </li>
+
+      <li id="og-customerservice" class="ops-guide">
+        <a href="https://customerserviceops.pagerduty.com/">Customer Service</a>
+        <p>Excellent Customer Service means excellent customer experience, even during incidents.</p>
+      </li>
+    </ul>
+
+    <p id="outro">
+      Made with <span class="material-icons love" aria-label="Love">favorite</span> at PagerDuty.
+    </p>
+
+    <p id="github-repo-link">
+      <a target="_blank"
+         title="View the source for this documentation on GitHub."
+         href="https://github.com/pagerduty/incident-response-docs">View Source on GitHub</a>
+    </p>
+
+    <!-- It's our theme, so we can just hardcode these :p -->
+    <ul id="social-links">
+      <li class="twitter">
+        <a title="View the @PagerDuty Twitter feed."
+           href="https://twitter.com/PagerDuty">Twitter</a>
+      </li>
+      <li class="github">
+        <a title="View PagerDuty on GitHub"
+           href="https://github.com/PagerDuty">GitHub</a>
+      </li>
+      <li class="pagerduty">
+        <a title="View the PagerDuty website."
+          href="https://www.pagerduty.com/">PagerDuty</a>
+      </li>
+    </ul>
+  </div>
+    </footer>
+
+        
+      <script src="../../../../search/main.js"></script>
+    
+    
+    
+      <script>
+        /* Google Analytics */
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-8759953-1', 'auto');
+        ga('send', 'pageview');
+
+        /* Track outbound links */
+        var buttons = document.querySelectorAll('a');
+        Array.prototype.map.call(buttons, function(item) {
+          if (item.host != document.location.host) {
+            item.addEventListener('click', function() {
+              var action = item.getAttribute('data-action') || 'follow';
+              ga('send', 'event', 'outbound', action, item.href);
+            });
+          }
+        });
+
+        /* Register handler to log search on blur */
+        var query = document.querySelector('#mkdocs-search-query');
+        query.addEventListener('blur', function() {
+          if (this.value) {
+            var path = document.location.pathname;
+            ga('send', 'pageview', path + '?q=' + this.value);
+          }
+        });
+      </script>
+    
+  </body>
+</html>

@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>培训概览 - PagerDuty 事件响应文档</title>
+
+    <!-- Author and License -->
+    <meta name="dcterms.license"      content="http://www.apache.org/licenses/LICENSE-2.0" />
+    <meta name="author"               content="PagerDuty, Inc." />
+    <meta name="dcterms.rightsHolder" content="PagerDuty, Inc." />
+    <meta name="dcterms.rights"       content="版权所有 &copy; PagerDuty, Inc." />
+    <!-- Page Description -->
+    <meta name="description" content="关于 PagerDuty 事件响应流程的一系列信息。不仅包括如何为新员工准备待命职责，还包括如何处理重大事件，包括准备和事后工作。" />
+    <meta name="robots"      content="index, follow, archive" />
+    <meta name="generator"   content="mkdocs-1.6.0, mkdocs-theme-pagerduty" />
+
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://response.pagerduty.com/training/overview/">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon"    href="/assets/images/favicon.png" type="image/png" />
+    <link rel="icon"             href="/assets/images/favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/assets/images/favicon.png" />
+
+    <!-- Mobile -->
+    <meta name="viewport"    content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+    <meta name="theme-color" content="#005a24" />
+
+    <!-- Apple -->
+    <meta name="apple-mobile-web-app-title"            content="PagerDuty 事件响应文档" />
+    <meta name="apple-mobile-web-app-capable"          content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <!-- Open Graph -->
+    <meta property="og:url"         content="https://response.pagerduty.com/training/overview/" />
+    <meta property="og:title"       content="培训概览 - PagerDuty 事件响应文档" />
+    <meta property="og:site_name"   content="PagerDuty 事件响应文档" />
+    <meta property="og:description" content="关于 PagerDuty 事件响应流程的一系列信息。不仅包括如何为新员工准备待命职责，还包括如何处理重大事件，包括准备和事后工作。" />
+    <meta property="og:image"       content="https://response.pagerduty.com/assets/img/covers/default.png" />
+    <meta property="og:locale"      content="en_US" />
+    <meta property="og:type"        content="website" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card"        content="summary_large_image" />
+    <meta name="twitter:title"       content="培训概览 - PagerDuty 事件响应文档" />
+    <meta name="twitter:description" content="关于 PagerDuty 事件响应流程的一系列信息。不仅包括如何为新员工准备待命职责，还包括如何处理重大事件，包括准备和事后工作。" />
+    <meta name="twitter:image"       content="https://response.pagerduty.com/assets/img/covers/default.png" />
+        <!-- Style -->
+    <link rel="stylesheet" href="../../assets/stylesheets/fonts.css" />
+    <link rel="stylesheet" href="../../assets/stylesheets/reset.css" />
+    <link rel="stylesheet" href="../../assets/stylesheets/pagerduty.css" />
+    <link rel="stylesheet" href="../../assets/stylesheets/code.css" />
+    
+    
+      <link rel="stylesheet" href="../../../../assets/css/custom.css" />
+    
+  </head>
+  <body class="">
+    <header>
+        <div class="content-wrapper">
+    <div id="logo">
+      <a href="../.." title="Go to 事件响应 homepage.">
+        <img src="../../assets/images/logo.png" title="PagerDuty" />
+      </a>
+      <span class="subtitle">
+        事件响应
+      </span>
+    </div>
+
+    
+<!-- This is a cheat for mobile search, allowing us to store state in a checkbox. -->
+<input id="mobile-search-link" type="checkbox"  />
+<label id="mobile-search-link-selector" for="mobile-search-link" role="button"></label>
+<div id="search">
+  <input name="q" id="mkdocs-search-query" type="search" placeholder="Search..." />
+  <div id="mkdocs-search-results"><p>No results found</p></div>
+</div>
+
+<!-- This is used for MkDocs search. Hardcoding to '/' so CSP is easier. -->
+<script>var base_url = '/';</script>
+
+  </div>
+    </header>
+
+      <nav id="breadcrumbs">
+    <div class="content-wrapper">
+      <p><a href="../..">事件响应</a></p>
+      
+        
+          
+            <p>培训</p>
+          
+        
+        <h1>培训概览</h1>
+      
+    </div>
+  </nav>
+    
+
+    <main>
+      <!-- This is a cheat for mobile navigation, allowing us to store state in a checkbox. -->
+<input id="mobile-nav-link" type="checkbox"  />
+<label id="mobile-nav-link-selector" for="mobile-nav-link" role="button"></label>
+<nav>
+  <div id="nav-title">事件响应</div>
+<ul>
+          <li>
+          <a title="首页" href="../..">首页</a>
+          </li>
+            <li>
+          <a title="入门指南" href="../../getting_started/">入门指南</a>
+          </li>
+    <li>
+        <span class="subsection">待命</span>
+        <ul>
+                <li>
+          <a title="待命职责" href="../../oncall/being_oncall/">待命职责</a>
+          </li>
+                <li>
+          <a title="谁在待命?" href="../../oncall/whos_oncall/">谁在待命?</a>
+          </li>
+                <li>
+          <a title="告警原则" href="../../oncall/alerting_principles/">告警原则</a>
+          </li>
+        </ul>
+      </li>
+    <li>
+        <span class="subsection">事件前</span>
+        <ul>
+                <li>
+          <a title="什么是事件?" href="../../before/what_is_an_incident/">什么是事件?</a>
+          </li>
+                <li>
+          <a title="严重性级别" href="../../before/severity_levels/">严重性级别</a>
+          </li>
+                <li>
+          <a title="不同角色" href="../../before/different_roles/">不同角色</a>
+          </li>
+                <li>
+          <a title="通话礼仪" href="../../before/call_etiquette/">通话礼仪</a>
+          </li>
+                <li>
+          <a title="复杂事件" href="../../before/complex_incidents/">复杂事件</a>
+          </li>
+        </ul>
+      </li>
+    <li>
+        <span class="subsection">事件中</span>
+        <ul>
+                <li>
+          <a title="事件处理" href="../../during/during_an_incident/">事件处理</a>
+          </li>
+                <li>
+          <a title="外部沟通指南" href="../../during/external_communication_guidelines/">外部沟通指南</a>
+          </li>
+                <li>
+          <a title="安全事件" href="../../during/security_incident_response/">安全事件</a>
+          </li>
+        </ul>
+      </li>
+    <li>
+        <span class="subsection">事件后</span>
+        <ul>
+                <li>
+          <a title="事件后处理" href="../../after/after_an_incident/">事件后处理</a>
+          </li>
+                <li>
+          <a title="事后分析流程" href="../../after/post_mortem_process/">事后分析流程</a>
+          </li>
+                <li>
+          <a title="事后分析模板" href="../../after/post_mortem_template/">事后分析模板</a>
+          </li>
+                <li>
+          <a title="有效的事后分析" href="../../after/effective_post_mortems/">有效的事后分析</a>
+          </li>
+        </ul>
+      </li>
+    <li>
+        <span class="subsection">危机响应</span>
+        <ul>
+                <li>
+          <a title="危机响应介绍" href="../../crisis/crisis_intro/">危机响应介绍</a>
+          </li>
+                <li>
+          <a title="术语" href="../../crisis/terms/">术语</a>
+          </li>
+                <li>
+          <a title="危机领导" href="../../crisis/leadership/">危机领导</a>
+          </li>
+                <li>
+          <a title="危机响应操作" href="../../crisis/operations/">危机响应操作</a>
+          </li>
+                <li>
+          <a title="危机前阶段" href="../../crisis/prework/">危机前阶段</a>
+          </li>
+                <li>
+          <a title="PagerDuty 用于危机响应操作" href="../../crisis/pagerduty/">PagerDuty 用于危机响应操作</a>
+          </li>
+        </ul>
+      </li>
+    <li>
+        <span class="subsection">培训</span>
+        <ul>
+                <li class="active">
+          <a title="培训概览" href="./">培训概览</a>
+          <ul id="toc">
+            <li class="anchor">
+                  <a title="培训指南" href="#_1">培训指南</a>
+                </li>
+            <li class="anchor">
+                  <a title="培训课程" href="#_2">培训课程</a>
+                </li>
+            <li class="anchor">
+                  <a title="事件示例" href="#_3">事件示例</a>
+                </li>
+            <li class="anchor">
+                  <a title="国家事件管理系统（NIMS）" href="#nims">国家事件管理系统（NIMS）</a>
+                </li>
+            <li class="anchor">
+                  <a title="全球事件响应" href="#_4">全球事件响应</a>
+                </li>
+            </ul>
+          </li>
+                <li>
+          <a title="事件指挥官" href="../incident_commander/">事件指挥官</a>
+          </li>
+                <li>
+          <a title="副指挥官" href="../deputy/">副指挥官</a>
+          </li>
+                <li>
+          <a title="记录员" href="../scribe/">记录员</a>
+          </li>
+                <li>
+          <a title="主题专家" href="../subject_matter_expert/">主题专家</a>
+          </li>
+                <li>
+          <a title="客户联络员" href="../customer_liaison/">客户联络员</a>
+          </li>
+                <li>
+          <a title="内部联络员" href="../internal_liaison/">内部联络员</a>
+          </li>
+                <li>
+          <a title="术语表" href="../glossary/">术语表</a>
+          </li>
+        </ul>
+      </li>
+    <li>
+        <span class="subsection">培训课程</span>
+        <ul>
+                <li>
+          <a title="事件响应" href="../courses/incident_response/">事件响应</a>
+          </li>
+        </ul>
+      </li>
+    <li>
+        <span class="subsection">其他资源</span>
+        <ul>
+                <li>
+          <a title="阅读材料" href="../../resources/reading/">阅读材料</a>
+          </li>
+                <li>
+          <a title="ChatOps" href="../../resources/chatops/">ChatOps</a>
+          </li>
+                <li>
+          <a title="反模式" href="../../resources/anti_patterns/">反模式</a>
+          </li>
+        </ul>
+      </li>
+            <li>
+          <a title="关于" href="../../about/">关于</a>
+          </li>
+    </ul>
+</nav>
+
+      <article>
+        <h1>培训概览</h1>
+        <section id="downloads">
+  
+  
+</section>
+        
+        <p>了解PagerDuty重大事件响应流程是成为PagerDuty有效待命工程师的重要部分。本节概述了我们针对参与事件响应的各种角色的培训材料，以及来自政府机构的额外信息和培训材料。</p>
+<h2 id="_1">培训指南<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
+<p>我们的培训指南按角色划分，但我们鼓励您阅读不属于您角色的培训指南，因为这可以为您提供在重大事件期间这些人将如何行动的良好洞察。</p>
+<ul>
+<li><a href="../incident_commander/">事件指挥官培训</a> - “IC”是推动重大事件解决的人。他们是指挥其他人的人。</li>
+<li><a href="../deputy/">副指挥官培训</a> - 副指挥官是支持事件指挥官的人，必要时可以接替他们。</li>
+<li><a href="../scribe/">记录员培训</a> - 这是为在事件期间担任记录员的人准备的。</li>
+<li><a href="../subject_matter_expert/">专家/解决者培训</a> - 这对PagerDuty所有待命的团队成员都相关。</li>
+<li><a href="../customer_liaison/">客户联络培训</a> - 这是为公开代表我们并与客户互动的人准备的。</li>
+<li><a href="../internal_liaison/">内部联络培训</a> - 这对可能在事件期间被要求与内部团队合作的人都相关。</li>
+</ul>
+<h2 id="_2">培训课程<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
+<p>我们还发布了部分培训课程的幻灯片和视频。最初在PagerDuty内部用于培训我们的员工，我们后来将其改编为更广泛的受众，以便您可以在自己的组织中利用它们。</p>
+<ul>
+<li><a href="../courses/incident_response/">事件响应培训课程</a> - 关于事件响应和事件指挥官角色的入门课程。</li>
+</ul>
+<h2 id="_3">事件示例<a class="headerlink" href="#_3" title="Permanent link">#</a></h2>
+<p>这段录音是对2017年1月在PagerDuty发生的实际重大事件的重现。为了简洁和隐私，一些细节已被更改，但事件本身基本保持不变。关于录音的更多细节，您可以阅读<a href="https://www.pagerduty.com/blog/incident-response-reenactment/">PagerDuty博客文章</a>。</p>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/yoY_pDxc0TA?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+<h2 id="nims">国家事件管理系统（NIMS）<a class="headerlink" href="#nims" title="Permanent link">#</a></h2>
+<p>我们的事件响应流程在很大程度上基于<a href="https://www.fema.gov/national-incident-management-system">美国国家事件管理系统（NIMS）</a>，该系统被描述为，</p>
+<p><em>一种系统性的、前瞻性的方法，指导各级政府、非政府组织和私营部门的部门和机构无缝合作，管理涉及所有威胁和危害的事件——无论其原因、大小、位置或复杂性如何——以减少生命、财产和环境的损失。</em></p>
+<p>虽然最初可能看起来这不适用于IT运营环境，但我们发现，从这些情况下的重大事件中吸取的许多教训可以直接应用于我们的行业。原则是相同的，并跨越许多不同的环境。</p>
+<p><a href="https://www.fema.gov/pdf/emergency/nims/NIMS_core.pdf"><img alt="NIMS" src="../../assets/img/thumbnails/nims_core.png" /></a> <a href="https://www.fema.gov/pdf/emergency/nims/nims_training_program.pdf"><img alt="NIMS培训" src="../../assets/img/thumbnails/nims_training.png" /></a></p>
+<p>如果您想了解更多关于NIMS的信息，我们推荐<a href="https://training.fema.gov/is/courseoverview.aspx?code=IS-100.b">ICS-100</a>和<a href="https://training.fema.gov/is/courseoverview.aspx?code=IS-700.a">ICS-700</a>在线培训课程，这些课程涵盖了NIMS和事件指挥系统（您也可以在培训后参加在线考试，以获得FEMA的证书）。还有大量的<a href="https://training.fema.gov/nims/">FEMA提供的额外培训材料和课程</a>关于NIMS，我们鼓励您查看。</p>
+<p>如果您位于美国并对在社区中担任更积极的事件响应角色感兴趣，我们建议您调查当地的<a href="https://www.ready.gov/cert">CERT项目</a>（社区应急响应团队）。许多城市提供CERT培训，之后您可以在社区中作为CERT贡献者自愿服务。这不仅是一个获得实际灾难响应经验的机会，而且您学到的技能也可以应用于日常生活。</p>
+<p>还可以查看<a href="../../resources/reading/">附加阅读</a>页面。</p>
+<h2 id="_4">全球事件响应<a class="headerlink" href="#_4" title="Permanent link">#</a></h2>
+<p>虽然NIMS是美国的事件响应框架，但许多国家都有自己的类似框架。有些是基于美国的系统，但许多是独立开发的。通过调查世界各地国家使用的方法和框架，可以学到大量的额外信息。</p>
+<p>一本名为“<a href="https://training.fema.gov/hiedu/aemrc/booksdownload/compemmgmtbookproject/">比较应急管理：理解来自世界各地的灾难政策、组织和倡议</a>”的书（可从<a href="https://training.fema.gov/hiedu/aemrc/">FEMA网站</a>获得）比较了30多个不同国家使用的系统，是关于世界各地使用的应急管理框架的惊人信息集合。</p>
+<p>以下是我们为了在PagerDuty适应和改进我们自己的流程而详细研究的一些系统。</p>
+<h3 id="_5">英国<a class="headerlink" href="#_5" title="Permanent link">#</a></h3>
+<p>英国紧急服务使用一种称为<a href="https://en.wikipedia.org/wiki/Gold%E2%80%93silver%E2%80%93bronze_command_structure"><strong>黄金-白银-青铜指挥结构</strong></a>的指挥层级进行重大操作。该框架涉及三个级别，负责战略（黄金）、战术（白银）和操作（青铜）指挥决策。</p>
+<p>如果您有兴趣了解更多信息，以下是一些有用的阅读材料：</p>
+<ul>
+<li><a href="https://www.gov.uk/guidance/emergency-response-and-recovery">英国政府 - 紧急响应和恢复</a>。</li>
+<li><a href="https://www.gov.uk/government/publications/fire-and-rescue-manual-volume-1-incident-command">英国政府 - 事件指挥 - 第三版（2008年）</a>。</li>
+<li><a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/735103/critical-incident-management-v12.0ext.pdf">英国内政部 - 关键事件管理</a>（PDF）。</li>
+</ul>
+<h3 id="_6">新西兰<a class="headerlink" href="#_6" title="Permanent link">#</a></h3>
+<p>新西兰的系统称为<a href="https://en.wikipedia.org/wiki/Coordinated_Incident_Management_System"><strong>协调事件管理系统（CIMS）</strong></a>，基于美国使用的事件指挥系统。我们特别喜欢CIMS的一个方面是它对通用术语的关注，这有助于防止事件期间的混乱，并允许更快、更有效的响应。一些术语已从ICS更改（例如，“控制”而不是“指挥”来描述管理功能），但应该仍然熟悉。</p>
+<p>如果您有兴趣了解更多信息，以下是一些有用的阅读材料：</p>
+<ul>
+<li><a href="https://www.civildefence.govt.nz/resources/coordinated-incident-management-system-cims-third-edition/">民防与应急管理部 - 新西兰协调事件管理系统（CIMS）</a>（<a href="https://www.civildefence.govt.nz/assets/Uploads/CIMS-3rd-edition-FINAL-Aug-2019.pdf">PDF</a>）。</li>
+<li><a href="https://www.emergencymanagement.co.nz/">Devereux-Blum培训与发展 - 应急管理培训</a></li>
+</ul>
+<h3 id="_7">澳大利亚<a class="headerlink" href="#_7" title="Permanent link">#</a></h3>
+<p>澳大利亚使用一种称为<a href="https://en.wikipedia.org/wiki/Australasian_Inter-Service_Incident_Management_System"><strong>澳大拉西亚跨服务事件管理系统（AIIMS）</strong></a>的系统，该系统是基于美国使用的NIMS框架的衍生。虽然基于ICS，AIIMS更注重_控制范围_，而不是其他框架。与新西兰的系统一样，使用的术语有一些差异（例如，“事件控制者”而不是“事件指挥官”），但对于了解ICS的人来说应该仍然熟悉。</p>
+<p>如果您有兴趣了解更多信息，以下是一些有用的阅读材料：</p>
+<ul>
+<li><a href="https://training.fema.gov/hiedu/docs/cem/comparative%20em%20-%20session%2021%20-%20handout%2021-1%20aiims%20manual.pdf">澳大拉西亚跨服务事件管理系统，第三版</a>（PDF）。</li>
+<li><a href="https://knowledge.aidr.org.au/resources/handbook-14-incident-management-in-australia/">澳大利亚事件管理手册</a></li>
+</ul>
+<h3 id="_8">加拿大<a class="headerlink" href="#_8" title="Permanent link">#</a></h3>
+<p>加拿大使用自己的<a href="https://www.icscanada.ca/images/upload/ICS%20OPS%20Description2012.pdf"><strong>事件指挥系统</strong></a>（PDF）。该标准由一个称为<a href="https://www.icscanada.ca/en/home.html">ICS Canada</a>的组织网络维护。他们的网站有一系列关于如何在加拿大根据您的省份找到当地培训课程的信息。</p>
+<p>如果您有兴趣了解更多信息，以下是一些有用的阅读材料：</p>
+<ul>
+<li><a href="https://www.svffa.ca/s/ICS100-Self-Paced-Student-Workbook_2016.pdf">ICSCanada - I-100 事件指挥系统简介</a>（PDF）。</li>
+<li><a href="https://www.icscanada.ca/en/Forms.html">加拿大ICS表格</a> - <em>标准ICS表格，您可以下载并在自己的事件中使用（<a href="https://training.fema.gov/icsresource/icsforms.aspx">FEMA有美国等效表格</a>）。</em></li>
+</ul>
+        
+      </article>
+    </main>
+
+      <nav id="pagination">
+    <div class="content-wrapper">
+      <div class="previous">
+        
+          <a href="../../crisis/pagerduty/" title="PagerDuty 用于危机响应操作">
+            <span class="label">Previous</span>
+            <div class="page">
+              <div class="button" role="button" aria-label="Previous">
+                <i class="icon icon-previous"></i>
+              </div>
+              <div class="title">
+                PagerDuty 用于危机响应操作
+              </div>
+            </div>
+          </a>
+        
+      </div>
+
+      <div class="next">
+        
+          <a href="../incident_commander/" title="事件指挥官">
+            <span class="label">Next</span>
+            <div class="page">
+              <div class="title">
+                事件指挥官
+              </div>
+              <div class="button" role="button" aria-label="Next">
+                <i class="icon icon-next"></i>
+              </div>
+            </div>
+          </a>
+        
+      </div>
+    </div>
+  </nav>
+
+    <footer>
+        <div class="content-wrapper">
+        <ul id="ops-guides">
+      <h2>Ops Guides</h2>
+      <p>Explore our other guides!</p>
+      <li id="og-incident-response" class="ops-guide">
+        <a href="https://response.pagerduty.com">Incident Response</a>
+        <p>A detailed outline of response processes for technical incidents practices by PagerDuty and our leading customers.</p>
+      </li>
+
+      <li id="og-security-training" class="ops-guide">
+        <a href="https://sudo.pagerduty.com">Security Training</a>
+        <p>Open source security training used at PagerDuty - adaptable for your own technical and non-technical teams.</p>
+      </li>
+
+      <li id="og-postmortems" class="ops-guide">
+        <a href="https://postmortems.pagerduty.com/">Postmortems</a>
+        <p>Comprehensive guide on how to conduct effective postmortems. Learn how to build a culture of blamelessness.</p>
+      </li>
+
+      <li id="og-operational-reviews" class="ops-guide">
+        <a href="https://reviews.pagerduty.com/">Operational Reviews</a>
+        <p>Gauge incident impact using data-driven regularly scheduled reviews to better manage the hidden cost of real-time ops.</p>
+      </li>
+
+      <li id="og-business-response" class="ops-guide">
+        <a href="https://business-response.pagerduty.com/">Business Response</a>
+        <p>Learn how to align the business needs with technical needs when severe technical incidents occur.</p>
+      </li>
+
+      <li id="og-stakeholder-comms" class="ops-guide">
+        <a href="https://stakeholders.pagerduty.com/">Stakeholder Comms</a>
+        <p>Build an effective communiction strategy for your internal stakeholders during major incidents.</p>
+      </li>
+
+      <li id="og-retrospectives" class="ops-guide">
+        <a href="https://retrospectives.pagerduty.com/">Retrospectives</a>
+        <p>Iteratively learn from working processes and behaviors while cultivating a culture of continuous improvement.</p>
+      </li>
+
+      <li id="og-ownership" class="ops-guide">
+        <a href="https://ownership.pagerduty.com">Ownership</a>
+        <p>Ensure the reliability of systems & services through a deeper understanding of how code functions in production.</p>
+      </li>
+
+      <li id="og-devsecops" class="ops-guide">
+        <a href="https://devsecops.pagerduty.com/">DevSecOps</a>
+        <p>New to DevSecOps, or wondering what it is and how to implement it? This guide will help you get started.</p>
+      </li>
+
+      <li id="og-goingoncall" class="ops-guide">
+        <a href="https://goingoncall.pagerduty.com/">Going On-Call</a>
+        <p>The complete resource to going on call for teams and managers.</p>
+      </li>
+
+      <li id="og-autoremediation" class="ops-guide">
+        <a href="https://autoremediation.pagerduty.com/">Auto Remediation</a>
+        <p>This guide will help you to leverage automation in your Incident Response process.</p>
+      </li>
+
+      <li id="og-customerservice" class="ops-guide">
+        <a href="https://customerserviceops.pagerduty.com/">Customer Service</a>
+        <p>Excellent Customer Service means excellent customer experience, even during incidents.</p>
+      </li>
+    </ul>
+
+    <p id="outro">
+      Made with <span class="material-icons love" aria-label="Love">favorite</span> at PagerDuty.
+    </p>
+
+    <p id="github-repo-link">
+      <a target="_blank"
+         title="View the source for this documentation on GitHub."
+         href="https://github.com/pagerduty/incident-response-docs">View Source on GitHub</a>
+    </p>
+
+    <!-- It's our theme, so we can just hardcode these :p -->
+    <ul id="social-links">
+      <li class="twitter">
+        <a title="View the @PagerDuty Twitter feed."
+           href="https://twitter.com/PagerDuty">Twitter</a>
+      </li>
+      <li class="github">
+        <a title="View PagerDuty on GitHub"
+           href="https://github.com/PagerDuty">GitHub</a>
+      </li>
+      <li class="pagerduty">
+        <a title="View the PagerDuty website."
+          href="https://www.pagerduty.com/">PagerDuty</a>
+      </li>
+    </ul>
+  </div>
+    </footer>
+
+        
+      <script src="../../../../search/main.js"></script>
+    
+    
+    
+      <script>
+        /* Google Analytics */
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-8759953-1', 'auto');
+        ga('send', 'pageview');
+
+        /* Track outbound links */
+        var buttons = document.querySelectorAll('a');
+        Array.prototype.map.call(buttons, function(item) {
+          if (item.host != document.location.host) {
+            item.addEventListener('click', function() {
+              var action = item.getAttribute('data-action') || 'follow';
+              ga('send', 'event', 'outbound', action, item.href);
+            });
+          }
+        });
+
+        /* Register handler to log search on blur */
+        var query = document.querySelector('#mkdocs-search-query');
+        query.addEventListener('blur', function() {
+          if (this.value) {
+            var path = document.location.pathname;
+            ga('send', 'pageview', path + '?q=' + this.value);
+          }
+        });
+      </script>
+    
+  </body>
+</html>

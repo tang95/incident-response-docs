@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>事件响应培训 - PagerDuty 事件响应文档</title>
+
+    <!-- Author and License -->
+    <meta name="dcterms.license"      content="http://www.apache.org/licenses/LICENSE-2.0" />
+    <meta name="author"               content="PagerDuty, Inc." />
+    <meta name="dcterms.rightsHolder" content="PagerDuty, Inc." />
+    <meta name="dcterms.rights"       content="版权所有 &copy; PagerDuty, Inc." />
+    <!-- Page Description -->
+    <meta name="description" content="这是PagerDuty事件响应培训课程的开源版本。最初作为PagerDuty内部培训新事件指挥官的课程，现已发展成为我们现在公开提供的培训。了解更多关于事件响应和事件指挥官角色的信息。" />
+    <meta name="robots"      content="index, follow, archive" />
+    <meta name="generator"   content="mkdocs-1.6.0, mkdocs-theme-pagerduty" />
+
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://response.pagerduty.com/training/courses/incident_response/">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon"    href="/assets/images/favicon.png" type="image/png" />
+    <link rel="icon"             href="/assets/images/favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/assets/images/favicon.png" />
+
+    <!-- Mobile -->
+    <meta name="viewport"    content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+    <meta name="theme-color" content="#005a24" />
+
+    <!-- Apple -->
+    <meta name="apple-mobile-web-app-title"            content="PagerDuty 事件响应文档" />
+    <meta name="apple-mobile-web-app-capable"          content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <!-- Open Graph -->
+    <meta property="og:url"         content="https://response.pagerduty.com/training/courses/incident_response/" />
+    <meta property="og:title"       content="事件响应培训 - PagerDuty 事件响应文档" />
+    <meta property="og:site_name"   content="PagerDuty 事件响应文档" />
+    <meta property="og:description" content="这是PagerDuty事件响应培训课程的开源版本。最初作为PagerDuty内部培训新事件指挥官的课程，现已发展成为我们现在公开提供的培训。了解更多关于事件响应和事件指挥官角色的信息。" />
+    <meta property="og:image"       content="https://response.pagerduty.com/assets/slides/incident_response/incident_response.001.jpeg" />
+    <meta property="og:locale"      content="en_US" />
+    <meta property="og:type"        content="website" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card"        content="summary_large_image" />
+    <meta name="twitter:title"       content="事件响应培训 - PagerDuty 事件响应文档" />
+    <meta name="twitter:description" content="这是PagerDuty事件响应培训课程的开源版本。最初作为PagerDuty内部培训新事件指挥官的课程，现已发展成为我们现在公开提供的培训。了解更多关于事件响应和事件指挥官角色的信息。" />
+    <meta name="twitter:image"       content="https://response.pagerduty.com/assets/slides/incident_response/incident_response.001.jpeg" />
+        <!-- Style -->
+    <link rel="stylesheet" href="../../../assets/stylesheets/fonts.css" />
+    <link rel="stylesheet" href="../../../assets/stylesheets/reset.css" />
+    <link rel="stylesheet" href="../../../assets/stylesheets/pagerduty.css" />
+    <link rel="stylesheet" href="../../../assets/stylesheets/code.css" />
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/slides.css" />
+    
+    
+      <link rel="stylesheet" href="../../../../../../assets/css/custom.css" />
+    
+  </head>
+  <body class="">
+    <header>
+        <div class="content-wrapper">
+    <div id="logo">
+      <a href="../../.." title="Go to 事件响应 homepage.">
+        <img src="../../../assets/images/logo.png" title="PagerDuty" />
+      </a>
+      <span class="subtitle">
+        事件响应
+      </span>
+    </div>
+
+    
+<!-- This is a cheat for mobile search, allowing us to store state in a checkbox. -->
+<input id="mobile-search-link" type="checkbox"  />
+<label id="mobile-search-link-selector" for="mobile-search-link" role="button"></label>
+<div id="search">
+  <input name="q" id="mkdocs-search-query" type="search" placeholder="Search..." />
+  <div id="mkdocs-search-results"><p>No results found</p></div>
+</div>
+
+<!-- This is used for MkDocs search. Hardcoding to '/' so CSP is easier. -->
+<script>var base_url = '/';</script>
+
+  </div>
+    </header>
+
+      <nav id="breadcrumbs">
+    <div class="content-wrapper">
+      <p><a href="../../..">事件响应</a></p>
+      
+        
+          
+            <p>培训课程</p>
+          
+        
+        <h1>事件响应</h1>
+      
+    </div>
+  </nav>
+    
+
+    <main>
+      <!-- This is a cheat for mobile navigation, allowing us to store state in a checkbox. -->
+<input id="mobile-nav-link" type="checkbox"  />
+<label id="mobile-nav-link-selector" for="mobile-nav-link" role="button"></label>
+<nav>
+  <div id="nav-title">事件响应</div>
+<ul>
+          <li>
+          <a title="首页" href="../../..">首页</a>
+          </li>
+            <li>
+          <a title="入门指南" href="../../../getting_started/">入门指南</a>
+          </li>
+    <li>
+        <span class="subsection">待命</span>
+        <ul>
+                <li>
+          <a title="待命职责" href="../../../oncall/being_oncall/">待命职责</a>
+          </li>
+                <li>
+          <a title="谁在待命?" href="../../../oncall/whos_oncall/">谁在待命?</a>
+          </li>
+                <li>
+          <a title="告警原则" href="../../../oncall/alerting_principles/">告警原则</a>
+          </li>
+        </ul>
+      </li>
+    <li>
+        <span class="subsection">事件前</span>
+        <ul>
+                <li>
+          <a title="什么是事件?" href="../../../before/what_is_an_incident/">什么是事件?</a>
+          </li>
+                <li>
+          <a title="严重性级别" href="../../../before/severity_levels/">严重性级别</a>
+          </li>
+                <li>
+          <a title="不同角色" href="../../../before/different_roles/">不同角色</a>
+          </li>
+                <li>
+          <a title="通话礼仪" href="../../../before/call_etiquette/">通话礼仪</a>
+          </li>
+                <li>
+          <a title="复杂事件" href="../../../before/complex_incidents/">复杂事件</a>
+          </li>
+        </ul>
+      </li>
+    <li>
+        <span class="subsection">事件中</span>
+        <ul>
+                <li>
+          <a title="事件处理" href="../../../during/during_an_incident/">事件处理</a>
+          </li>
+                <li>
+          <a title="外部沟通指南" href="../../../during/external_communication_guidelines/">外部沟通指南</a>
+          </li>
+                <li>
+          <a title="安全事件" href="../../../during/security_incident_response/">安全事件</a>
+          </li>
+        </ul>
+      </li>
+    <li>
+        <span class="subsection">事件后</span>
+        <ul>
+                <li>
+          <a title="事件后处理" href="../../../after/after_an_incident/">事件后处理</a>
+          </li>
+                <li>
+          <a title="事后分析流程" href="../../../after/post_mortem_process/">事后分析流程</a>
+          </li>
+                <li>
+          <a title="事后分析模板" href="../../../after/post_mortem_template/">事后分析模板</a>
+          </li>
+                <li>
+          <a title="有效的事后分析" href="../../../after/effective_post_mortems/">有效的事后分析</a>
+          </li>
+        </ul>
+      </li>
+    <li>
+        <span class="subsection">危机响应</span>
+        <ul>
+                <li>
+          <a title="危机响应介绍" href="../../../crisis/crisis_intro/">危机响应介绍</a>
+          </li>
+                <li>
+          <a title="术语" href="../../../crisis/terms/">术语</a>
+          </li>
+                <li>
+          <a title="危机领导" href="../../../crisis/leadership/">危机领导</a>
+          </li>
+                <li>
+          <a title="危机响应操作" href="../../../crisis/operations/">危机响应操作</a>
+          </li>
+                <li>
+          <a title="危机前阶段" href="../../../crisis/prework/">危机前阶段</a>
+          </li>
+                <li>
+          <a title="PagerDuty 用于危机响应操作" href="../../../crisis/pagerduty/">PagerDuty 用于危机响应操作</a>
+          </li>
+        </ul>
+      </li>
+    <li>
+        <span class="subsection">培训</span>
+        <ul>
+                <li>
+          <a title="培训概览" href="../../overview/">培训概览</a>
+          </li>
+                <li>
+          <a title="事件指挥官" href="../../incident_commander/">事件指挥官</a>
+          </li>
+                <li>
+          <a title="副指挥官" href="../../deputy/">副指挥官</a>
+          </li>
+                <li>
+          <a title="记录员" href="../../scribe/">记录员</a>
+          </li>
+                <li>
+          <a title="主题专家" href="../../subject_matter_expert/">主题专家</a>
+          </li>
+                <li>
+          <a title="客户联络员" href="../../customer_liaison/">客户联络员</a>
+          </li>
+                <li>
+          <a title="内部联络员" href="../../internal_liaison/">内部联络员</a>
+          </li>
+                <li>
+          <a title="术语表" href="../../glossary/">术语表</a>
+          </li>
+        </ul>
+      </li>
+    <li>
+        <span class="subsection">培训课程</span>
+        <ul>
+                <li class="active">
+          <a title="事件响应" href="./">事件响应</a>
+          <ul id="toc">
+            <li class="anchor">
+                  <a title="引言" href="#_1">引言</a>
+                </li>
+            <li class="anchor">
+                  <a title="学习如何有效管理事件" href="#_2">学习如何有效管理事件</a>
+                </li>
+            <li class="anchor">
+                  <a title="用平静取代混乱" href="#_3">用平静取代混乱</a>
+                </li>
+            <li class="anchor">
+                  <a title="什么是事件响应？" href="#_4">什么是事件响应？</a>
+                </li>
+            <li class="anchor">
+                  <a title="事件响应的目标" href="#_5">事件响应的目标</a>
+                </li>
+            <li class="anchor">
+                  <a title="什么是事件？" href="#_6">什么是事件？</a>
+                </li>
+            <li class="anchor">
+                  <a title="什么是重大事件？" href="#_7">什么是重大事件？</a>
+                </li>
+            <li class="anchor">
+                  <a title="严重性级别" href="#_8">严重性级别</a>
+                </li>
+            <li class="anchor">
+                  <a title="任何人都可以触发事件响应" href="#_9">任何人都可以触发事件响应</a>
+                </li>
+            <li class="anchor">
+                  <a title="通过聊天触发事件" href="#_10">通过聊天触发事件</a>
+                </li>
+            <li class="anchor">
+                  <a title="和平时期与战时" href="#_11">和平时期与战时</a>
+                </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    <li>
+        <span class="subsection">其他资源</span>
+        <ul>
+                <li>
+          <a title="阅读材料" href="../../../resources/reading/">阅读材料</a>
+          </li>
+                <li>
+          <a title="ChatOps" href="../../../resources/chatops/">ChatOps</a>
+          </li>
+                <li>
+          <a title="反模式" href="../../../resources/anti_patterns/">反模式</a>
+          </li>
+        </ul>
+      </li>
+            <li>
+          <a title="关于" href="../../../about/">关于</a>
+          </li>
+    </ul>
+</nav>
+
+      <article>
+        <h1>事件响应</h1>
+        <section id="downloads">
+  
+  <div id="download-link-pdf" class="download-link">
+    <a href="/assets/pdf/pagerduty_incident_response_training_public.pdf"
+       target="_blank"
+       title="Download slides as PDF."
+       data-action="download"
+       aria-label="Download PDF">
+      <i class="material-icons">file_download</i>Slides
+    </a>
+  </div>
+  
+  
+</section>
+        
+        <div class="admonition info">
+<p class="admonition-title">事件响应培训课程（2018）</p>
+<p>这是“事件响应培训”的开源版本，我们为事件响应和事件指挥提供的PagerDuty培训课程。它最初是作为培训新事件指挥官的内部课程，现已发展成为我们现在公开提供的课程。这是2018年培训的快照。最新版本现已是我们<a href="https://university.pagerduty.com/">PagerDuty大学</a>课程的一部分。</p>
+<p>它包含大量关于我们流程的介绍性信息，特别是关于事件指挥官角色的详细信息。所有信息已经作为我们<a href="https://response.pagerduty.com">公开文档</a>的一部分提供，这只是以一种希望更具吸引力的方式呈现它。欢迎您将其作为自己组织培训的基础。</p>
+<p>这里呈现的文本是通常交付培训的半准确转录。如果您更喜欢，还可以观看这个课程更早版本的<a href="#video">视频</a>。</p>
+</div>
+<hr />
+<h3 id="_1">引言<a class="headerlink" href="#_1" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="001" /><label for="001"><img alt="001" src="../../../assets/slides/incident_response/incident_response.001.jpeg" /></label>
+<em>001. "事件响应培训".</em></p>
+<p>嗨，我是Rich，欢迎参加“事件响应培训”。这是我们PagerDuty内部培训的简短版本，我们用它来培训我们的新事件指挥官。它已经稍微改编以适应更广泛的受众，但大部分内容正是我们自己运行的内容。我们无法涵盖所有内容，否则我们将在这里待上几天，但我会介绍我们流程中一些最重要的部分。我会尽量简短。</p>
+<p>实际上，我们有多少时间？有人能帮我计时吗？那太好了，谢谢！</p>
+<hr />
+<h3 id="_2">学习如何有效管理事件<a class="headerlink" href="#_2" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="002" /><label for="002"><img alt="002" src="../../../assets/slides/incident_response/incident_response.002.jpeg" /></label>
+<em>002. 学习如何有效管理事件.</em></p>
+<p>本次会议的目标是让您了解如何在组织内有效管理事件。我将描述我们在PagerDuty管理关键事件所使用的流程，并更详细地谈论一个特定的角色，称为“事件指挥官”。</p>
+<p>这不是销售宣传。我不是销售团队的成员，这也不是关于如何使用PagerDuty管理您的事件的演讲（尽管如果您这样做显然会很棒）。今天的目的是向您介绍我们在PagerDuty内部如何管理事件，并为您提供大量实用的信息，您可以将其带回自己的组织，以开始或改进您自己的事件响应流程。</p>
+<hr />
+<h3 id="_3">用平静取代混乱<a class="headerlink" href="#_3" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="003" /><label for="003"><img alt="003" src="../../../assets/slides/incident_response/incident_response.003.jpeg" /></label>
+<em>003. 用平静取代混乱.</em></p>
+<p>让我们从一个快速问题开始。今天在您的组织中事件响应通常是如何进行的？是一个顺畅和精简的过程，还是很多人互相交谈？对大多数人来说，可能介于两者之间。</p>
+<p>我们希望减少后者，增加前者。我们希望用平静取代混乱。恐慌和混乱在事件中不好，它们只会加剧事情并导致更多混乱。我们希望事情平静有序。</p>
+<hr />
+<h3 id="_4">什么是事件响应？<a class="headerlink" href="#_4" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="004" /><label for="004"><img alt="004" src="../../../assets/slides/incident_response/incident_response.004.jpeg" /></label>
+<em>004. 什么是事件响应？ <a href="../../before/what_is_an_incident/#what-is-incident-response">文档参考</a></em></p>
+<p>因此，当我们谈论事件响应时，我们真正谈论的是一种有组织的方法来处理和管理事件。这是我们在PagerDuty对事件响应的定义。关键在于“有组织”这个词。我们不希望在每次警报响起时都惊慌失措。我们希望我们的响应几乎是例行的，每个人都像一台运转良好的机器一样协同工作。</p>
+<p>有一句我很喜欢的名言，来自一本很棒的书，叫做<a href="https://learning.oreilly.com/library/view/~/9781491917619/">《运营中的事件管理》</a>，这里很合适，</p>
+<blockquote>
+<p>火灾对消防部门来说不是紧急情况……[Y]ou expect a rapid response from a group of professionals, skilled in the art of solving whatever issues you are having.</p>
+</blockquote>
+<hr />
+<h3 id="_5">事件响应的目标<a class="headerlink" href="#_5" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="005" /><label for="005"><img alt="005" src="../../../assets/slides/incident_response/incident_response.005.jpeg" /></label>
+<em>005. 事件响应的目标。 <a href="../../../before/what_is_an_incident/#what-is-incident-response">文档参考</a></em></p>
+<p>您可能会惊讶地发现，事件响应的目标不仅仅是解决问题。给一千只猴子一个键盘，足够的时间，它们可能会解决您的问题。这不是好的事件响应。我们希望以一种限制造成的损害，减少恢复时间和成本的方式解决问题。我不仅仅是指财务成本，还有与工程师健康相关的成本。不断在凌晨3点叫醒人们可能会对他们的健康和幸福产生戏剧性的负面影响。</p>
+<p>如果财务影响是您唯一关心的，那么不要忘记<strong>人很贵</strong>。在一个大型组织中，一个有100人坐在那里大部分时间闲置几个小时的电话桥并不罕见。如果每个人每小时花费约100美元，那就是每小时1万美元！这对企业来说真的很贵。</p>
+<hr />
+<h3 id="_6">什么是事件？<a class="headerlink" href="#_6" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="006" /><label for="006"><img alt="006" src="../../../assets/slides/incident_response/incident_response.006.jpeg" /></label>
+<em>006. 什么是事件？ <a href="../../../before/what_is_an_incident/#what-is-an-incident">文档参考</a></em></p>
+<p>但在我们能够响应事件之前，我们需要<a href="../../../before/what_is_an_incident/">定义什么是事件</a>。听起来很傻，但如果你不确定某件事是否是事件，你就不知道是否要响应它。</p>
+<p>这是PagerDuty对事件的定义，</p>
+<blockquote>
+<p>一个未计划的干扰或服务降级，正在积极影响客户使用产品。</p>
+</blockquote>
+<p>这里的“客户”不仅仅指外部客户，还可以指内部客户。</p>
+<p>您的定义可能不同，这没关系。我只是想给您一个可以开始的定义的想法。您希望您的定义简单，不超过一句话，并且任何人都能轻松理解。</p>
+<p>您可能会注意到，这是一个相当广泛的定义。一个打字错误在技术上符合这个描述。以及全面中断。显然这些是非常不同的场景。所以我们还有别的东西。</p>
+<hr />
+<h3 id="_7">什么是重大事件？<a class="headerlink" href="#_7" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="007" /><label for="007"><img alt="007" src="../../../assets/slides/incident_response/incident_response.007.jpeg" /></label>
+<em>007. 什么是重大事件？ <a href="../../../before/what_is_an_incident/#what-is-a-major-incident">文档参考</a></em></p>
+<p>我们还有我们称之为<strong>重大事件</strong>的东西。这是任何需要团队之间协调响应的事件。再次强调，这只是我们在PagerDuty的定义，欢迎您使用自己的定义。</p>
+<p>这个定义背后的意图是，有时事件可以由单个团队处理，可能是遇到麻烦的服务的所有者。这很少需要大规模响应。但一旦他们需要涉及另一个团队，无论是客户支持还是数据库管理员，那么我们就宣布它为重大事件，并启动一个更大的响应。这里的<strong>协调</strong>是关键，我们稍后会详细讨论。</p>
+<p>但这仍然涵盖了相当广泛的潜在事件。我们可以更具体。</p>
+<hr />
+<h3 id="_8">严重性级别<a class="headerlink" href="#_8" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="008" /><label for="008"><img alt="008" src="../../../assets/slides/incident_response/incident_response.008.jpeg" /></label>
+<em>008. 严重性级别。 <a href="../../../before/severity_levels/">文档参考</a></em></p>
+<p>我们还使用<a href="../../../before/severity_levels/">严重性级别</a>来确定事件的严重程度，以及它得到的响应类型。我们使用<code>SEV-5</code>到<code>SEV-1</code>作为我们的级别，但您可能使用不同的方案，<code>P0</code>到<code>P5</code>，或者甚至是表情符号，🔥到💩，等等。</p>
+<p>假设您正在查看网站流量的图表。您通常可以根据受影响的指标来确定严重性。因此，随着网站流量的下降，严重性增加。</p>
+<p>您通常会达到某个预定义的目标或水印，一旦指标超过，您就自动认为某事是重大事件。在PagerDuty，这是<code>SEV-3</code>和<code>SEV-2</code>之间的区别，但对您的组织来说可能不同。然后，随着事情变得更加严峻，我们进入我们的<code>SEV-2</code>和<code>SEV-1</code>，当事情完全平线时。</p>
+<p>拥有预定义的阈值和指标可以让您为响应流程设置自动触发器。</p>
+<details class="aside hide-arrow" open="open">
+<summary>我们建议使用与业务影响相关的指标。</summary>
+<p>指标非常有用，通常在它们与业务影响相关时效果最好。例如，我们在PagerDuty监控的指标是“每秒出站通知数”，在亚马逊可能是“每秒订单数”，在Netflix可能是“每秒流开始数”，等等。监控这些重要的业务指标将让您使用自动化来确定事件的严重性和使用的响应类型。</p>
+<p>如果您使用与业务影响无关的指标（例如，“主机CPU使用率高”），那么很难，有时甚至不可能确定与该指标相关的事件的严重性。</p>
+<p>您希望使用一个指标，让您知道您的业务状况如何，而不是某个特定设备的状况如何。</p>
+</details>
+<hr />
+<h3 id="_9">任何人都可以触发事件响应<a class="headerlink" href="#_9" title="Permanent link">#</a></h3>
+<p><em><input type="checkbox" id="009" /><label for="009"><img alt="009" src="../../../assets/slides/incident_response/incident_response.009.jpeg" /></label></em>
+<em>009. 任何人都可以随时触发事件响应。</em></p>
+<p>但有时您不会立即知道影响。或者也许您的指标还没有达到预定义的阈值。我们仍然需要一种方法让一个人跳进来并称某事为重大事件。</p>
+<p>因此，尽管我们在PagerDuty有自动化，但我们也有一个机制，任何人都可以随时触发我们的重大事件响应流程。这对我们非常重要。我们发现，<strong>降低触发事件响应的障碍已经导致事件解决速度的显著增加</strong>。</p>
+<p>我们不希望人们因为正式警报还没有响起而坐在某件事上。如果客户支持迅速收到大量请求，这是一个很好的迹象表明有问题，我们需要他们能够拉响警报。我们甚至有实习生在第一周就触发了我们的事件响应流程。如果清洁工走过一张图表并认为它看起来不对，我希望他们能够触发事件响应。</p>
+<p>我们最初犹豫是否引入这一点，因为我们担心这会导致大量的误报。人们出于过度谨慎触发警报，但实际上并不是事件。但我们看到了相反的情况，人们非常擅长自我监管。只有两次我们遇到了误报，而且根据当时可用的信息，这两次都是合理的。即使您偶尔遇到误报，您也可以将其作为免费练习。</p>
+<hr />
+<h3 id="_10">通过聊天触发事件<a class="headerlink" href="#_10" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="010" /><label for="010"><img alt="010" src="../../../assets/slides/incident_response/incident_response.010.jpeg" /></label>
+<em>010. 通过聊天触发事件。 <a href="../../../resources/chatops/#ic-page">文档参考</a></em></p>
+<p>那么我们如何让人类触发流程呢？我们用一个<a href="../../../resources/chatops/">聊天命令</a>来做，但不要觉得这是唯一正确的方式。我只是想展示我们是如何做的，给您一个想法。您可以随心所欲地做。空气喇叭，办公室里的闪光灯，雇佣一个mariachi乐队，等等。</p>
+<p>关键是您希望有一种快速、简单且对每个人都可用的触发响应的方式。</p>
+<hr />
+<h3 id="_11">和平时期与战时<a class="headerlink" href="#_11" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="011" /><label for="011"><img alt="011" src="../../../assets/slides/incident_response/incident_response.011.jpeg" /></label>
+<em>011. 和平时期与战时。 <a href="../../../before/what_is_an_incident/#mentality-shift">文档参考</a></em></p>
+<p>一旦事件被触发，我们需要切换我们的思维模式。我们需要一个<a href="../../../before/what_is_an_incident/#mentality-shift">心态转变</a>。我们希望在“正常运营”和“正在进行事件”之间有所区别。我们需要从和平时期的决策转向战时。从日常运营转向保卫业务。</p>
+<p>在正常运营中被认为完全不可接受的事情，比如部署代码而不运行任何测试，在重大事件期间当您需要快速恢复服务时可能是完全可以接受的。</p>
+<p>您</p>
+        
+      </article>
+    </main>
+
+      <nav id="pagination">
+    <div class="content-wrapper">
+      <div class="previous">
+        
+          <a href="../../glossary/" title="术语表">
+            <span class="label">Previous</span>
+            <div class="page">
+              <div class="button" role="button" aria-label="Previous">
+                <i class="icon icon-previous"></i>
+              </div>
+              <div class="title">
+                术语表
+              </div>
+            </div>
+          </a>
+        
+      </div>
+
+      <div class="next">
+        
+          <a href="../../../resources/reading/" title="阅读材料">
+            <span class="label">Next</span>
+            <div class="page">
+              <div class="title">
+                阅读材料
+              </div>
+              <div class="button" role="button" aria-label="Next">
+                <i class="icon icon-next"></i>
+              </div>
+            </div>
+          </a>
+        
+      </div>
+    </div>
+  </nav>
+
+    <footer>
+        <div class="content-wrapper">
+        <ul id="ops-guides">
+      <h2>Ops Guides</h2>
+      <p>Explore our other guides!</p>
+      <li id="og-incident-response" class="ops-guide">
+        <a href="https://response.pagerduty.com">Incident Response</a>
+        <p>A detailed outline of response processes for technical incidents practices by PagerDuty and our leading customers.</p>
+      </li>
+
+      <li id="og-security-training" class="ops-guide">
+        <a href="https://sudo.pagerduty.com">Security Training</a>
+        <p>Open source security training used at PagerDuty - adaptable for your own technical and non-technical teams.</p>
+      </li>
+
+      <li id="og-postmortems" class="ops-guide">
+        <a href="https://postmortems.pagerduty.com/">Postmortems</a>
+        <p>Comprehensive guide on how to conduct effective postmortems. Learn how to build a culture of blamelessness.</p>
+      </li>
+
+      <li id="og-operational-reviews" class="ops-guide">
+        <a href="https://reviews.pagerduty.com/">Operational Reviews</a>
+        <p>Gauge incident impact using data-driven regularly scheduled reviews to better manage the hidden cost of real-time ops.</p>
+      </li>
+
+      <li id="og-business-response" class="ops-guide">
+        <a href="https://business-response.pagerduty.com/">Business Response</a>
+        <p>Learn how to align the business needs with technical needs when severe technical incidents occur.</p>
+      </li>
+
+      <li id="og-stakeholder-comms" class="ops-guide">
+        <a href="https://stakeholders.pagerduty.com/">Stakeholder Comms</a>
+        <p>Build an effective communiction strategy for your internal stakeholders during major incidents.</p>
+      </li>
+
+      <li id="og-retrospectives" class="ops-guide">
+        <a href="https://retrospectives.pagerduty.com/">Retrospectives</a>
+        <p>Iteratively learn from working processes and behaviors while cultivating a culture of continuous improvement.</p>
+      </li>
+
+      <li id="og-ownership" class="ops-guide">
+        <a href="https://ownership.pagerduty.com">Ownership</a>
+        <p>Ensure the reliability of systems & services through a deeper understanding of how code functions in production.</p>
+      </li>
+
+      <li id="og-devsecops" class="ops-guide">
+        <a href="https://devsecops.pagerduty.com/">DevSecOps</a>
+        <p>New to DevSecOps, or wondering what it is and how to implement it? This guide will help you get started.</p>
+      </li>
+
+      <li id="og-goingoncall" class="ops-guide">
+        <a href="https://goingoncall.pagerduty.com/">Going On-Call</a>
+        <p>The complete resource to going on call for teams and managers.</p>
+      </li>
+
+      <li id="og-autoremediation" class="ops-guide">
+        <a href="https://autoremediation.pagerduty.com/">Auto Remediation</a>
+        <p>This guide will help you to leverage automation in your Incident Response process.</p>
+      </li>
+
+      <li id="og-customerservice" class="ops-guide">
+        <a href="https://customerserviceops.pagerduty.com/">Customer Service</a>
+        <p>Excellent Customer Service means excellent customer experience, even during incidents.</p>
+      </li>
+    </ul>
+
+    <p id="outro">
+      Made with <span class="material-icons love" aria-label="Love">favorite</span> at PagerDuty.
+    </p>
+
+    <p id="github-repo-link">
+      <a target="_blank"
+         title="View the source for this documentation on GitHub."
+         href="https://github.com/pagerduty/incident-response-docs">View Source on GitHub</a>
+    </p>
+
+    <!-- It's our theme, so we can just hardcode these :p -->
+    <ul id="social-links">
+      <li class="twitter">
+        <a title="View the @PagerDuty Twitter feed."
+           href="https://twitter.com/PagerDuty">Twitter</a>
+      </li>
+      <li class="github">
+        <a title="View PagerDuty on GitHub"
+           href="https://github.com/PagerDuty">GitHub</a>
+      </li>
+      <li class="pagerduty">
+        <a title="View the PagerDuty website."
+          href="https://www.pagerduty.com/">PagerDuty</a>
+      </li>
+    </ul>
+  </div>
+    </footer>
+
+        
+      <script src="../../../../../../search/main.js"></script>
+    
+    
+      <script src="/assets/javascripts/jquery-3.6.0-slim.min.js"></script>
+      <script src="/assets/javascripts/slides.js"></script>
+    
+    
+      <script>
+        /* Google Analytics */
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-8759953-1', 'auto');
+        ga('send', 'pageview');
+
+        /* Track outbound links */
+        var buttons = document.querySelectorAll('a');
+        Array.prototype.map.call(buttons, function(item) {
+          if (item.host != document.location.host) {
+            item.addEventListener('click', function() {
+              var action = item.getAttribute('data-action') || 'follow';
+              ga('send', 'event', 'outbound', action, item.href);
+            });
+          }
+        });
+
+        /* Register handler to log search on blur */
+        var query = document.querySelector('#mkdocs-search-query');
+        query.addEventListener('blur', function() {
+          if (this.value) {
+            var path = document.location.pathname;
+            ga('send', 'pageview', path + '?q=' + this.value);
+          }
+        });
+      </script>
+    
+  </body>
+</html>

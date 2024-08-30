@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>有效的事后分析 - PagerDuty 事件响应文档</title>
+
+    <!-- Author and License -->
+    <meta name="dcterms.license"      content="http://www.apache.org/licenses/LICENSE-2.0" />
+    <meta name="author"               content="PagerDuty, Inc." />
+    <meta name="dcterms.rightsHolder" content="PagerDuty, Inc." />
+    <meta name="dcterms.rights"       content="版权所有 &copy; PagerDuty, Inc." />
+    <!-- Page Description -->
+    <meta name="description" content="关于 PagerDuty 事件响应流程的一系列信息。不仅包括如何为新员工准备待命职责，还包括如何处理重大事件，包括准备和事后工作。" />
+    <meta name="robots"      content="index, follow, archive" />
+    <meta name="generator"   content="mkdocs-1.6.0, mkdocs-theme-pagerduty" />
+
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://response.pagerduty.com/after/effective_post_mortems/">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon"    href="/assets/images/favicon.png" type="image/png" />
+    <link rel="icon"             href="/assets/images/favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/assets/images/favicon.png" />
+
+    <!-- Mobile -->
+    <meta name="viewport"    content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+    <meta name="theme-color" content="#005a24" />
+
+    <!-- Apple -->
+    <meta name="apple-mobile-web-app-title"            content="PagerDuty 事件响应文档" />
+    <meta name="apple-mobile-web-app-capable"          content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <!-- Open Graph -->
+    <meta property="og:url"         content="https://response.pagerduty.com/after/effective_post_mortems/" />
+    <meta property="og:title"       content="有效的事后分析 - PagerDuty 事件响应文档" />
+    <meta property="og:site_name"   content="PagerDuty 事件响应文档" />
+    <meta property="og:description" content="关于 PagerDuty 事件响应流程的一系列信息。不仅包括如何为新员工准备待命职责，还包括如何处理重大事件，包括准备和事后工作。" />
+    <meta property="og:image"       content="https://response.pagerduty.com/assets/img/covers/default.png" />
+    <meta property="og:locale"      content="en_US" />
+    <meta property="og:type"        content="website" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card"        content="summary_large_image" />
+    <meta name="twitter:title"       content="有效的事后分析 - PagerDuty 事件响应文档" />
+    <meta name="twitter:description" content="关于 PagerDuty 事件响应流程的一系列信息。不仅包括如何为新员工准备待命职责，还包括如何处理重大事件，包括准备和事后工作。" />
+    <meta name="twitter:image"       content="https://response.pagerduty.com/assets/img/covers/default.png" />
+        <!-- Style -->
+    <link rel="stylesheet" href="../../assets/stylesheets/fonts.css" />
+    <link rel="stylesheet" href="../../assets/stylesheets/reset.css" />
+    <link rel="stylesheet" href="../../assets/stylesheets/pagerduty.css" />
+    <link rel="stylesheet" href="../../assets/stylesheets/code.css" />
+    
+    
+      <link rel="stylesheet" href="../../../../assets/css/custom.css" />
+    
+  </head>
+  <body class="">
+    <header>
+        <div class="content-wrapper">
+    <div id="logo">
+      <a href="../.." title="Go to 事件响应 homepage.">
+        <img src="../../assets/images/logo.png" title="PagerDuty" />
+      </a>
+      <span class="subtitle">
+        事件响应
+      </span>
+    </div>
+
+    
+<!-- This is a cheat for mobile search, allowing us to store state in a checkbox. -->
+<input id="mobile-search-link" type="checkbox"  />
+<label id="mobile-search-link-selector" for="mobile-search-link" role="button"></label>
+<div id="search">
+  <input name="q" id="mkdocs-search-query" type="search" placeholder="Search..." />
+  <div id="mkdocs-search-results"><p>No results found</p></div>
+</div>
+
+<!-- This is used for MkDocs search. Hardcoding to '/' so CSP is easier. -->
+<script>var base_url = '/';</script>
+
+  </div>
+    </header>
+
+      <nav id="breadcrumbs">
+    <div class="content-wrapper">
+      <p><a href="../..">事件响应</a></p>
+      
+        
+          
+            <p>事件后</p>
+          
+        
+        <h1>有效的事后分析</h1>
+      
+    </div>
+  </nav>
+    
+
+    <main>
+      <!-- This is a cheat for mobile navigation, allowing us to store state in a checkbox. -->
+<input id="mobile-nav-link" type="checkbox"  />
+<label id="mobile-nav-link-selector" for="mobile-nav-link" role="button"></label>
+<nav>
+  <div id="nav-title">事件响应</div>
+<ul>
+          <li>
+          <a title="首页" href="../..">首页</a>
+          </li>
+            <li>
+          <a title="入门指南" href="../../getting_started/">入门指南</a>
+          </li>
+    <li>
+        <span class="subsection">待命</span>
+        <ul>
+                <li>
+          <a title="待命职责" href="../../oncall/being_oncall/">待命职责</a>
+          </li>
+                <li>
+          <a title="谁在待命?" href="../../oncall/whos_oncall/">谁在待命?</a>
+          </li>
+                <li>
+          <a title="告警原则" href="../../oncall/alerting_principles/">告警原则</a>
+          </li>
+        </ul>
+      </li>
+    <li>
+        <span class="subsection">事件前</span>
+        <ul>
+                <li>
+          <a title="什么是事件?" href="../../before/what_is_an_incident/">什么是事件?</a>
+          </li>
+                <li>
+          <a title="严重性级别" href="../../before/severity_levels/">严重性级别</a>
+          </li>
+                <li>
+          <a title="不同角色" href="../../before/different_roles/">不同角色</a>
+          </li>
+                <li>
+          <a title="通话礼仪" href="../../before/call_etiquette/">通话礼仪</a>
+          </li>
+                <li>
+          <a title="复杂事件" href="../../before/complex_incidents/">复杂事件</a>
+          </li>
+        </ul>
+      </li>
+    <li>
+        <span class="subsection">事件中</span>
+        <ul>
+                <li>
+          <a title="事件处理" href="../../during/during_an_incident/">事件处理</a>
+          </li>
+                <li>
+          <a title="外部沟通指南" href="../../during/external_communication_guidelines/">外部沟通指南</a>
+          </li>
+                <li>
+          <a title="安全事件" href="../../during/security_incident_response/">安全事件</a>
+          </li>
+        </ul>
+      </li>
+    <li>
+        <span class="subsection">事件后</span>
+        <ul>
+                <li>
+          <a title="事件后处理" href="../after_an_incident/">事件后处理</a>
+          </li>
+                <li>
+          <a title="事后分析流程" href="../post_mortem_process/">事后分析流程</a>
+          </li>
+                <li>
+          <a title="事后分析模板" href="../post_mortem_template/">事后分析模板</a>
+          </li>
+                <li class="active">
+          <a title="有效的事后分析" href="./">有效的事后分析</a>
+          <ul id="toc">
+            <li class="anchor">
+                  <a title="应该做的" href="#_1">应该做的</a>
+                </li>
+            <li class="anchor">
+                  <a title="不应该做的" href="#_2">不应该做的</a>
+                </li>
+            <li class="anchor">
+                  <a title="建议" href="#_3">建议</a>
+                </li>
+            <li class="anchor">
+                  <a title="审查" href="#_4">审查</a>
+                </li>
+            <li class="anchor">
+                  <a title="示例" href="#_5">示例</a>
+                </li>
+            <li class="anchor">
+                  <a title="有用资源" href="#_6">有用资源</a>
+                </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    <li>
+        <span class="subsection">危机响应</span>
+        <ul>
+                <li>
+          <a title="危机响应介绍" href="../../crisis/crisis_intro/">危机响应介绍</a>
+          </li>
+                <li>
+          <a title="术语" href="../../crisis/terms/">术语</a>
+          </li>
+                <li>
+          <a title="危机领导" href="../../crisis/leadership/">危机领导</a>
+          </li>
+                <li>
+          <a title="危机响应操作" href="../../crisis/operations/">危机响应操作</a>
+          </li>
+                <li>
+          <a title="危机前阶段" href="../../crisis/prework/">危机前阶段</a>
+          </li>
+                <li>
+          <a title="PagerDuty 用于危机响应操作" href="../../crisis/pagerduty/">PagerDuty 用于危机响应操作</a>
+          </li>
+        </ul>
+      </li>
+    <li>
+        <span class="subsection">培训</span>
+        <ul>
+                <li>
+          <a title="培训概览" href="../../training/overview/">培训概览</a>
+          </li>
+                <li>
+          <a title="事件指挥官" href="../../training/incident_commander/">事件指挥官</a>
+          </li>
+                <li>
+          <a title="副指挥官" href="../../training/deputy/">副指挥官</a>
+          </li>
+                <li>
+          <a title="记录员" href="../../training/scribe/">记录员</a>
+          </li>
+                <li>
+          <a title="主题专家" href="../../training/subject_matter_expert/">主题专家</a>
+          </li>
+                <li>
+          <a title="客户联络员" href="../../training/customer_liaison/">客户联络员</a>
+          </li>
+                <li>
+          <a title="内部联络员" href="../../training/internal_liaison/">内部联络员</a>
+          </li>
+                <li>
+          <a title="术语表" href="../../training/glossary/">术语表</a>
+          </li>
+        </ul>
+      </li>
+    <li>
+        <span class="subsection">培训课程</span>
+        <ul>
+                <li>
+          <a title="事件响应" href="../../training/courses/incident_response/">事件响应</a>
+          </li>
+        </ul>
+      </li>
+    <li>
+        <span class="subsection">其他资源</span>
+        <ul>
+                <li>
+          <a title="阅读材料" href="../../resources/reading/">阅读材料</a>
+          </li>
+                <li>
+          <a title="ChatOps" href="../../resources/chatops/">ChatOps</a>
+          </li>
+                <li>
+          <a title="反模式" href="../../resources/anti_patterns/">反模式</a>
+          </li>
+        </ul>
+      </li>
+            <li>
+          <a title="关于" href="../../about/">关于</a>
+          </li>
+    </ul>
+</nav>
+
+      <article>
+        <h1>有效的事后分析</h1>
+        <section id="downloads">
+  
+  
+</section>
+        
+        <p>编写有效的事后分析报告使我们能够快速从错误中学习，并改进我们的系统和流程，惠及所有人。我们希望确保我们编写的事后分析报告详细且准确，以便从中获得最大的益处。本指南列出了一些我们可以做的事情，以确保我们的事后分析报告有效。</p>
+<h2 id="_1">应该做的<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
+<ul>
+<li>确保时间线准确反映了事件。</li>
+<li>描述任何新手可能不理解的技术术语/缩略词。</li>
+<li><a href="https://www.pagerduty.com/blog/postmortem-understand-service-reliability/">讨论事件如何符合我们对受影响服务健康和弹性的理解</a>。</li>
+</ul>
+<h2 id="_2">不应该做的<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
+<ul>
+<li>除非真的是服务中断，否则不要使用“中断”这个词。我们希望确保准确反映事件的影响，而“中断”通常是一个过于宽泛的术语。它可能让客户误以为我们完全不可用，而实际情况远非如此。</li>
+<li>不要改变细节或事件以使事情“看起来更好”。我们需要在事后分析报告中保持诚实，即使是对我们自己，否则它们就会失去效力。</li>
+<li>不要点名批评某人。我们保持事后分析报告无责备。如果某人部署了一个破坏性的变更，那不是他们的错，而是我们的错，因为我们有一个允许他们部署破坏性变更的系统，等等。</li>
+</ul>
+<h2 id="_3">建议<a class="headerlink" href="#_3" title="Permanent link">#</a></h2>
+<ul>
+<li>避免使用“人为错误”的概念。这与上面的“点名批评”有关，但有一个微妙的区别——很少有错误“根植”于人的行为，通常有多个促成因素（人运行的脚本没有速率限制，文档已过时，等等）可以而且应该被解决。</li>
+<li>避免在时间线或描述部分讨论“替代现实”。例如，“服务X今天早上开始看到流量增加，并停止响应请求。<em>如果服务X对客户的请求进行了速率限制，</em>它就不会失败。”和“服务X今晚开始缓慢响应请求，<em>监控不足</em>无法检测到CPU使用率升高。”这两个例子将描述实际问题与假设的修复混合在一起——将改进与描述分开，以便可以分别讨论。</li>
+<li>这些视频更详细地讨论了上述观点：</li>
+<li>“<a href="https://www.youtube.com/watch?v=TqaFT-0cY7U">事故调查中的三个分析陷阱</a>”</li>
+<li>“<a href="https://www.youtube.com/watch?v=rHeukoWWtQ8">关于人为错误的两种观点</a>”</li>
+</ul>
+<h2 id="_4">审查<a class="headerlink" href="#_4" title="Permanent link">#</a></h2>
+<p>我们在Slack上有一个专门用于在预定会议前审查事后分析报告的房间。以下是我们关注的一些事项：</p>
+<ul>
+<li>它是否提供了足够的细节？</li>
+<li>它是否不仅仅是指出哪里出了问题，而是深入挖掘问题的根本原因？</li>
+<li>它是否将“发生了什么？”与“如何修复？”分开？</li>
+<li>提出的行动项是否合理？它们是否足够明确？</li>
+<li>事后分析报告是否写得好且易于理解？</li>
+<li>对外信息是否能引起客户的共鸣，还是可能会引起愤怒？</li>
+</ul>
+<p>审查事后分析报告不是关于挑剔拼写错误（尽管我们应该确保对外信息没有充满拼写错误）。它是为了提供建设性的反馈，以便从事后分析报告中获得最大的益处。</p>
+<h2 id="_5">示例<a class="headerlink" href="#_5" title="Permanent link">#</a></h2>
+<p>以下是其他公司的一些事后分析报告示例，供参考，</p>
+<ul>
+<li><a href="https://blog.lastpass.com/2015/06/lastpass-security-notice/">LastPass</a></li>
+<li><a href="https://aws.amazon.com/message/5467D2/">AWS</a></li>
+<li><a href="https://www.twilio.com/blog/2013/07/billing-incident-post-mortem-breakdown-analysis-and-root-cause.html">Twilio</a></li>
+<li><a href="https://status.heroku.com/incidents/151">Heroku</a></li>
+<li><a href="https://netflixtechblog.com/post-mortem-of-october-22-2012-aws-degradation-efcee3ab40d5">Netflix</a></li>
+<li><a href="https://www.gov.uk/government/publications/kyle-beck-safety-digest/near-miss-at-kyle-beck-3-august-2016">GOV.UK 铁路事故调查</a></li>
+<li><a href="https://github.com/danluu/post-mortems">事后分析报告列表！</a></li>
+</ul>
+<h2 id="_6">有用资源<a class="headerlink" href="#_6" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="https://www.slideshare.net/jallspaw/advanced-postmortem-fu-and-human-error-101-velocity-2011">高级事后分析技巧和人为错误101（Velocity 2011）</a></li>
+<li><a href="https://fractio.nl/2015/10/30/blame-language-sharing/">责备。语言。分享。</a></li>
+</ul>
+        
+      </article>
+    </main>
+
+      <nav id="pagination">
+    <div class="content-wrapper">
+      <div class="previous">
+        
+          <a href="../post_mortem_template/" title="事后分析模板">
+            <span class="label">Previous</span>
+            <div class="page">
+              <div class="button" role="button" aria-label="Previous">
+                <i class="icon icon-previous"></i>
+              </div>
+              <div class="title">
+                事后分析模板
+              </div>
+            </div>
+          </a>
+        
+      </div>
+
+      <div class="next">
+        
+          <a href="../../crisis/crisis_intro/" title="危机响应介绍">
+            <span class="label">Next</span>
+            <div class="page">
+              <div class="title">
+                危机响应介绍
+              </div>
+              <div class="button" role="button" aria-label="Next">
+                <i class="icon icon-next"></i>
+              </div>
+            </div>
+          </a>
+        
+      </div>
+    </div>
+  </nav>
+
+    <footer>
+        <div class="content-wrapper">
+        <ul id="ops-guides">
+      <h2>Ops Guides</h2>
+      <p>Explore our other guides!</p>
+      <li id="og-incident-response" class="ops-guide">
+        <a href="https://response.pagerduty.com">Incident Response</a>
+        <p>A detailed outline of response processes for technical incidents practices by PagerDuty and our leading customers.</p>
+      </li>
+
+      <li id="og-security-training" class="ops-guide">
+        <a href="https://sudo.pagerduty.com">Security Training</a>
+        <p>Open source security training used at PagerDuty - adaptable for your own technical and non-technical teams.</p>
+      </li>
+
+      <li id="og-postmortems" class="ops-guide">
+        <a href="https://postmortems.pagerduty.com/">Postmortems</a>
+        <p>Comprehensive guide on how to conduct effective postmortems. Learn how to build a culture of blamelessness.</p>
+      </li>
+
+      <li id="og-operational-reviews" class="ops-guide">
+        <a href="https://reviews.pagerduty.com/">Operational Reviews</a>
+        <p>Gauge incident impact using data-driven regularly scheduled reviews to better manage the hidden cost of real-time ops.</p>
+      </li>
+
+      <li id="og-business-response" class="ops-guide">
+        <a href="https://business-response.pagerduty.com/">Business Response</a>
+        <p>Learn how to align the business needs with technical needs when severe technical incidents occur.</p>
+      </li>
+
+      <li id="og-stakeholder-comms" class="ops-guide">
+        <a href="https://stakeholders.pagerduty.com/">Stakeholder Comms</a>
+        <p>Build an effective communiction strategy for your internal stakeholders during major incidents.</p>
+      </li>
+
+      <li id="og-retrospectives" class="ops-guide">
+        <a href="https://retrospectives.pagerduty.com/">Retrospectives</a>
+        <p>Iteratively learn from working processes and behaviors while cultivating a culture of continuous improvement.</p>
+      </li>
+
+      <li id="og-ownership" class="ops-guide">
+        <a href="https://ownership.pagerduty.com">Ownership</a>
+        <p>Ensure the reliability of systems & services through a deeper understanding of how code functions in production.</p>
+      </li>
+
+      <li id="og-devsecops" class="ops-guide">
+        <a href="https://devsecops.pagerduty.com/">DevSecOps</a>
+        <p>New to DevSecOps, or wondering what it is and how to implement it? This guide will help you get started.</p>
+      </li>
+
+      <li id="og-goingoncall" class="ops-guide">
+        <a href="https://goingoncall.pagerduty.com/">Going On-Call</a>
+        <p>The complete resource to going on call for teams and managers.</p>
+      </li>
+
+      <li id="og-autoremediation" class="ops-guide">
+        <a href="https://autoremediation.pagerduty.com/">Auto Remediation</a>
+        <p>This guide will help you to leverage automation in your Incident Response process.</p>
+      </li>
+
+      <li id="og-customerservice" class="ops-guide">
+        <a href="https://customerserviceops.pagerduty.com/">Customer Service</a>
+        <p>Excellent Customer Service means excellent customer experience, even during incidents.</p>
+      </li>
+    </ul>
+
+    <p id="outro">
+      Made with <span class="material-icons love" aria-label="Love">favorite</span> at PagerDuty.
+    </p>
+
+    <p id="github-repo-link">
+      <a target="_blank"
+         title="View the source for this documentation on GitHub."
+         href="https://github.com/pagerduty/incident-response-docs">View Source on GitHub</a>
+    </p>
+
+    <!-- It's our theme, so we can just hardcode these :p -->
+    <ul id="social-links">
+      <li class="twitter">
+        <a title="View the @PagerDuty Twitter feed."
+           href="https://twitter.com/PagerDuty">Twitter</a>
+      </li>
+      <li class="github">
+        <a title="View PagerDuty on GitHub"
+           href="https://github.com/PagerDuty">GitHub</a>
+      </li>
+      <li class="pagerduty">
+        <a title="View the PagerDuty website."
+          href="https://www.pagerduty.com/">PagerDuty</a>
+      </li>
+    </ul>
+  </div>
+    </footer>
+
+        
+      <script src="../../../../search/main.js"></script>
+    
+    
+    
+      <script>
+        /* Google Analytics */
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-8759953-1', 'auto');
+        ga('send', 'pageview');
+
+        /* Track outbound links */
+        var buttons = document.querySelectorAll('a');
+        Array.prototype.map.call(buttons, function(item) {
+          if (item.host != document.location.host) {
+            item.addEventListener('click', function() {
+              var action = item.getAttribute('data-action') || 'follow';
+              ga('send', 'event', 'outbound', action, item.href);
+            });
+          }
+        });
+
+        /* Register handler to log search on blur */
+        var query = document.querySelector('#mkdocs-search-query');
+        query.addEventListener('blur', function() {
+          if (this.value) {
+            var path = document.location.pathname;
+            ga('send', 'pageview', path + '?q=' + this.value);
+          }
+        });
+      </script>
+    
+  </body>
+</html>
