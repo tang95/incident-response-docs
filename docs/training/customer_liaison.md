@@ -1,6 +1,6 @@
 ---
-封面: assets/img/covers/customer_liaison.png
-描述: 想要成为客户联络员吗？你来对地方了！
+cover: assets/img/covers/customer_liaison.png
+description: 想要成为客户联络员吗？你来对地方了！
 ---
 想要成为客户联络员吗？你来对地方了！
 

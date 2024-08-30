@@ -1,8 +1,8 @@
 ---
-封面: assets/img/covers/reading.png
-描述: 这是我们发现的有助于理解事件响应主题的额外阅读材料集合。
-主图: assets/img/headers/iStock-1097331490-3992x2242-e4f3f2d.png
-主图替代文本: PagerDuty 的事件响应
+cover: assets/img/covers/reading.png
+description: 这是我们发现的有助于理解事件响应主题的额外阅读材料集合。
+hero: assets/img/headers/iStock-1097331490-3992x2242-e4f3f2d.png
+hero_alt_text: PagerDuty 的事件响应
 ---
 
 这是我们发现的有助于理解事件响应主题的额外阅读材料集合。

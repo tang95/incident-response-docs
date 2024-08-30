@@ -1,6 +1,6 @@
 ---
-封面: assets/img/crisis/cover_crisisresponse.png
-描述: PagerDuty 的 Operations Cloud 提供了多种工具和功能，帮助您的组织有效管理危机。
+cover: assets/img/crisis/cover_crisisresponse.png
+description: PagerDuty 的 Operations Cloud 提供了多种工具和功能，帮助您的组织有效管理危机。
 ---
 
 ## PagerDuty 配置

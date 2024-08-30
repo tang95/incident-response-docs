@@ -1,6 +1,6 @@
 ---
-封面: assets/img/covers/being_on-call.png
-描述: 关于在PagerDuty担任待命职责的期望和责任概述，以及一些最佳实践和礼仪建议。
+cover: assets/img/covers/being_on-call.png
+description: 关于在PagerDuty担任待命职责的期望和责任概述，以及一些最佳实践和礼仪建议。
 ---
 待命期望和有用信息的总结。
 

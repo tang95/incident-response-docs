@@ -1,7 +1,7 @@
 ---
-封面: assets/img/crisis/cover_crisisresponse.png
-描述: 您组织的危机应对计划需要强有力的领导。正确的危机领导是基于价值观的，并在谨慎和深思熟虑地回应问题与有意地基于应对效果获取关注或新业务之间保持平衡。
-英雄图片: assets/img/headers/iStock-1097331490-3992x2242-e4f3f2d.png
+cover: assets/img/crisis/cover_crisisresponse.png
+description: 您组织的危机应对计划需要强有力的领导。正确的危机领导是基于价值观的，并在谨慎和深思熟虑地回应问题与有意地基于应对效果获取关注或新业务之间保持平衡。
+hero_alt_text: assets/img/headers/iStock-1097331490-3992x2242-e4f3f2d.png
 ---
 
 ## 危机应对管理操作简介

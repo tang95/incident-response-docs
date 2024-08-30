@@ -1,6 +1,6 @@
 ---
-封面: assets/img/covers/post-mortem_template.png
-描述: 这是我们在PagerDuty进行事后分析时使用的标准模板。每个部分都描述了您希望在该部分中包含的信息类型。
+cover: assets/img/covers/post-mortem_template.png
+description: 这是我们在PagerDuty进行事后分析时使用的标准模板。每个部分都描述了您希望在该部分中包含的信息类型。
 ---
 这是我们在PagerDuty进行事后分析时使用的标准模板。每个部分都描述了您希望在该部分中包含的信息类型。
 

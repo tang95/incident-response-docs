@@ -1,6 +1,6 @@
 ---
-封面: assets/img/covers/deputy.png
-描述: 想要成为副指挥官吗？你来对地方了！
+cover: assets/img/covers/deputy.png
+description: 想要成为副指挥官吗？你来对地方了！
 ---
 想要成为副指挥官吗？你来对地方了！
 

@@ -1,7 +1,7 @@
 ---
-封面: assets/img/covers/training_overview.png
-标题: 培训概览
-描述: 了解PagerDuty重大事件响应流程是成为PagerDuty有效待命工程师的重要部分。本节概述了我们针对参与事件响应的各种角色的培训材料，以及来自政府机构的额外信息和培训材料。
+cover: assets/img/covers/training_overview.png
+title: 培训概览
+description: 了解PagerDuty重大事件响应流程是成为PagerDuty有效待命工程师的重要部分。本节概述了我们针对参与事件响应的各种角色的培训材料，以及来自政府机构的额外信息和培训材料。
 ---
 了解PagerDuty重大事件响应流程是成为PagerDuty有效待命工程师的重要部分。本节概述了我们针对参与事件响应的各种角色的培训材料，以及来自政府机构的额外信息和培训材料。
 

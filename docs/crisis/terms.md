@@ -1,6 +1,6 @@
 ---
-封面: assets/img/crisis/cover_crisisresponse.png
-描述: 如果您或您的组织对危机应对尚不熟悉，这些术语将帮助您建立理解的基础。
+cover: assets/img/crisis/cover_crisisresponse.png
+description: 如果您或您的组织对危机应对尚不熟悉，这些术语将帮助您建立理解的基础。
 ---
 
 以下术语列表将帮助您导航本文档中的危机应对部分。您会发现一些术语与事件应对中使用的术语相似，而有些则具有稍微不同的定义。

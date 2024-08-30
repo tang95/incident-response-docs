@@ -1,6 +1,6 @@
 ---
-封面: assets/img/covers/resolved.png
-描述: 重大事件后的应对措施信息。我们的后续行动和事后审查程序。
+cover: assets/img/covers/resolved.png
+description: 重大事件后的应对措施信息。我们的后续行动和事后审查程序。
 ---
 重大事件后的应对措施信息。我们的后续行动和事后审查程序。
 

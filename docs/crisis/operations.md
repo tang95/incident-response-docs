@@ -1,6 +1,6 @@
 ---
-封面: assets/img/crisis/cover_crisisresponse.png
-描述: 实施危机计划的第一步是通过实际的改变，确保你拥有所需的一切，以你需要的方式，在你需要的时间。
+cover: assets/img/crisis/cover_crisisresponse.png
+description: 实施危机计划的第一步是通过实际的改变，确保你拥有所需的一切，以你需要的方式，在你需要的时间。
 ---
 
 ## 实施你的危机计划
