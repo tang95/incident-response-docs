@@ -1,54 +1,54 @@
 ---
-cover: assets/img/covers/blameless.png
-description: Writing an effective postmortem allows us to learn quickly from our mistakes and improve our systems and processes for everyone. We want to be sure we're writing detailed and accurate postmortems in order to get the most benefit out of them. This guide lists some of the things we can do to make sure our post-mortems are effective.
+封面: assets/img/covers/blameless.png
+描述: 编写有效的事后分析报告使我们能够快速从错误中学习，并改进我们的系统和流程，惠及所有人。我们希望确保我们编写的事后分析报告详细且准确，以便从中获得最大的益处。本指南列出了一些我们可以做的事情，以确保我们的事后分析报告有效。
 ---
-Writing an effective postmortem allows us to learn quickly from our mistakes and improve our systems and processes for everyone. We want to be sure we're writing detailed and accurate postmortems in order to get the most benefit out of them. This guide lists some of the things we can do to make sure our postmortems are effective.
+编写有效的事后分析报告使我们能够快速从错误中学习，并改进我们的系统和流程，惠及所有人。我们希望确保我们编写的事后分析报告详细且准确，以便从中获得最大的益处。本指南列出了一些我们可以做的事情，以确保我们的事后分析报告有效。
 
-## Dos
+## 应该做的
 
-* Make sure the timeline is an accurate representation of events.
-* Describe any technical lingo/acronyms you use that newcomers may not understand.
-* [Discuss how the incident fits into our understanding of the health and resiliency of the services affected](https://www.pagerduty.com/blog/postmortem-understand-service-reliability/).
+* 确保时间线准确反映了事件。
+* 描述任何新手可能不理解的技术术语/缩略词。
+* [讨论事件如何符合我们对受影响服务健康和弹性的理解](https://www.pagerduty.com/blog/postmortem-understand-service-reliability/)。
 
-## Don'ts
+## 不应该做的
 
-* Don't use the word "outage" unless it really was an outage. We want to be sure we accurately reflect the impact of an incident, and outage is usually too broad of a term to use. It can lead customers to think we were fully unavailable when that likely was nowhere near the case.
-* Don't change details or events to make things "look better." We need to be honest in our postmortems, even to ourselves, otherwise they lose their effectiveness.
-* Don't name and shame someone. We keep our postmortems blameless. If someone deployed a change that broke things, it's not their fault, it's our fault for having a system that allowed them to deploy a breaking change, etc.
+* 除非真的是服务中断，否则不要使用“中断”这个词。我们希望确保准确反映事件的影响，而“中断”通常是一个过于宽泛的术语。它可能让客户误以为我们完全不可用，而实际情况远非如此。
+* 不要改变细节或事件以使事情“看起来更好”。我们需要在事后分析报告中保持诚实，即使是对我们自己，否则它们就会失去效力。
+* 不要点名批评某人。我们保持事后分析报告无责备。如果某人部署了一个破坏性的变更，那不是他们的错，而是我们的错，因为我们有一个允许他们部署破坏性变更的系统，等等。
 
-## Suggestions
+## 建议
 
-* Avoid the concept of "human error." This is related to the point above about "naming and shaming," but there's a subtle difference - very rarely is the mistake "rooted" in a human performing an action, there are often several contributing factors (the script the human ran didn't have rate limiting, the documentation was out of date, etc) that can and should be addressed.
-* Avoid "alternate reality" discussion in the timeline or description sections. "Service X started seeing elevated traffic early this morning, and stopped responding to requests. _*If service X had*_ rate limited the requests from the customer, _*it would not have*_ failed." & "Service X began slowly responding to requests this evening, _*there was insufficient monitoring*_ to detect the elevated CPU usage." as two examples, blends describing the actual problem with a hypothetical fix - keep the improvements separate from the description, so that each can be appropriately discussed.
-* These videos go into more detail on the above points:
-  * "[Three analytical traps in accident investigation](https://www.youtube.com/watch?v=TqaFT-0cY7U)"
-  * "[Two views on Human Error](https://www.youtube.com/watch?v=rHeukoWWtQ8)"
+* 避免使用“人为错误”的概念。这与上面的“点名批评”有关，但有一个微妙的区别——很少有错误“根植”于人的行为，通常有多个促成因素（人运行的脚本没有速率限制，文档已过时，等等）可以而且应该被解决。
+* 避免在时间线或描述部分讨论“替代现实”。例如，“服务X今天早上开始看到流量增加，并停止响应请求。*如果服务X对客户的请求进行了速率限制，*它就不会失败。”和“服务X今晚开始缓慢响应请求，*监控不足*无法检测到CPU使用率升高。”这两个例子将描述实际问题与假设的修复混合在一起——将改进与描述分开，以便可以分别讨论。
+* 这些视频更详细地讨论了上述观点：
+  * “[事故调查中的三个分析陷阱](https://www.youtube.com/watch?v=TqaFT-0cY7U)”
+  * “[关于人为错误的两种观点](https://www.youtube.com/watch?v=rHeukoWWtQ8)”
 
-## Reviewing
+## 审查
 
-We have a Slack room dedicated to reviewing postmortems before the scheduled meeting. Here are some of the things we're looking for:
+我们在Slack上有一个专门用于在预定会议前审查事后分析报告的房间。以下是我们关注的一些事项：
 
-* Does it provide enough detail?
-* Rather than just pointing out what went wrong, does it drill down to the underlying causes of the issue?
-* Does it separate “What Happened?” from “How to Fix it”?
-* Do the proposed action items make sense? Are they well-scoped enough?
-* Is the postmortem well written and understandable?
-* Does the external message resonate well with customers or is it likely to cause outrage?
+* 它是否提供了足够的细节？
+* 它是否不仅仅是指出哪里出了问题，而是深入挖掘问题的根本原因？
+* 它是否将“发生了什么？”与“如何修复？”分开？
+* 提出的行动项是否合理？它们是否足够明确？
+* 事后分析报告是否写得好且易于理解？
+* 对外信息是否能引起客户的共鸣，还是可能会引起愤怒？
 
-Reviewing a postmortem isn't about nit-picking typos (although we should make sure our external message isn't littered with spelling errors). It's about providing constructive feedback on valuable changes to a postmortem so that we get the most benefit from them.
+审查事后分析报告不是关于挑剔拼写错误（尽管我们应该确保对外信息没有充满拼写错误）。它是为了提供建设性的反馈，以便从事后分析报告中获得最大的益处。
 
-## Examples
-Here are some examples of postmortems from other companies as a reference,
+## 示例
+以下是其他公司的一些事后分析报告示例，供参考，
 
 * [LastPass](https://blog.lastpass.com/2015/06/lastpass-security-notice/)
 * [AWS](https://aws.amazon.com/message/5467D2/)
 * [Twilio](https://www.twilio.com/blog/2013/07/billing-incident-post-mortem-breakdown-analysis-and-root-cause.html)
 * [Heroku](https://status.heroku.com/incidents/151)
 * [Netflix](https://netflixtechblog.com/post-mortem-of-october-22-2012-aws-degradation-efcee3ab40d5)
-* [GOV.UK Rail Accident Investigation](https://www.gov.uk/government/publications/kyle-beck-safety-digest/near-miss-at-kyle-beck-3-august-2016)
-* [A List of Postmortems!](https://github.com/danluu/post-mortems)
+* [GOV.UK 铁路事故调查](https://www.gov.uk/government/publications/kyle-beck-safety-digest/near-miss-at-kyle-beck-3-august-2016)
+* [事后分析报告列表！](https://github.com/danluu/post-mortems)
 
-## Useful Resources
+## 有用资源
 
-* [Advanced PostMortem Fu and Human Error 101 (Velocity 2011)](https://www.slideshare.net/jallspaw/advanced-postmortem-fu-and-human-error-101-velocity-2011)
-* [Blame. Language. Sharing.](https://fractio.nl/2015/10/30/blame-language-sharing/)
+* [高级事后分析技巧和人为错误101（Velocity 2011）](https://www.slideshare.net/jallspaw/advanced-postmortem-fu-and-human-error-101-velocity-2011)
+* [责备。语言。分享。](https://fractio.nl/2015/10/30/blame-language-sharing/)

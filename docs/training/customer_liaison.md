@@ -1,66 +1,66 @@
 ---
-cover: assets/img/covers/customer_liaison.png
-description: So you want to be a customer liaison? You've come to the right place!
+封面: assets/img/covers/customer_liaison.png
+描述: 想要成为客户联络员吗？你来对地方了！
 ---
-So you want to be a Customer Liaison? You've come to the right place!
+想要成为客户联络员吗？你来对地方了！
 
-## Purpose
-The purpose of the Customer Liaison is to be the primary individual in charge of notifying our customers of the current conditions, and informing the Incident Commander of any relevant feedback from customers as the incident progresses.
+## 目的
+客户联络员的主要职责是向客户通报当前状况，并在事件进展过程中向事件指挥官传达客户的任何相关反馈。
 
-It's important for the rest of the command staff to be able to focus on the problem at hand, rather than worrying about crafting messages to customers.
+对于指挥团队的其余成员来说，能够专注于眼前的问题，而不是担心如何向客户传达信息，这一点很重要。
 
-Your job as Customer Liaison is to listen to the call, watch the incident Slack room, and track incoming customer support requests, keeping track of what's going on and how far the incident is progressing (still investigating vs close to resolution). The Incident Commander will instruct you to notify customers of the incident and keep them updated at various points throughout the call. You will be required to craft the message, gain approval from the IC, and then disseminate that message to customers.
+作为客户联络员，你的工作是倾听通话，关注事件 Slack 频道，并跟踪收到的客户支持请求，记录正在发生的事情以及事件进展到什么程度（仍在调查中 vs 接近解决）。事件指挥官会在通话过程中指示你向客户通报事件并保持更新。你需要撰写信息，获得指挥官的批准，然后将该信息传达给客户。
 
-## Prerequisites
-Before you can be a Customer Liaison, it is expected that you meet the following criteria. Don't worry if you don't meet them all yet, you can still continue with training!
+## 先决条件
+在你成为客户联络员之前，我们期望你满足以下条件。如果你还没有完全满足这些条件，别担心，你仍然可以继续培训！
 
-* Excellent verbal and written **communication skills**.
-* Be a member of the **Customer Support team**, or have had customer support training.
+* 出色的口头和书面**沟通技巧**。
+* 成为**客户支持团队**的成员，或接受过客户支持培训。
 
-## Responsibilities
-Read up on our [Different Roles for Incidents](../before/different_roles.md) to see what is expected from a Customer Liaison, as well as what we expect from the other roles you'll be interacting with.
+## 职责
+阅读我们的[不同角色在事件中的职责](../before/different_roles.md)，了解客户联络员的期望，以及我们对与你互动的其他角色的期望。
 
-## Training Process
-There is no formal training process for this role, you should feel free to contact our Customer Support team to learn more.
+## 培训过程
+这个角色没有正式的培训过程，你可以随时联系我们的客户支持团队了解更多信息。
 
-## Customer Liaison
-The objective of a Customer Liaison is to keep our customers informed during an incident as to what is happening, and to act as a voice for our customers to the Incident Commander. It is important for customers to have visibility into how they are impacted by an incident we are having, and to have insight into the fact that the problem is actively being worked on. Crafting a public message for customers is tricky, especially on platforms such as Twitter where the number of characters you can use are limited. But here are some general tips for crafting a public message,
+## 客户联络员
+客户联络员的目标是在事件期间向客户通报正在发生的事情，并作为客户的代言人向事件指挥官传达信息。对于客户来说，了解他们如何受到我们正在处理的事件的影响，并了解问题正在积极解决中，这一点很重要。为客户撰写公开信息是棘手的，尤其是在 Twitter 这样的平台上，字符数有限。但以下是一些撰写公开信息的一般提示：
 
-* Prepare a default message in advance.
-    * One that can be used for the initial update if the scope of the issue is unknown.
-* Be honest.
-    * Never lie, and never guess. Work with the incident commander if you are unsure as to what is actually happening.
-    * Provide transparent information to customers. If we are dropping the ball, be upfront about it.
-* Describe our progress in resolving the incident.
-    * _"We are aware of an incident..."_
-    * _"We are investigating delayed notifications..."_
-    * _"A fix has been applied and is currently being deployed..."_
-    * _"The issue has been resolved..."_
-* Be clear about how the incident is affecting customers. This is the primary piece of information customers will care about.
-    * Are notifications delayed? Is the website loading slowly but still working?
-* Provide any workarounds customers can use until the incident is resolved.
-* <span class="icon bad"></span>  Don't estimate resolution times.
-    * Never say something like _"We expect this incident to be resolved in 10 minutes"_. Something else could happen, and customers get angry when you set an expectation you can't keep.
-* <span class="icon bad"></span>  Don't provide **too much** detail.
-    * Customers don't care if `application-server-123` is having issues, they care that they are not getting notifications. Make sure the information you provide is relevant and not just noise.
+* 提前准备一条默认信息。
+    * 如果问题的范围未知，可以用于初始更新。
+* 诚实。
+    * 永远不要撒谎，也不要猜测。如果你不确定实际发生了什么，请与事件指挥官合作。
+    * 向客户提供透明的信息。如果我们犯了错误，要坦率承认。
+* 描述我们解决事件的进展。
+    * _"我们意识到一个事件..."_
+    * _"我们正在调查延迟的通知..."_
+    * _"已经应用了修复并正在部署..."_
+    * _"问题已经解决..."_
+* 清楚地说明事件如何影响客户。这是客户最关心的主要信息。
+    * 通知延迟了吗？网站加载缓慢但仍在工作吗？
+* 提供客户在事件解决前可以使用的任何变通方法。
+* <span class="icon bad"></span> 不要估计解决时间。
+    * 永远不要说类似_"我们预计这个事件将在10分钟内解决"_的话。可能会发生其他事情，当你设定的期望无法实现时，客户会感到愤怒。
+* <span class="icon bad"></span> 不要提供**太多**细节。
+    * 客户不关心`application-server-123`是否有问题，他们关心的是没有收到通知。确保你提供的信息是相关的，而不是噪音。
 
-## Incident Call Procedures and Lingo
-The [Steps for Customer Liaison](../during/during_an_incident.md) provide a detailed description of what you should be doing during an incident.
+## 事件通话程序和术语
+[客户联络员的步骤](../during/during_an_incident.md)提供了在事件期间你应该做什么的详细描述。
 
-Here are some examples of phrases and patterns you should use during incident calls.
+以下是一些在事件通话中应该使用的短语和模式示例。
 
-### Gaining Message Approval
-After you have crafted the public message, you should gain approval from the IC before posting it publicly. Simply copy the message into Slack and wait for verbal/written confirmation from the IC before proceeding.
+### 获取信息批准
+在你撰写好公开信息后，你应该在公开发布之前从指挥官那里获得批准。只需将信息复制到 Slack 中，并等待指挥官的口头/书面确认后再继续。
 
-> (You) Message for customers: "We are currently experiencing delayed notifications and are actively investigating the issue."
+> (你) 给客户的信息: "我们目前正在经历延迟的通知，并正在积极调查该问题。"
 
-> (IC): Looks good, go ahead and post.
+> (指挥官): 看起来不错，继续发布。
 
-It's important to get sign-off from the IC before posting as the nature of the incident may have changed while you were crafting the message, and new information might now be known and need to be included.
+在发布之前获得指挥官的批准很重要，因为在你撰写信息的过程中，事件的性质可能已经发生了变化，新的信息可能已经知道并需要包含在内。
 
-### Notification of Customer Response
-You may be receiving calls and emails from customers during the incident. This provides useful context for the Incident Commander, as it gives an indication of the scope of the incident. You should keep the IC apprised of any relevant information from customers.
+### 客户反馈的通知
+在事件期间，你可能会收到客户的电话和电子邮件。这为事件指挥官提供了有用的背景信息，因为它给出了事件范围的指示。你应该向指挥官报告任何来自客户的有关信息。
 
-> We've had 6 customers call so far and say they haven't received notifications for the last several minutes.
+> 到目前为止，我们已经接到6个客户的电话，他们表示在过去几分钟内没有收到通知。
 
-This can provide the IC with information which affects which areas we investigate first, or an indication of how the incident is progressing.
+这可以为指挥官提供信息，影响我们首先调查哪些区域，或者事件进展的指示。

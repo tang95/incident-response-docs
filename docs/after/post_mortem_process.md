@@ -1,120 +1,89 @@
 ---
 cover: assets/img/covers/post-mortem_process.png
-description: For every major incident (SEV-2/1), we need to follow up with a postmortem. A blame-free, detailed description, of exactly what went wrong in order to cause the incident, along with a list of steps to take in order to prevent a similar incident from occurring again in the future.
+description: 对于每一次重大事件（SEV-2/1），我们需要进行事后分析。这是一个无责备的、详细的描述，确切地说明是什么导致了事件的发生，以及一系列步骤，以防止未来再次发生类似事件。
 ---
-For every major incident (SEV-2/1), we need to follow up with a postmortem. A blame-free, detailed description, of exactly what went wrong in order to cause the incident, along with a list of steps to take in order to prevent a similar incident from occurring again in the future. The incident response process itself should also be included.
+对于每一次重大事件（SEV-2/1），我们需要进行事后分析。这是一个无责备的、详细的描述，确切地说明是什么导致了事件的发生，以及一系列步骤，以防止未来再次发生类似事件。事件响应过程本身也应包括在内。
 
-!!! warning "Don't Neglect the Postmortem"
-    Don't make the mistake of neglecting a postmortem after an incident. Without a postmortem, you fail to recognize what you're doing right, where you could improve, and most importantly how to avoid making the same exact mistakes next time around. A well-designed, blameless postmortem allows teams to continuously learn and serves as a way to iteratively improve your infrastructure and incident response process.
+!!! warning "不要忽视事后分析"
+    不要在事件后忽视事后分析。没有事后分析，你就无法认识到你做得对的地方，你可以在哪里改进，最重要的是如何避免下次犯同样的错误。一个设计良好、无责备的事后分析允许团队持续学习，并作为一种迭代改进你的基础设施和事件响应过程的方式。
 
-## Owner Designation
-The first step is designating a postmortem owner. This is done by the IC either at the end of a major incident call or very shortly after. You will be notified directly by the IC if you are the owner for the postmortem. The owner is responsible for populating the postmortem, looking up logs, managing the follow-up investigation, and keeping all interested parties in the loop. Please use Slack for coordinating follow-up. A detailed list of the steps is available below:
+## 负责人指定
+第一步是指定事后分析的负责人。这是由IC在重大事件通话结束时或非常短的时间后完成的。如果你是事后分析的负责人，IC会直接通知你。负责人负责填充事后分析，查找日志，管理后续调查，并让所有相关方了解情况。请使用Slack协调后续行动。详细的步骤列表如下：
 
-## Owner Responsibilities
-As owner of a postmortem, you are responsible for the following,
+## 负责人职责
+作为事后分析的负责人，你负责以下事项：
 
-* Scheduling the postmortem meeting (on the shared calendar) and inviting the relevant people (this should be **scheduled within 3 calendar days** for a SEV-1 and **5 business days** for a SEV-2).
-* Investigating the incident and pulling in whomever you need from other teams to assist in the investigation.
-* Updating the page with all of the necessary content.
-* Creating follow-up JIRA tickets (_You are only responsible for creating the tickets, not following them up to resolution_).
-* Reviewing the postmortem content with appropriate parties before the meeting.
-* Running through the topics at the postmortem meeting (the IC will "run" the meeting and keep the discussion on track, but you will likely be doing most of the talking).
-* Communicating the results of the postmortem internally.
+* 安排事后分析会议（在共享日历上）并邀请相关人员（这应该在SEV-1的3个日历日内和SEV-2的5个工作日内安排）。
+* 调查事件并从其他团队中拉入你需要的人协助调查。
+* 更新页面上的所有必要内容。
+* 创建后续JIRA票证（你只负责创建票证，不负责跟进解决）。
+* 在会议前与适当的各方审查事后分析内容。
+* 在事后分析会议上讨论主题（IC将“主持”会议并保持讨论的焦点，但你可能会做大部分的谈话）。
+* 在内部传达事后分析的结果。
 
-## Status Descriptions
-Our postmortems have a "Status" field which indicates where in our process the postmortem currently is. Here's a description of the values and how we use them.
+## 状态描述
+我们的事后分析有一个“状态”字段，表示事后分析目前在我们流程中的位置。以下是值的描述以及我们如何使用它们。
 
-| Status | Description |
+| 状态 | 描述 |
 |-|-|
-| **Draft** | Indicates that the content of the postmortem is still being worked on. |
-| **In Review** | The content of the postmortem has been completed, and is ready to be reviewed during the postmortem meeting. |
-| **Reviewed** | The meeting is over and the content has been reviewed and agreed upon.<br/>If there is an "External Message," the Customer Support team will take the message and update our status page as appropriate. |
-| **Closed** | No further actions are needed on the postmortem (outstanding issues are tracked in JIRA).<br/>If no "External Message," you can skip straight to this once the meeting is over.<br/>If there's an "External Message", then the Support team will update it to this status once the message is posted. |
+| **草稿** | 表示事后分析的内容仍在进行中。 |
+| **审查中** | 事后分析的内容已完成，并准备在事后分析会议上进行审查。 |
+| **已审查** | 会议结束，内容已审查并达成一致。<br/>如果有“外部消息”，客户支持团队将接受消息并在适当的情况下更新我们的状态页面。 |
+| **已关闭** | 事后分析不再需要进一步行动（未解决的问题在JIRA中跟踪）。<br/>如果没有“外部消息”，一旦会议结束，你可以直接跳到这个状态。<br/>如果有“外部消息”，那么支持团队将在消息发布后更新到这个状态。 |
 
-## Postmortem
-Once you've been designated as the owner of a postmortem, you should start creating one and updating it with all the relevant information.
+## 事后分析
+一旦你被指定为事后分析的负责人，你应该开始创建一个并更新所有相关信息。
 
-1. (If not already done by the IC) Create a new postmortem for the incident.
+1. （如果IC尚未完成）为事件创建一个新的事后分析。
 
-1. Schedule a postmortem meeting for within **3 calendar days** for a SEV-1 and **5 business days** for a SEV-2. You should schedule this before filling in the postmortem, just so it's on the calendar.
-    * Create the meeting on the "Incident Postmortem Meetings" shared calendar.
+1. 安排一个事后分析会议，SEV-1在3个日历日内，SEV-2在5个工作日内。你应该在填写事后分析之前安排这个会议，只是为了让它出现在日历上。
+    * 在“事件事后分析会议”共享日历上创建会议。
 
-1. Begin populating the page with all of the information you have.
-    * The timeline should be the main focus to begin with.
-        * The timeline should include important changes in status/impact and key actions taken by responders.
-    * Go through the history in Slack to identify the responders and add them to the page.
-        * Identify the Incident Commander and Scribe in this list.
+1. 开始用你拥有的所有信息填充页面。
+    * 时间线应该是主要的焦点。
+        * 时间线应包括状态/影响的重要变化和响应者采取的关键行动。
+    * 通过Slack的历史记录识别响应者并将他们添加到页面。
+        * 在这个列表中识别事件指挥官和抄写员。
 
-1. Populate the postmortem with more detailed information.
-    * For each item in the timeline, identify a metric, or some third-party page where the data came from. This could be a link to a Datadog graph, a SumoLogic search, a tweet, etc. Anything which shows the data point you're trying to illustrate in the timeline.
-    * Add a link to the incident call recording.
+1. 用更详细的信息填充事后分析。
+    * 对于时间线中的每一项，识别一个指标或第三方页面，数据来自哪里。这可以是一个Datadog图表的链接，一个SumoLogic搜索，一条推文等。任何显示你在时间线中试图说明的数据点的内容。
+    * 添加事件通话录音的链接。
 
-1. Perform an analysis of the incident.
-    * Capture all available data regarding the incident. What caused it, how many customers were affected, etc.
-        * Any commands or queries you use to look up data should be posted in the page so others can see how the data was gathered.
-    * Capture the impact to customers (generally in terms of event submission, delayed processing, and slow notification delivery)
-    * Identify the underlying cause of the incident (what happened and _why_ did it happen).
+1. 对事件进行分析。
+    * 捕获有关事件的所有可用数据。是什么原因导致的，受影响的客户有多少，等等。
+        * 你用来查找数据的任何命令或查询都应该发布在页面上，以便其他人可以看到数据是如何收集的。
+    * 捕获对客户的影响（通常在事件提交、延迟处理和缓慢通知传递方面）
+    * 识别事件的根本原因（发生了什么以及为什么发生）。
 
-1. Write the external message that will be sent to customers. This will be reviewed during the postmortem meeting before it is sent out.
-    * Avoid using the word "outage" unless it really was a full outage, use the word "incident" or "service degradation" instead. Customers generally see "outage" and assume the worst.
-    * Look at other examples of previous postmortems to see the kind of thing you should send.
+1. 写下将发送给客户的外部消息。这将在事后分析会议期间审查后发送。
+    * 除非真的是全面中断，否则避免使用“中断”这个词，使用“事件”或“服务降级”代替。客户通常看到“中断”并假设最坏的情况。
+    * 查看其他以前的事后分析示例，看看你应该发送的内容。
 
-1. Post a link to the postmortem into Slack to be reviewed for style and content by internal parties, you should try to do this about **24 hours before** the meeting is scheduled.
-    * Experienced postmortem writers will give you feedback on the level of detail and content of the postmortem. This avoids wasted time during the meeting.
+1. 在Slack中发布事后分析的链接，供内部各方审查风格和内容，你应该在会议安排前大约**24小时**尝试这样做。
+    * 有经验的事后分析作者会给你反馈事后分析的详细程度和内容。这避免了会议中的浪费时间。
 
-1. Attend the postmortem meeting (see below section for more information).
+1. 参加事后分析会议（见下文部分了解更多信息）。
 
-1. Create any follow-up action JIRA tickets (or note down topics for discussion if we need to decide on a direction to go before creating tickets),
-    * Go through the history in Slack to identify any TODO items.
-    * Label all tickets with their severity level and date tags.
-    * Any actions which can reduce reoccurrence of the incident.
-        * (There may be some trade-off here, and that's fine. Sometimes the ROI isn't worth the effort that would go into it).
-    * Identify any actions which can make our incident response process better.
-    * Be careful with creating too many tickets. Generally we only want to create things that are P0/P1's. Things that absolutely should be dealt with.
+1. 创建任何后续行动JIRA票证（或记下需要讨论的主题，如果我们需要决定一个方向在创建票证之前），
+    * 通过Slack的历史记录识别任何TODO项目。
+    * 给所有票证打上严重级别和日期标签。
+    * 任何可以减少事件再次发生的行动。
+        * （这里可能有一些权衡，这没关系。有时投资回报率不值得投入的努力）。
+    * 识别任何可以使我们的事件响应过程更好的行动。
+    * 小心创建太多票证。通常我们只希望创建P0/P1的东西。绝对应该处理的事情。
 
-1. Communicate internally so we can learn from the incident.
-    * Send out an internal email to the relevant stakeholders describing the results and key learnings.
-    * Include a link to the postmortem.
+1. 在内部传达，以便我们可以从事件中学习。
+    * 向相关利益相关者发送内部电子邮件，描述结果和关键学习。
+    * 包括事后分析的链接。
 
-## Postmortem Meeting
-These meetings should generally last 15-30 minutes and are intended to be a wrap up of the postmortem process. We should discuss what happened, what we could've done better, and any follow-up actions that we need to take. The goal is to suss out any disagreement on the facts, analysis, or recommended actions, and to get some wider awareness of the problems that are causing reliability issues for us.
+## 事后分析会议
+这些会议通常应持续15-30分钟，旨在作为事后分析过程的总结。我们应该讨论发生了什么，我们可以做得更好，以及我们需要采取的任何后续行动。目标是解决事实、分析或推荐行动上的任何分歧，并获得一些更广泛的意识，了解哪些问题正在导致我们的可靠性问题。
 
-You should invite the following people to the postmortem meeting,
+你应该邀请以下人员参加事后分析会议，
 
-* Always
-    * The Incident Commander.
-    * The Incident Commander Shadowee (if there was one).
-    * Service owners involved in the incident.
-    * Key engineer(s)/responders involved in the incident.
-    * Engineering manager for impacted systems.
-    * Product manager for impacted systems.
-* Optional
-    * Customer Liaison. (Only SEV-1 incidents)
-
-The Incident Commander will run the meeting, keeping the discussion focused and on track. However the postmortem owner will likely be doing most of the talking as they walk through the postmortem report.
-
-A general agenda for the meeting would be something like,
-
-1. Recap the timeline, to make sure everyone agrees and is on the same page.
-1. Recap important points, and any unusual items.
-1. Discuss how the problem could've been caught.
-    * Did it show up in [canary](https://www.pagerduty.com/blog/continuous-build-break-fix-fast#canary-releases)?
-    * Could it have been caught in tests, or loadtest environment?
-1. Discuss customer impact. Any comments from customers, etc.
-1. Review action items that have been created, discuss if appropriate, or if more are needed, etc.
-
-## Examples
-Here are some examples of postmortems from other companies as a reference,
-
-* [LastPass](https://blog.lastpass.com/2015/06/lastpass-security-notice/)
-* [AWS](https://aws.amazon.com/message/5467D2/)
-* [Twilio](https://www.twilio.com/blog/2013/07/billing-incident-post-mortem-breakdown-analysis-and-root-cause.html)
-* [Heroku](https://status.heroku.com/incidents/151)
-* [Netflix](https://netflixtechblog.com/post-mortem-of-october-22-2012-aws-degradation-efcee3ab40d5)
-* [GOV.UK Rail Accident Investigation](https://www.gov.uk/government/publications/kyle-beck-safety-digest/near-miss-at-kyle-beck-3-august-2016)
-* [A List of Postmortems!](https://github.com/danluu/post-mortems)
-
-## Useful Resources
-
-* [Advanced PostMortem Fu and Human Error 101 (Velocity 2011)](https://www.slideshare.net/jallspaw/advanced-postmortem-fu-and-human-error-101-velocity-2011)
-* [Blame. Language. Sharing.](https://fractio.nl/2015/10/30/blame-language-sharing/)
+* 总是
+    * 事件指挥官。
+    * 事件指挥官的影子（如果有）。
+    * 事件中涉及的服务所有者。
+    * 事件中涉及的关键工程师/响应者。
+    * 受影响系统

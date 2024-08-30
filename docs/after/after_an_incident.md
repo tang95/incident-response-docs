@@ -1,55 +1,55 @@
 ---
-cover: assets/img/covers/resolved.png
-description: Information on what to do after a major incident. Our followup and after action review procedures.
+封面: assets/img/covers/resolved.png
+描述: 重大事件后的应对措施信息。我们的后续行动和事后审查程序。
 ---
-Information on what to do after a major incident. Our follow-up and after action review procedures.
+重大事件后的应对措施信息。我们的后续行动和事后审查程序。
 
-## Follow-up Actions for Response Roles
-In addition to any direct follow-up items generated from an incident, each of our response roles will have a few standard follow-up tasks. These are generally lightweight actions that ensure we organize information and followup with customers appropriately.
+## 响应角色的后续行动
+除了从事件中直接产生的任何后续项目外，我们的每个响应角色都有一些标准的后续任务。这些通常是轻量级的行动，确保我们组织信息并与客户适当跟进。
 
-### Steps for Incident Commander
+### 事件指挥官的步骤
 
-1. Update the incident in PagerDuty.
-    * Group any related incidents under the primary incident.
-    * Set the final severity of the incident.
-    * Resolve the incident.
+1. 在PagerDuty中更新事件。
+    * 将任何相关事件归入主要事件下。
+    * 设置事件的最终严重性。
+    * 解决事件。
 
-1. Create the postmortem, and assign an owner to the postmortem for the incident.
+1. 创建事后分析报告，并为该事件的事后分析分配负责人。
 
-1. Send out an internal email to the relevant stakeholders explaining that we had an incident, provide a link to the postmortem.
+1. 向相关利益相关者发送内部电子邮件，解释我们发生了事件，并提供事后分析报告的链接。
 
-1. Occasionally check on the progress of the postmortem to ensure that it is completed within the desired time frame.
+1. 偶尔检查事后分析的进展，确保其在期望的时间框架内完成。
 
-### Steps for Deputy
-There are no additional steps after an incident is resolved. However, the IC may ask for your help with their steps.
+### 副指挥官的步骤
+事件解决后没有额外的步骤。然而，事件指挥官可能会要求你协助他们的步骤。
 
-### Steps for Scribe
+### 记录员的步骤
 
-1. Review the chat communications and extract any relevant items from key events.
+1. 审查聊天通信，并从关键事件中提取任何相关项目。
 
-1. Collect all `TODO` items and add them to the postmortem.
+1. 收集所有`TODO`项，并将其添加到事后分析中。
 
-### Steps for Subject Matter Experts 
+### 主题专家的步骤
 
-1. Add any notes you think are relevant to the postmortem.
+1. 添加你认为对事后分析相关的任何笔记。
 
-### Steps for Customer Liaison
+### 客户联络员的步骤
 
-1. Reply to any customer enquiries we received about the incident.
+1. 回复我们收到的关于该事件的任何客户咨询。
 
-1. Follow the postmortem progress, and update our status page with the external message once it is available.
+1. 跟踪事后分析的进展，并在外部消息可用时更新我们的状态页面。
 
-### Steps for Internal Liaison
-There are no additional steps after an incident is resolved. However the IC may ask for your help with answering questions from internal stakeholders.
+### 内部联络员的步骤
+事件解决后没有额外的步骤。然而，事件指挥官可能会要求你协助回答内部利益相关者的问题。
 
-## Reviewing the Incident
-It's important that we review the incident in detail to see exactly what went wrong, why it went wrong, and what we can do to make sure it doesn't happen again. These take many names; after-action reviews, incident review, follow-up review, etc. We use the term postmortem.
+## 审查事件
+详细审查事件非常重要，以确切了解出了什么问题，为什么会出问题，以及我们如何确保它不再发生。这些有很多名称；事后审查、事件审查、后续审查等。我们使用术语事后分析。
 
-You can read all about our [postmortem process](post_mortem_process.md), which goes over this in more detail.
+你可以阅读我们关于[事后分析流程](post_mortem_process.md)的所有内容，其中对此进行了更详细的介绍。
 
-## Reviewing the Process
-As well as reviewing the incident, it's important to review our process. Did we handle the incident well, or are there things we could have done better?
+## 审查流程
+除了审查事件外，审查我们的流程也很重要。我们处理事件的方式是否得当，或者我们是否有可以做得更好的地方？
 
-This review isn't very formal yet, and typically involves a few of the Incident Commanders getting together to discuss how we might have done things differently, or if there are any tweaks we can make to our incident response process.
+这种审查目前还不是非常正式，通常涉及几位事件指挥官一起讨论我们可能采取的不同做法，或者我们是否可以对事件响应流程进行任何调整。
 
-If you're interested in joining these meetings, just let one of the Incident Commanders know and we'll be sure to invite you.
+如果你对参加这些会议感兴趣，只需告知其中一位事件指挥官，我们一定会邀请你。

@@ -1,75 +1,74 @@
 ---
-cover: assets/img/covers/scribe.png
-description: So you want to be a scribe? You've come to the right place! You don't need to be a senior team member to become a Deputy or Scribe, anyone can do it providing you have the requisite knowledge!
+封面: assets/img/covers/scribe.png
+描述: 想成为一名记录员吗？你来对地方了！成为副记录员或记录员不需要是资深团队成员，任何人都可以，只要你具备必要的知识！
 ---
-So you want to be a Scribe? You've come to the right place! You don't need to be a senior team member to become a Deputy or Scribe, anyone can do it providing you have the requisite knowledge!
+想成为一名记录员吗？你来对地方了！成为副记录员或记录员不需要是资深团队成员，任何人都可以，只要你具备必要的知识！
 
-## Purpose
-The purpose of the Scribe is to maintain a timeline of key events during an incident. Documenting actions, and keeping track of any follow-up items that will need to be addressed.
+## 目的
+记录员的目的在于维护事件期间关键事件的时间线。记录行动，并跟踪需要处理的任何后续事项。
 
-It's important for the rest of the command staff to be able to focus on the problem at hand, rather than worrying about documenting the steps.
+对于指挥团队的其余成员来说，能够专注于眼前的问题，而不是担心记录步骤，这一点很重要。
 
-Your job as Scribe is to listen to the call and to watch the incident Slack room, keeping track of context and actions that need to be performed, documenting these in Slack as you go. **You should not be performing any remediations, checking graphs, or investigating logs.** Those tasks will be delegated to the subject matter experts (SME's) by the Incident Commander.
+作为记录员，你的工作是倾听通话并观察事件 Slack 房间，跟踪需要执行的上下文和行动，并在 Slack 中实时记录这些内容。**你不应该执行任何修复措施，检查图表或调查日志。**这些任务将由事件指挥官委派给主题专家（SME）。
 
+## 先决条件
+在你成为记录员之前，预期你需要满足以下标准。如果你还没有完全满足，不用担心，你仍然可以继续培训！
 
-## Prerequisites
-Before you can be a Scribe, it is expected that you meet the following criteria. Don't worry if you don't meet them all yet, you can still continue with training!
+* 出色的口头和书面**沟通技巧**。
 
-* Excellent verbal and written **communication skills**.
+## 职责
+阅读我们的[不同角色](../before/different_roles.md)，了解对记录员的期望，以及我们对与你互动的其他角色的期望。
 
-## Responsibilities
-Read up on our [Different Roles for Incidents](../before/different_roles.md) to see what is expected from a Scribe, as well as what we expect from the other roles you'll be interacting with.
+## 培训过程
+这个角色没有正式的培训过程，阅读这一页应该对大多数任务足够了。以下是你可以进行培训的一些事项：
 
-## Training Process
-There is no formal training process for this role, reading this page should be sufficient for most tasks. Here's a list of things you can do to train though,
+* 阅读本页的其余部分，特别是下面的章节。
 
-* Read the rest of this page, particularly the sections below.
+* 参与[失败星期五](https://www.pagerduty.com/blog/failure-friday-at-pagerduty/)（FF）。
+    * 旁听 FF，看看它是如何运行的。
+    * 多次担任 FF 的记录员。
 
-* Participate in [Failure Friday](https://www.pagerduty.com/blog/failure-friday-at-pagerduty/) (FF).
-    * Shadow a FF to see how it's run.
-    * Be the Scribe for multiple FF's.
+## 记录
+记录更多的是艺术而非科学。目标是保持对通话中发生的重要事件的准确记录，以便我们可以回顾时间线，看看发生了什么。但究竟什么是重要的？没有压倒性的答案，这真的取决于判断和经验。但以下是作为记录员你绝对想要捕捉的一些一般事项。
 
-## Scribing
-Scribing is more art than science. The objective is to keep an accurate record of important events that occurred on the call, so that we can look back at the timeline to see what happened. But what exactly is important? There's no overwhelming answer, and it really comes down the judgement and experience. But here are some general things you most definitely want to capture as Scribe.
+* 任何投票决策的结果。
+    * <span class="icon bad"></span> 这不是“9 人投赞成票，3 人投反对票”。
+    * <span class="icon good"></span> 这是“投票决定是否进行滚动重启。<USER_A> 正在执行重启。”
+* 任何被指出为“我们应该做这个..”，“为什么这个没有..”等的后续事项。
+    * <span class="icon bad"></span> 这不是“为什么支持代表不在通话中？”
+    * <span class="icon good"></span> 这是“TODO: 为什么我们没有更早地收到这个警报？”
 
-* The result of any polling decisions.
-    * <span class="icon bad"></span>  This is not "9 people voted yay, 3 voted nay".
-    * <span class="icon good"></span>  It is "Polled for if we should do rolling restart. <USER_A> is proceeding with restart."
-* Any follow-up items that are called out as "We should do this..", "Why didn't this?..", etc.
-    * <span class="icon bad"></span>  This is not "Why isn't the Support representative on the call?"
-    * <span class="icon good"></span>  This is "TODO: Why didn't we get paged for this earlier?"
+## 事件通话程序和术语
+[记录员步骤](../during/during_an_incident.md)提供了在事件期间你应该做什么的详细描述。
 
-## Incident Call Procedures and Lingo
-The [Steps for Scribe](../during/during_an_incident.md) provide a detailed description of what you should be doing during an incident.
+以下是你在事件通话中应该使用的一些短语和模式的例子。
 
-Here are some examples of phrases and patterns you should use during incident calls.
-
-### Status Stalking
-At the start of any major incident call, you should start our status stalking bot, so that it will post to the room an update automatically.
+### 状态跟踪
+在任何重大事件通话开始时，你应该启动我们的状态跟踪机器人，以便它会自动向房间发布更新。
 
 > !status stalk
 
-This will provide the update and allow the IC to see the status without having to keep asking.
+这将提供更新，并允许 IC 看到状态，而不必一直询问。
 
-### Note Important Actions
-During a call, you will hear lots of discussion happening, you should not be documenting all of this in the chat room. You only want to document things which will be important for the final timeline. It's not always obvious what this might be, and it's usually a matter of judgement. You generally want to note any actions the IC has asked someone to perform, along with the result of any polling decisions.
+### 记录重要行动
+在通话中，你会听到很多讨论，你不应该在聊天室中记录所有这些内容。你只想记录对最终时间线重要的事情。这并不总是显而易见的，通常是一个判断问题。你通常想记录 IC 要求某人执行的任何行动，以及任何投票决策的结果。
 
-> Polled for decision on whether to perform rolling restart. We are proceeding with restart. [USER_A] to execute.
+> 投票决定是否进行滚动重启。我们正在执行重启。[USER_A] 执行。
 
-Some actions might seem important at the time, but end up not being. That's OK. It's better to have more info than not enough, but don't go overboard.
+有些行动可能在当时看起来很重要，但最终并不重要。没关系。有更多的信息总比没有好，但不要过度。
 
-### Note Follow-up Actions
-Sometimes during the call, someone will either mention something we "should fix", or the IC will specifically ask you to note a followup item. You can do this in Slack by simply prefixing with "TODO", this will make it easier to search for later.
+### 记录后续行动
+有时在通话中，有人会提到我们“应该修复”的东西，或者 IC 会特别要求你记录一个后续事项。你可以在 Slack 中通过简单地用“TODO”前缀来做到这一点，这将使以后更容易搜索。
 
-> TODO: Why did we not get paged for the fall in traffic on [X] cluster?
+> TODO: 为什么我们没有收到 [X] 集群流量下降的警报？
 
-The postmortem owner will find these after and raise tasks for them.
+事后分析的所有者会在之后找到这些并提出任务。
 
-### End of Call Notification
-When the IC ends the call, you should post a message into Slack to let everyone know the call is over, and that they should continue discussion elsewhere.
+### 通话结束通知
+当 IC 结束通话时，你应该在 Slack 中发布一条消息，让每个人知道通话结束了，他们应该在其他地方继续讨论。
 
-> Call is over, thanks everyone. Follow up in Slack.
+> 通话结束，谢谢大家。在 Slack 中跟进。
 
-Don't forget to also stop the status stalking.
+别忘了也要停止状态跟踪。
 
 > !status unstalk

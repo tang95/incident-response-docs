@@ -1,170 +1,170 @@
 ---
 cover: assets/img/covers/security_incident.png
-description: Checklist of actions for responding to a security incident at PagerDuty.
+description: PagerDuty 安全事件响应行动清单。
 ---
 <div id="reviewed-dates">
-  <span><strong>Last Reviewed:</strong> <abbr title="We recommend you include with this document the date you last reviewed your process.">YYYY-MM-DD</abbr></span>
-  <span><strong>Last Tested:</strong> <abbr title="We recommend you include with this document the date you last tested your process.">YYYY-MM-DD</abbr></span>
+  <span><strong>上次审查日期：</strong> <abbr title="我们建议您在此文档中包含上次审查流程的日期。">YYYY-MM-DD</abbr></span>
+  <span><strong>上次测试日期：</strong> <abbr title="我们建议您在此文档中包含上次测试流程的日期。">YYYY-MM-DD</abbr></span>
 </div>
 
-!!! warning "Incident Commander Required"
-     As with all major incidents at PagerDuty, security incidents will also involve an Incident Commander who will delegate the tasks to relevant responders. Tasks may be performed in parallel as assigned by the IC. Page one at the earliest possible opportunity `!ic page`.
+!!! warning "需要事件指挥官"
+     与PagerDuty的所有重大事件一样，安全事件也将涉及一位事件指挥官，负责将任务委派给相关响应者。任务可以由IC分配并行执行。尽早尽可能地呼叫`!ic page`。
 
-!!! question "Not Sure it's a Security Incident?"
-    Trigger the process anyway. It's better to be safe than sorry. The Incident Commander will make a determination on if response is needed.
+!!! question "不确定是否是安全事件？"
+    无论如何都要启动流程。安全总比遗憾好。事件指挥官将决定是否需要响应。
 
-## Checklist
-Details for each of these items are available in the next section.
+## 检查清单
+这些项目的详细信息在下一节中提供。
 
-1. Stop the attack in progress.
-1. Cut off the attack vector.
-1. Assemble the response team.
-1. Isolate affected instances.
-1. Identify timeline of attack.
-1. Identify compromised data.
-1. Assess risk to other systems.
-1. Assess risk of re-attack.
-1. Apply additional mitigations, additions to monitoring, etc.
-1. Forensic analysis of compromised systems.
-1. Internal communication.
-1. Involve law enforcement.
-1. Reach out to external parties that may have been used as vector for attack.
-1. External communication.
+1. 停止正在进行的攻击。
+1. 切断攻击向量。
+1. 组建响应团队。
+1. 隔离受影响的实例。
+1. 确定攻击的时间线。
+1. 识别被泄露的数据。
+1. 评估对其他系统的风险。
+1. 评估再次攻击的风险。
+1. 应用额外的缓解措施，增加监控等。
+1. 对受影响的系统进行取证分析。
+1. 内部沟通。
+1. 涉及执法机构。
+1. 联系可能被用作攻击向量的外部方。
+1. 外部沟通。
 
 ---
 
-## Attack Mitigation
-Stop the attack as quickly as you can, via any means necessary. Shut down servers, network isolate them, turn off a data center if you have to. Some common things to try,
+## 攻击缓解
+尽快通过任何必要手段停止攻击。关闭服务器，网络隔离它们，如果有必要，关闭数据中心。一些常见的尝试包括：
 
-* Shutdown the instance from the provider console (do not delete or terminate if you can help it, as we'll need to do forensics).
-* If you happen to be logged into the box you can try to,
-    * Reinstate our default iptables rules to restrict traffic.
-    * `kill -9` any active session you think is an attacker.
-    * Change root password and update /etc/shadow to lock out all other users.
+* 从提供商控制台关闭实例（如果可以的话，不要删除或终止，因为我们需要进行取证）。
+* 如果你碰巧登录到该服务器，可以尝试：
+    * 恢复我们的默认iptables规则以限制流量。
+    * `kill -9`任何你认为是攻击者的活动会话。
+    * 更改root密码并更新/etc/shadow以锁定所有其他用户。
     * `sudo shutdown now`
 
-## Cut Off Attack Vector
-Identify the likely attack vectors and path/fix them so they cannot be re-exploited immediately after stopping the attack.
+## 切断攻击向量
+识别可能的攻击向量并修复它们，以防止在停止攻击后立即重新利用。
 
-* If you suspect a third-party provider is compromised, delete all accounts except your own (and those of others who are physically present) and immediately rotate your password and MFA tokens.
-* If you suspect a service application was an attack vector, disable any relevant code paths, or shut down the service entirely.
+* 如果你怀疑第三方提供商被攻破，删除所有账户，除了你自己的（以及其他在场的其他人），并立即轮换你的密码和MFA令牌。
+* 如果你怀疑服务应用程序是攻击向量，禁用任何相关的代码路径，或完全关闭服务。
 
-## Assemble Response Team
-Identify the key responders for the security incident and keep them all in the loop. Set up a secure method of communicating all information associated with the incident. Details on the incident (or even the fact that an incident has occurred) should be kept private to the responders until you are confident the attack is not being triggered internally.
+## 组建响应团队
+识别安全事件的关键响应者并让他们保持联系。建立一种安全的方法来交流与事件相关的所有信息。在确信攻击不是由内部触发之前，应将事件的细节（甚至事件发生的事实）保密给响应者。
 
-* Page an Incident Commander if not already done so. They will also appoint the usual incident command roles. The incident command team will be responsible for keeping documentation of actions taken, and for notifying internal stakeholders as appropriate.
-* Give the project an innocuous codename that can be used for chats/documents so if anyone overhears they don't realize it's a security incident. (e.g. sapphire-unicorn).
-* Start the voice call if not already in progress.
-* Setup chat room using the codename of the incident.
-* Invite all responders to the voice call and chat room.
-    1. The **security team should always be included**.
-    1. A representative for any affected services should be included.
-    1. Executive stakeholders and legal counsel should be invited at earliest possible opportunity, but prioritize operational responders first.
-* Do not communicate with anyone not on the response team about the incident until forensics have been performed. The attack could be happening internally.
-* Prefix all emails, and chat topics with "Attorney Work Project".
+* 如果没有这样做，呼叫一位事件指挥官。他们还将任命通常的事件指挥角色。事件指挥团队将负责记录所采取的行动，并在适当的时候通知内部利益相关者。
+* 给项目起一个无害的代号，用于聊天/文档，这样如果有人无意中听到，他们不会意识到这是一起安全事件。（例如，蓝宝石独角兽）。
+* 如果尚未进行，开始语音通话。
+* 使用事件的代号设置聊天室。
+* 邀请所有响应者加入语音通话和聊天室。
+    1. **安全团队应始终包括在内**。
+    1. 任何受影响服务的代表应包括在内。
+    1. 尽早邀请执行利益相关者和法律顾问，但优先考虑操作响应者。
+* 在完成取证之前，不要与响应团队以外的人交流事件。攻击可能是内部发生的。
+* 在所有电子邮件和聊天主题前加上“律师工作项目”。
 
-## Isolate Affected Instances
-Any instances which were affected by the attack should be immediately isolated from any other instances. As soon as possible, an image of the system should be taken and put into a read-only cold storage for later forensic analysis.
+## 隔离受影响的实例
+任何受攻击影响的实例应立即与其他实例隔离。尽快对系统进行镜像，并将其放入只读冷存储中，以供以后的取证分析。
 
-* Blacklist the IP addresses for any affected instances from all other hosts.
-* Turn off and shutdown the instances immediately if you didn't do that to stop the attack.
-* Take a disk image for any disks attached to the instances, and ship them to an off-site cold storage location. You should make sure these images are read-only and cannot be tampered with.
+* 从所有其他主机中屏蔽任何受影响实例的IP地址。
+* 如果没有这样做以停止攻击，立即关闭并关闭实例。
+* 对连接到实例的任何磁盘进行磁盘镜像，并将其发送到离线冷存储位置。确保这些镜像是只读的，不能被篡改。
 
-## Identify Timeline of Attack
-Work with all tools at your disposal to identify the timeline of the attack, along with exactly what the attacker did.
+## 识别攻击的时间线
+利用所有可用的工具来识别攻击的时间线，以及攻击者究竟做了什么。
 
-* Any reconnaissance the attacker performed on the system before the attack started.
-* When the attacker gained access to the system.
-* What actions the attacker performed on the system, and when.
-* Identify how long the attacker had access to the system before they were detected, and before they were kicked out.
-* Identify any queries the attacker ran on databases.
-* Try to identify if the attacker still has access to the system via another back door. Monitor logs for unusual activity, etc.
+* 攻击开始前攻击者在系统上进行的任何侦察。
+* 攻击者何时获得系统访问权限。
+* 攻击者在系统上执行的操作及其时间。
+* 识别攻击者在被检测到之前，以及在被踢出之前，对系统有多长时间的访问权限。
+* 识别攻击者在数据库上运行的任何查询。
+* 尝试识别攻击者是否仍然通过另一个后门访问系统。监控日志中的异常活动等。
 
-## Compromised Data
-Using forensic analysis of log files, time-series graphs, and any other information/tools at your disposal, attempt to identify what information was compromised (if any),
+## 被泄露的数据
+利用日志文件的取证分析、时间序列图表以及任何其他可用的信息/工具，尝试识别哪些信息被泄露（如果有的话），
 
-* Identify any data that was compromised during the attack.
-    * Was any data exfiltrated from a database?
-    * What keys were on the system that are now considered compromised?
-    * Was the attacker able to identify other components of the system (map out the network, etc)?
-* Find exactly what customer data has been compromised, if any.
+* 识别攻击期间被泄露的任何数据。
+    * 是否有任何数据从数据库中被外泄？
+    * 系统上哪些密钥现在被认为是泄露的？
+    * 攻击者是否能够识别系统的其他组件（绘制网络图等）？
+* 准确找出哪些客户数据被泄露，如果有的话。
 
-## Assess Risk
-Based on the data that was compromised, assess the risk to other systems.
+## 评估风险
+根据被泄露的数据，评估对其他系统的风险。
 
-* Does the attacker have enough information to find another way in?
-* Were any passwords or keys stored on the host? If so, they should be considered compromised regardless of how they were stored.
-* Any user accounts that were used in the initial attack should rotate all of their keys and passwords on every other system they have an account.
+* 攻击者是否有足够的信息找到另一种进入方式？
+* 主机上是否存储了任何密码或密钥？如果是，无论它们是如何存储的，都应被视为泄露。
+* 在初始攻击中使用的任何用户账户应在他们拥有的每个其他系统上轮换所有密钥和密码。
 
-## Apply Additional Mitigations
-Start applying mitigations to other parts of your system.
+## 应用额外的缓解措施
+开始对系统的其他部分应用缓解措施。
 
-* Rotate any compromised data.
-* Identify any new alerting which is needed to notify of a similar breach.
-* Block any IP addresses associated with the attack.
-* Identify any keys/credentials that are compromised and revoke their access immediately.
+* 轮换任何泄露的数据。
+* 识别需要的新警报，以通知类似的违规行为。
+* 屏蔽与攻击相关的任何IP地址。
+* 识别任何被泄露的密钥/凭证，并立即撤销其访问权限。
 
-## Forensic Analysis
-Once you are confident the systems are secured, and enough monitoring is in place to detect another attack, you can move onto the forensic analysis stage.
+## 取证分析
+一旦你确信系统是安全的，并且有足够的监控来检测另一次攻击，你就可以进入取证分析阶段。
 
-* Take any read-only images you created, any access logs you have, and comb through them for more information about the attack.
-* Identify exactly what happened, how it happened, and how to prevent it in future.
-* Keep track of all IP addresses involved in the attack.
-* Monitor logs for any attempt to regain access to the system by the attacker.
+* 利用你创建的任何只读镜像，你拥有的任何访问日志，并仔细检查它们以获取更多关于攻击的信息。
+* 准确识别发生了什么，如何发生的，以及如何在未来防止它。
+* 跟踪所有参与攻击的IP地址。
+* 监控日志中攻击者试图重新访问系统的任何尝试。
 
-## Internal Communication
-**Delegate to:** VP or Director of Engineering
+## 内部沟通
+**委派给：**工程副总裁或总监
 
-Communicate internally only once you are confident (via forensic analysis) that the attack was not sourced internally.
+只有在通过取证分析确信攻击不是由内部发起的情况下，才进行内部沟通。
 
-* Don't go into too much detail.
-* Overview the timeline.
-* Discuss mitigation steps taken.
-* Follow up with more information once it is known.
+* 不要过于详细。
+* 概述时间线。
+* 讨论采取的缓解步骤。
+* 一旦了解更多信息，再跟进。
 
-## Liaise With Law Enforcement / External Actors
-**Delegate to:** VP or Director of Engineering
+## 与执法机构/外部行为者联络
+**委派给：**工程副总裁或总监
 
-Work with law enforcement to identify the source of the attack, letting any system owners know that systems under their control may be compromised, etc.
+与执法机构合作，识别攻击的来源，让任何系统所有者知道他们控制的系统可能被攻破，等等。
 
-* Contact local law enforcement.
-* Contact the FBI.
-* Contact operators for any systems used in the attack, their systems may also have been compromised.
-* Contact security companies to help in assessing risk and any PR next steps.
-* Contact your cyber insurance provider.
+* 联系当地执法机构。
+* 联系FBI。
+* 联系在攻击中使用的任何系统的运营商，他们的系统也可能被攻破。
+* 联系安全公司帮助评估风险和任何后续的公关步骤。
+* 联系你的网络安全保险提供商。
 
-## External Communication
-**Delegate to:** Marketing Team
+## 外部沟通
+**委派给：**营销团队
 
-Once you have validated all of the information you have is accurate, have a timeline of events, and know exactly what information was compromised, how it was compromised, and sure that it won't happen again. Only then should you prepare and release a public statement to customers informing them of the compromised information and any steps they need to take.
+一旦你验证了所有信息的准确性，有了事件的时间线，知道了哪些信息被泄露，如何被泄露，并且确信它不会再发生。只有这样，你才应该准备并向客户发布公开声明，告知他们被泄露的信息以及他们需要采取的任何步骤。
 
-* Include the date in the title of any announcement so that it's never confused for a potential new breach.
-* Don't say "We take security very seriously." It makes everyone cringe when they read it.
-* Be honest, accept responsibility, and present the facts, along with exactly how we plan to prevent such things in future.
-* Be as detailed as possible with the timeline.
-* Be as detailed as possible in what information was compromised and how it affects customers. If we were storing something we shouldn't have been, be honest about it. It'll come out later and it'll be much worse.
-* Don't name and shame any external parties that might have caused the compromise. It's bad form. (Unless they've already publicly disclosed, in which case we can link to their disclosure).
-* Release the external communication as soon as possible, preferably within a few days of the compromise. The longer you wait, the worse it will be.
-* If possible, get in touch with customers' internal security teams before the general public notice is sent.
-
----
-
-## Communicating During an Incident
-
-* Prefer voice call and Slack over any other methods.
-* Avoid email, but if you absolutely need to for some reason,
-    * Subject of emails should be "Attorney Work Project" and nothing else.
-    * If the email chain has **ANY** contacts **not with the @pagerduty.com domain**, make sure your emails are encrypted.
-* Do not use SMS to communicate about the incident.
-    * The only exception is to tell someone to move to a more secure channel. e.g. "Please join Slack ASAP."
-* Do not disseminate anything about the incident to those outside the response team until you have approval to do so.
+* 在任何公告的标题中包含日期，以免与潜在的新违规混淆。
+* 不要说“我们非常重视安全。”当人们读到这句话时，他们会感到反感。
+* 诚实，承担责任，并提出事实，以及我们计划如何在未来防止此类事件。
+* 尽可能详细地描述时间线。
+* 尽可能详细地描述被泄露的信息及其对客户的影响。如果我们存储了不应该存储的东西，要诚实地说明。这会在以后曝光，而且会更糟。
+* 不要点名羞辱任何可能导致泄露的外部方。这是不好的行为。（除非他们已经公开披露，在这种情况下，我们可以链接到他们的披露）。
+* 尽快发布外部沟通，最好是在泄露后的几天内。你等待的时间越长，情况会越糟。
+* 如果可能，在向公众发出通知之前，先与客户的内部安全团队联系。
 
 ---
 
-## Additional Reading
+## 事件期间的沟通
 
-* [Computer Security Incident Handling Guide](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf) (NIST)
-* [Incident Handler's Handbook](https://www.sans.org/reading-room/whitepapers/incident/incident-handlers-handbook-33901) (SANS)
-* [Responding to IT Security Incidents](https://docs.microsoft.com/en-us/previous-versions/tn-archive/cc700825(v=technet.10)) (Microsoft)
-* [Defining Incident Management Processes for CSIRTs: A Work in Progress](https://resources.sei.cmu.edu/library/asset-view.cfm?assetid=7153) (CMU)
-* [Creating and Managing Computer Security Incident Handling Teams (CSIRTS)](https://www.first.org/conference/2008/papers/killcrece-georgia-slides.pdf) (CERT)
+* 首选语音通话和Slack，而不是其他任何方法。
+* 避免使用电子邮件，但如果出于某种原因绝对需要，
+    * 电子邮件的主题应该是“律师工作项目”，别无其他。
+    * 如果电子邮件链中有**任何**非@pagerduty.com域的联系人，确保你的电子邮件是加密的。
+* 不要使用短信来交流事件。
+    * 唯一的例外是告诉某人转移到更安全的渠道。例如，“请尽快加入Slack。”
+* 在获得批准之前，不要向响应团队以外的人传播任何关于事件的信息。
+
+---
+
+## 附加阅读
+
+* [计算机安全事件处理指南](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf)（NIST）
+* [事件处理者手册](https://www.sans.org/reading-room/whitepapers/incident/incident-handlers-handbook-33901)（SANS）
+* [应对IT安全事件](https://docs.microsoft.com/en-us/previous-versions/tn-archive/cc700825(v=technet.10))（Microsoft）
+* [定义CSIRT的事件管理流程：正在进行的工作](https://resources.sei.cmu.edu/library/asset-view.cfm?assetid=7153)（CMU）
+* [创建和管理计算机安全事件处理团队（CSIRT）](https://www.first.org/conference/2008/papers/killcrece-georgia-slides.pdf)（CERT）

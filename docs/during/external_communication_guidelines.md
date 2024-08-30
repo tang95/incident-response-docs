@@ -1,70 +1,70 @@
 ---
 cover: assets/img/covers/whos_on-call.png
-description: Information on how to manage external communications
+description: 关于如何管理外部沟通的信息
 ---
 
-Information on how to manage external communications during an incident. See our [role descriptions](../before/different_roles/) for information about who is responsible for external communications.
+关于在事件期间如何管理外部沟通的信息。请参阅我们的[角色描述](../before/different_roles/)，了解谁负责外部沟通。
 
-## When to communicate publicly
+## 何时公开沟通
 
-Before you decide to communicate an incident, it’s important to have an agreed-upon set of criteria for when a major incident is communicated. False alarms and short-lived issues can sometimes kick off incident calls, so knowing when communication is appropriate will help your customers avoid widespread panic. This can be tied to your organization’s definition of [what an incident is](https://response.pagerduty.com/before/what_is_an_incident/), and/or your [severity levels](https://response.pagerduty.com/before/severity_levels/).
+在决定沟通事件之前，重要的是要有一套商定好的标准，用于确定何时沟通重大事件。误报和短暂问题有时会触发事件通话，因此了解何时进行沟通将有助于客户避免广泛的恐慌。这可以与您组织的[什么是事件](https://response.pagerduty.com/before/what_is_an_incident/)的定义和/或您的[严重性级别](https://response.pagerduty.com/before/severity_levels/)相关联。
 
-You might consider the following criteria as well: 
+您可能还考虑以下标准：
 
-1. Which products are affected?
-1. How badly is the usage affected?
-1. How many customers are affected?
-1. How noticeable is the impact?
-1. Is the impact something a customer may want to have contingencies for?
+1. 哪些产品受到影响？
+2. 使用受影响的程度如何？
+3. 有多少客户受到影响？
+4. 影响有多明显？
+5. 客户是否可能希望为此影响准备应急措施？
 
-We also recommend coming up with a set of templates for different stages of an incident, including options for the communications below as well as special situations (long-running incidents, small or limited customer impact, incidents opened with immediate resolution, etc.) 
+我们还建议为事件的不同阶段制定一套模板，包括以下沟通选项以及特殊情况（长时间运行的事件、小范围或有限客户影响、立即解决的事件等）。
 
-## How to communicate
+## 如何沟通
 
-### Initial communication:
+### 初始沟通：
 
-The first communication should indicate that an incident is under investigation. The goal here is to avoid a customer experiencing symptoms of the incident, checking status pages or Twitter accounts, and not seeing awareness of the issue from the business. 
+第一次沟通应表明正在调查事件。这里的目标是避免客户经历事件的症状，检查状态页面或Twitter账户，但没有看到企业对问题的认识。
 
-- Decision and posting of initial communication happens within 5 minutes of kicking off the incident call.
-- These messages should be entirely templated for ease of action.
-- These messages can be minimal in revealing scope which might not be known yet, but should indicate that scope will be coming soon. 
+- 初始沟通的决定和发布应在启动事件通话后的5分钟内完成。
+- 这些消息应完全模板化以方便操作。
+- 这些消息可以最小限度地揭示可能尚未确定的范围，但应表明范围即将到来。
 
-### Second communication: Initial Scoping of Impact
+### 第二次沟通：初始影响范围
 
-This is a message that should be delivered within 5 minutes of the first communication, once some scope of impact is known. This post should outline: 
+这是一条应在第一次沟通后的5分钟内发送的消息，一旦了解了某些影响范围。此帖子应概述：
 
-- Customer impact
-- An update of which components and/or functionality are impacted
-- Which regions are affected.
+- 客户影响
+- 受影响的组件和/或功能更新
+- 受影响的地区。
 
-### Updates
+### 更新
 
-Depending on the length of the incident, periodic updates will be necessary. These updates should be delivered **at least** every 20 minutes from the scoping update during the first two hours of an incident. After two hours, you may choose to update with reduced frequency and shift to a long incident communication model (see below). Regardless of expected frequency, when the degree of impact has meaningfully changed, updates should be posted. These updates should:
+根据事件的长度，需要定期更新。这些更新应从范围更新开始，在前两个小时内**至少**每20分钟发送一次。两小时后，您可以选择减少频率并切换到长时间事件沟通模型（见下文）。无论预期的频率如何，当影响程度有实质性变化时，应发布更新。这些更新应：
 
-- Indicate any changes to impact and/or scope
-- Indicate if we believe we have shifted into recovery and/or mitigation steps. 
-- Provide an expectation of when the next update will be posted.
+- 指出任何影响和/或范围的变化
+- 如果我们认为已经进入恢复和/或缓解步骤，应予以说明。
+- 提供下一次更新发布的时间预期。
 
-Customers with special contracts around their Customer Support or Customer Success, such as a customer on a Premium Support plan, should also receive communication of impact delivered individually, whether through a Customer Liaison or their account team.
+与客户支持或客户成功有特殊合同的客户，如高级支持计划的客户，也应通过客户联络或其账户团队单独接收影响沟通。
 
-### Long Incidents
+### 长时间事件
 
-Incidents longer than two hours should be considered a long incident, and have different communication procedures as a result. When we know an incident will be extended, customer expectations have to be set appropriately, and customer notification fatigue due to content-less updates should be avoided. When in doubt, notify at the frequency which keeps updates meaningful. 
+超过两小时的事件应被视为长时间事件，并因此有不同的沟通程序。当我们知道事件将持续很长时间时，必须适当设定客户期望，并避免因内容空洞的更新而导致的客户通知疲劳。如有疑问，请以保持更新有意义的频率通知。
 
-- Don’t determine this within the first hour of an incident.
-- For incidents where we know a long running recovery, indicate this in an update when known.
-- If planning to reduce update frequency, continue to provide expectations of when the next update will be posted.
+- 不要在事件的第一小时内确定这一点。
+- 对于我们知道将长时间恢复的事件，在已知时在更新中说明。
+- 如果计划减少更新频率，请继续提供下一次更新发布的时间预期。
 
-### Resolution
+### 解决
 
-Your final communication should be posted when full recovery of the incident has been confirmed by the Incident Commander. This update should include:
+您的最终沟通应在事件指挥官确认事件已完全恢复时发布。此更新应包括：
 
-- Confirmation of full recovery
-- Clear indication of any data loss or lingering corruption.
-- If there are no lingering impacts, clearly note this in the update. 
+- 确认完全恢复
+- 明确指出任何数据丢失或持续损坏。
+- 如果没有持续影响，请在更新中明确说明。
 
-Once this is posted, continue to follow the steps for [After an Incident](https://response.pagerduty.com/after/after_an_incident/) and the [Postmortem Process](https://response.pagerduty.com/after/post_mortem_process/). 
+一旦发布，继续遵循[事件后](https://response.pagerduty.com/after/after_an_incident/)和[事后分析过程](https://response.pagerduty.com/after/post_mortem_process/)的步骤。
 
-## Quick Reference
+## 快速参考
 
-![Quick reference rubric for external communications spanning from initial investigation communication to resolution.](../assets/img/misc/decision-tree.png)
+![从初始调查沟通到解决的外部沟通快速参考指南。](../assets/img/misc/decision-tree.png)

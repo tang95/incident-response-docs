@@ -1,51 +1,51 @@
 ---
 cover: assets/img/covers/whos_on-call.png
-description: Organizational structures vary, but these are general guidelines about the way different functions in a business relate to incident response.
+description: 组织结构各异，但这些是关于企业中不同职能与事件响应之间关系的一般指导原则。
 ---
-Organizational structures vary, but these are general guidelines about the way different functions in a business relate to incident response.
+组织结构各异，但这些是关于企业中不同职能与事件响应之间关系的一般指导原则。
 
-Generally speaking, every department should have a primary point of contact, on-call rotation, and clear escalation path. Organizations should always strive to minimize dependencies and empower response teams as much as possible. But, in novel situations, you do not know who you will need to help out. A clear system for recruiting responders from all parts of the business ensures that when the unexpected happens, responders don’t waste time on manual processes or ambiguous points of contact.
+一般来说，每个部门都应有一个主要联系人、值班轮换和清晰的升级路径。组织应始终努力减少依赖性，并尽可能授权给响应团队。但在新情况下，你不知道会需要谁来帮忙。一个清晰的系统，从企业的各个部分招募响应者，确保在意外发生时，响应者不会在手动流程或不明确的联系点上浪费时间。
 
-## Engineering
+## 工程
 
-Engineers are typically the primary responders and [subject matter experts](../before/different_roles.md) during incident response.
+工程师通常是事件响应中的主要响应者和[主题专家](../before/different_roles.md)。
 
-Which engineering teams are involved in which responses varies with a company’s operational model. In some organizations, a designated “Operations” or “Site Reliability Engineering” team may have initial responsibility for triage and assessment of new issues. At PagerDuty, the on-call engineer for an affected service has initial triage and assessment responsibility.
+哪些工程团队参与哪些响应，因公司的运营模式而异。在一些组织中，指定的“运营”或“站点可靠性工程”团队可能最初负责新问题的分类和评估。在PagerDuty，受影响服务的值班工程师最初负责分类和评估。
 
-## Customer Support / Customer Success
+## 客户支持 / 客户成功
 
-Support is the voice of the customer during incident response. A member of the Customer Support team is the default [Customer Liaison](../training/customer_liaison.md) within the response team, updating customers and stakeholders about incident status through Twitter, an internal Slack channel, and other channels as needed. They may also serve as an internal liaison to keep stakeholders within the company up to date.
+支持是事件响应期间客户的代言人。客户支持团队的一名成员是响应团队中的默认[客户联络人](../training/customer_liaison.md)，通过Twitter、内部Slack频道和其他必要渠道向客户和利益相关者更新事件状态。他们还可能作为内部联络人，让公司内的利益相关者保持最新状态。
 
-## Marketing
+## 市场营销
 
-Marketing or Public Relations is the primary response team for any public relations Incident.
+市场营销或公共关系是任何公共关系事件的主要响应团队。
 
-Additionally, Marketing or Public Relations should be engaged in any incident of scope or severity such that the company’s brand or image is at risk, or where public updates need to be sent through customer communication channels such as mass email or the company blog.
+此外，市场营销或公共关系应在任何可能影响公司品牌或形象的事件中被调动，或者需要通过客户沟通渠道（如大规模电子邮件或公司博客）发送公共更新的事件中被调动。
 
-## Product Management and Design
+## 产品管理和设计
 
-Product Managers and Designers are often on the hook for helping response teams make decisions when product functionality is impacted across multiple services or products. For example, if the response team has to decide which service to bring back up first, a Product Manager can help decide which one is more customer impacting.
+产品经理和设计师通常负责帮助响应团队在多个服务或产品受到影响时做出决策。例如，如果响应团队必须决定首先恢复哪个服务，产品经理可以帮助决定哪个对客户影响更大。
 
-Product will also be involved in the [postmortem process](../after/post_mortem_process.md), for both scheduling follow-up action against other work, as well as advising on any required product changes due to the issue.
+产品团队还将参与[事后分析过程](../after/post_mortem_process.md)，为后续行动安排时间，以及就因问题而需要的产品变更提供建议。
 
-## Executive Team
+## 执行团队
 
-Clear processes for updating the executive team during a major incident response helps ensure organizational leadership has the context and information they need and prevents [executive swoops](../training/glossary.md#executive-swoop). Additionally, while the Incident Commander has final authority during response, occasionally a major incident may require action at the highest levels of a company. For example, a senior executive may want to reach out to an impacted customer or partner to manage their relationship and help assure them the issue is getting the attention it needs.
+在重大事件响应期间，更新执行团队的清晰流程有助于确保组织领导层拥有他们需要的上下文和信息，并防止[执行干预](../training/glossary.md#executive-swoop)。此外，虽然事件指挥官在响应期间拥有最终权威，但偶尔重大事件可能需要公司在最高层采取行动。例如，高级执行官可能希望联系受影响的客户或合作伙伴，管理他们的关系，并帮助确保他们的问题得到应有的关注。
 
-## Sales
+## 销售
 
-Sales are generally stakeholders during incident response. Salespeople should be notified when there is any impact to the product that may affect demos or customer conversations, and account owners should understand any potential impact to their accounts.
+销售通常是事件响应期间的利益相关者。当产品受到影响可能影响演示或客户对话时，应通知销售人员，账户所有者应了解对其账户的任何潜在影响。
 
-## Human Resources (HR)
+## 人力资源（HR）
 
-HR is generally involved in any response to incidents affecting the safety or health of employees. Additionally, during a security incident, the security team may need to coordinate with HR both for management of an internal attacker as well as protection of any affected employees.
+HR通常参与任何影响员工安全或健康的事件响应。此外，在安全事件期间，安全团队可能需要与HR协调，既管理内部攻击者，也保护任何受影响的员工。
 
-## Finance
+## 财务
 
-Finance is most often a stakeholder during incident response, and should be kept up to date of any impacts to the platform that may affect billing, accounting, or end-of-month/quarter activities.
+财务在事件响应期间通常是利益相关者，应保持对可能影响计费、会计或月/季度末活动的平台影响的最新了解。
 
-However, finance should also have a clear on-call rotation and escalation path as there may be components of incident response that require third-party account management or other related actions.
+然而，财务也应有一个清晰的值班轮换和升级路径，因为在事件响应中可能需要第三方账户管理或其他相关行动。
 
-!!! tip "Consider Your Entire Organization"
+!!! tip "考虑整个组织"
 
-    There may be other parts of your organization that need to be part of incident response, either as responders or stakeholders. It is important to identify the different areas of your business and think through situations in which they may need to be involved, as well as ensure that anyone on-call has proper incident response training and understands their responsibilities.
+    你的组织中可能有其他部分需要成为事件响应的一部分，无论是作为响应者还是利益相关者。重要的是要识别企业中的不同领域，思考在哪些情况下他们可能需要参与，并确保任何值班人员都接受过适当的事件响应培训并了解他们的责任。

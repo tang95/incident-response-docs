@@ -1,11 +1,11 @@
 ---
 cover: assets/img/covers/dont_panic.png
-description: Information on what to do during a major incident.
+description: 重大事件发生时应采取的行动指南。
 ---
-Information on what to do during a major incident. See our [severity level descriptions](../before/severity_levels.md) for what constitutes a major incident.
+重大事件发生时应采取的行动指南。关于重大事件的定义，请参阅我们的[严重级别描述](../before/severity_levels.md)。
 
-!!! note "Documentation"
-    For your own internal documentation, you should make sure that this page has all of the necessary information prominently displayed. Such as: phone bridge numbers, Slack rooms, important chat commands, etc. Here is an example,
+!!! note "文档记录"
+    为了您内部的文档记录，请确保此页面显著展示所有必要信息，例如：电话会议号码、Slack 房间、重要的聊天命令等。以下是一个示例：
 
     <table class="custom-table" id="contact-summary">
       <thead>
@@ -17,116 +17,116 @@ Information on what to do during a major incident. See our [severity level descr
           <td><a href="#">+1 555 BIG FIRE</a> (+1 555 244 3473) / PIN: 123456</td>
         </tr>
         <tr>
-          <td colspan="3" class="centered">Need an IC? Do <code>!ic page</code> in Slack</td>
+          <td colspan="3" class="centered">需要指挥官吗？在 Slack 中执行 <code>!ic page</code></td>
         </tr>
         <tr>
-          <td colspan="3"><em>For executive summary updates only, join <a href="#">#executive-summary-updates</a>.</em></td>
+          <td colspan="3"><em>仅限执行摘要更新，加入 <a href="#">#executive-summary-updates</a>。</em></td>
         </tr>
       </tbody>
     </table>
 
-!!! warning "Security Incident?"
-    If this is a security incident, you should follow the [Security Incident Response](../during/security_incident_response.md) process.
+!!! warning "安全事件？"
+    如果是安全事件，应遵循[安全事件响应](../during/security_incident_response.md)流程。
 
-## Don't Panic!
+## 不要慌张！
 
-1. Join the incident call and chat (see links above).
-    * Anyone is free to join the call or chat to observe and follow along with the incident.
-    * If you wish to participate however, you should join both. If you can't join the call for some reason, you should have a dedicated proxy for the call. Disjointed discussions in the chat room are ultimately distracting.
+1. 加入事件通话和聊天（见上文链接）。
+    * 任何人都可以自由加入通话或聊天，观察并跟进事件。
+    * 如果您希望参与，则应同时加入通话和聊天。如果由于某些原因无法加入通话，您应指定一个专门的代理加入通话。在聊天室中进行分散的讨论最终会分散注意力。
 
-1. Follow along with the call/chat and add any comments you feel are appropriate, but keep the discussion relevant to the problem at hand.
-    * If you are not an SME, try to filter any discussion through the primary SME for your service. Too many people discussing at once can become overwhelming, so we should try to maintain a hierarchical structure to the call if possible.
+1. 跟随通话/聊天，添加您认为合适的任何评论，但请保持讨论与当前问题相关。
+    * 如果您不是主题专家（SME），请尝试通过您服务的主题专家过滤任何讨论。同时有太多人讨论可能会变得难以应付，因此我们应尽可能保持通话的层级结构。
 
-1. Follow instructions from the Incident Commander.
-    * **Is there no IC on the call?**
-        * Manually page them via Slack, with `!ic page` in Slack. This will page the primary and backup IC's at the same time.
-        * Never hesitate to page the IC. It's much better to have them and not need them than the other way around.
+1. 遵循事件指挥官的指示。
+    * **通话中没有指挥官吗？**
+        * 通过 Slack 手动呼叫他们，使用 `!ic page` 在 Slack 中。这将同时呼叫主要和备份指挥官。
+        * 不要犹豫呼叫指挥官。有他们在场而无需他们比没有他们在场要好得多。
 
-## Steps for Incident Commander
-Resolve the incident as quickly and as safely as possible, use the Deputy to assist you. Delegate any tasks to relevant experts at your discretion.
+## 事件指挥官的步骤
+尽快且尽可能安全地解决事件，使用副指挥官协助您。根据需要将任务委派给相关专家。
 
-1. Announce on the call and in Slack that you are the incident commander, who you have designated as deputy (usually the backup IC), and scribe.
+1. 在通话和 Slack 中宣布您是事件指挥官，您指定的副指挥官（通常是备份指挥官）和记录员。
 
-1. Identify if there is an obvious cause to the incident (recent deployment, spike in traffic, etc.), delegate investigation to relevant experts,
-    * Use the service experts on the call to assist in the analysis. They should be able to quickly provide confirmation of the cause, but not always. It's the call of the IC on how to proceed in cases where the cause is not positively known. Confer with service owners and use their knowledge to help you.
+1. 确定是否存在明显的事件原因（最近的部署、流量激增等），委派相关专家进行调查，
+    * 利用通话中的服务专家协助分析。他们应能快速确认原因，但并非总是如此。在原因未明确的情况下，指挥官应决定如何进行。与服务所有者协商，利用他们的知识帮助您。
 
-1. Identify investigation & repair actions (roll back, rate-limit services, etc) and delegate actions to relevant service experts. Typically something like this (obviously not an exhaustive list),
-    * **Bad Deployment:** Roll it back.
-    * **Web Application Stuck/Crashed:** Do a rolling restart.
-    * **Event Flood:** Validate automatic throttling is sufficient, adjust manually if not.
-    * **Data Center Outage:** Validate automation has removed bad data center. Force it to do so if not.
-    * **Degraded Service Behavior without load:** Gather forensic data (heap dumps, etc), and consider doing a rolling restart.
+1. 确定调查和修复行动（回滚、服务限速等），并将行动委派给相关服务专家。通常包括以下内容（显然不是一个详尽的列表），
+    * **不良部署：** 回滚。
+    * **Web 应用程序卡住/崩溃：** 进行滚动重启。
+    * **事件洪水：** 验证自动限速是否足够，必要时手动调整。
+    * **数据中心中断：** 验证自动化是否已移除不良数据中心。如果未移除，强制执行。
+    * **服务性能下降无负载：** 收集法医数据（堆转储等），并考虑进行滚动重启。
 
-1. Listen for prompts from your Deputy regarding severity escalations, decide whether we need to announce publicly, and instruct Customer Liaison accordingly.
-    * Announcing publicly is at your discretion as IC. If you are unsure, then announce publicly ("If in doubt, tweet it out").
+1. 听取副指挥官关于严重性升级的提示，决定是否需要公开宣布，并相应指示客户联络员。
+    * 公开宣布由您作为指挥官自行决定。如果您不确定，则公开宣布（“如有疑问，请推文”）。
 
-1. Keep track of your [span of control](../training/glossary.md#span-of-control). If the response starts to become larger, or the incident increases in complexity, consider [splitting off sub-teams](../before/complex_incidents.md#spinning-off-sub-teams) in order to get a more effective response.
+1. 跟踪您的[控制范围](../training/glossary.md#span-of-control)。如果响应开始变得更大，或者事件变得更加复杂，考虑[分出子团队](../before/complex_incidents.md#spinning-off-sub-teams)以获得更有效的响应。
 
-1. Once the incident has recovered or is actively recovering, you can announce that the incident is over and that the call is ending. This usually indicates there's no more productive work to be done for the incident right now.
-    * Move the remaining, non-time-critical discussion to Slack.
-    * Follow up to ensure the customer liaison wraps up the incident publicly.
-    * Identify any post-incident clean-up work.
-    * You may need to perform debriefing/analysis of the underlying contributing factor.
+1. 一旦事件恢复或正在积极恢复，您可以宣布事件结束并结束通话。这通常表明当前没有更多对事件有建设性的工作要做。
+    * 将剩余的非时间敏感讨论转移到 Slack。
+    * 跟进确保客户联络员公开结束事件。
+    * 确定任何事后清理工作。
+    * 您可能需要进行事后回顾/分析，以确定潜在的贡献因素。
 
-1. Once the call is over, you can start to follow the steps from [After an Incident](../after/after_an_incident.md).
+1. 通话结束后，您可以开始遵循[事件后](../after/after_an_incident.md)的步骤。
 
-## Steps for Deputy
-You are there to support the IC in whatever they need.
+## 副指挥官的步骤
+您在那里支持指挥官，满足他们的需求。
 
-1. Monitor the status of the incident, and notify the IC if/when the incident escalates in severity level.
+1. 监控事件状态，并在事件严重性升级时通知指挥官。
 
-1. Follow instructions from the Incident Commander.
+1. 遵循事件指挥官的指示。
 
-1. Once the call is over, you can start to follow the steps from [After an Incident](../after/after_an_incident.md).
+1. 通话结束后，您可以开始遵循[事件后](../after/after_an_incident.md)的步骤。
 
-## Steps for Scribe
-You are there to document the key information from the incident in Slack.
+## 记录员的步骤
+您在那里记录 Slack 中事件的关键信息。
 
-1. Update the Slack room with who the IC is, who the Deputy is, and that you're the scribe (if not already done).
-    * e.g. "IC: Bob Boberson, Deputy: Deputy Deputyson, Scribe: Writer McWriterson"
+1. 在 Slack 房间中更新谁是指挥官，谁是副指挥官，以及您是记录员（如果尚未完成）。
+    * 例如：“指挥官：Bob Boberson，副指挥官：Deputy Deputyson，记录员：Writer McWriterson”
 
-1. Start our status monitoring bot so that all responders can see the current state without needing to ask.
-    * OfficerURL can help you to monitor the status on Slack,
-        * `!status` - Will tell you the current status.
-        * `!status stalk` - Will continually monitor the status and report it to the room every 30s.
+1. 启动我们的状态监控机器人，以便所有响应者无需询问即可看到当前状态。
+    * OfficerURL 可以帮助您在 Slack 上监控状态，
+        * `!status` - 将告诉您当前状态。
+        * `!status stalk` - 将持续监控状态并向房间每 30 秒报告一次。
 
-1. You should add notes to Slack when significant actions are taken, or findings are determined. You don't need to wait for the IC to direct this - use your own judgment.
-    * You should also add `TODO` notes to the Slack room that indicate follow-ups slated for later.
+1. 在采取重大行动或确定发现时，应在 Slack 中添加笔记。您无需等待指挥官指示这一点 - 使用您自己的判断。
+    * 还应在 Slack 房间中添加 `TODO` 笔记，指示稍后安排的跟进。
 
-1. Follow instructions from the Incident Commander.
+1. 遵循事件指挥官的指示。
 
-1. Once the call is over, you can start to follow the steps from [After an Incident](../after/after_an_incident.md).
+1. 通话结束后，您可以开始遵循[事件后](../after/after_an_incident.md)的步骤。
 
-## Steps for Subject Matter Experts
-You are there to support the Incident Commander in identifying the cause of the incident, suggesting and evaluation repair actions, and following through on the repair actions.
+## 主题专家的步骤
+您在那里支持事件指挥官，确定事件原因，提出并评估修复行动，并执行修复行动。
 
-1. Investigate the incident by analyzing any graphs or logs at your disposal. Announce all findings to the incident commander.
-    * If you are unsure of the cause, that is fine. Simply state that you are investigating and provide regular updates to the IC.
+1. 通过分析您可用的任何图表或日志来调查事件。向事件指挥官宣布所有发现。
+    * 如果您不确定原因，那也没关系。只需声明您正在调查，并向指挥官提供定期更新。
 
-1. Announce all suggestions for resolution to the Incident Commander, it is their decision on how to proceed, do not follow any actions unless told to do so!
+1. 向事件指挥官宣布所有解决建议，由他们决定如何进行，除非被告知这样做，否则不要采取任何行动！
 
-1. Follow instructions from the Incident Commander.
+1. 遵循事件指挥官的指示。
 
-1. Once the call is over, you can start to follow the steps from [After an Incident](../after/after_an_incident.md).
+1. 通话结束后，您可以开始遵循[事件后](../after/after_an_incident.md)的步骤。
 
-## Steps for Customer Liaison
-Be on stand-by to post public-facing messages regarding the incident.
+## 客户联络员的步骤
+准备好发布与事件相关的面向公众的消息。
 
-1. You will typically be required to update the status page and to send tweets from our various accounts at certain times during the call.
+1. 您通常需要在通话期间的某些时候更新状态页面，并从我们的各个账户发送推文。
 
-1. Follow instructions from the Incident Commander.
+1. 遵循事件指挥官的指示。
 
-1. Once the call is over, you can start to follow the steps from [After an Incident](../after/after_an_incident.md).
+1. 通话结束后，您可以开始遵循[事件后](../after/after_an_incident.md)的步骤。
 
-## Steps for Internal Liaison
-You are there to provide updates to internal stakeholders and to mobilize additional internal responders as necessary.
+## 内部联络员的步骤
+您在那里向内部利益相关者提供更新，并在必要时动员额外的内部响应者。
 
-1. Be prepared to page other people as directed by the Incident Commander.
+1. 准备好根据事件指挥官的指示呼叫其他人。
 
-1. Notify internal stakeholders as necessary, adding subscribers to the PagerDuty incident. We have predefined teams called "SEV-1 Stakeholders" and "SEV-2 Stakeholders" which can be used.
+1. 根据需要通知内部利益相关者，并向 PagerDuty 事件添加订阅者。我们有预定义的团队，如“SEV-1 利益相关者”和“SEV-2 利益相关者”可以使用。
 
-1. Provide regular status updates in Slack (roughly every 30mins) to the executive team, giving an executive summary of the current status. Keep it short and to the point, and use `@here`.
+1. 在 Slack 中向执行团队提供定期状态更新（大约每 30 分钟），提供当前状态的执行摘要。保持简短和重点，并使用 `@here`。
 
-1. Follow instructions from the Incident Commander.
+1. 遵循事件指挥官的指示。
 
-1. Once the call is over, you can start to follow the steps from [After an Incident](../after/after_an_incident.md).
+1. 通话结束后，您可以开始遵循[事件后](../after/after_an_incident.md)的步骤。

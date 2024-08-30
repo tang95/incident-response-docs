@@ -1,43 +1,43 @@
 ---
 cover: assets/img/covers/incident.png
-description: Before defining an incident response process, we should first define what an incident (and a major incident) is, along with how we should trigger the response for such incidents.
+description: 在定义事件响应流程之前，我们首先应该定义什么是事件（以及重大事件），以及我们应该如何触发此类事件的响应。
 ---
-Before we can define our incident response process, we should first define what an incident (and a major incident) is.
+在我们能够定义事件响应流程之前，我们首先应该定义什么是事件（以及重大事件）。
 
-## What is an incident?
-Any unplanned disruption or degradation of service that is actively affecting customers ability to use PagerDuty.
+## 什么是事件？
+任何未计划的、正在影响客户使用PagerDuty的服务中断或服务降级。
 
-## What is a major incident?
-Any incident that requires a coordinated response between multiple teams.
+## 什么是重大事件？
+任何需要多个团队协调响应的事件。
 
-## What is incident response?
-An organized approach to addressing and managing an incident. The goal isn't just to solve the incident, but to handle the situation in a way that limits damage and reduces recovery time and costs.
+## 什么是事件响应？
+一种有组织的方法来处理和管理部门事件。目标不仅仅是解决事件，而是以一种限制损害、减少恢复时间和成本的方式来处理情况。
 
-## What triggers our incident response process?
-Our incident response process should be initiated for any major incident. It provides a framework for effectively responding and reaching a fast resolution time. Our incident response process can be triggered one of two ways, either via automated monitoring and alerting, or manually via human action.
+## 什么触发我们的事件响应流程？
+我们的事件响应流程应该针对任何重大事件启动。它提供了一个有效响应和快速解决时间的框架。我们的事件响应流程可以通过两种方式触发，要么是通过自动监控和警报，要么是通过人工操作手动触发。
 
-### Automated Monitoring
-Throughout our system, we monitor various metrics to determine if our system is in a state which would require a coordinated human response in order to resolve. To determine which metrics we monitor, and what to monitor them for, we ask ourselves these questions. If the answer to any is "No", then we should trigger our incident response process.
+### 自动监控
+在我们的系统中，我们监控各种指标，以确定我们的系统是否处于需要协调人类响应以解决的状态。为了确定我们监控哪些指标以及监控它们的目的，我们问自己这些问题。如果任何一个问题的答案是“否”，那么我们应该触发我们的事件响应流程。
 
-1. Can customers perform all incident response functions provided by PagerDuty, across all platforms?
-    * e.g. Can customers acknowledge, reassign, and resolve incidents via every supported method?
-1. Are customers receiving notifications within SLA?
+1. 客户能否在所有平台上执行PagerDuty提供的所有事件响应功能？
+    * 例如，客户能否通过所有支持的方法确认、重新分配和解决事件？
+1. 客户是否在服务级别协议（SLA）内收到通知？
 
-### Human Escalation
-Automatic monitoring is only part of the process. We may have parts of our functionality which lack the necessary monitoring. It's important to still be able to trigger a coordinated incident response in those cases. For example, if our Support team starts to receive requests that indicate a system issue, they need to have the power to trigger our response. Any PagerDuty employee has the ability to trigger our incident response process at any time.
+### 人工升级
+自动监控只是流程的一部分。我们可能有一些功能缺乏必要的监控。在这些情况下，仍然能够触发协调的事件响应是很重要的。例如，如果我们的支持团队开始收到表明系统问题的请求，他们需要有权触发我们的响应。任何PagerDuty员工都有能力在任何时间触发我们的事件响应流程。
 
-We trigger on any unplanned disruption or degradation of service to which any PagerDuty employee deems necessary of requiring coordinated incident response.
+我们针对任何PagerDuty员工认为需要协调事件响应的未计划服务中断或服务降级触发响应。
 
-!!! question "Is a response required?"
-    If you are unsure of whether response is required, trigger our incident response process. All you need to do to start the process is page an Incident Commander in Slack with `!ic page`.
+!!! question "是否需要响应？"
+    如果你不确定是否需要响应，请触发我们的事件响应流程。你只需要在Slack中向事件指挥官发送`!ic page`即可开始流程。
 
-## Incident Severity
-Our [severity definitions](../before/severity_levels.md) determine how severe we _think_ an incident is based on some predefined guidelines. The intent is to guide responders on the type of response they can provide. For example, the higher the severity, the riskier the decisions you can take to return the system to normal.
+## 事件严重性
+我们的[严重性定义](../before/severity_levels.md)根据一些预定义的指导方针确定我们_认为_一个事件的严重程度。目的是指导响应者提供哪种类型的响应。例如，严重性越高，你可以采取的风险决策就越大，以使系统恢复正常。
 
-Severities are useful to quickly determine whether something requires a more complex response, or whether it requires a coordinated response at all. However, they are not a black and white definition of what constitutes a major incident. If something is not covered by our severity definitions - but you think it requires incident response - then it requires incident response. We only need to know one thing: Is this a major incident? The severity level can be determined later and isn't a requirement of triggering our response process.
+严重性有助于快速确定某事是否需要更复杂的响应，或者是否需要协调响应。然而，它们并不是定义重大事件的黑白标准。如果某事不在我们的严重性定义范围内——但你觉得它需要事件响应——那么它就需要事件响应。我们只需要知道一件事：这是一个重大事件吗？严重级别可以在稍后确定，并不是触发我们响应流程的要求。
 
-## Mentality Shift
-One of the more important concepts of our incident response process is the mentality shift that needs to be made during an incident. We typically call this the "Peacetime vs Wartime" mentality shift. The idea is that the decision making process changes when you are in an incident situation, and you are able to take riskier actions than you would normally consider during day-to-day operations. It can be hard for responders to grasp this concept, and your incident response process can be held up by responders who stick to the peacetime way of thinking to avoid proceeding with a potentially risky action. You can read more about peacetime vs wartime in the [Responder Training Guide](../training/subject_matter_expert.md#wartime-vs-peacetime).
+## 心态转变
+我们事件响应流程中更重要的概念之一是在事件期间需要进行的心态转变。我们通常称之为“和平时期与战争时期”的心态转变。这个想法是，当你处于事件情况时，决策过程会发生变化，你可以采取比日常运营中通常考虑的风险更大的行动。对于响应者来说，掌握这个概念可能很难，你的事件响应流程可能会被坚持和平时期思维方式的响应者阻碍，以避免采取潜在风险行动。你可以在[响应者培训指南](../training/subject_matter_expert.md#wartime-vs-peacetime)中阅读更多关于和平时期与战争时期的内容。
 
-!!!info "Normal vs Emergency"
-    Some people don't like the "Peacetime vs Wartime" analogy, in which case you can use any other terms you feel appropriate. "Normal vs Emergency" is a common choice, but you could equally use "OK vs Not OK". It's not terribly important what name you give it, the important part is to make the mentality shift.
+!!! info "正常与紧急"
+    有些人不喜欢“和平时期与战争时期”的比喻，在这种情况下，你可以使用任何你认为合适的其他术语。“正常与紧急”是一个常见的选择，但你也可以使用“OK与Not OK”。名称并不重要，重要的是进行心态转变。

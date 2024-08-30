@@ -1,60 +1,60 @@
 ---
-cover: assets/img/covers/chatops.png
-description: Throughout this documentation references are made to various chat commands, all starting with an exclamation (e.g. 'ic page'). We have bots running in our Slack rooms which watch for these commands and execute various actions for us when they're detected. This page gives an overview of the commands we've referenced in this documentation, and what they do behind the scenes.
+封面: assets/img/covers/chatops.png
+描述: 在整个文档中，提到了各种以感叹号开头的聊天命令（例如 `!ic page`）。我们在 Slack 房间中运行着一些机器人，它们会监视这些命令并在检测到时为我们执行各种操作。本页概述了我们在文档中引用的命令以及它们在幕后的作用。
 ---
-Throughout this documentation, references are made to various chat commands, all starting with an exclamation (e.g. `!ic page`). We have bots running in our Slack rooms which watch for these commands and execute various actions for us when they're detected. This page gives an overview of the commands we've referenced in this documentation, and what they do behind the scenes.
+在整个文档中，提到了各种以感叹号开头的聊天命令（例如 `!ic page`）。我们在 Slack 房间中运行着一些机器人，它们会监视这些命令并在检测到时为我们执行各种操作。本页概述了我们在文档中引用的命令以及它们在幕后的作用。
 
-!!! question "Are these bots open-source?"
-    The chat plugins and bots we use are unfortunately not currently open-sourced, however we would like to eventually get them open-sourced so that you can all benefit from them. In the meantime, the hope is that the descriptions on this page can help you to reproduce similar functionality with your own  tooling.
+!!! 问题 "这些机器人是开源的吗？"
+    遗憾的是，我们使用的聊天插件和机器人目前尚未开源，但我们希望最终能将它们开源，以便大家都能从中受益。在此之前，我们希望本页的描述能帮助您使用自己的工具重现类似的功能。
 
-## Incident Response
+## 事件响应
 
-Our `!ic` commands poll the PagerDuty API behind the scenes for various on-call schedules we specify. It caches the names and contact details for the current on-call users, so that if there's any issue in making API requests, the funtionality isn't impacted.
+我们的 `!ic` 命令在幕后轮询 PagerDuty API，以获取我们指定的各种待命时间表。它会缓存当前待命用户的姓名和联系信息，以便在无法进行 API 请求时，功能不受影响。
 
 ### `!ic`
-This command lists out the current Incident Commanders on-call, their phone numbers, and a message telling users how to page them.
+此命令列出当前的现场指挥官（Incident Commanders）待命人员、他们的电话号码，并告知用户如何呼叫他们。
 
-![Incident Commander List](../assets/img/chatops/ic.png)
+![现场指挥官列表](../assets/img/chatops/ic.png)
 
 ### `!ic page`
-This is the command we use to manually trigger our incident response process. It uses the cached schedule information and will page all of the current Incident Commanders on-call (the primary, the backup, and any trainees who are shadowing). It will also notify into the room if it is unable to page them for any reason, and direct users to manually call the person using their contact information. Additionally, it will create a new PagerDuty incident and link users to it.
+这是我们用来手动触发事件响应流程的命令。它使用缓存的时间表信息，并会呼叫所有当前待命的现场指挥官（主要、备份及任何旁听的实习生）。如果由于任何原因无法呼叫他们，它还会在房间中通知，并指导用户使用联系信息手动呼叫相关人员。此外，它还会创建一个新的 PagerDuty 事件并链接到该事件。
 
-![Paging Incident Commanders](../assets/img/chatops/ic_page.png)
+![呼叫现场指挥官](../assets/img/chatops/ic_page.png)
 
-If for any reason we are unable to page the Incident Commanders automatically, the bot will let us know that it has failed, and give us the phone numbers for the relevant people so we can manually call them. Here is some example output from our test bot, where we have simulated being unable to page via PagerDuty due to an unresponsive API call.
+如果由于任何原因我们无法自动呼叫现场指挥官，机器人会通知我们呼叫失败，并提供相关人员的电话号码，以便我们手动呼叫。以下是我们测试机器人的一些示例输出，我们在其中模拟了由于 API 调用无响应而无法通过 PagerDuty 呼叫的情况。
 
-![Testing for Failure](../assets/img/chatops/test_for_failure.png)
+![测试失败情况](../assets/img/chatops/test_for_failure.png)
 
 ### `!ic responders`
-This works similarly to the `!ic` command, only it uses all our service team schedules instead of just the IC schedules. It will list out all the current people who are on-call for each engineering team. This is useful to also know who will likely be joining the incident call momentarily.
+这与 `!ic` 命令类似，只是它使用我们所有服务团队的时间表，而不仅仅是现场指挥官的时间表。它会列出每个工程团队当前待命的所有人员。这对于了解哪些人员可能会立即加入事件通话很有用。
 
-![Listing Responders](../assets/img/chatops/ic_responders.png)
+![列出响应者](../assets/img/chatops/ic_responders.png)
 
 ### `!ic page responders`
-This works similarly to `!ic page`, only it pages the responders list instead of the Incident Commanders. This is rarely used, since generally only the relevant team will get paged. However, sometimes we require an "all hands on deck" response, and need the ability to quickly page all the current on-calls.
+这与 `!ic page` 类似，只是它呼叫响应者列表而不是现场指挥官。这很少使用，因为通常只有相关团队会被呼叫。然而，有时我们需要“全员出动”的响应，并需要快速呼叫所有当前待命人员的能力。
 
-![Paging Responders](../assets/img/chatops/ic_page_responders.png)
+![呼叫响应者](../assets/img/chatops/ic_page_responders.png)
 
 ### `!ic who <user>`
-Sometimes we may need to identify a specific individual to bring them onto a call. This command lists out the contact info for a specific user, and a message telling users how to page them.
+有时我们可能需要确定一个特定的人，以便将他们加入通话。此命令列出特定用户的联系信息，并告知用户如何呼叫他们。
 
-![Identifying Users](../assets/img/chatops/ic_who_rich.png)
+![识别用户](../assets/img/chatops/ic_who_rich.png)
 
 ### `!ic page <user>`
-This will page a specific person by username.
+这将通过用户名呼叫特定的人。
 
-![Paging a User](../assets/img/chatops/ic_page_rich.png)
+![呼叫用户](../assets/img/chatops/ic_page_rich.png)
 
-## Status
+## 状态
 
-Our `!status` commands look at our internal monitoring systems to determine the current system state, as reported by the systems themselves. This is the status our alerting tooling uses to automatically notify us of issues.
+我们的 `!status` 命令查看我们的内部监控系统，以确定系统当前的状态，如系统自身所报告的那样。这是我们的警报工具用来自动通知我们问题的状态。
 
 ### `!status`
-This will tell us the current overview of our system state. It will also alert us if it is unable to check for the status, since that could also be an indication of an issue. Typically though, it will hopefully show a status of `NORMAL`.
+这将告诉我们系统状态的当前概览。如果无法检查状态，它还会提醒我们，因为这也可能是问题的迹象。通常情况下，我们希望它显示 `NORMAL` 状态。
 
-![Displaying Status](../assets/img/chatops/status.png)
+![显示状态](../assets/img/chatops/status.png)
 
 ### `!status stalk`
-This does the same as the above, only it polls every 30s until we stop it (with `!status unstalk`). It will only report the status into the chat room if it has changed since the last time it checked. We have this running during an incident so we can easily see if our system is getting worse or recovering without having to manually check our monitoring.
+这与上述命令相同，只是它每 30 秒轮询一次，直到我们停止它（使用 `!status unstalk`）。只有在自上次检查以来状态发生变化时，它才会将状态报告到聊天室。我们在事件期间运行此命令，以便轻松查看系统是恶化还是恢复，而无需手动检查我们的监控。
 
-![Stalking Status](../assets/img/chatops/status_stalk.png)
+![追踪状态](../assets/img/chatops/status_stalk.png)

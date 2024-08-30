@@ -1,176 +1,176 @@
 ---
 cover: assets/img/covers/roles.png
-description: There are several main roles for our incident response teams at PagerDuty. This page describes each of our roles in detail, why it's important to have them, and what their responsibilities are.
+description: PagerDuty 的事故响应团队有几种主要角色。本页详细描述了每个角色，为什么需要这些角色，以及他们的职责是什么。
 ---
-There are several main roles for our incident response teams at PagerDuty. Certain roles only have one person per incident (e.g. IC), whereas other roles can have multiple people (e.g. Subject Matter Expert, SME). It's all about coming together as a team, working the problem, and getting a solution quickly.
+PagerDuty 的事故响应团队有几种主要角色。某些角色在每次事故中只有一个人（例如 IC），而其他角色可以有多个人（例如主题专家，SME）。关键在于作为一个团队共同努力，解决问题，并迅速找到解决方案。
 
-Here is a rough outline of our role hierarchy with each role discussed in more detail on the rest of this page.
+以下是我们角色层次的大致概述，每个角色将在本页其余部分详细讨论。
 
-![Incident Response Structure](../assets/img/misc/incident_response_roles.png)
+![事故响应结构](../assets/img/misc/incident_response_roles.png)
 
-During larger complex incidents, the role structure may be adjusted to account for the creation of sub-teams. Read about how we handle [complex incidents](../before/complex_incidents.md) for more information.
+在处理更大更复杂的事故时，角色结构可能会调整，以适应子团队的创建。更多信息请阅读我们如何处理[复杂事故](../before/complex_incidents.md)。
 
-!!! tip "Flexible Structure"
-     It is not intended that every role be filled by a different person for every incident. For example, if the incident is small enough in scope, the Deputy might also take on the responsibilities of the Scribe and Internal Liaison for that specific incident. The structure should be flexible and scale based on the size and scope of the incident.
-
----
-
-## Incident Commander (IC)
-
-### What is it?
-An Incident Commander acts as the single source of truth of what is currently happening and what is going to happen during a major incident. They come in all shapes, sizes, and colors.
-
-### Why have one?
-As any software system grows in size and complexity, things break and cause incidents. The Incident Commander is needed to help drive major incidents to resolution.
-
-### What are the responsibilities?
-1. Help prepare for major incidents,
-    * Setup communications channels for major incidents.
-    * Funnel people to these communications channels when there is a major incident.
-    * Train team members on how to communicate during major incidents and train other Incident Commanders.
-1. Drive major incidents to resolution,
-    * Get everyone on the same communication channel.
-    * Collect information from team members for their services/area of ownership status.
-    * Collect proposed repair actions and then recommend repair actions to be taken.
-    * Delegate all repair actions, the Incident Commander is NOT a resolver.
-    * Be the single authority on system status
-1. Communication during major incidents,
-    * Timely reminders to Customer Liaison to draft external communication messages when needed. 
-    * Reviewing, giving feedback and approving draft external communication 
-    * Asking Customer Liaison to post the reviewed draft external communication
-    * Asking all responders if there are strong objections to posting the external communication is a good practice but is not mandatory
-    * Approving the removal of an ephemeral investigation message if there has been no customer impact and the major incident turns out to be a false alarm
-    * If Customer Liaison is not available to post on the status page, the IC is responsible for delegating somebody to post publicly in their stead. 
-1. Postmortem,
-    * Creating the initial template right after the incident so people can put in their thoughts while fresh.
-    * Assigning the postmortem after the event is over, this can be done after the call.
-    * Work with Team Leads/Managers on scheduling preventive actions.
-
-### Who are they?
-Anyone on the Incident Commander on-call schedule. Trainees are typically on the Incident Commander Shadow schedule.
-
-### How can I become one?
-Take a look at our [Incident Commander training guide](../training/incident_commander.md).
+!!! tip "灵活结构"
+     并不是每次事故都需要每个角色由不同的人来担任。例如，如果事故的范围足够小，副指挥官可能也会承担记录员和内部联络员的职责。结构应该是灵活的，并根据事故的大小和范围进行调整。
 
 ---
 
-## Deputy
+## 事故指挥官 (IC)
 
-### What is it?
-A Deputy is a direct support role for the Incident Commander. This is not a shadow where the person just observes. The Deputy is expected to perform important tasks during an incident.
+### 是什么？
+事故指挥官在重大事故期间充当当前发生情况和即将发生情况的唯一真实来源。他们来自各种背景，形态和颜色。
 
-### Why have one?
-It's important for the IC to focus on the problem at hand rather than worrying about documenting the steps or monitoring timers. The Deputy helps to support the IC and keep them focussed on the incident.
+### 为什么需要？
+随着任何软件系统的大小和复杂性增加，事情会出错并导致事故。事故指挥官需要帮助推动重大事故解决。
 
-### What are the responsibilities?
-The Deputy is expected to:
+### 职责是什么？
+1. 帮助准备重大事故，
+    * 为重大事故设置通信渠道。
+    * 在发生重大事故时引导人们到这些通信渠道。
+    * 培训团队成员如何在重大事故期间沟通，并培训其他事故指挥官。
+1. 推动重大事故解决，
+    * 让所有人都在同一个通信渠道上。
+    * 从团队成员那里收集他们服务/所有权区域的状态信息。
+    * 收集提议的修复行动，然后推荐采取的修复行动。
+    * 委派所有修复行动，事故指挥官不是解决者。
+    * 成为系统状态的单一权威
+1. 重大事故期间的沟通，
+    * 及时提醒客户联络员在需要时起草外部沟通信息。
+    * 审查，提供反馈并批准起草的外部沟通
+    * 要求客户联络员发布审查过的外部沟通草案
+    * 询问所有响应者是否有强烈反对发布外部沟通的做法是好的，但不是强制性的
+    * 如果客户没有受到影响，重大事故被证明是误报，批准移除临时调查信息
+    * 如果客户联络员无法在状态页面上发布信息，IC 负责委派某人在其位置上公开发布。
+1. 事后回顾，
+    * 在事故后立即创建初始模板，以便人们在新鲜时可以放入他们的想法。
+    * 在事件结束后分配事后回顾，这可以在通话后完成。
+    * 与团队领导/经理一起安排预防行动。
 
-1. Bring up issues to the Incident Commander that may otherwise not be addressed (keeping an eye on timers that have been started, circling back around to missed items from a roll call, etc).
-1. Be a "hot standby" Incident Commander, should the primary need to either transition to a SME, or otherwise have to step away from the IC role.
-1. Manage the incident call and be prepared to remove people from the call if instructed by the Incident Commander.
+### 他们是谁？
+任何在事故指挥官待命计划上的人。受训者通常在事故指挥官影子计划上。
 
-### Who are they?
-Any Incident Commander can act as a Deputy. Deputies need to be trained as an Incident Commander as they may be required to take over command.
-
-### How can I become one?
-Take a look at our [Deputy training guide](../training/deputy.md). Deputies also need to be [trained as an Incident Commander](../training/incident_commander.md).
-
----
-
-## Scribe
-
-### What is it?
-A Scribe documents the timeline of an incident as it progresses and makes sure all important decisions and data are captured for later review.
-
-### Why have one?
-The Incident Commander will need to focus on the problem at hand and the subject matter experts will need to focus on resolving the incident. It is important to capture a timeline of events as they happen so that they can be reviewed during the postmortem to determine how well we performed, and so we can accurately determine any additional impact that we might not have noticed at the time.
-
-### What are the responsibilities?
-The Scribe is expected to:
-
-1. Ensure the incident call is being recorded.
-1. Note in Slack important data, events, and actions, as they happen. Specifically:
-    * Key actions as they are taken (Example: "prod-server-387723 is being restarted to attempt to remove the stuck lock")
-    * Status reports when one is provided by the IC (Example: "We are in SEV-1, service A is currently not processing events due to a stuck lock, X is restarting the app stack, next checkin in 3 minutes")
-    * Any key callouts either during the call or at the ending review (Example: "Note: (Bob B) We should have a better way to determine stuck locks.")
-
-### Who are they?
-Anyone can act as a Scribe during an incident, and are chosen by the Incident Commander at the start of the call. Typically the Deputy will act as the Scribe, but that doesn't necessarily need to happen, and for larger incidents may not be possible.
-
-### How can I become one?
-Follow our [Scribe training guide](../training/scribe.md), and then notify the Incident Commanders that you would like to be considered for scribing for the next incident.
+### 如何成为？
+查看我们的[事故指挥官培训指南](../training/incident_commander.md)。
 
 ---
 
-## Subject Matter Expert
+## 副指挥官
 
-### What is it?
-A Subject Matter Expert (SME), sometimes called a "Resolver", is a domain expert or designated owner of a component or service that is part of the PagerDuty software stack.
+### 是什么？
+副指挥官是事故指挥官的直接支持角色。这不是一个观察者的影子角色。副指挥官在事故期间需要执行重要任务。
 
-### Why have one?
-The IC and Deputy are not all-knowing super beings. When there is a problem with a service, an expert in that service is needed to be able to quickly help identify and fix issues.
+### 为什么需要？
+IC 需要专注于手头的问题，而不是担心记录步骤或监控计时器。副指挥官帮助支持 IC 并让他们专注于事故。
 
-### What are the responsibilities?
-1. Being able to diagnose common problems with the service.
-1. Being able to rapidly fix issues found during an incident.
-1. Concise communication skills, specifically for CAN reports:
-    * Condition: What is the current state of the service? Is it healthy or not?
-    * Actions: What actions need to be taken if the service is not in a healthy state?
-    * Needs: What support does the resolver need to perform an action?
+### 职责是什么？
+副指挥官需要：
 
-### Who are they?
-Anyone who is considered a "domain expert" can act as a resolver for an incident. Typically the service's primary on-call will act as the SME for that service.
+1. 向事故指挥官提出可能未被注意的问题（关注已启动的计时器，回顾呼叫中遗漏的项目等）。
+1. 成为“热备用”事故指挥官，如果主要需要过渡到 SME，或其他原因需要离开 IC 角色。
+1. 管理事故通话，并准备好在事故指挥官指示下移除通话中的人员。
 
-### How can I become one?
-Take a look at our [Subject Matter Expert training guide](../training/subject_matter_expert.md). You should also discuss with your team and service owner to determine what the requirements are for your particular service.
+### 他们是谁？
+任何事故指挥官都可以担任副指挥官。副指挥官需要接受事故指挥官的培训，因为他们可能需要接管指挥。
+
+### 如何成为？
+查看我们的[副指挥官培训指南](../training/deputy.md)。副指挥官也需要接受[事故指挥官的培训](../training/incident_commander.md)。
 
 ---
 
-## Customer Liaison
+## 记录员
 
-### What is it?
-A person responsible for interacting with customers, either directly, or via our public communication channels. Typically a member of the Customer Support team.
+### 是什么？
+记录员记录事故进展的时间线，并确保所有重要决策和数据都被捕获以供后续审查。
 
-### Why have one?
-All of the other roles will be actively working on identifying the cause and resolving the issue, we need a role which is focused purely on the customer interaction side of things so that it can be done properly, with the due care and attention it needs.
+### 为什么需要？
+事故指挥官需要专注于手头的问题，主题专家需要专注于解决事故。捕获事件发生的时间线非常重要，以便在事后回顾中审查我们的表现，并准确确定我们当时可能没有注意到的任何额外影响。
 
-### What are the responsibilities?
-1. Drafting [external communication][ecg] messages when needed, picking the appropriate template, either when asked by the IC or at own initiative
-1. Asking for more information / clarification if needed for clear communication
-1. Regularly notify the IC of the number of customers reporting that they are affected by the incident. This can include providing specific customer references or examples for investigation purposes.
-1. Post any publicly facing messages regarding the incident (Twitter, StatusPage, etc) once approved by the IC
-1. Removing an ephemeral investigation message once approved by the IC
-1. Provide customers with the external message from the postmortem once it is completed.
+### 职责是什么？
+记录员需要：
 
-### Who are they?
-Any member of the Support Team can act as a customer liaison.
+1. 确保事故通话被记录。
+1. 在 Slack 中记录重要数据，事件和行动，具体如下：
+    * 关键行动（例如：“prod-server-387723 正在重启以尝试移除卡住的锁”）
+    * 状态报告（例如：“我们处于 SEV-1，服务 A 目前由于卡住的锁而未处理事件，X 正在重启应用堆栈，下一次检查在 3 分钟内”）
+    * 任何关键呼叫或在结束审查时的呼叫（例如：“注意：（Bob B）我们应该有一个更好的方法来确定卡住的锁。”）
 
-### How can I become one?
-Follow our [Customer Liaison training guide](../training/customer_liaison.md), and discuss with the Support Team about becoming our next Customer Liaison.
+### 他们是谁？
+任何人都可以在事故期间担任记录员，并在通话开始时由事故指挥官选择。通常副指挥官会担任记录员，但这不一定需要发生，对于更大的事故可能不现实。
 
-### Where can I find out more about external communications?
-Review our [external communication guidelines][ecg].
+### 如何成为？
+遵循我们的[记录员培训指南](../training/scribe.md)，然后通知事故指挥官您希望在下一次事故中被考虑担任记录员。
+
+---
+
+## 主题专家
+
+### 是什么？
+主题专家（SME），有时称为“解决者”，是 PagerDuty 软件堆栈中某个组件或服务领域的专家或指定所有者。
+
+### 为什么需要？
+IC 和副指挥官不是无所不知的超人。当服务出现问题时，需要该服务的专家能够快速帮助识别和修复问题。
+
+### 职责是什么？
+1. 能够诊断服务中的常见问题。
+1. 能够快速修复事故中发现的问题。
+1. 简洁的沟通技巧，特别是对于 CAN 报告：
+    * 条件：服务的当前状态是什么？它是否健康？
+    * 行动：如果服务不健康，需要采取什么行动？
+    * 需求：解决者需要什么支持来执行行动？
+
+### 他们是谁？
+任何被认为是“领域专家”的人都可以在事故中担任解决者。通常服务的初级待命人员将担任该服务的 SME。
+
+### 如何成为？
+查看我们的[主题专家培训指南](../training/subject_matter_expert.md)。您还应该与您的团队和服务所有者讨论，以确定您特定服务的要求。
+
+---
+
+## 客户联络员
+
+### 是什么？
+负责与客户互动的人，无论是直接互动，还是通过我们的公共沟通渠道。通常是客户支持团队的成员。
+
+### 为什么需要？
+所有其他角色将积极致力于识别原因并解决问题，我们需要一个专注于客户互动方面的角色，以便能够正确地完成这项工作，并给予应有的关注和照顾。
+
+### 职责是什么？
+1. 在需要时起草[外部沟通][ecg]信息，选择适当的模板，无论是由 IC 要求还是自行发起
+1. 如果需要，请求更多信息/澄清以进行清晰沟通
+1. 定期通知 IC 报告受事故影响的客户数量。这可以包括提供特定客户参考或示例以供调查目的。
+1. 在 IC 批准后发布任何关于事故的公开信息（Twitter，StatusPage 等）
+1. 在 IC 批准后移除临时调查信息
+1. 在事后回顾完成后向客户提供外部信息。
+
+### 他们是谁？
+任何支持团队的成员都可以担任客户联络员。
+
+### 如何成为？
+遵循我们的[客户联络员培训指南](../training/customer_liaison.md)，并与支持团队讨论成为我们的下一个客户联络员。
+
+### 如何了解更多关于外部沟通的信息？
+查看我们的[外部沟通指南][ecg]。
 
 [ecg]: ../during/external_communication_guidelines.md
 
 ---
 
-## Internal Liaison
+## 内部联络员
 
-### What is it?
-A person responsible for interacting with internal stakeholders. Whether it's notifying an internal team of the incident, or mobilizing additional responders within the organization.
+### 是什么？
+负责与内部利益相关者互动的人。无论是通知内部团队事故，还是在组织内动员其他响应者。
 
-### Why have one?
-For larger incidents, we may have multiple teams across the organization involved. Having a dedicated liaison to mobilize those teams and bring them up to speed frees up the rest of the responders to handle the incident.
+### 为什么需要？
+对于更大的事故，我们可能会有组织内多个团队参与。拥有一个专门的联络员来动员这些团队并让他们跟上速度，可以让其他响应者处理事故。
 
-### What are the responsibilities?
-1. Page SME's or other on-call engineers as instructed by the Incident Commander.
-1. Notify other teams within the organization (e.g. Finance, Legal, Marketing) as instructed by the Incident Commander.
-1. Liaise with stakeholders and provide status updates as necessary.
-1. Interact with internal stakeholders to answer their questions, to keep the primary call distraction free.
+### 职责是什么？
+1. 根据事故指挥官的指示呼叫 SME 或其他待命工程师。
+1. 根据事故指挥官的指示通知组织内的其他团队（例如财务，法律，营销）。
+1. 与利益相关者联络并提供必要的状态更新。
+1. 与内部利益相关者互动，回答他们的问题，以保持主要通话不受干扰。
 
-### Who are they?
-Anyone designated by the Incident Commander during incident response.
+### 他们是谁？
+任何在事故响应期间由事故指挥官指定的人。
 
-### How can I become one?
-Follow our [Internal Liaison training](../training/internal_liaison.md).
+### 如何成为？
+遵循我们的[内部联络员培训](../training/internal_liaison.md)。

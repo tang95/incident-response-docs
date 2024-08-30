@@ -1,55 +1,55 @@
 ---
-cover: assets/img/covers/sme.png
-description: If you are on-call for any team at PagerDuty, you may be paged for a major incident and will be expected to respond as a subject matter expert (SME) for your service. This page details everything you need to know in order to be prepared for that responsibility.
+封面: assets/img/covers/sme.png
+描述: 如果您在PagerDuty的任何团队中担任待命人员，您可能会被呼叫处理重大事件，并作为您服务的主题专家（SME）被期望做出响应。本页详细介绍了为承担这一责任所需了解的所有信息。
 ---
-If you are on-call for any team at PagerDuty, you may be paged for a major incident and will be expected to respond as a subject matter expert (SME) for your service. This page details everything you need to know in order to be prepared for that responsibility. If you are interested in becoming an Incident Commander, take a look at the [Incident Commander Training page](../training/incident_commander.md).
+如果您在PagerDuty的任何团队中担任待命人员，您可能会被呼叫处理重大事件，并作为您服务的主题专家（SME）被期望做出响应。本页详细介绍了为承担这一责任所需了解的所有信息。如果您有兴趣成为事件指挥官，请查看[事件指挥官培训页面](../training/incident_commander.md)。
 
-## On-Call Expectations
-If you are on-call for your team, there are certain expectations of you as that on-call. This applies to both the primary and secondary on-calls. Getting paged about a SEV-3 or SEV-4 in your system comes with different expectations than getting paged with a major SEV-2.
+## 待命期望
+如果您为您的团队待命，作为待命人员，您有一些特定的期望。这适用于主要和次要待命人员。关于系统中的SEV-3或SEV-4事件的呼叫与重大SEV-2事件的呼叫有不同的期望。
 
-### Before Going On-Call
+### 待命前准备
 
-1. Be prepared, by having already familiarized yourself with our incident response policies and procedures. In particular,
-    1. [Different Roles for Incidents](../before/different_roles.md) - You will be acting as a "Resolver" or "SME". But you should familiarize yourself with the other roles and what they will be doing.
-    1. [Incident Call Etiquette](../before/call_etiquette.md) - How to behave during an incident call.
-    1. [During an Incident](../during/during_an_incident.md) - What to do during an incident. You are specifically interested in the "Resolver" steps, but you should familiarize yourself with the entire document.
-    1. [Glossary](../training/glossary.md) - Familiarize yourself with the terminology that may be used during the call.
-1. Make sure you have set up your alerting methods, and that PagerDuty can [bypass your "Do Not Disturb" settings](https://support.pagerduty.com/docs/notification-phone-numbers).
-1. Check you can join the incident call. You may need to install a browser plugin. You don't want to be doing that the first time you get paged.
-1. Be aware of your upcoming on-call time and arrange swaps around travel, vacations, appointments, etc.
-1. If you are an Incident Commander, make sure you are not on-call for your team at the same time as being on-call as Incident Commander.
+1. 通过已经熟悉我们的应急响应政策和程序来做好准备。特别是，
+    1. [不同角色](../before/different_roles.md) - 您将作为“解决者”或“SME”行动。但您应该熟悉其他角色以及他们的职责。
+    1. [通话礼仪](../before/call_etiquette.md) - 事件通话期间的行为方式。
+    1. [事件期间](../during/during_an_incident.md) - 事件期间应做的事情。您特别关注“解决者”步骤，但您应该熟悉整个文档。
+    1. [术语表](../training/glossary.md) - 熟悉可能在通话中使用的术语。
+1. 确保您已经设置了警报方式，并且PagerDuty可以[绕过您的“请勿打扰”设置](https://support.pagerduty.com/docs/notification-phone-numbers)。
+1. 检查您可以加入事件通话。您可能需要安装浏览器插件。您不希望在第一次被呼叫时才做这件事。
+1. 了解您即将到来的待命时间，并在旅行、假期、预约等安排中进行交换。
+1. 如果您是事件指挥官，确保您在作为事件指挥官待命时，不要同时为您的团队待命。
 
-### During On-Call Period
+### 待命期间
 
-1. Have your laptop and Internet with you at all times during your on-call period (office, home, a MiFi, a phone with a tethering plan, etc).
-1. If you have important appointments, you need to get someone else on your team to cover that time slot in advance.
-1. When you receive an alert for a major incident, you are expected to join the incident call and Slack as quickly as possible (within minutes).
-    1. You will be asked questions or given actions by the Incident Commander. Answer questions concisely, and follow all actions given (even if you disagree with them).
+1. 在您的待命期间，随时携带您的笔记本电脑和互联网（办公室、家中、MiFi、带有共享计划的电话等）。
+1. 如果您有重要预约，您需要提前让团队中的其他人来覆盖那个时间段。
+1. 当您收到重大事件的警报时，您应尽快加入事件通话和Slack（几分钟内）。
+    1. 事件指挥官会向您提问或给出行动指示。简洁地回答问题，并遵循所有给出的行动指示（即使您不同意）。
 
-## Response Mobilization
-When an incident occurs, you must be mobilized or assigned to become part of the incident response. In other words, until you are mobilized to the incident via a page or being directly asked by someone else on the incident, you remain in your everyday role. After being mobilized, your first task is to check in and receive an assignment. While it's tempting to see an incident happening and want to jump in and help, when resources show up that have not been requested, the management of the incident can be compromised.
+## 响应动员
+当发生事件时，您必须被动员或指派成为应急响应的一部分。换句话说，直到您通过呼叫或被事件中的其他人直接要求动员到事件中，您仍然处于日常角色。被动员后，您的首要任务是报到并接受任务分配。虽然看到事件发生并想要跳进去帮忙很诱人，但当未被请求的资源出现时，事件管理可能会受到影响。
 
-## "Never Hesitate to Escalate"
-If you're not sure about something, it is perfectly acceptable to bring in other SMEs from your team that you believe know a given system better than you. Don't let your ego keep you from bringing in additional help. Our motto is "Never hesitate to escalate", you will never be looked down upon for escalating something because you didn't know how to handle it.
+## “绝不犹豫升级”
+如果您不确定某事，完全可以让您团队中您认为对某个系统比您更了解的其他SME加入。不要让您的自尊阻止您寻求额外帮助。我们的座右铭是“绝不犹豫升级”，您永远不会因为不知道如何处理而升级问题而受到轻视。
 
-## Blameless
-There will be incidents. Some will be caused by you, some will be caused by others... some will just happen. Our entire incident response process is completely blameless. Blaming people is counter productive and just distracts from the problem at hand. No matter how an incident started, they all need to get solved as quickly as possible.
+## 无责备
+会有事件发生。有些是由您引起的，有些是由他人引起的...有些只是会发生。我们的整个应急响应流程是完全无责备的。责备人是反生产力的，只会分散对当前问题的注意力。无论事件是如何开始的，都需要尽快解决。
 
-## Wartime vs Peacetime
-Behavior during a major incident is very different to any other alert you may have received in the past. We call a major incident "wartime", and make a distinction between that and normal everyday operations ("peacetime").
+## 战时与平时
+在重大事件期间的行为与您过去可能收到的任何其他警报非常不同。我们称重大事件为“战时”，并将其与正常的日常运营（“平时”）区分开来。
 
-### Peacetime
-The organizational structure is generally based on seniority. The more senior members of a team will lead discussions, and managers or team leads will have the final say. Decisions are made after careful consideration of all options, and to minimize potential risk to customers.
+### 平时
+组织结构通常基于资历。团队中更资深的成员将领导讨论，经理或团队负责人将做出最终决定。在仔细考虑所有选项并最大限度地减少对客户的潜在风险后做出决策。
 
-### Wartime
-Wartime is different, and you will notice on our major incident calls that there's a different organizational structure.
+### 战时
+战时不同，您会在我们的重大事件通话中注意到不同的组织结构。
 
-* The Incident Commander is in charge. No matter their rank during peacetime, they are now the highest ranked individual on the call, higher than the CEO.
-* Primary responders (folks acting as primary on-call for a team/service) are the highest ranked individuals for that service.
-* Decisions will be made by the IC after consideration of the information presented. Once that decision is made, it is final.
-* Riskier decisions can be made by the IC than would normally be considered during peacetime.
-    * For example, the IC may decide to drop events for a particular customer in order to maintain the integrity of the system for everyone else.
-* The IC may go against a consensus decision. If a poll is done, and 9/10 people agree but 1 disagrees. The IC may choose the disagreement option despite a majority vote.
-    * Even if you disagree, the IC's decision is final. During the call is not the time to argue with them.
-* The IC may use language or behave in a way you find rude. This is wartime, and they need to do whatever it takes to resolve the situation, so sometimes rudeness occurs. This is never anything personal, and something you should be prepared to experience if you've never been in a wartime situation before.
-* You may be asked to leave the call by the IC, or you may even be forceable kicked off a call. It is at the IC's discretion to do this if they feel you are not providing useful input. Again, this is nothing personal and you should remember that wartime is different than peacetime.
+* 事件指挥官负责。无论他们在平时的地位如何，他们现在是在通话中地位最高的个人，高于CEO。
+* 主要响应者（为团队/服务担任主要待命的人员）是该服务的最高地位个人。
+* 决策将由IC在考虑所提供的信息后做出。一旦做出决定，它就是最终的。
+* IC可能会做出比平时通常考虑的风险更大的决策。
+    * 例如，IC可能会决定为特定客户丢弃事件，以保持系统对其他所有人的完整性。
+* IC可能会反对共识决策。如果进行投票，9/10人同意但1人不同意。IC可能会选择不同意选项，尽管是多数票。
+    * 即使您不同意，IC的决定也是最终的。在通话中不是与他们争论的时候。
+* IC可能会使用您认为粗鲁的语言或行为。这是战时，他们需要尽一切可能解决问题，所以有时会发生粗鲁行为。这绝不是针对个人的，如果您以前从未经历过战时情况，您应该准备好体验这一点。
+* IC可能会要求您离开通话，或者您甚至可能被强制踢出通话。如果IC认为您没有提供有用的输入，他们有权这样做。再次强调，这绝不是针对个人的，您应该记住战时与平时不同。

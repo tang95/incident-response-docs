@@ -1,42 +1,42 @@
 ---
-cover: assets/img/covers/deputy.png
-description: So you want to be a Deputy? You've come to the right place!
+封面: assets/img/covers/deputy.png
+描述: 想要成为副指挥官吗？你来对地方了！
 ---
-So you want to be a Deputy? You've come to the right place!
+想要成为副指挥官吗？你来对地方了！
 
-## Purpose
-The purpose of the Deputy is to support the IC by keeping track of timers, notifying the IC of important information, and paging other people as directed by the IC.
+## 目的
+副指挥官的目的是通过跟踪计时器、向指挥官通报重要信息以及根据指挥官的指示呼叫其他人员来支持指挥官。
 
-It's important for the IC to focus on the problem at hand, rather than worrying about monitoring timers. The deputy is there to help support the IC and keep them focused on the incident.
+指挥官需要专注于当前的问题，而不是担心监控计时器。副指挥官的存在是为了帮助支持指挥官，让他们专注于事件。
 
-As a Deputy, you will be expected to take over command from the IC if they request it.
+作为副指挥官，如果指挥官请求，你将被期望接管指挥权。
 
-**You should not be performing any remediations, checking graphs, or investigating logs**. Those tasks will be delegated to the resolvers by the IC.
+**你不应该执行任何补救措施、检查图表或调查日志**。这些任务将由指挥官委派给解决者。
 
-## Prerequisites
-Before you can be a Deputy, it is expected that you meet the following criteria. Don't worry if you don't meet them all yet, you can still continue with training!
+## 先决条件
+在你成为副指挥官之前，我们期望你满足以下条件。如果你还没有完全满足这些条件，别担心，你仍然可以继续培训！
 
-* Be trained as an [Incident Commander](../training/incident_commander.md).
+* 接受过[指挥官培训](../training/incident_commander.md)。
 
-## Responsibilities
-Read up on our [Different Roles for Incidents](../before/different_roles.md) to see what is expected from a Deputy, as well as what we expect from the other roles you'll be interacting with.
+## 职责
+阅读我们的[不同角色在事件中的职责](../before/different_roles.md)，了解副指挥官的期望，以及我们对其他你将与之互动的角色的期望。
 
-## Training Process
-The training process for a Deputy is quite simple.
+## 培训过程
+副指挥官的培训过程相当简单。
 
-* Follow our [Incident Commander Training](../training/incident_commander.md).
-* Read this page.
+* 遵循我们的[指挥官培训](../training/incident_commander.md)。
+* 阅读此页面。
 
-## Incident Call Procedures and Lingo
-The [Steps for Deputy](../during/during_an_incident.md) provide a detailed description of what you should be doing during an incident.
+## 事件通话程序和术语
+[副指挥官的步骤](../during/during_an_incident.md)提供了在事件期间你应该做什么的详细描述。
 
-Here are some examples of phrases and patterns you should use during incident calls.
+以下是一些在事件通话中你应该使用的短语和模式的例子。
 
-### Alert IC to Timers
-You are expected to keep track of how long the incident has been running for, and provide callouts to the IC every 10 minutes so they can take actions such as increasing the severity, or asking Support to Tweet out. This is as simple as telling the IC on the call,
+### 提醒指挥官计时器
+你被期望跟踪事件已经运行了多长时间，并每10分钟向指挥官通报一次，以便他们可以采取行动，如增加严重性，或要求支持部门发布推文。这就像在通话中告诉指挥官，
 
-> IC, be advised the incident is now at the 10 minute mark.
+> 指挥官，请注意，事件现在已经到了10分钟标记。
 
-Similarly, when the IC asks for someone to get back to them in X minutes, you are expected to keep track of that. You should remind the IC when that time has been reached.
+同样，当指挥官要求某人在X分钟内回复他们时，你被期望跟踪这一点。你应该在到达那个时间时提醒指挥官。
 
-> IC, be advised the timer for [TEAM]'s investigation is up.
+> 指挥官，请注意，[团队]调查的计时器已经到了。

@@ -1,88 +1,88 @@
 ---
 cover: assets/img/covers/getting_started.png
-description: This 'Getting Started' guide will help you to navigate the most important parts of our process, and provide some guidelines about which bits we think you should start with. If you're just starting out with your own incident response process, this is a great way to know what order we think you should do things in.
+description: 这份“入门指南”将帮助您了解我们流程中最关键的部分，并提供一些关于我们应该从哪些方面开始的指导。如果您刚刚开始建立自己的事件响应流程，这是一个很好的方式来了解我们认为您应该按照什么顺序进行操作。
 hero: assets/img/headers/iStock-1097331490-3992x2242-e4f3f2d.png
-hero_alt_text: Getting Started
+hero_alt_text: 入门指南
 ---
-If you don't yet have a process in your own organization, or if you're just starting out, you may find the sheer quantity of information in this documentation overwhelming. It's important to remember that this **isn't something you'll be able to implement overnight**. This is a process that should be built up over time. While it took us years to get to this point, our hope is that you can make use of this documentation to skip some of the awkward growing pains we went through and reach a more mature incident response process in the most efficient way possible.
+如果您还没有在自己的组织中建立流程，或者刚刚开始，您可能会发现这份文档中的信息量之大令人不知所措。重要的是要记住，这**不是您能在一夜之间就能实施的事情**。这是一个应该随着时间逐步建立起来的过程。虽然我们花了数年时间才达到这个阶段，但我们希望您能利用这份文档，跳过我们经历的一些尴尬的成长痛苦，以最有效的方式达到一个更成熟的事件响应流程。
 
-To that end, we've put together this "Getting Started" guide to help you navigate the most important parts of our process and provide some guidelines about which bits we think you should start with. If you're just starting out with your own incident response - process, this is a great way to know what order we think you should do things in.
+为此，我们编写了这份“入门指南”，以帮助您了解我们流程中最关键的部分，并提供一些关于我们应该从哪些方面开始的指导。如果您刚刚开始建立自己的事件响应流程，这是一个很好的方式来了解我们认为您应该按照什么顺序进行操作。
 
-## Define what an "Incident" and "Major Incident" are for you.
+## 定义什么是您认为的“事件”和“重大事件”。
 
-You don't have to use [our definitions](before/severity_levels.md), they're just a starting point. Feel free to come up with whatever you want. The point is that the definition should be a short, simple statement that ensures everyone is on the same page. The goal is to remove any discussion around whether something is an incident or not during your response process. If you have a metric to use (e.g. "if errors go above 100/minute it's a major incident"), that's great. If not, don't let that stop you from defining what a major incident is.
+您不必使用[我们的定义](before/severity_levels.md)，它们只是一个起点。您可以自由地提出任何您想要的定义。关键是定义应该是一个简短、简单的陈述，确保每个人都在同一页上。目标是消除在响应过程中关于某事是否是事件的讨论。如果您有一个可用的指标（例如，“如果错误超过每分钟100次，就是重大事件”），那就太好了。如果没有，也不要因此停止定义什么是重大事件。
 
-The reason this should be your first step is because you can't respond to an incident until you know what an incident is. If one person considers something an incident but the rest of the organization doesn't, that will create ambiguity and confusion during any sort of incident response. Having a clear definition that's disseminated to your entire organization ensures that everyone has the same understanding and will prevent any confusion.
+这一步应该是您的第一步，因为您无法响应一个您不知道是什么的事件。如果一个人认为某事是事件，而组织中的其他人则不这么认为，这将在任何形式的事件响应中造成模糊和混乱。有一个清晰的定义，并向整个组织传达，确保每个人都有相同的理解，并防止任何混淆。
 
-!!! question "What about severity levels?"
-    You shouldn't need to worry about severity levels at the beginning - just whether something is an incident or not. You can add severity levels later once you flesh out your response process a bit more.
+!!! question "那么严重性级别呢？"
+    您在开始时不需要担心严重性级别——只需确定某事是否是事件。您可以在稍后完善您的响应流程时添加严重性级别。
 
-## Determine how you mobilize responders.
+## 确定如何动员响应者。
 
-What is going to trigger your incident response process? Will it be an automated alert tied to a metric? That's a great place to start, even if it's just a single alert that goes out to a group of responders.
+什么会触发您的事件响应流程？它将是一个与指标相关联的自动警报吗？这是一个很好的起点，即使它只是一个发送给一组响应者的单一警报。
 
-!!! tip "Have a way to manually trigger incident response."
-    Having a way for humans to manually trigger incident response when they see something wrong will help improve your response times. It took us a while to do this, but if we could go back in time, we'd do this from the start!
+!!! tip "有一个手动触发事件响应的方法。"
+    当人们发现问题时，有一个手动触发事件响应的方法将有助于提高您的响应时间。我们花了一段时间才做到这一点，但如果我们能回到过去，我们会从一开始就这样做！
 
-Make sure to set up a phone bridge and chat room dedicated for incident response. You want to prepare this in advance, and make sure the numbers and connection information are written down and shared with anyone who may need to respond. You don't want to be setting up the call and chat room while trying to respond to an incident. You should make the call and room names static or as easily discoverable as possible.
+确保设置一个专门用于事件响应的电话桥和聊天室。您希望提前准备好这些，并确保号码和连接信息被记录下来并与可能需要响应的任何人共享。您不希望在试图响应事件时设置电话和聊天室。您应该使电话和房间名称保持静态或尽可能容易发现。
 
-You also want to [set expectations for your responders](oncall/being_oncall.md). Make sure they know that they need to join the call and chat room if they get paged and that they shouldn't just jump into solving the problem.
+您还需要[为您的响应者设定期望](oncall/being_oncall.md)。确保他们知道如果他们被呼叫，他们需要加入电话和聊天室，而不应该直接跳入解决问题。
 
-Finally, you want to make sure your [alerts are actionable](oncall/alerting_principles.md). There's nothing worse than waking everyone up for something you cannot control. Make sure anything that is going to trigger your incident response and page people is something that requires **immediate human action** to resolve.
+最后，您要确保您的[警报是可操作的](oncall/alerting_principles.md)。没有什么比为了无法控制的事情而唤醒所有人更糟糕的了。确保任何将触发您的事件响应并呼叫人们的警报都是需要**立即人为干预**来解决的事情。
 
-## Define the incident response roles.
+## 定义事件响应角色。
 
-You will only care about the [Incident Commander](before/different_roles.md#incident-commander-ic) role to begin with. If you have enough people, you can also have a [Scribe](before/different_roles.md#scribe). But to start, just have an Incident Commander and your responders. The Incident Commander shouldn't be taking any remediation actions at all, they should just be leading the response and making the decisions. You don't need to follow the entire [training guide](training/incident_commander.md) to begin with; just the basics of asking questions and assigning tasks are enough to get you started.
+您最初只需要关注[事件指挥官](before/different_roles.md#incident-commander-ic)角色。如果您有足够的人，您也可以有一个[记录员](before/different_roles.md#scribe)。但一开始，只需有一个事件指挥官和您的响应者。事件指挥官不应该采取任何修复行动，他们应该只是领导响应并做出决策。您不需要从一开始就遵循整个[培训指南](training/incident_commander.md)；只需询问问题和分配任务的基本知识就足够让您开始了。
 
-## Create a postmortem template.
-You can use [our template](after/post_mortem_template.md) to get started or come up with your own version. Just make sure that you have a structured template so that it makes it easier to compare incidents to each other. It can be as simple as three headings to begin with:
+## 创建一个事后回顾模板。
+您可以使用[我们的模板](after/post_mortem_template.md)开始，或者提出您自己的版本。只需确保您有一个结构化的模板，以便更容易比较不同的事件。它可以从三个标题开始：
 
-1. What happened?
-1. Why did it happen?
-1. How are we going to make sure it doesn't happen again?.
+1. 发生了什么？
+1. 为什么会发生？
+1. 我们如何确保它不再发生？
 
-Adding more detailed fields and information can come later.
+稍后可以添加更多详细的字段和信息。
 
-!!! tip "Naming Doesn't Matter"
-    You don't need to call them "Postmortem's." After-action review, learning review, retrospective, etc. are all valid names. The point is that you review what happened and learn from it. The name you give to the process doesn't really matter.
+!!! tip "命名并不重要"
+    您不需要称它们为“事后回顾”。行动后审查、学习回顾、回顾等都是有效的名称。关键是您回顾发生了什么并从中学习。您给这个过程的名称并不真正重要。
 
-## Practice
+## 练习
 
-Run a fake incident, mobilize your responders, and have someone act as the Incident Commander. Get used to the switch from normal day-to-day operations and the emergency operations of an incident. Switching to having an Incident Commander running the show can be jarring at first, so it helps to practice it in a low-risk situation to begin with.
+运行一个假想的事件，动员您的响应者，并让某人充当事件指挥官。习惯从日常操作切换到事件的紧急操作。一开始切换到由事件指挥官主导可能会有些突兀，所以在低风险的情况下练习它是有帮助的。
 
-Playing a game of "[Keep Talking and Nobody Explodes](https://www.keeptalkinggame.com/)" is a light-hearted way of practicing the skills required for incident response. You can also run your own version of [Failure Friday](https://www.pagerduty.com/blog/failure-fridays-four-years/), where you manually inject some failure into your system and treat it as a major incident.
+玩一场“[保持通话，无人爆炸](https://www.keeptalkinggame.com/)”是一个轻松的方式来练习事件响应所需的技能。您也可以运行您自己的“失败星期五”版本，手动向系统注入一些故障，并将其视为重大事件。
 
-## Use it for a real incident.
+## 用于真实事件。
 
-Once you have the basics in place, you can start using the process for a real incident. The more you use it, the more natural it will become. As you use it more and more, you can add more processes into it and tweak it for your needs as necessary. Things may not go smoothly the first time, but don't give up!
+一旦您有了基本的东西，您就可以开始将流程用于真实事件。您使用的越多，它就会变得越自然。随着您越来越多地使用它，您可以添加更多的流程，并根据需要进行调整。第一次可能不会顺利，但不要放弃！
 
-## What comes next?
+## 接下来是什么？
 
-You can now start expanding your process and adding some more things. Here are our recommendations for the next things you should incorporate:
+您现在可以开始扩展您的流程并添加更多内容。以下是我们对您应该接下来包含的内容的建议：
 
-### Add a Scribe if you haven't already.
+### 如果您还没有，添加一个记录员。
 
-Keeping an accurate timeline of events becomes really important when you want to go back and review your incidents. A [Scribe](before/different_roles.md#scribe) should be the next role you start using.
+当您想要回顾您的事件时，保持事件的准确时间线变得非常重要。[记录员](before/different_roles.md#scribe)应该是您接下来开始使用的角色。
 
-### Expand your IC rotation.
+### 扩展您的IC轮换。
 
-You don't want to just have a single IC, you want to have as many as you can get. Start training up more people and create an on-call rotation for it. At first, you will probably use weekly rotations. We recommend trying to get to a daily rotation as quickly as you can.
+您不希望只有一个IC，您希望尽可能多。开始培训更多的人，并为IC创建一个轮换。一开始，您可能会使用每周轮换。我们建议尽快尝试每天轮换。
 
-### Add in a Deputy as a role.
+### 添加一个副手作为角色。
 
-Once you have a few more IC's, start adding a Deputy to your response. Having a [Deputy](before/different_roles.md#deputy) will give you the ability to quickly hand over during longer incidents and also gives the IC some backup for shorter incidents.
+一旦您有了几个更多的IC，开始在您的响应中添加一个副手。有一个[副手](before/different_roles.md#deputy)将使您能够在长时间事件中快速交接，并为IC在短时间事件中提供一些备份。
 
-### Define severity levels.
+### 定义严重性级别。
 
-Once you have the process working well, you can start to add more granularity to your response and incident definitions. Perhaps you don't want to do a "full" response for certain incidents. Define some [severity levels](before/severity_levels.md) to document the level of response you want.
+一旦您的流程运行良好，您可以开始为您的响应和事件定义添加更多细节。也许您不想为某些事件进行“全面”响应。定义一些[严重性级别](before/severity_levels.md)来记录您想要的响应级别。
 
-### Start adding other roles.
+### 开始添加其他角色。
 
-As your process becomes more established, you want to start adding other roles. We recommend a [Customer Liaison](before/different_roles.md#customer-liaison) as the next one you include.
+随着您的流程变得更加成熟，您希望开始添加其他角色。我们建议下一个包含的是[客户联络](before/different_roles.md#customer-liaison)。
 
-### Practice, practice, practice.
+### 练习，练习，练习。
 
-It cannot be overstated how much it helps to practice your incident response. If you trigger incident response and realize it's not really an incident, treat it as one anyway. You've already mobilized your responders, so it's essentially free practice.
+再怎么强调练习您的事件响应有多么重要也不为过。如果您触发事件响应并意识到它并不是真正的事件，也请将其视为一个事件。您已经动员了您的响应者，所以这实际上是免费的练习。
 
-### Define a process for larger incidents.
-We call these [complex incidents](before/complex_incidents.md). You won't use this often, but you'll want the phone bridge numbers and chat rooms prepared ahead of time. You'll also want to make sure your responders are aware of the process.
+### 定义一个处理更大事件的流程。
+我们称之为[复杂事件](before/complex_incidents.md)。您不会经常使用这个，但您会希望提前准备好电话桥号码和聊天室。您还需要确保您的响应者了解这个流程。

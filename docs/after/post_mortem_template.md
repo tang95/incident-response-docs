@@ -1,84 +1,84 @@
 ---
-cover: assets/img/covers/post-mortem_template.png
-description: This is a standard template we use for postmortems at PagerDuty. Each section describes the type of information you will want to put in that section.
+封面: assets/img/covers/post-mortem_template.png
+描述: 这是我们在PagerDuty进行事后分析时使用的标准模板。每个部分都描述了您希望在该部分中包含的信息类型。
 ---
-This is a standard template we use for postmortems at PagerDuty. Each section describes the type of information you will want to put in that section.
+这是我们在PagerDuty进行事后分析时使用的标准模板。每个部分都描述了您希望在该部分中包含的信息类型。
 
 ---
 
-!!! note "Guidelines"
-    This page is intended to be reviewed during a postmortem meeting that should be scheduled within 5 business days of any event.
-    Your first step should be to schedule the postmortem meeting in the shared calendar for within 5 business days after the incident.
-    Don't wait until you've filled in the info to schedule the meeting. Make sure the page is completed by the meeting.
+!!! 注意 "指南"
+    此页面旨在在任何事件发生后的5个工作日内安排的事后分析会议期间进行审查。
+    您的第一步应该是在事件发生后的5个工作日内，在共享日历上安排事后分析会议。
+    不要等到填写完信息后再安排会议。确保在会议前完成页面。
 
-**Postmortem Owner:** _Your name goes here._
+**事后分析负责人:** _您的名字放在这里。_
 
-**Meeting Scheduled For:** _Schedule the meeting on the "Incident Postmortem Meetings" shared calendar, for within 5 business days after the incident. Put the date/time here._
+**会议安排日期:** _在“事件事后分析会议”共享日历上安排会议，在事件发生后的5个工作日内。将日期/时间放在这里。_
 
-**Call Recording:** _Link to the incident call recording._
+**通话录音:** _指向事件通话录音的链接。_
 
-## Overview
-_Include a **short** sentence or two summarizing the contributing factors, timeline summary, and the impact. E.g. "On the morning of August 99th, we suffered a 1 minute SEV-1 due to a runaway process on our primary database machine. This slowness caused roughly 0.024% of alerts that had begun during this time to be delivered out of SLA."_
+## 概述
+_包括一两句总结贡献因素、时间线摘要和影响的简短句子。例如：“8月99日上午，由于我们的主数据库机器上的失控进程，我们遭受了1分钟的SEV-1。这种缓慢导致在此期间开始的约0.024%的警报未能在服务水平协议（SLA）内送达。”_
 
-## What Happened
-_Include a short description of what happened._
+## 发生了什么
+_简要描述发生了什么。_
 
-## Contributing Factors
-_Include a description of any conditions that contributed to the issue. If there were any actions taken that exacerbated the issue, also include them here with the intention of learning from any mistakes made during the resolution process._
+## 贡献因素
+_描述任何导致问题的条件。如果采取了任何加剧问题的行动，也请在此处包括，目的是从解决过程中犯的错误中学习。_
 
-## Resolution
-_Include a description of what solved the problem. If there was a temporary fix in place, describe that along with the long-term solution._
+## 解决办法
+_描述解决了问题的方法。如果有临时修复措施，请描述该措施以及长期解决方案。_
 
-## Impact
-_Be very specific here and include exact numbers._
+## 影响
+_在这里要非常具体，并包括确切的数字。_
 
 | | |
 |-|-|
-| Time in SEV-1 | ?mins |
-| Time in SEV-2 | ?mins |
-| Notifications Delivered out of SLA | ??% (?? of ??) |
-| Events Dropped / Not Accepted | ??% (?? of ??) _Should usually be 0, but always check_ |
-| Accounts Affected | ?? |
-| Users Affected | ?? |
-| Support Requests Raised | ?? _Include any relevant links to tickets_ |
+| 处于SEV-1的时间 | ?分钟 |
+| 处于SEV-2的时间 | ?分钟 |
+| 超出SLA送达的通知 | ??% (?? of ??) |
+| 丢弃/未接受的事件 | ??% (?? of ??) _通常应为0，但始终检查_ |
+| 受影响的账户 | ?? |
+| 受影响的用户 | ?? |
+| 提出的支持请求 | ?? _包括任何相关的工单链接_ |
 
-## Responders
+## 响应者
 
-* _Who was the IC?_
-* _Who was the scribe?_
-* _Who else was involved?_
+* _谁是IC？_
+* _谁是记录员？_
+* _还有谁参与了？_
 
-## Timeline
-_Some important times to include: (1) time the contributing factor began, (2) time of the page, (3) time that the status page was updated (i.e. when the incident became public), (4) time of any significant actions, (5) time the SEV-2/1 ended, (6) links to tools/logs that show how the timestamp was arrived at._
+## 时间线
+_包括一些重要的时间点：（1）贡献因素开始的时间，（2）页面触发的时间，（3）状态页面更新的时间（即事件公开的时间），（4）任何重要行动的时间，（5）SEV-2/1结束的时间，（6）显示如何确定时间戳的工具/日志链接。_
 
-| Time (UTC) | Event | Data Link |
+| 时间 (UTC) | 事件 | 数据链接 |
 | ---------- | ----- | --------- |
 
-## How'd We Do?
+## 我们做得如何？
 
-### What Went Well?
+### 做得好的地方？
 
-* _List anything you did well and want to call out. It's OK to not list anything._
+* _列出你做得好并想要强调的任何事情。不列出任何内容也是可以的。_
 
-### What Didn't Go So Well?
+### 做得不好的地方？
 
-* _List anything you think we didn't do very well. The intent is that we should follow up on all points here to improve our processes._
+* _列出你认为我们做得不太好的任何事情。目的是我们应该跟进这里的所有点以改进我们的流程。_
 
-## Action Items
-_Each action item should be in the form of a JIRA ticket, and each ticket should have the same set of two tags:  “sev1_YYYYMMDD” (such as sev1_20150911) and simply “sev1”. Include action items such as: (1) any fixes required to prevent the contributing factor in the future, (2) any preparedness tasks that could help mitigate the problem if it came up again, (3) remaining postmortem steps, such as the internal email, as well as the status-page public post, (4) any improvements to our incident response process._
+## 行动项
+_每个行动项应以JIRA工单的形式出现，每个工单应具有相同的两个标签：“sev1_YYYYMMDD”（例如sev1_20150911）和简单的“sev1”。包括以下行动项：（1）任何防止未来贡献因素所需的修复，（2）任何有助于在问题再次出现时减轻问题的准备任务，（3）剩余的事后分析步骤，如内部邮件，以及状态页面的公开帖子，（4）我们事件响应流程的任何改进。_
 
-## Messaging
+## 信息传递
 
-### Internal Email
-_This is a follow-up for employees. It should be sent out right after the postmortem meeting is over. It only needs a short paragraph summarizing the incident and a link to this wiki page._
+### 内部邮件
+_这是对员工的跟进。应在事后分析会议结束后立即发送。它只需要一个简短的段落总结事件和指向此维基页面的链接。_
 
-> Briefly summarize what happened and where the postmortem page (this page) can be found.
+> 简要总结发生了什么以及事后分析页面（此页面）的位置。
 
-### External Message
-_This is what will be included on the status.pagerduty.com website regarding this incident. What are we telling customers, including an apology? (The apology should be genuine, not rote.)_
+### 外部信息
+_这是将在status.pagerduty.com网站上关于此事件的内容。我们告诉客户什么，包括道歉？（道歉应该是真诚的，而不是机械的。）_
 
-> Summary
+> 总结
 
-> What Happened?
+> 发生了什么？
 
-> What Are We Doing About This?
+> 我们对此做了什么？

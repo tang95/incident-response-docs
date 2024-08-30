@@ -1,43 +1,42 @@
 ---
-cover: assets/img/crisis/cover_crisisresponse.png
-description: Operationalizing your crisis plan begins by making practical changes to ensure you have what you need, in the way you need it, and at the time you need it.
+封面: assets/img/crisis/cover_crisisresponse.png
+描述: 实施危机计划的第一步是通过实际的改变，确保你拥有所需的一切，以你需要的方式，在你需要的时间。
 ---
 
-## Operationalizing Your Crisis Plan
+## 实施你的危机计划
 
-Operationalizing your crisis plan begins by making practical changes to ensure you have what you need, in the way you need it, and at the time you need it. For example, your broader crisis management plan will be too cumbersome for your team to scan through for answers during a crisis situation. On the other hand, playbooks are more focused versions of your larger plan which make them easier to action, test and maintain. They’re also scenario-driven and provide you with specific parameters, considerations and tasks.
+实施你的危机计划首先需要进行实际的改变，确保你拥有所需的一切，以你需要的方式，在你需要的时间。例如，你的更广泛的危机管理计划在危机情况下对于团队来说过于繁琐，难以快速查找答案。另一方面，操作手册是更大计划的更集中版本，使它们更容易执行、测试和维护。它们也是基于场景的，为你提供特定的参数、考虑因素和任务。
 
-Once you have these critical resources created, it can be difficult to centralize them and keep track of the most current version. PagerDuty makes this easy with the ability to add your runbooks, playbooks, policies and any other crisis response [documentation links](https://support.pagerduty.com/docs/service-profile#remediate) into your PagerDuty defined service(s).
+一旦你创建了这些关键资源，集中它们并跟踪最新版本可能会很困难。PagerDuty通过允许你将操作手册、操作手册、政策和任何其他危机响应[文档链接](https://support.pagerduty.com/docs/service-profile#remediate)添加到你定义的PagerDuty服务中，使这变得容易。
 
-![Ensure that your PagerDuty services have links to their runbooks and documentation](../assets/img/crisis/04_remediationdocs.png)
+![确保你的PagerDuty服务链接到它们的操作手册和文档](../assets/img/crisis/04_remediationdocs.png)
 
-## Crisis Classification Scheme
+## 危机分类方案
 
-Waking up your Executive Crisis Leadership Team in the middle of the night with a PagerDuty alert should be a very rare occurrence. Having a [classification scheme](https://support.pagerduty.com/docs/incident-priority#establish-an-incident-classification-scheme) in place to rank the actual or anticipated materiality of an event will help you avoid a cry wolf scenario. A simple scale such as Low, Medium, High or Level 1, 2, 3 can be effective.
+在半夜用PagerDuty警报唤醒你的执行危机领导团队应该是极其罕见的事件。制定一个[分类方案](https://support.pagerduty.com/docs/incident-priority#establish-an-incident-classification-scheme)来评估事件的实际或预期重要性将帮助你避免“狼来了”的情况。一个简单的等级如低、中、高或级别1、2、3可以有效。
 
-Within PagerDuty, you can add your crisis “material impact levels” using the [incident priority](https://support.pagerduty.com/docs/incident-priority) feature. Remember that not all crises begin as a crisis. It may develop out of an ongoing incident so determining your thresholds for escalation ahead of time (e.g., 90 minutes without HVAC, 24 hours without direct contact, greater than $100k revenue at risk, etc.) is equally as important as the rankings.
+在PagerDuty中，你可以使用[事件优先级](https://support.pagerduty.com/docs/incident-priority)功能添加你的危机“实质影响级别”。记住，并非所有危机一开始就是危机。它可能从持续的事件发展而来，因此提前确定升级阈值（例如，90分钟无空调，24小时无直接联系，收入风险超过10万美元等）与排名同样重要。
 
-![Set and define priorities that make sense for your organization](../assets/img/crisis/05_priorities.png)
+![为你的组织设置和定义有意义的优先级](../assets/img/crisis/05_priorities.png)
 
-Once you’ve defined your priorities, you can begin to leverage PagerDuty to automate parts of your crisis response through integrations and [incident workflows](https://support.pagerduty.com/docs/incident-workflows). You can integrate with Slack, Teams or Zoom for creating communications channels. You can auto-publish from templates to post on internal status pages. You can auto-initiate stakeholder alerts or [subscriptions](https://support.pagerduty.com/docs/communicate-with-stakeholders#add-subscribers-at-incident-creation), etc. 
+一旦你定义了优先级，你就可以开始利用PagerDuty通过集成和[事件工作流程](https://support.pagerduty.com/docs/incident-workflows)自动化你的危机响应部分。你可以与Slack、Teams或Zoom集成以创建通信渠道。你可以从模板自动发布到内部状态页面。你可以自动发起利益相关者警报或[订阅](https://support.pagerduty.com/docs/communicate-with-stakeholders#add-subscribers-at-incident-creation)等。
 
-![Use incident workflows to streamline response.](../assets/img/crisis/06_incidentworkflows.png)
+![使用事件工作流程来简化响应。](../assets/img/crisis/06_incidentworkflows.png)
 
-In a crisis situation, time savings are everything. Decreasing the mean time to respond and getting in touch with the right people is the most critical action your team can take at the onset of a crisis.
+在危机情况下，时间节省至关重要。减少平均响应时间并联系到正确的人是你的团队在危机开始时可以采取的最关键行动。
 
-## Crisis Declaration
+## 危机声明
 
-Does your crisis response team operate the same in a crisis as they do in normal business situations? Your answer should be no. Operating in a “crisis mode” should be distinctive because all actions and decisions are amplified, the tempo is quicker, the need for timely decisions is critical, the complexity of the problems are greater, the risks are higher, etc. 
+你的危机响应团队在危机中是否与正常业务情况下运作相同？你的答案应该是否定的。在“危机模式”下运作应该是独特的，因为所有行动和决策都被放大，节奏更快，及时决策至关重要，问题的复杂性更大，风险更高等。
 
-The Crisis Team Leader needs to clearly and definitively signal that the modes of thinking and processing have shifted. What better way to signal that shift than through a PagerDuty alert? The incident priority feature is an easy way to make that declaration to the necessary stakeholders in a not so public way. Declaring the response as over is also important in transitioning to normal or new ways of doing things, which can be completed by [resolving the alert](https://support.pagerduty.com/docs/alerts#resolve-alerts) created on your crisis service(s) or posting to an internal status page.
+危机团队领导者需要清楚明确地发出信号，表明思维和处理方式已经转变。还有什么比通过PagerDuty警报更好的方式来发出这种转变的信号呢？事件优先级功能是一个简单的方式，以不那么公开的方式向必要的利益相关者宣布这一声明。宣布响应结束对于过渡到正常或新的做事方式也很重要，这可以通过[解决警报](https://support.pagerduty.com/docs/alerts#resolve-alerts)在你危机服务上创建的警报或发布到内部状态页面来完成。
 
-## Crisis Response Management Operations
+## 危机响应管理操作
 
-If you’ve followed along so far, you’ve essentially learned the ins and outs of a PagerDuty instance for crisis response. During your response, you don’t want to worry about how to contact the Crisis Team Leaders or which conference bridge you should be using or where your most up to date playbook is located. The operations side of things should just work. Aside from PagerDuty’s built-in alerting capabilities, the platform has 700+ [integrations](https://www.pagerduty.com/integrations/#Integrations-library) and more are possible through the API so you can bring your existing technology stack.
+如果你一直遵循到这里，你基本上已经了解了PagerDuty实例在危机响应中的来龙去脉。在你的响应过程中，你不希望担心如何联系危机团队领导者，或者你应该使用哪个会议桥，或者你的最新操作手册位于何处。操作方面的事情应该自动运行。除了PagerDuty内置的警报功能外，该平台还有700多个[集成](https://www.pagerduty.com/integrations/#Integrations-library)，并且通过API还可以实现更多集成，因此你可以引入现有的技术堆栈。
 
-[Adding integrations](https://support.pagerduty.com/docs/services-and-integrations#add-integrations-to-an-existing-service) to your service(s) for crisis response at the minimum should include an email integration, an instant messaging integration with Slack, Google Chat, etc. and a video conferencing tool such as Zoom, Microsoft Teams, etc. This standard grouping enables you to trigger alerts multiple ways (e.g., web, mobile, email, API and instant messaging) and alert or advise your Executive Crisis Leadership Team that something is up (e.g., PagerDuty alert via email, SMS, push or voice, automated group channel message and [subscribers](https://support.pagerduty.com/docs/communicate-with-stakeholders#subscribe-to-a-business-service) to a service).
+在你的服务中为危机响应[添加集成](https://support.pagerduty.com/docs/services-and-integrations#add-integrations-to-an-existing-service)至少应包括电子邮件集成、与Slack、Google Chat等的即时消息集成以及Zoom、Microsoft Teams等的视频会议工具。这种标准组合使你能够通过多种方式（例如，网络、移动、电子邮件、API和即时消息）触发警报，并通知或建议你的执行危机领导团队有问题（例如，通过电子邮件、短信、推送或语音的PagerDuty警报，自动群组频道消息和[订阅](https://support.pagerduty.com/docs/communicate-with-stakeholders#subscribe-to-a-business-service)到服务）。
 
-Given the scope of the [PagerDuty Operations Cloud](https://www.pagerduty.com/operations-cloud/), you’re likely not the only group within your organization running their operations through the platform. Your Customer Service organization may be using the platform alongside your Technical Operations organization. As a result, you’ll want to deploy some tradecraft as you trigger alerts, add notes and publish status pages to maintain the right level of privacy and compliance.
+鉴于[PagerDuty Operations Cloud](https://www.pagerduty.com/operations-cloud/)的范围，你可能不是组织内唯一通过该平台运行其操作的团队。你的客户服务组织可能与你的技术操作组织一起使用该平台。因此，在触发警报、添加笔记和发布状态页面时，你希望部署一些技巧，以保持适当的隐私和合规级别。
 
-![The PagerDuty Operations Cloud](../assets/img/crisis/07_operationscloud.png)
-
+![PagerDuty Operations Cloud](../assets/img/crisis/07_operationscloud.png)

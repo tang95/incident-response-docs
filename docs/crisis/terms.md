@@ -1,22 +1,22 @@
 ---
-cover: assets/img/crisis/cover_crisisresponse.png
-description: If crisis response is new to you or your organization, these terms will help you establish a baseline for understanding.
+封面: assets/img/crisis/cover_crisisresponse.png
+描述: 如果您或您的组织对危机应对尚不熟悉，这些术语将帮助您建立理解的基础。
 ---
 
-The following list of terms will help you navigate the Crisis Response section of this document. You'll find some terms mirror those used in incident response, while some will have slightly different definitions.
+以下术语列表将帮助您导航本文档中的危机应对部分。您会发现一些术语与事件应对中使用的术语相似，而有些则具有稍微不同的定义。
 
-- **Crisis** - an extraordinary event or situation that serves as an existential threat to people, the operational environment, assets or reputation requiring a strategic, adaptive and timely organizational response
-- **Crisis Management** - coordinated activities to lead, direct and control an organization with regards to its response to a crisis
-- **Incident** - a potentially costly yet generally foreseeable event, e.g., availability, performance degradation, market volatility, increased competition, etc., that disrupts normal business processes
-- **Emergent Issue** - a situational problem that does not present a significant impact to strategic objectives, reputation or viability of the organization but may require comment or organized activity to avert an incident or crisis
-- **Emergency** - a sudden, short-lived threat generally involving people or physical assets that requires immediate action or assistance to mitigate
-- **Incident Command System (ICS)** - a standardized emergency management construct created by the U.S. Federal Emergency Management Agency (FEMA) to provide an integrated organizational structure that reflects the complexity and demands of single or multiple incidents
-- **Area Command** - an organizational structure used by the Federal Emergency Management Agency (FEMA) to oversee the management of multiple incidents or oversee the management of a very large or evolving situation with multiple ICS organizations
-- **Incident Commander (IC)** - the individual responsible for incident management having overall authority and responsibility for conducting and managing response operations
-- **Executive Crisis Leadership Team** - a group of Executives who make enterprise-wide strategic decisions for the business during a crisis situation and pre-crisis
-- **Crisis Management Plan** - a document defining the personnel, procedures and resources needed to manage a crisis from beginning to end
-- **Crisis Team Leader** - the equivalent of an Incident Commander for a crisis situation based on their functional area of expertise or charge
-- **Crisis Response** - the immediate actions taken in response to a crisis situation to contain it and the steps taken pre-crisis to develop the capabilities and readiness to do so
-- **Crisis Response Management** - the triage and initial treatment stages of a crisis situation and the effective activations to support the complete crisis management lifecycle
-- **Incident Response** - the process for addressing and solving an incident of varying severity in order to limit damage and reduce recovery time and costs
-- **Emergency Response** - the process of responding to a range of life-safety events and threats to the environment to mitigate damage and loss
+- **危机** - 一种非同寻常的事件或情况，对人员、运营环境、资产或声誉构成生存威胁，需要组织进行战略性、适应性和及时的响应。
+- **危机管理** - 协调活动，以领导、指导和控制组织对危机的响应。
+- **事件** - 一种潜在代价高昂但通常可预见的事件，例如可用性问题、性能下降、市场波动、竞争加剧等，这些事件扰乱了正常的业务流程。
+- **突发问题** - 一种情境性问题，不会对战略目标、声誉或组织的生存能力产生重大影响，但可能需要评论或组织活动以防止事件或危机的发生。
+- **紧急情况** - 一种突然且短暂存在的威胁，通常涉及人员或物理资产，需要立即采取行动或援助以缓解。
+- **事件指挥系统（ICS）** - 由美国联邦紧急事务管理署（FEMA）创建的标准化紧急管理结构，旨在为单个或多个事件提供反映复杂性和需求的集成组织结构。
+- **区域指挥** - 由联邦紧急事务管理署（FEMA）使用的组织结构，用于管理多个事件或管理非常庞大或不断发展的多ICS组织情况。
+- **事件指挥官（IC）** - 负责事件管理的个人，对执行和管理响应操作拥有总体权威和责任。
+- **执行危机领导团队** - 在危机和危机前为业务做出企业级战略决策的一组执行人员。
+- **危机管理计划** - 一份文档，定义了从开始到结束管理危机所需的人员、程序和资源。
+- **危机团队领导** - 根据其专业领域或职责，在危机情况下相当于事件指挥官的个人。
+- **危机应对** - 为遏制危机情况而立即采取的行动，以及在危机前为发展应对能力和准备度而采取的步骤。
+- **危机应对管理** - 危机情况的分诊和初步处理阶段，以及支持完整危机管理生命周期的有效激活。
+- **事件应对** - 解决和解决不同严重程度的事件的过程，以限制损害并减少恢复时间和成本。
+- **紧急应对** - 对一系列生命安全事件和对环境的威胁做出响应的过程，以减轻损害和损失。

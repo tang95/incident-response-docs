@@ -1,74 +1,74 @@
 ---
-cover: assets/img/covers/alerting_principles.png
-description: We manage how we get alerted based on a simple principle, an alert is something which requires a human to perform an action. Anything else is a notification, which is something that we cannot control, and for which we cannot make any action to affect it. Notifications are useful, but they shouldn't be waking people up under any circumstance.
+封面: assets/img/covers/alerting_principles.png
+描述: 我们根据一个简单的原则来管理如何接收警报：**警报是需要人类执行某种操作的事情**。其他任何事情都是通知，这是我们无法控制且无法对其采取任何行动的事情。通知是有用的，但它们不应该在任何情况下唤醒人们。
 ---
-We manage how we get alerted based on a simple principle. **An alert is something which requires a human to perform an action**. Anything else is a notification, which is something that we cannot control, and for which we cannot make any action to affect it. Notifications are useful, but they shouldn't be waking people up under any circumstance.
+我们根据一个简单的原则来管理如何接收警报。**警报是需要人类执行某种操作的事情**。其他任何事情都是通知，这是我们无法控制且无法对其采取任何行动的事情。通知是有用的，但它们不应该在任何情况下唤醒人们。
 
-## Alert Priority
+## 警报优先级
 
-!!! warning "High Priority Alerts"
-    Anything that wakes up a human in the middle of the night should be **immediately human actionable**. If it is none of those things, then we need to adjust the alert to not page at those times.
+!!! 警告 "高优先级警报"
+    任何在半夜唤醒人类的事情都应该是**立即需要人类采取行动**的。如果不是这些事情，那么我们需要调整警报，使其不在那些时间发出。
 
-| Priority | Alerts | Response |
+| 优先级 | 警报 | 响应 |
 | -------- | ------ | -------- |
-| High | High-Priority PagerDuty Alert 24/7/365. | Requires **immediate human action**. |
-| Medium | High-Priority PagerDuty Alert during **business hours only**. | Requires human action within 24 hours. |
-| Low | Low-Priority PagerDuty Alert 24/7/365. | Requires human action at some point. |
-| Notification | Suppressed PagerDuty Event. | No response required. Informational only. |
+| 高 | 高优先级 PagerDuty 警报 24/7/365。 | 需要**立即人类行动**。 |
+| 中 | 高优先级 PagerDuty 警报仅在**工作时间**。 | 需要在24小时内采取人类行动。 |
+| 低 | 低优先级 PagerDuty 警报 24/7/365。 | 需要在某个时间点采取人类行动。 |
+| 通知 | 抑制的 PagerDuty 事件。 | 不需要响应。仅提供信息。 |
 
-If you're setting up a new alert/notification, consider the chart above for how you want to alert people. Be mindful of not creating new high-priority alerts if they don't require an immediate response, for example.
+如果你正在设置一个新的警报/通知，考虑上面的图表来决定如何通知人们。要注意不要创建不需要立即响应的高优先级警报。
 
-## Priority Examples
+## 优先级示例
 
-#### "Production service is failing for 75% of requests, automation is unable to resolve."_
-This would be a **High** priority page, requiring immediate human action to resolve.
+#### "生产服务的请求失败率达到75%，自动化无法解决。"
+这将是**高**优先级页面，需要立即采取人类行动来解决。
 
-![High Urgency](../assets/img/screenshots/high_urgency.png)
+![高紧急](../assets/img/screenshots/high_urgency.png)
 
-#### "Production server disk space is filling, expected to be full in 48 hours. Log rotation is insufficient to resolve."
-This would be a **Medium** priority page, requiring human action soon, but not immediately.
+#### "生产服务器磁盘空间正在填充，预计48小时后满。日志轮转不足以解决。"
+这将是**中**优先级页面，需要人类尽快采取行动，但不是立即。
 
-![Medium Urgency](../assets/img/screenshots/high_business_hours.png)
+![中紧急](../assets/img/screenshots/high_business_hours.png)
 
-#### "An SSL certificate is due to expire in one week."
-This would be a **Low** priority page, requiring human action some time soon.
+#### "SSL证书将在一周后到期。"
+这将是**低**优先级页面，需要在不久的将来采取人类行动。
 
-![Low Urgency](../assets/img/screenshots/low_urgency.png)
+![低紧急](../assets/img/screenshots/low_urgency.png)
 
-#### "A deployment was successful."
-This would be a **Notification**, and should be sent as a suppressed event. It provides useful context should an incident occur, but does not require notifying a human.
+#### "部署成功。"
+这将是**通知**，应作为抑制事件发送。它在发生事件时提供有用的上下文，但不需要通知人类。
 
-![Notification](../assets/img/screenshots/suppressed.png)
+![通知](../assets/img/screenshots/suppressed.png)
 
 
-## Alert Content
+## 警报内容
 
-We should ensure that alerts contain enough useful context to quickly identify the issue and any potential remediation steps. Alerts with generic titles or descriptions are not useful and can cause confusion. We have a set of guidelines for the content of alerts, which all our alerts should follow,
+我们应该确保警报包含足够有用的上下文，以便快速识别问题和任何潜在的修复步骤。具有通用标题或描述的警报没有用，并且会造成混淆。我们有一套警报内容的指南，所有警报都应该遵循，
 
-#### Make the title/summary descriptive and concise.
-  * <span class="icon bad"></span>  ALERT: Something went wrong.
-  * <span class="icon good"></span> Disk is 80% full on `prod-web-loadbalancer-af5462ce`.
+#### 使标题/摘要具有描述性和简洁性。
+  * <span class="icon bad"></span>  警报：出问题了。
+  * <span class="icon good"></span> `prod-web-loadbalancer-af5462ce` 上的磁盘已满80%。
 
-#### Make sure to include the metric which triggered the alert somewhere in the body.
-  * <span class="icon bad"></span>  Diskspace on a disk is filling.
+#### 确保在正文中包含触发警报的指标。
+  * <span class="icon bad"></span>  磁盘上的磁盘空间正在填充。
   * <span class="icon good"></span> `avg(last_1h):max:system.disk.in_use{env:prod-web-loadbalancer} by {host} > 0.8`
 
-#### The body should also include a description of what the actual problem is, and why it's an issue.
-  * <span class="icon bad"></span>  Disk is full.
-  * <span class="icon good"></span> The disk on this host is at 80% capacity. If it becomes too full it could cause system instability as new files will not be able to be created and current files will not be written to.
+#### 正文还应包括实际问题的描述以及为什么它是一个问题。
+  * <span class="icon bad"></span>  磁盘已满。
+  * <span class="icon good"></span> 该主机上的磁盘容量为80%。如果它变得太满，可能会导致系统不稳定，因为无法创建新文件，并且当前文件无法写入。
 
-#### Provide clear steps to resolve the problem, or link to a run book. Alerts with neither of these things are useless.
-  * <span class="icon bad"></span>  Fix it by deleting stuff.
-  * <span class="icon good"></span> Follow the run book here for identifying and resolving disk space issues: https://example.com/runbook/disk. Additionally, you should investigate whether log rotation thresholds are sufficient to prevent this happening again, the following run book has the necessary steps: https://example.com/runbook/log-rotate
+#### 提供清晰的解决问题步骤，或链接到运行手册。没有这些内容的警报是无用的。
+  * <span class="icon bad"></span>  通过删除东西来修复它。
+  * <span class="icon good"></span> 请按照此运行手册识别和解决磁盘空间问题：https://example.com/runbook/disk。此外，您应该调查日志轮转阈值是否足够以防止再次发生这种情况，以下运行手册包含必要的步骤：https://example.com/runbook/log-rotate
 
 
-## Testing Your Alerts
+## 测试你的警报
 
-!!! info "Testing is Critical"
-    An untested alert is equivalent to not having an alert at all. You cannot be sure it will alert you when the time comes. Testing that your alerting actually works is critical to proper service health and should be included in any release planning / deployment efforts.
+!!! 信息 "测试是关键"
+    未测试的警报等同于没有警报。你无法确定它在需要时是否会提醒你。测试你的警报是否实际工作对于适当的服务健康至关重要，并且应包含在任何发布计划/部署工作中。
 
-Make sure to test all new and modified alerts. This is usually covered as part of [Failure Friday](https://www.pagerduty.com/blog/failure-friday-at-pagerduty/) for any new service; however, you should manually test them if you need it more quickly. Some things to test:
+确保测试所有新的和修改的警报。这通常作为任何新服务的[Failure Friday](https://www.pagerduty.com/blog/failure-friday-at-pagerduty/)的一部分涵盖；然而，如果你需要更快地测试它们，你应该手动测试。一些需要测试的事情：
 
-* Test that the threshold is set appropriately. We don't want noisy alerts.
-* Test that you get alerted for the "No Data" condition if applicable. Generally, receiving no data is the same as breaking your threshold.
-* Test that the alert resolves automatically when the metric returns to normal.
+* 测试阈值设置是否适当。我们不希望有噪音警报。
+* 如果适用，测试你是否会因为“无数据”条件而收到警报。通常，接收不到数据与打破阈值是一样的。
+* 测试当指标恢复正常时警报是否自动解决。

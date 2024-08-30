@@ -1,95 +1,95 @@
 ---
-cover: assets/img/covers/being_on-call.png
-description: A summary of the expectations and responsibilities of being on-call at PagerDuty, along with some best practice and etiquette recommendations.
+封面: assets/img/covers/being_on-call.png
+描述: 关于在PagerDuty担任待命职责的期望和责任概述，以及一些最佳实践和礼仪建议。
 ---
-A summary of expectations and helpful information for being on-call.
+待命期望和有用信息的总结。
 
-## What is On-Call?
-Being on-call means that you are able to be contacted at any time in order to investigate and fix issues that may arise for the system you are responsible for. For example, if you are on-call for your service at PagerDuty, should any alarms be triggered for that service, you will receive a "page" (an alert on your mobile device, email, phone call, or SMS, etc.) giving you details on what is broken and how to fix it. You will be expected to take whatever actions are necessary in order to resolve the issue and return your service to a normal state.
+## 什么是待命？
+待命意味着你可以在任何时候被联系，以便调查和修复你负责的系统可能出现的问题。例如，如果你在PagerDuty为你的服务待命，如果该服务的任何警报被触发，你将收到一个“页面”（移动设备上的警报、电子邮件、电话呼叫或短信等），告诉你哪里出了问题以及如何修复。你将被期望采取任何必要的行动来解决问题，并将你的服务恢复到正常状态。
 
-On-call responsibilities extend beyond normal office hours, and if you are on-call, you are expected to be able to respond to issues - even at 2am. This sounds horrible (and it can be), but this is what our customers go through and is the problem that the PagerDuty product itself is trying to fix!
+待命职责超出了正常办公时间，如果你在待命，你将被期望能够响应问题——即使在凌晨2点。这听起来很可怕（而且可能会很可怕），但这是我们的客户所经历的，也是PagerDuty产品本身试图解决的问题！
 
-## Responsibilities
+## 责任
 
-1. **Prepare**
-    * Have your laptop and Internet with you (office, home, a MiFi dongle, a phone with a tethering plan, etc).
-        * Have a way to charge your MiFi.
-    * Team alert escalation happens within 5 minutes, set/stagger your notification timeouts (push, SMS, phone, etc.) accordingly.
-        * Make sure PagerDuty texts and calls can [bypass your "Do Not Disturb" settings](https://support.pagerduty.com/docs/notification-phone-numbers).
-    * Be prepared (environment is set up, a current working copy of the necessary repositories is local and functioning, you have configured and tested environments on workstations, your credentials for third-party services are current, etc.)
-    * Read our incident response documentation (that's this!) to understand how we handle serious incidents, what the different roles and methods of communication are, etc.
-    * Be aware of your upcoming on-call time (primary, backup) and arrange swaps around travel, vacations, appointments, etc.
+1. **准备**
+    * 随身携带你的笔记本电脑和互联网（办公室、家中、MiFi dongle、有共享计划的电话等）。
+        * 有一个给MiFi充电的方法。
+    * 团队警报升级在5分钟内发生，相应地设置/调整你的通知超时（推送、短信、电话等）。
+        * 确保PagerDuty的短信和电话可以[绕过你的“请勿打扰”设置](https://support.pagerduty.com/docs/notification-phone-numbers)。
+    * 做好准备（环境已设置好，必要的仓库的当前工作副本本地且功能正常，你已经在工作站上配置和测试了环境，你的第三方服务凭证是最新的，等等）。
+    * 阅读我们的应急响应文档（就是这个！），了解我们如何处理严重事件，不同的角色和沟通方式是什么，等等。
+    * 了解你即将到来的待命时间（主要、备份），并围绕旅行、假期、预约等安排交换。
 
-1. **Triage**
-    * Acknowledge and act on alerts whenever you can (see the first "Not responsibilities" point below)
-    * Determine the urgency of the problem:
-        * Is it something that should be worked on right now or escalated into a major incident? (e.g. "production server on fire" situations. Security alerts) - do so.
-        * Is it some tactical work that doesn't have to happen during the night? For example, disk utilization high watermark, but there's plenty of space left and the trend is not indicating impending doom, etc. just snooze the alert until a more suitable time (working hours or the next morning) and get back to fixing it then.
-    * Check Slack for current activity. Oftentimes - but not always -  actions that could potentially cause alerts will be announced there.
-    * Does the alert and your initial investigation indicate a general problem or an issue with a specific service that the relevant team should look into? If it does not look like a problem you are the expert for, then escalate to another team.
+1. **分类**
+    * 尽可能确认并处理警报（见下面的第一个“非责任”点）。
+    * 确定问题的紧迫性：
+        * 是否是需要立即处理或升级为重大事件的问题？（例如，“生产服务器着火”的情况。安全警报）- 如果是，请这样做。
+        * 是否是一些战术工作，不必在夜间进行？例如，磁盘利用率高水位线，但还有足够的空间，趋势也没有预示即将发生的灾难，等等。只需将警报暂停到更合适的时间（工作时间或第二天早上），然后回来修复它。
+    * 检查Slack的当前活动。通常（但并非总是），可能引起警报的行动会在那里宣布。
+    * 警报和你的初步调查是否表明是一个普遍问题或特定服务的问题，相关团队应该关注？如果看起来不像是你擅长解决的问题，那么就升级到另一个团队。
 
-1. **Fix**
-    * You are empowered to dive into any problem and act to fix it.
-    * Involve other team members as necessary: Do not hesitate to escalate if you cannot figure out the cause within a reasonable timeframe, or if the service / alert is something you have not tackled before.
-    * If the issue is not time sensitive and you have other priority work, create a JIRA ticket to keep a track of it (with an appropriate severity).
+1. **修复**
+    * 你有权深入任何问题并采取行动修复它。
+    * 必要时涉及其他团队成员：如果你在合理时间内无法找出原因，或者服务/警报是你以前没有处理过的，不要犹豫升级。
+    * 如果问题不是时间敏感的，并且你有其他优先工作，创建一个JIRA票来跟踪它（具有适当的严重性）。
 
-1. **Improve**
-    * If a particular issue keeps happening; if an issue alerts often but turns out to be a preventable non-issue – perhaps improving this should be a longer-term task.
-        * Disks that fill up, logs that should be rotated, noisy alerts...
-    * If information is difficult / impossible to find, write it down. Constantly refactor and improve our knowledge base and documentation. Add redundant links and pointers if your mental model of the wiki / codebase does not match the way it is currently organized.
+1. **改进**
+    * 如果某个特定问题不断发生；如果一个问题经常警报但结果是一个可预防的非问题——也许改进这个应该是一个长期任务。
+        * 填满的磁盘，应该轮转的日志，嘈杂的警报...
+    * 如果信息难以/不可能找到，写下来。不断重构和改进我们的知识库和文档。如果你的心理模型与当前的维基/代码库组织方式不匹配，添加冗余链接和指针。
 
-1. **Support**
-    * When your on-call "shift" ends, let the next on-call know about issues that have not been resolved yet and other experiences of note.
-    * If you are making a change that impacts the schedule (e.g. adding / removing yourself), let others know since many of us make arrangements around the on-call schedule well in advance.
-    * Support each other: When doing activities that might generate plenty of pages, it is courteous to "take the page" away from the on-call by notifying them and scheduling an override for the duration.
+1. **支持**
+    * 当你的待命“班次”结束时，让下一个待命的人知道尚未解决的问题和其他值得注意的经验。
+    * 如果你正在做一个影响日程的改变（例如，添加/移除你自己），让其他人知道，因为我们中的许多人在待命日程上提前做了安排。
+    * 互相支持：当进行可能产生大量页面的活动时，礼貌地“拿走页面”，通过通知他们并安排覆盖持续时间来避免待命人员被打扰。
 
-## Not Responsibilities
+## 非责任
 
-1. There should be no expectation to be the first to acknowledge _all_ of the alerts during the on-call period.
-    * Commutes (and other necessary distractions) are facts of life, and sometimes it is not possible to receive or act on an alert before it escalates. That's what we have the backup on-call and schedule for.
+1. 不应该期望在待命期间首先确认所有的警报。
+    * 通勤（和其他必要的干扰）是生活的事实，有时在警报升级之前无法接收或处理警报。这就是我们有备份待命和日程安排的原因。
 
-1. There's no expectation to fix all issues by yourself.
-    * No one knows everything. Your whole team is here to help. There is no shame, and much to be learned, by escalating issues you are not certain about. Our motto is "Never hesitate to escalate."
-    * Service owners will always know more about how their stuff works. Especially if our and their documentation is lacking, double checking with the relevant team can avoid mistakes. Measure twice, cut once – and it's often best to let the subject matter expert (SME) do the cutting.
+1. 没有期望你独自解决所有问题。
+    * 没有人知道所有事情。你的整个团队都在这里帮助你。对于你不确定的问题进行升级并没有什么可耻的，而且有很多东西可以学习。我们的座右铭是“永远不要犹豫升级。”
+    * 服务所有者总是更了解他们的东西是如何工作的。特别是在我们的和他们的文档不足的情况下，与相关团队再次确认可以避免错误。量两次，切一次——通常最好让主题专家（SME）来做切割。
 
-## Recommendations
-If your team is starting its own on-call rotation, here are some scheduling recommendations from the operations team.
+## 建议
+如果你的团队正在开始自己的待命轮换，这里有一些来自运营团队的日程安排建议。
 
-* Always have a backup schedule. Yes, this means two people being on-call at the same time. This takes a lot of the stress off of the primary on-call if they know they have a specific backup they can contact, rather than trying to choose a random member of the team.
-    * A backup shift should generally come directly after a primary shift. It gives a chance for the previous primary to pass on additional context, which may have come up during their shift. It also helps to prevent people from sitting on issues with the intent of letting the next shift fix it.
+* 总是有一个备份日程。是的，这意味着两个人同时待命。如果主要待命的人知道他们有一个特定的备份可以联系，而不是试图选择团队的随机成员，这会减轻很多压力。
+    * 备份班次通常应该直接跟在主要班次之后。这给了前一个主要待命的人传递额外上下文的机会，这些上下文可能在他们班次期间出现。它还有助于防止人们坐在问题上，意图让下一个班次来解决。
 
-* The third level of your escalation (after backup schedule) should probably be your entire team. This should hopefully never happen (it's happened once in the history of the operations team), but when it does, it's useful to be able to just get the next available person.
+* 你的升级的第三级（在备份日程之后）应该是你的整个团队。这应该希望永远不会发生（这在运营团队的历史上只发生过一次），但当它发生时，能够直接得到下一个可用的人是有用的。
 
-![Escalation](../assets/img/misc/escalation.png)
+![升级](../assets/img/misc/escalation.png)
 
-* Team managers can (and should) be part of your normal rotation. It gives a better insight into what has been going on.
+* 团队经理可以（也应该）成为你正常轮换的一部分。这提供了更好的洞察力，了解发生了什么。
 
-* New members of the team should shadow your on-call rotation during the first few weeks. They should get all alerts and follow along with what you are doing. (All new employees shadow the operations team for one week of on-call, but it's useful to have new team members shadow your team rotations also. Just not at the same time).
+* 团队的新成员应该在最初几周内跟随你的待命轮换。他们应该收到所有警报，并跟随你正在做的事情。（所有新员工都会跟随运营团队进行一周的待命，但让新团队成员跟随你的团队轮换也很有用。只是不要同时进行）。
 
-* We recommend you set your escalation timeout to 5 minutes. This should be plenty of time for someone to acknowledge the incident if they're able to. If they're not able to within 5 minutes, then they're probably not in a good position to respond to the incident anyway.
+* 我们建议你将升级超时设置为5分钟。这应该足够时间让某人确认事件，如果他们能够的话。如果他们在5分钟内无法确认，那么他们可能不在一个好的位置来响应事件。
 
-* When going off-call, you should provide a quick summary to the next on-call about any issues that may come up during their shift. A service has been flapping, an issue is likely to reoccur, etc. If you want to be formal, this can be a written report via email, but generally a verbal summary is sufficient.
+* 当结束待命时，你应该向下一任待命者提供一个关于他们班次期间可能出现的任何问题的快速总结。一个服务一直在波动，一个问题可能会再次发生，等等。如果你想正式一点，这可以通过电子邮件的书面报告，但通常口头总结就足够了。
 
-### Notification Method Recommendations
-You are free to set up your notification rules as you see fit to match how you would like to best respond to incidents. If you're not sure how to configure them, the operations team has some recommendations.
+### 通知方法建议
+你可以自由设置你的通知规则，以匹配你希望最好地响应事件的方式。如果你不确定如何配置它们，运营团队有一些建议。
 
-![Mobile Alerts](../assets/img/misc/mobile_alerts.png)
+![移动警报](../assets/img/misc/mobile_alerts.png)
 
-* Use push notifications and email as your first method of notification. Most of us have phones with us at all times, so this is a prudent first method and is usually sufficient.
-* Use phone and/or SMS notification each minute after, until the escalation time. If push didn't work, then it's likely you need something stronger, like a phone call. Keep calling every minute until it's too late. If you don't pick up by the 3rd time, then it's unlikely you are able to respond, and the incident will get escalated away from you.
+* 使用推送通知和电子邮件作为你的第一种通知方法。我们大多数人总是随身携带手机，所以这是一种谨慎的第一种方法，通常是足够的。
+* 在升级时间之后，每分钟使用电话和/或短信通知。如果推送不起作用，那么你可能需要更强烈的东西，比如电话呼叫。每分钟呼叫，直到太晚。如果你在第三次呼叫时没有接听，那么你不太可能能够响应，事件将远离你升级。
 
-## Etiquette
+## 礼仪
 
-* If the current on-call comes into the office at 12 p.m. looking tired, it's not because they're lazy. They probably got paged in the night. Cut them some slack and be nice.
+* 如果当前待命的人在中午来到办公室看起来很累，那不是因为他们懒惰。他们可能晚上被页面了。给他们一些空间，友好一点。
 
-* Don't acknowledge an incident out from under someone else. If you didn't get paged for the incident, then you shouldn't be acknowledging it. Add a comment with your notes instead.
+* 不要在别人下面确认事件。如果你没有因为事件被页面，那么你不应该确认它。添加一个带有你的笔记的评论。
 
-![Acknowledging](../assets/img/misc/ack.png)
+![确认](../assets/img/misc/ack.png)
 
-* If you are testing something or performing an action that you know will cause a page, it's customary to "take the pager" for the time during which you will be testing. Notify the person on-call that you are taking the pager for the next hour while you test.
+* 如果你正在测试某事或执行你知道会导致页面的行动，习惯上在测试期间“拿走页面”。通知待命的人你将在接下来的一个小时里拿走页面进行测试。
 
-* "Never hesitate to escalate." Never feel ashamed to rope in someone else if you're not sure how to resolve an issue. Likewise, never look down on someone else if they ask you for help.
+* “永远不要犹豫升级。”如果你不确定如何解决一个问题，永远不要感到羞耻去拉入其他人。同样，如果别人向你求助，永远不要看不起他们。
 
-* Always consider covering an hour or so of someone else's on-call time if they request it and you are able. We all have lives which might get in the way of on-call time, and one day it might be you who needs to swap their on-call time in order to have a night out with your friend from out of town.
+* 如果有人请求并且你能够的话，总是考虑覆盖别人的待命时间一两个小时。我们都有可能干扰待命时间的生活，有一天可能是你需要交换你的待命时间，以便与外地的朋友出去玩。
 
-* If an issue comes up during your on-call shift for which you got paged, you are responsible for resolving it. Even if it takes 3 hours and there's only 1 hour left of your shift. You can hand over to the next on-call if they agree, but you should never assume that's possible.
+* 如果在你待命班次期间出现了一个你被页面的问题，你负责解决它。即使它需要3个小时，而你的班次只剩下1个小时。你可以交给下一个待命的人，如果他们同意，但你永远不应该假设这是可能的。

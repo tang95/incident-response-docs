@@ -1,55 +1,55 @@
-# PagerDuty Incident Response Documentation 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/ca66d085-7d5f-4a57-81c7-4eb104c9bdb7/deploy-status)](https://app.netlify.com/sites/incident-response-docs/deploys)
+# PagerDuty 事件响应文档
+[![Netlify 状态](https://api.netlify.com/api/v1/badges/ca66d085-7d5f-4a57-81c7-4eb104c9bdb7/deploy-status)](https://app.netlify.com/sites/incident-response-docs/deploys)
 
-This is a public version of the Incident Response process used at PagerDuty. It is also used to prepare new employees for on-call responsibilities, and provides information not only on preparing for an incident, but also what to do during and after. See the [about page](docs/about.md) for more information on what this documentation is and why it exists.
+这是 PagerDuty 使用的事件响应流程的公开版本。它还用于为新员工准备随叫随到的职责，并提供不仅在准备事件时，而且在事件期间和之后应采取的行动的信息。有关此文档的更多信息及其存在的原因，请参阅[关于页面](docs/about.md)。
 
-You can view the documentation [directly](docs/index.md) in this repository, or rendered as a website at https://response.pagerduty.com.
+您可以直接在此仓库中查看文档[直接](docs/index.md)，或者以网站形式在 https://response.pagerduty.com 上查看。
 
-[![PagerDuty Incident Response Documentation](screenshot.png)](https://response.pagerduty.com)
+[![PagerDuty 事件响应文档](screenshot.png)](https://response.pagerduty.com)
 
-## Development
-We use [MkDocs](https://www.mkdocs.org/) to create a static site from this repository.
+## 开发
+我们使用 [MkDocs](https://www.mkdocs.org/) 从该仓库创建一个静态站点。
 
-### Native
-For local development on your native device,
+### 本地原生开发
+对于在您的本地设备上进行开发，
 
-1. Install [MkDocs](https://www.mkdocs.org/user-guide/installation/). `pip install mkdocs`
-1. Install [MkDocs PyMdown Extensions](https://squidfunk.github.io/mkdocs-material/extensions/pymdown/). `pip install pymdown-extensions`
-1. Install [Pygments](https://pygments.org/) if you want syntax highlighting for any code examples. `pip install pygments`
-1. Install the [PagerDuty MkDocs Theme](https://github.com/pagerduty/mkdocs-theme-pagerduty).
+1. 安装 [MkDocs](https://www.mkdocs.org/user-guide/installation/)。`pip install mkdocs`
+1. 安装 [MkDocs PyMdown 扩展](https://squidfunk.github.io/mkdocs-material/extensions/pymdown/)。`pip install pymdown-extensions`
+1. 如果您希望对任何代码示例进行语法高亮，请安装 [Pygments](https://pygments.org/)。`pip install pygments`
+1. 安装 [PagerDuty MkDocs 主题](https://github.com/pagerduty/mkdocs-theme-pagerduty)。
     1. `git clone https://github.com/pagerduty/mkdocs-theme-pagerduty`
     1. `cd mkdocs-theme-pagerduty & python3 setup.py install`
-1. To test locally, run `mkdocs serve` from the project directory.
-1. You can now view the website in your browser at `http://127.0.0.1:8000`. The site will automatically update as you edit the code.
+1. 要在本地测试，请从项目目录运行 `mkdocs serve`。
+1. 现在您可以在浏览器中查看网站，网址为 `http://127.0.0.1:8000`。网站将自动更新，当您编辑代码时。
 
 ### Docker
-For local development using Docker,
+对于使用 Docker 进行本地开发，
 
-1. Build the docker image and load it for immediate use. `docker build --load -t mkdocs .`
-1. Run the container and pass through your current working directory. `docker run -v $(pwd):/docs -p 127.0.0.1:8000:8000 mkdocs`
-1. You can now view the website in your browser at `http://127.0.0.1:8000`. The site will automatically update as you edit the code.
+1. 构建 Docker 镜像并立即加载使用。`docker build --load -t mkdocs .`
+1. 运行容器并传递您当前的工作目录。`docker run -v $(pwd):/docs -p 127.0.0.1:8000:8000 mkdocs`
+1. 现在您可以在浏览器中查看网站，网址为 `http://127.0.0.1:8000`。网站将自动更新，当您编辑代码时。
 
-_Note: If you're using an Apple Silicon device, add `--platform linux/arm64/v8` to the `docker build` command to get a native Apple Silicon image. That will work faster than translating an arm64 image._
+_注意：如果您使用的是 Apple Silicon 设备，请在 `docker build` 命令中添加 `--platform linux/arm64/v8`，以获取原生 Apple Silicon 镜像。这将比翻译 arm64 镜像更快。_
 
-## Deploying
-1. Run `mkdocs build --clean` to produce the static site for upload.
-1. Upload the `site` directory to S3 (or wherever you would like it to be hosted).
+## 部署
+1. 运行 `mkdocs build --clean` 以生成用于上传的静态站点。
+1. 将 `site` 目录上传到 S3（或您希望托管的任何地方）。
 
         aws s3 sync ./site/ s3://[BUCKET_NAME] \
           --acl public-read \
           --exclude "*.py*" \
           --delete
 
-## License
-[Apache 2](https://www.apache.org/licenses/LICENSE-2.0) (See [LICENSE](LICENSE) file)
+## 许可证
+[Apache 2](https://www.apache.org/licenses/LICENSE-2.0)（参见 [LICENSE](LICENSE) 文件）
 
-## Contributing
-Thank you for considering contributing! If you have any questions, just ask - or submit your issue or pull request anyway. The worst that can happen is we'll politely ask you to change something. We appreciate all friendly contributions.
+## 贡献
+感谢您考虑贡献！如果您有任何问题，尽管问 - 或者直接提交您的问题或拉取请求。最坏的情况是我们会礼貌地请您更改某些内容。我们欢迎所有友好的贡献。
 
-Here is our preferred process for submitting a pull request,
+以下是我们首选的提交拉取请求的流程，
 
-1. Fork it ( https://github.com/PagerDuty/incident-response-docs/fork )
-1. Create your feature branch (`git checkout -b my-new-feature`)
-1. Commit your changes (`git commit -am 'Add some feature'`)
-1. Push to the branch (`git push origin my-new-feature`)
-1. Create a new Pull Request.
+1.  fork 它（ https://github.com/PagerDuty/incident-response-docs/fork ）
+1.  创建您的功能分支（`git checkout -b my-new-feature`）
+1.  提交您的更改（`git commit -am '添加某些功能'`）
+1.  推送到分支（`git push origin my-new-feature`）
+1.  创建一个新的 Pull Request。

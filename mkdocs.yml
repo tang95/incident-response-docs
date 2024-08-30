@@ -1,78 +1,78 @@
-# Project Information
-site_name: PagerDuty Incident Response Documentation
-site_description: A collection of information about the PagerDuty incident response process. Not only how to prepare new employees for on-call responsibilities, but also how to handle major incidents, both in preparation and after-work.
+# 项目信息
+site_name: PagerDuty 事件响应文档
+site_description: 关于 PagerDuty 事件响应流程的一系列信息。不仅包括如何为新员工准备待命职责，还包括如何处理重大事件，包括准备和事后工作。
 site_author: PagerDuty, Inc.
 site_url: https://response.pagerduty.com/
 
-# Repository
+# 仓库
 repo_url: https://github.com/pagerduty/incident-response-docs
 
-# Copyright
-copyright: 'Copyright &copy; PagerDuty, Inc.'
+# 版权
+copyright: '版权所有 &copy; PagerDuty, Inc.'
 
-# Theme
+# 主题
 theme:
   name: 'pagerduty'
-  title: 'Incident Response'
+  title: '事件响应'
 
-# Set default cover image
+# 设置默认封面图片
 extra:
   cover: assets/img/covers/default.png
 
-# Theme overrides and customizations for this specific site.
+# 主题覆盖和针对此站点的自定义设置
 extra_css: ['assets/css/custom.css']
 
-# Contents
+# 内容
 nav:
-  - Home: 'index.md'
-  - Getting Started: 'getting_started.md'
-  - On-Call:
-    - Being On-Call: 'oncall/being_oncall.md'
-    - Who's On-Call?: 'oncall/whos_oncall.md'
-    - Alerting Principles: 'oncall/alerting_principles.md'
-  - Before an Incident:
-    - What is an Incident?: 'before/what_is_an_incident.md'
-    - Severity Levels: 'before/severity_levels.md'
-    - Different Roles: 'before/different_roles.md'
-    - Call Etiquette: 'before/call_etiquette.md'
-    - Complex Incidents: 'before/complex_incidents.md'
-  - During an Incident:
-    - During an Incident: 'during/during_an_incident.md'
-    - External Communication Guidelines: 'during/external_communication_guidelines.md'
-    - Security Incident: 'during/security_incident_response.md'
-  - After an Incident:
-    - After an Incident: 'after/after_an_incident.md'
-    - Postmortem Process: 'after/post_mortem_process.md'
-    - Postmortem Template: 'after/post_mortem_template.md'
-    - Effective Postmortems: 'after/effective_post_mortems.md'
-  - Crisis Response:
-    - Crisis Response Introduction: 'crisis/crisis_intro.md'
-    - Terminology: 'crisis/terms.md'
-    - Crisis Leadership: 'crisis/leadership.md'
-    - Crisis Response Operations: 'crisis/operations.md'
-    - Pre-crisis Phase: 'crisis/prework.md'
-    - PagerDuty for CRMOps: 'crisis/pagerduty.md'
-  - Training:
-    - Training Overview: 'training/overview.md'
-    - Incident Commander: 'training/incident_commander.md'
-    - Deputy: 'training/deputy.md'
-    - Scribe: 'training/scribe.md'
-    - Subject Matter Expert: 'training/subject_matter_expert.md'
-    - Customer Liaison: 'training/customer_liaison.md'
-    - Internal Liaison: 'training/internal_liaison.md'
-    - Glossary: 'training/glossary.md'
-  - Training Courses:
-    - Incident Response: 'training/courses/incident_response.md'
-  - Additional Resources:
-    - Reading: 'resources/reading.md'
+  - 首页: 'index.md'
+  - 入门指南: 'getting_started.md'
+  - 待命:
+    - 待命职责: 'oncall/being_oncall.md'
+    - 谁在待命?: 'oncall/whos_oncall.md'
+    - 告警原则: 'oncall/alerting_principles.md'
+  - 事件前:
+    - 什么是事件?: 'before/what_is_an_incident.md'
+    - 严重性级别: 'before/severity_levels.md'
+    - 不同角色: 'before/different_roles.md'
+    - 通话礼仪: 'before/call_etiquette.md'
+    - 复杂事件: 'before/complex_incidents.md'
+  - 事件中:
+    - 事件处理: 'during/during_an_incident.md'
+    - 外部沟通指南: 'during/external_communication_guidelines.md'
+    - 安全事件: 'during/security_incident_response.md'
+  - 事件后:
+    - 事件后处理: 'after/after_an_incident.md'
+    - 事后分析流程: 'after/post_mortem_process.md'
+    - 事后分析模板: 'after/post_mortem_template.md'
+    - 有效的事后分析: 'after/effective_post_mortems.md'
+  - 危机响应:
+    - 危机响应介绍: 'crisis/crisis_intro.md'
+    - 术语: 'crisis/terms.md'
+    - 危机领导: 'crisis/leadership.md'
+    - 危机响应操作: 'crisis/operations.md'
+    - 危机前阶段: 'crisis/prework.md'
+    - PagerDuty 用于危机响应操作: 'crisis/pagerduty.md'
+  - 培训:
+    - 培训概览: 'training/overview.md'
+    - 事件指挥官: 'training/incident_commander.md'
+    - 副指挥官: 'training/deputy.md'
+    - 记录员: 'training/scribe.md'
+    - 主题专家: 'training/subject_matter_expert.md'
+    - 客户联络员: 'training/customer_liaison.md'
+    - 内部联络员: 'training/internal_liaison.md'
+    - 术语表: 'training/glossary.md'
+  - 培训课程:
+    - 事件响应: 'training/courses/incident_response.md'
+  - 其他资源:
+    - 阅读材料: 'resources/reading.md'
     - ChatOps: 'resources/chatops.md'
-    - Anti-Patterns: 'resources/anti_patterns.md'
-  - About: 'about.md'
+    - 反模式: 'resources/anti_patterns.md'
+  - 关于: 'about.md'
 
-# Analytics
+# 分析
 google_analytics: ['UA-8759953-1', 'auto']
 
-# Extensions
+# 扩展
 markdown_extensions:
   - toc:
       permalink: '#'
@@ -87,5 +87,5 @@ markdown_extensions:
   - pymdownx.superfences:
   - pymdownx.tabbed:
 
-# Development URL, bind to local only.
+# 开发 URL，仅绑定到本地。
 dev_addr: '127.0.0.1:8000'

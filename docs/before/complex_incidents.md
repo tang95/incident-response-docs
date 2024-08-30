@@ -1,53 +1,53 @@
 ---
 cover: assets/img/covers/complex_incidents.png
-description: There will come a time when you will be involved in an incident (or multiple concurrent incidents) which ends up spanning a large number of resources. In these cases it's important for everyone to maintain an effective span of control. This page describes how we manage such incidents.
+description: 总有一天，你将参与到一个（或多个同时发生的）事件中，这些事件最终会涉及大量资源。在这些情况下，每个人都保持有效的控制范围至关重要。本页描述了我们如何管理此类事件。
 ---
-There will come a time when you will be involved in an incident (or multiple concurrent incidents) which ends up spanning a large number of resources. In these cases, it's important for everyone to maintain an effective [span of control](../training/glossary.md#span-of-control). This page describes how we manage such incidents.
+总有一天，你将参与到一个（或多个同时发生的）事件中，这些事件最终会涉及大量资源。在这些情况下，每个人都保持有效的[控制范围](../training/glossary.md#span-of-control)至关重要。本页描述了我们如何管理此类事件。
 
-## Identifying Complex Incidents
-Perhaps multiple issues are happening at once, or an existing incident escalated and had a knock-on effect on other services. It's important to identify these types of incidents as early as possible to prevent confusion and burnout. Here are a few key things the Incident Commanders will be watching out for to help to identify a complex incident.
+## 识别复杂事件
+可能同时发生多个问题，或者现有事件升级并对其他服务产生了连锁反应。尽早识别这些类型的事件以防止混乱和疲劳至关重要。以下是事件指挥官将关注的一些关键事项，以帮助识别复杂事件。
 
-1. Are multiple teams involved?
-    * Are most of them actively investigating multiple issues?
+1. 是否有多个团队参与？
+    * 他们中的大多数是否正在积极调查多个问题？
 
-1. Multiple symptoms are present, and do not appear to have any obvious correlation.
+1. 存在多个症状，并且似乎没有任何明显的关联。
 
-1. A group of SME's are all working on the same analysis.
+1. 一组专家都在进行相同的分析。
 
-1. The incident calls "feels crowded." This is a rather fuzzy metric, but most people can generally get a feeling when there are too many responders on the call.
+1. 事件通话“感觉拥挤”。这是一个相当模糊的指标，但大多数人通常能感觉到通话中有太多响应者。
 
-## Sub-Teams
-When it is identified that we have a complex incident, the Incident Commander will spin off sub-teams to work on each individual problem. We have three predefined sub-teams, which the Incident Commander may assign you to: Alpha, Bravo, and Charlie. Each team has its own Slack room and conference call bridge already set up and ready for use.
+## 子团队
+当我们确定有一个复杂事件时，事件指挥官将组建子团队来处理每个单独的问题。我们有三个预定义的子团队，事件指挥官可能会将你分配到其中之一：Alpha、Bravo 和 Charlie。每个团队都有自己的 Slack 房间和会议电话桥，已经设置好并准备使用。
 
-!!! note "Team Names"
-    We chose the phonetic alphabet for our teams. We did not use colors as "Red Team" and "Blue Team" have other definitions within security incident response, and we wanted to prevent confusion.
+!!! note "团队名称"
+    我们选择了语音字母表作为我们的团队名称。我们没有使用颜色，因为“红队”和“蓝队”在安全事件响应中有其他定义，我们希望防止混淆。
 
 | | | |
 |-|-|-|
-| Alpha Team | #team-alpha | +1.555.123.4567 |
-| Bravo Team | #team-bravo | +1.555.123.4568 |
-| Charlie Team | #team-charlie | +1.555.123.4569 |
+| Alpha 团队 | #team-alpha | +1.555.123.4567 |
+| Bravo 团队 | #team-bravo | +1.555.123.4568 |
+| Charlie 团队 | #team-charlie | +1.555.123.4569 |
 
-All three teams do not necessarily need to be active at the same time. An incident may call for only one, or even more than three if necessary. Team leaders will be picked and then assigned to a specific team designation by the Incident Commander.
+并非所有三个团队都需要同时活跃。一个事件可能只需要一个团队，甚至必要时超过三个。团队领导者将被选出，然后由事件指挥官分配到特定的团队名称。
 
-### Role Structure
-How do sub-teams fit into the role structure for our incident response? The team leaders essentially replace the SMEs in the normal role structure, and then the SMEs will report to their team leader. This ensures that the Incident Commander and team leaders can maintain an effective span of control.
+### 角色结构
+子团队如何适应我们的应急响应角色结构？团队领导者基本上取代了正常角色结构中的专家，然后专家将向他们的团队领导者报告。这确保了事件指挥官和团队领导者可以保持有效的控制范围。
 
-![Incident Response Structure for Complex Incidents](../assets/img/misc/incident_response_roles_sub_teams.png)
+![复杂事件的应急响应结构](../assets/img/misc/incident_response_roles_sub_teams.png)
 
-### Spinning Off Sub-Teams
+### 组建子团队
 
-1. The IC will assign a leader to each team who will report to them directly. All other team members will report to their team leader.
-    * When assigning a team leader, the IC will also designate which team name they fall under (Alpha, Bravo, or Charlie).
-    * _Team leaders do not have to be trained as Incident Commanders; however, some leadership experience would be prudent._
+1. 事件指挥官将为每个团队分配一名直接向他们报告的领导者。所有其他团队成员将向他们的团队领导者报告。
+    * 在分配团队领导者时，事件指挥官还将指定他们所属的团队名称（Alpha、Bravo 或 Charlie）。
+    * _团队领导者不必接受过事件指挥官的培训；然而，一些领导经验是明智的。_
 
-1. Each team will be given a specific task to complete and will be time-boxed as they normally would for an individual responder.
+1. 每个团队将被分配一个特定的任务来完成，并将像单个响应者一样设定时间限制。
 
-How teams are split is at the discretion of the Incident Commander. Potential structures include:
+团队的划分由事件指挥官自行决定。潜在的结构包括：
 
-* Cross-functional groups to address one entire problem domain per group.
-* Groups of Subject Matter Experts to focus on one specific element of a larger problem.
-* Teams based on normal day-to-day roles.
+* 跨职能小组，每个小组解决一个完整的问题领域。
+* 专家小组，专注于一个更大问题的特定元素。
+* 基于日常角色的团队。
 
-### Switching Sub-Teams
-If you feel like you would be better suited on another sub-team, you should bring this up with your **current team leader**. Do not bring it up to the Incident Commander or with the leader of the team you wish to be on. An incident is currently in progress, and the defined escalation path should still be followed.
+### 切换子团队
+如果你觉得自己更适合另一个子团队，你应该向你的**当前团队领导者**提出。不要向事件指挥官或你希望加入的团队的领导者提出。事件正在进行中，应遵循定义的升级路径。

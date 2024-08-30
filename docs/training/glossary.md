@@ -1,38 +1,38 @@
 ---
-cover: assets/img/covers/definitions.png
-description: Ever wonder what all of those strange words you sometimes see in our documentation mean? This page is here to help.
+封面: assets/img/covers/definitions.png
+描述: 你是否曾经好奇过在我们文档中偶尔看到的那些奇怪的词汇是什么意思？这一页就是为了帮助你解答这个问题。
 ---
-Ever wonder what all of those strange words you sometimes see in our documentation mean? This page is here to help.
+你是否曾经好奇过在我们文档中偶尔看到的那些奇怪的词汇是什么意思？这一页就是为了帮助你解答这个问题。
 
-### Incident Commander / IC
-The Incident Commander is the person responsible for bringing any major incident to resolution. They are the highest ranking individual on any major incident call, regardless of their day-to-day rank. Their decisions made as Incident Commander are final. [More info](../before/different_roles.md).
+### 事件指挥官 / IC
+事件指挥官是负责将任何重大事件解决的人。他们是任何重大事件通话中最高级别的个人，无论他们日常的级别如何。他们作为事件指挥官所做的决定是最终的。[更多信息](../before/different_roles.md)。
 
-### Deputy
-Typically the backup IC. The deputy's job is to support the IC during the call, providing them with any help they need. [More info](../before/different_roles.md).
+### 副指挥官
+通常是备用的IC。副指挥官的工作是在通话期间支持IC，为他们提供任何需要的帮助。[更多信息](../before/different_roles.md)。
 
-### Scribe
-The Scribe's job is to keep a log of all activities performed during the call in a written chat log on Slack. [More info](../before/different_roles.md).
+### 记录员
+记录员的工作是在Slack的书面聊天记录中记录通话期间所有活动的日志。[更多信息](../before/different_roles.md)。
 
-### Resolver
-A person on the incident call who is able to help resolve issues within a particular system. Also referred to as an SME (see below). [More info](../before/different_roles.md).
+### 解决者
+在事件通话中能够帮助解决特定系统问题的人。也被称为SME（见下文）。[更多信息](../before/different_roles.md)。
 
 ### SME
-"Subject Matter Expert", someone who is an expert in a particular service or subject who can provide information to the IC, and perform resolution actions for a particular system. [More info](../before/different_roles.md).
+“主题专家”，是某个特定服务或主题的专家，能够向IC提供信息，并执行特定系统的解决行动。[更多信息](../before/different_roles.md)。
 
-### Command Staff
-The Command Staff consists of the Incident Commander, Deputy, and Scribe.
+### 指挥团队
+指挥团队由事件指挥官、副指挥官和记录员组成。
 
-### CAN Report
-CAN stands for "Conditions" "Actions" "Needs", if an IC asks you for a CAN report, you should provide the current state of your service (condition), what actions need to be taken to return it to a healthy state (actions), and what support you need in order to perform the actions (needs).
+### CAN报告
+CAN代表“条件”“行动”“需求”，如果IC要求你提供CAN报告，你应该提供你的服务的当前状态（条件），需要采取哪些行动使其恢复到健康状态（行动），以及为了执行这些行动你需要什么支持（需求）。
 
-### Severity / Sev
-How severe the incident is. The "sev" of an incident determines the type of response we give. The higher the severity, the higher the likelihood of making risky actions to resolve the situation. [More info](../before/severity_levels.md).
+### 严重性 / Sev
+事件的严重程度。事件的“sev”决定了我们给出的响应类型。严重性越高，采取风险行动解决情况的可能性就越大。[更多信息](../before/severity_levels.md)。
 
-### Span of Control
-Refers to the number of direct reports you have. For example, if the IC has 10 people as direct reports on a call, they have a large span of control. We aim to make the span of control as minimal as we can while still being productive.
+### 控制范围
+指的是你直接报告的人数。例如，如果IC在通话中有10个人直接报告，他们就有很大的控制范围。我们旨在使控制范围尽可能小，同时仍然保持生产力。
 
-### Grenade Thrower
-Someone who joins the call at a late time in the game, and provides information that completely derails the current thinking. They then leave almost immediately.
+### 手榴弹投掷者
+在游戏后期加入通话的人，提供完全颠覆当前思维的信息。然后他们几乎立即离开。
 
-### Executive Swoop
-When an executive comes on the call and drops some sort of bombshell. A version of grenade throwing.
+### 高管突袭
+当一个高管加入通话并抛出某种重磅炸弹时。手榴弹投掷的一种版本。

@@ -1,14 +1,14 @@
 ---
-cover: assets/img/crisis/cover_crisisresponse.png
-description: Take the time to stress test your work before the real world does it for you. Practice and simulations are crucial for flagging any gaps or blindspots you want to be aware of ahead of a crisis. This is also an opportunity to build strong leadership, reduce mean time to respond and develop good habits within your team.
+封面: assets/img/crisis/cover_crisisresponse.png
+描述: 在现实世界为你进行压力测试之前，花时间对你的工作进行压力测试。练习和模拟对于发现你希望在危机之前意识到的任何差距或盲点至关重要。这也是建立强大领导力、减少响应平均时间和在团队中培养良好习惯的机会。
 ---
 
-## Pre-crisis
-You now have your Executive Crisis Leadership team, your crisis response management configured in PagerDuty, your 100-page crisis management plan and a shorter scenario-driven playbook for crisis response. Now what? This is the time to stress test your work before the real world does it for you. This step is crucial for flagging any gaps or blindspots you want to be aware of ahead of a crisis. This is also an opportunity to build strong leadership, reduce mean time to respond and develop good habits within your team.
+## 危机前
+你现在有了你的执行危机领导团队，你的危机响应管理在PagerDuty中配置好了，你的100页危机管理计划和针对危机响应的简短情景驱动手册。现在怎么办？现在是时候在现实世界为你进行压力测试之前对你的工作进行压力测试了。这一步对于发现你希望在危机之前意识到的任何差距或盲点至关重要。这也是建立强大领导力、减少响应平均时间和在团队中培养良好习惯的机会。
 
-## Crisis Simulations
-Conducting discussion-based tabletop exercises with your team is an ideal starting point. However, leveraging functional exercises to simulate your level of maturity with crisis coordination, and command and control is also important. Running a crisis simulation using PagerDuty is as simple as triggering an alert on your crisis service—randomly if you really want to simulate real life. You would then follow your typical process of getting the right people on a conference call or instant messaging channel through an integration and running through a scenario with your corresponding playbook.
+## 危机模拟
+与你的团队进行基于讨论的桌面练习是一个理想的起点。然而，利用功能性练习来模拟你在危机协调、指挥和控制方面的成熟度也很重要。使用PagerDuty运行危机模拟就像在你的危机服务上触发一个警报一样简单——如果你真的想模拟现实生活，可以随机触发。然后，你将遵循典型的流程，通过集成将正确的人员召集到电话会议或即时消息通道上，并根据相应的手册运行一个情景。
 
-The PagerDuty platform will automatically track the length of the exercise and record any notes or status changes in the timeline which you can then use in your [postmortem](https://postmortems.pagerduty.com/what_is/) (i.e, after action report or hotwash) and in developing further tabletops or simulations. 
+PagerDuty平台将自动跟踪练习的时长，并在时间线上记录任何笔记或状态变化，你可以将其用于你的[事后分析](https://postmortems.pagerduty.com/what_is/)（即，行动后报告或热洗），并在开发进一步的桌面练习或模拟中使用。
 
-A biannual cadence for crisis simulations provides sufficient time for preparation and to review the findings in the postmortem.
+每年两次的危机模拟节奏为准备和审查事后分析中的发现提供了足够的时间。

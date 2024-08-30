@@ -1,98 +1,95 @@
 ---
-cover: assets/img/crisis/cover_crisisresponse.png
-description: Your organization's crisis response plan requires strong leadership. The right kind of crisis leadership is values-driven and maintains the balancing act between carefully and thoughtfully responding to what went wrong and deliberately capturing mindshare or new business based on the effectiveness of your response.
+封面: assets/img/crisis/cover_crisisresponse.png
+描述: 贵组织的危机应对计划需要强有力的领导。正确的危机领导是价值观驱动的，并在谨慎、深思熟虑地回应问题与基于应对效果有意吸引关注或获取新业务之间保持平衡。
 ---
 
+有效的危机管理需要领导力。危机领导强调企业领导者如何将组织价值观应用于危机的所有阶段。
 
-Effective crisis management requires leadership. Crisis Leadership underlines how your corporate leaders apply your organization’s values to all stages of a crisis.
+## 为什么危机领导对您的组织重要
+每一次危机都蕴含着危险与机遇。在公司历史的关键时刻，正确的领导至关重要。正确的危机领导是价值观驱动的，并在谨慎、深思熟虑地回应问题与基于应对效果有意吸引关注或获取新业务之间保持平衡。
 
-## Why is Crisis Leadership important for your organization
-With every crisis, there is danger and opportunity. The right kind of leadership is vital in the critical moments of your company’s history. The right kind of crisis leadership is values-driven and maintains the balancing act between carefully and thoughtfully responding to what went wrong and deliberately capturing mindshare or new business based on the effectiveness of your response. 
+当公司的价值观置于首位时，您的利益相关者沟通和公开声明保持一致。您的受众总能察觉到您是否在倒退或随大流。通过保持一致，您避免了加剧局势。没有两次危机是相同的，正如没有两个组织是相同的。危机领导的核心在于您——而不是其他人——向您的利益相关者讲述您的组织从一次危机到下一次危机的故事。
 
-When your company’s values are at the forefront, your stakeholder communications and public statements remain consistent. Your audience can always tell when you’re backpedaling from established viewpoints or bandwagoning. You avoid compounding the situation by being consistent. No two crises are alike just as no two organizations are alike. Crisis Leadership centers on you—not others—telling your constituents your organization’s story from one crisis to the next.
+## 危机领导的考虑因素
 
-## Considerations for Crisis Leaders 
+危机不可预测且变化多端的性质需要情境意识。了解您知道什么和不知道什么是至关重要的。持续监控局势，预测状态，并准备好适应变化的环境，使您的公司在危机应对中变得熟练，并为您的团队提供目标，即每个人都在同步并朝着相同的目标努力。
 
-The unpredictable and fluid nature of a crisis requires situational awareness. Being aware of what you know and don't know is crucial. Continually monitoring the situation, predicting statuses and being prepared to roll with the changing environment makes your company adept at crisis response and provides your team with purpose, i.e., everyone is in sync and working towards the same goal.
+危机领导的一个越来越重要的方面是照顾好自己和团队。您的危机应对团队成员可能受到事件影响，但仍在努力解决。您的团队中有些人可能已经连续工作了24小时，需要有人允许他们暂时离开。疲劳可能正在累积等等。利用PagerDuty平台内置的功能来建立值班轮换、交接，并整合Zoom或Teams等视频会议技术，可以帮助在应对可能持续的局势时为您的团队创造一个安全健康[值班文化](https://goingoncall.pagerduty.com/culture/)。
 
-An increasingly important aspect of Crisis Leadership is taking care of yourself and your team. Members of your crisis response team may have been impacted by the events but are still working to resolve it. Some of your team may have been awake for 24 hours needing someone to give them permission to step away. Fatigue may be setting in and so forth. Leveraging the functionality built into the PagerDuty platform to establish on-call rotations, hand-offs and integrate video conferencing technology like Zoom or Teams can help create a safe and healthy [on call culture](https://goingoncall.pagerduty.com/culture/) for your teams while responding to what could be a protracted situation.
+![按日和小时设置值班限制](../assets/img/crisis/01_oncallrestrictions.png)
 
-![On-call Restrictions by day and hour](../assets/img/crisis/01_oncallrestrictions.png)
+## 领导危机时的注意事项
+成功和不成功的公司危机应对案例随处可见。事实上，很有可能在你阅读本指南时，新闻中就有一个成功和一个不成功的案例。重要的是从他人的公开错误中学习，并以注意事项列表的形式制定您的核心原则。其中一些可能是显而易见的，但仍然值得记录。以下是一些常见的例子：
 
-## Do's and Don'ts when Leading A Crisis
-Successful and unsuccessful corporate responses to crises are all around us. In fact, the chances are high that there’s one of each happening in the news at the time you're reading this guide. What’s important is that you learn from the very public mistakes of others and develop your core principles in the form of a do's and don'ts list. Some of them may be obvious but they’re still worth documenting. Here are a few common examples:
+- **应做**准备一组通用的暂定声明，可以轻松定制以适应特定情况（例如，供应商破产、网络事件、产品召回、高层离职等）
 
-- **DO** have a set of generic holding statements ready to go that can be easily customized for specific situations (e.g., vendor bankruptcy, cyber incident, product recall, high profile departure, etc.)
+- **应做**谨慎考虑何时以及如何回应，因为总是存在新闻可能在您评论之前就曝光的风险
 
-- **DO** be cautious about when and how you respond, as there is always a risk that the news could break before you’ve commented
+- **应做**在回应中保持克制，避免试图对每一个负面帖子、询问或攻击做出回应
 
-- **DO** be measured in your response and avoid playing whack a mole trying to respond to every negative post, inquiry or attack
+- **不应**假设同时发生的多个危机或事件是相关的
 
-- **DON’T** assume multiple crises or incidents happening at the same time are related
+- **不应**复制粘贴——即采取仅基于您组织价值观、历史和风险概况的独特行动，并在您的能力范围内，否则您将面临更大的暴露风险
 
-- **DON’T** copy and paste—i.e., take actions that are unique to your organization’s values, history, and risk profile, and within your capabilities or you’ll risk greater exposure
+- **不应**假设主动发布非义务性公开声明没有重大风险——您需要在此方面与法律团队仔细权衡您的决定
 
-- **DON’T** assume that making proactive non-obligatory public statements are not without great risk—you need to carefully weigh your decision with your Legal team in this regard
+- **不应**假设您在内部或对部分客户或投资者所说的话不会公开
 
-- **DON’T** assume that what you've said internally or to a subset of customers or investors won’t go public
+## 危机情景规划
 
-## Crisis Scenario Planning
+危机领导者应始终在危机成为现实之前为公司的最坏日子做好准备。如果2020年的大流行是您的第一次生存危机，墨菲定律说它不会是最后一次。在您在组织中的任期内，很可能会经历多次危机。参考公司历史上的危机是规划的一部分。然而，情景规划是前瞻性的，专注于对组织最可能和最具破坏性的危机情景，以主动发展团队、计划和剧本。有无数的情景可供选择，但以下是一些例子：
 
-Crisis Leaders should always plan for the company’s worst day before it becomes a reality. If the 2020 pandemic was your first existential crisis, Murphy’s Law says it won’t be your last. It’s likely you’ll experience multiple crises during your tenure at an organization. Referencing your company’s historical crises while planning is one piece of the puzzle. However, scenario planning is forward-looking and hones in on the most likely and most damaging crisis scenarios for your organization to proactively develop teams, plans and playbooks. There are a myriad of scenarios to choose from but here are a few examples:
+- 关键基础设施攻击（例如，电力、水、交通）
+- 网络事件（例如，勒索软件、数据泄露）
+- 大流行（例如，传染病）
+- 环境灾难（例如，地震、飓风、干旱）
+- 人力资源危机（例如，工会罢工、抗议、劳动力短缺）
+- 地缘政治灾难（例如，战争、政变）
+- 恐怖主义（例如，政治暴力、破坏）
+- 经济灾难（例如，股市崩盘、货币危机）
+- 工业事故（例如，气体泄漏、建筑物倒塌）
 
-- Critical infrastructure attack (e.g., power, water, transportation)
-- Cyber incident (e.g., ransomware, data breach)
-- Pandemics (e.g., contagions)
-- Environmental disaster (e.g., earthquake, hurricane, drought)
-- Human resources crisis (e.g., union strikes, walk-outs, labor shortage)
-- Geopolitical disaster (e.g., war, coup d’etat)
-- Terrorism (e.g., political violence, sabotage)
-- Economic disaster (e.g., stock market crash, currency crisis)
-- Industrial accident (e.g., gas leak, building collapse)
+如果时间无限且世界静止，您可以为世界上所有的情景做准备。然而，目标是选择您列表中的一小部分情景，并建立可转移的原则和技能，为更广泛的危机做好准备。另一种方法是关注情景之间的后果，并通过添加控制措施（如剧本、运行手册或预定义的战术响应团队）来解决这些能力差距。您还可能发现，随着运营环境的变化，关键性顺序也会变化，因此定期审查您的顶级情景及其相关计划和团队是重要的。
 
-If time was infinite and the world was static, you could plan for all of the scenarios in the world. However, the goal is to select a handful of scenarios from your list and build transferable principles and skills that prepare you for a wider range of crises. Another way to do that is by focusing on the consequences across your scenarios and solving for those capability gaps by adding controls such as playbooks, runbooks or predefined tactical response teams. You may also find that the order of criticality changes as the operating environment changes so periodic review of your top scenarios and the associated plans and teams is important.
+## 组建执行危机领导团队
 
-## Assembling An Executive Crisis Leadership Team
+在考虑危机应对团队的规模、范围和角色时，制定一个执行危机领导团队是一个良好的起点。这个团队将包括来自组织各个领域的功能业务负责人，从沟通到法律、人力资源等等。考虑从以下一些或所有功能角色开始：
 
-Developing an Executive Crisis Leadership Team is a good starting point when considering the scope, scale and role of your Crisis Response team. This group will consist of functional business owners from all areas of your organization from Communications to Legal to Human Resources and so on. Consider starting with some or all of the following functional roles:
+- 首席执行官
+- 首席法律官
+- 首席沟通官
+- 首席财务官
+- 首席信息安全官
+- 首席人力资源官
+- 首席运营官
+- 首席信息官
+- 首席韧性官
+- 首席收入官
+- 首席营销官
+- 首席安全官
 
--   Chief Executive Officer
--   Chief Legal Officer
--   Chief Communications Officer
--   Chief Financial Officer
--   Chief Information Security Officer
--   Chief Human Resource Officer
--   Chief Operating Officer
--   Chief Information Officer
--   Chief Resilience Officer
--   Chief Revenue Officer
--   Chief Marketing Officer
--   Chief Security Officer
+没有一种尺寸适合所有情况，您可能不需要执行危机领导团队中的所有这些角色。同样重要的是考虑您的董事会——如果有的话——作为执行危机领导团队的延伸。同样，外部资源如公共关系/危机管理公司、灾难恢复服务、保险公司、数字取证专家或地方/联邦当局不应被忽视，应作为重要联系人记录。
 
-There’s no one size fits all and you may not need all of these roles in your Executive Crisis Leadership Team. It’s also important to consider your Board of Directors—if you have one—as an extension of your Executive Crisis Leadership Team. Similarly, external resources like Public Relations/Crisis Management firms, Disaster Recovery services, insurance providers, Digital Forensic Specialists or Local/Federal authorities should not be overlooked as essential contacts to document.
+## 危机团队领导者
 
-## Crisis Team Leaders
+在危机中，重要的是要有一个面孔和一个单一的声音。危机团队领导者是负责领导组织度过危机的个人，基于其专业领域的整体责任。他们类似于危机情况下的事件指挥官。然而，在复杂情况下，危机团队领导者可能更像是一个区域指挥官，如果有多个事件指挥官需要监督。
 
-It’s important to put a face and single voice to a crisis. A Crisis Team Leader is the individual responsible for leading the organization through a crisis having overall responsibility based on their area(s) of expertise. They’re similar to an Incident Commander for a crisis situation. However, a Crisis Team Leader may function more as an Area Commander if there are multiple Incident Commanders to oversee in a complex situation. 
+一旦您构建了您的一小部分情景，下一步是分配组织成员作为团队领导者及其备份。以下是一个示例表格：
 
-Once you’ve built your handful of scenarios, assigning members of your organization as the team leader along with their backup is the next step. See the below table as an example:
-
-| **Crisis Scenario** | **Scenario Examples** | **Crisis Team Leader** | **Potential Backup** |
+| **危机情景** | **情景示例** | **危机团队领导者** | **潜在备份** |
 | ------------------- | --------------------- | ---------------------- | -------------------- |
-| Critical infrastructure attack | Energy grid, water supply, telecommunications | Chief Operating Office | Logistics Chief |
-| Environmental disaster | Earthquake, hurricane, volcano | Chief Resilience Officer | Safety Chief |
-| Human resources crisis | Labor strike, protests, labor violation | Chief Human Resource Officer | Operations Chief |
-| Marketing campaign failure | Typo, untrue product claim, wrong tone | Chief Digital Officer | Communications Chief |
+| 关键基础设施攻击 | 能源电网、供水、电信 | 首席运营官 | 物流主管 |
+| 环境灾难 | 地震、飓风、火山 | 首席韧性官 | 安全主管 |
+| 人力资源危机 | 劳工罢工、抗议、劳工违规 | 首席人力资源官 | 运营主管 |
+| 营销活动失败 | 打字错误、不实产品声明、错误语气 | 首席数字官 | 沟通主管 |
 
+使用PagerDuty，您可以在平台内构建您的[值班计划](https://support.pagerduty.com/docs/schedule-basics)，提供关于谁在值班以及业务领域在危机情况下发生时的可见性和问责制。您还可以使用升级策略添加备份，在自定义时间延迟后通知下一个人。
 
-Using PagerDuty, you can build your [on-call schedule](https://support.pagerduty.com/docs/schedule-basics) right inside the platform providing visibility and accountability about who’s on call for what area of the business if a crisis situation takes place. You can also add backups using an escalation policy that alerts the next person up after a custom time delay.
+![设置升级超时](../assets/img/crisis/02_escalationtimeout.png)
 
-![Set escalation timeouts](../assets/img/crisis/02_escalationtimeout.png)
+如果您想平衡值班团队的负载，[循环调度](https://support.pagerduty.com/docs/round-robin-scheduling)可以帮助通过轮流通知谁是每个危机通知的主要团队成员。
 
+![使用循环调度](../assets/img/crisis/03_roundrobin.png)
 
-If you want to balance the load for your on-call team, the [round robin scheduling](https://support.pagerduty.com/docs/round-robin-scheduling) can help by alternating who’s the primary team member that’s notified for each crisis notification.
-
-![Use round-robin scheduling](../assets/img/crisis/03_roundrobin.png)
-
-## Succession planning
-As you examine the makeup of your Executive Crisis Leadership Team, Crisis Team Leaders and their backups, you should view it through the lens of succession planning or failover mapping. Depending on the makeup of your organization and geographical concentrations, you may want to further diversify your members to spread the risk. If everyone is positioned close together, an impact to that region will lead to failure and extended MTTRs. You will want your PagerDuty rotations and/or escalation policies to reflect this strategy.
+## 继任计划
+在审视您的执行危机领导团队、危机团队领导者和他们的备份时，您应该从继任计划或故障转移映射的角度来看待它。根据您组织的组成和地理集中度，您可能希望进一步多样化您的成员以分散风险。如果每个人都位于相近的位置，对该地区的影响将导致失败和延长的平均修复时间（MTTR）。您希望您的PagerDuty轮换和/或升级策略反映这一战略。

@@ -1,41 +1,41 @@
 ---
-cover: assets/img/covers/reading.png
-description: This is a collection of additional reading on the topic of incident response that we've found useful.
-hero: assets/img/headers/iStock-1097331490-3992x2242-e4f3f2d.png
-hero_alt_text: Incident Response at PagerDuty
+封面: assets/img/covers/reading.png
+描述: 这是我们发现的有助于理解事件响应主题的额外阅读材料集合。
+主图: assets/img/headers/iStock-1097331490-3992x2242-e4f3f2d.png
+主图替代文本: PagerDuty 的事件响应
 ---
 
-This is a collection of additional reading on the topic of incident response that we've found useful.
+这是我们发现的有助于理解事件响应主题的额外阅读材料集合。
 
-## Books
+## 书籍
 
-* [Incident Management for Operations](https://learning.oreilly.com/library/view/~/9781491917619/) (Rob Schnepp, Ron Vidal, Chris Hawley)
-* [Incident Response](https://learning.oreilly.com/library/view/~/0596001304/) (Kenneth R. van Wyk, Richard Forno)
-* [The Checklist Manifesto](http://atulgawande.com/book/the-checklist-manifesto/) (Atul Gawande)
-* [The Field Guide to Understanding Human Error](https://www.amazon.com/Field-Guide-Understanding-Human-Error/dp/0754648265) (Sidney Dekker)
-* [Normal Accidents: Living with High-Risk Technologies](https://www.amazon.com/Normal-Accidents-Living-High-Risk-Technologies/dp/0691004129) (Charles Perrow)
-* [Site Reliability Engineering](https://sre.google/sre-book/table-of-contents/) (Google)
-* [IT Disaster Response: Lessons Learned in the Field](https://www.amazon.com/Disaster-Response-Lessons-Learned-Field/dp/1484221834) (Greg D. Moore)
-* [Comparative Emergency Management](https://training.fema.gov/hiedu/aemrc/booksdownload/compemmgmtbookproject/) (David A. McEntire, Ph.D.)
+* [《运营中的事件管理》](https://learning.oreilly.com/library/view/~/9781491917619/) (Rob Schnepp, Ron Vidal, Chris Hawley)
+* [《事件响应》](https://learning.oreilly.com/library/view/~/0596001304/) (Kenneth R. van Wyk, Richard Forno)
+* [《清单宣言》](http://atulgawande.com/book/the-checklist-manifesto/) (Atul Gawande)
+* [《理解人为错误现场指南》](https://www.amazon.com/Field-Guide-Understanding-Human-Error/dp/0754648265) (Sidney Dekker)
+* [《正常事故：与高风险技术共存》](https://www.amazon.com/Normal-Accidents-Living-High-Risk-Technologies/dp/0691004129) (Charles Perrow)
+* [《网站可靠性工程》](https://sre.google/sre-book/table-of-contents/) (Google)
+* [《IT灾难响应：现场经验教训》](https://www.amazon.com/Disaster-Response-Lessons-Learned-Field/dp/1484221834) (Greg D. Moore)
+* [《比较应急管理》](https://training.fema.gov/hiedu/aemrc/booksdownload/compemmgmtbookproject/) (David A. McEntire, Ph.D.)
 
-## Documents
+## 文档
 
-* [Debriefing Facilitation Guide](https://extfiles.etsy.com/DebriefingFacilitationGuide.pdf) (Etsy)
+* [《回顾引导指南》](https://extfiles.etsy.com/DebriefingFacilitationGuide.pdf) (Etsy)
 
-## Talks
+## 演讲
 
-* [Every Minute Counts: Leading Heroku's Incident Response](https://www.heavybit.com/library/video/every-minute-counts-coordinating-herokus-incident-response/) (Blake Gentry)
-* [Three Analytical Traps in Accident Investigation](https://www.youtube.com/watch?v=TqaFT-0cY7U) (Dr. Johan Bergström)
+* [《每分钟都至关重要：领导Heroku的事件响应》](https://www.heavybit.com/library/video/every-minute-counts-coordinating-herokus-incident-response/) (Blake Gentry)
+* [《事故调查中的三个分析陷阱》](https://www.youtube.com/watch?v=TqaFT-0cY7U) (Dr. Johan Bergström)
 
-## Official Resources
+## 官方资源
 
-* [US National Incident Management System (NIMS)](https://www.fema.gov/national-incident-management-system) (FEMA)
-* [UK Government Fire and Rescue Manual - Incident Command](https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/7643/incidentcommand.pdf) (UK.GOV)
-* [New Zealand Coordinated Incident Management System (CIMS)](https://www.civildefence.govt.nz/resources/coordinated-incident-management-system-cims-third-edition/) (NZCDEM)
-* [The Australasian Inter-Service Incident Management System (AIIMS)](https://training.fema.gov/hiedu/docs/cem/comparative%20em%20-%20session%2021%20-%20handout%2021-1%20aiims%20manual.pdf) (AFAC)
-* [Academic Emergency Management and Related Courses](https://training.fema.gov/hiedu/aemrc/) (FEMA)
+* [美国国家事件管理系统(NIMS)](https://www.fema.gov/national-incident-management-system) (FEMA)
+* [英国政府消防与救援手册 - 事件指挥](https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/7643/incidentcommand.pdf) (UK.GOV)
+* [新西兰协调事件管理系统(CIMS)](https://www.civildefence.govt.nz/resources/coordinated-incident-management-system-cims-third-edition/) (NZCDEM)
+* [澳大利亚互服务事件管理系统(AIIMS)](https://training.fema.gov/hiedu/docs/cem/comparative%20em%20-%20session%2021%20-%20handout%2021-1%20aiims%20manual.pdf) (AFAC)
+* [学术应急管理及相关课程](https://training.fema.gov/hiedu/aemrc/) (FEMA)
 
-## Other Useful Resources
+## 其他有用资源
 
-* [Informed's NIMS Incident Command System Field Guide](https://www.amazon.com/gp/product/1284038408) (Michael J. Ward)
-* [Linkedin's School Of SRE](https://linkedin.github.io/school-of-sre/) (LinkedIn)
+* [《Informed的NIMS事件指挥系统现场指南》](https://www.amazon.com/gp/product/1284038408) (Michael J. Ward)
+* [LinkedIn的SRE学校](https://linkedin.github.io/school-of-sre/) (LinkedIn)

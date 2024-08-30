@@ -1,101 +1,101 @@
 ---
-cover: assets/img/covers/anti-patterns.png
-description: These are some processes that we've found do not work well. We've either tried them in the past and regretted it, or spent considerable time thinking about them and ultimately rejected them. We want to document them to make sure we don't repeat mistakes or wonder why a decision was made later down the line.
+封面: assets/img/covers/anti-patterns.png
+描述: 这些是我们发现效果不佳的一些流程。我们过去尝试过它们并感到后悔，或者花费了大量时间思考它们并最终拒绝了它们。我们希望记录它们，以确保我们不会重复错误，或者在未来某个时刻疑惑为什么做出了某个决定。
 ---
-!!! warning "Process Anti-Patterns"
-    These are some processes that we've found do not work well. We've either tried them in the past and regretted it, or spent considerable time thinking about them and ultimately rejected them. We want to document them to make sure we don't repeat mistakes or wonder why a decision was made later down the line. The list is in no particular order.
+!!! 警告 "流程反模式"
+    这些是我们发现效果不佳的一些流程。我们过去尝试过它们并感到后悔，或者花费了大量时间思考它们并最终拒绝了它们。我们希望记录它们，以确保我们不会重复错误，或者在未来某个时刻疑惑为什么做出了某个决定。这个列表没有特定的顺序。
 
-## Getting everyone on the call.
+## 让所有人加入通话。
 
-Believe it or not, we used to page every single engineer at PagerDuty when we had a SEV-2 incident. If a SEV-2 happened at 3am, then we'd be paging the entire engineering department at 3am. There a few reasons we went down this path,
+信不信由你，当我们遇到SEV-2事件时，我们曾经呼叫PagerDuty的每一位工程师。如果SEV-2事件发生在凌晨3点，那么我们会在凌晨3点呼叫整个工程部门。我们走这条路有几个原因，
 
-1. When the company was smaller, there were only a few engineers. So this process worked well, since you really did need every engineer on the call.
-1. Rather than triaging an incident and then having to page in additional people, if everyone is on the call to begin with then the thinking was that we'd get a faster response.
+1. 当公司规模较小时，只有少数几位工程师。因此这个流程效果很好，因为你确实需要每一位工程师加入通话。
+2. 与其对事件进行分类然后不得不呼叫额外的人员，如果所有人从一开始就在通话中，那么我们的想法是我们可以更快地响应。
 
-As we grew our engineer department, this did not scale well at all, and problems quickly became apparent,
+随着我们的工程师部门扩大，这个流程根本无法很好地扩展，问题很快就变得明显，
 
-1. Most of the people on the call had nothing to do. They'd been woken up for no reason.
-1. Paging people has a cost impact. Both in employee health, and in finance. Waking up your entire engineering department at 3am means nothing productive is going to be done the next day, across the entire department.
-1. People who weren't on-call would still get paged.
+1. 通话中的大多数人无事可做。他们被无缘无故地叫醒。
+2. 呼叫人员有成本影响。无论是员工健康还是财务方面。在凌晨3点叫醒整个工程部门意味着第二天整个部门都不会有什么生产力。
+3. 那些不在值班的人仍然会被呼叫。
 
-It's important to maintain an **effective span of control** on any incident response. If you have more than 7 or 8 people directly reporting to the [Incident Commander]() things can quickly get overwhelming. We now will only page the engineers who are on-call for a specific service, rather than the entire team. If more responders are required, then they will be mobilized by the [Internal Liaison]() to join the response. 9 times out of 10 we don't need additional responders, so the rest of the engineering department can get some rest without interference. This results in a happier engineering department and a more streamlined response process.
+在任何事件响应中保持**有效的控制范围**非常重要。如果你有超过7或8个人直接向[事件指挥官]()报告，事情很快就会变得难以应付。现在我们只会呼叫特定服务的值班工程师，而不是整个团队。如果需要更多的响应者，那么他们将由[内部联络员]()动员加入响应。十次中有九次我们不需要额外的响应者，因此工程部门的其余人员可以在不受干扰的情况下休息。这导致了一个更快乐的工程部门和一个更精简的响应流程。
 
-## Forcing everyone to stay on the call.
+## 强迫每个人留在通话中。
 
-Our original thinking was that if you've been mobilized onto a response call, then we would need you to stick around until the end, since if you were needed at one point, chances are you'll be needed again before the incident is resolved. Unfortunately, we've since found that that's never really the case. Typically someone will be mobilized to investigate a specific system, or perform a specific action, after which time there would be nothing further required from them. We'd have a call full of people who weren't doing anything and could've gone back to sleep. This can also encourage 'hero' mentalities where individuals feel pressured that they have to stay on a call.
+我们最初的思考是，如果你被动员加入响应通话，那么我们需要你一直待到结束，因为如果你在某一点被需要，很可能在事件解决之前你会再次被需要。不幸的是，我们后来发现这从来都不是真的。通常某人会被动员去调查一个特定的系统，或执行一个特定的行动，之后就不会再需要他们了。我们会有一通全是无所事事的人，他们本可以回去睡觉。这也可能助长“英雄”心态，个人感到压力必须留在通话中。
 
-Now we ask people to leave the call if they're no longer needed. Once the Incident Commander has ascertained which systems are impacted, they let representatives for the other systems leave the call so they can get some rest. You can always mobilize them again if they're really needed. Most of the time they won't be needed again, so we're optimizing for the 99% case.
+现在我们要求人们离开通话，如果他们不再需要的话。一旦事件指挥官确定了哪些系统受到影响，他们会让其他系统的代表离开通话，以便他们可以休息。如果他们真的需要，你随时可以再次动员他们。大多数时候他们不会再被需要，所以我们优化了99%的情况。
 
-## Too frequent status updates.
+## 过于频繁的状态更新。
 
-Executives need to know what's going on and want to be provided status updates every 5 minutes to keep them in the loop. The problem with this is that you'll spend the entire time providing status updates rather than resolving the incident.
+高管需要知道发生了什么，并希望每5分钟提供一次状态更新，以让他们了解情况。问题是，你会花全部时间提供状态更新，而不是解决问题。
 
-We've found that providing status updates every 20-30 minutes during a major incident is a typical cadence that works. This ensures we're not just providing updates for the sake of providing updates, but that they're more likely to have some actual useful information in them. That's not to say you can't provide updates more frequently if there really is new information to share, but it shouldn't be a requirement. We want to spend as much time fixing the incident as we can, but we also want to make sure we keep stakeholders in the loop. It's a delicate balance that's easy to get wrong.
+我们发现，在重大事件期间每20-30分钟提供一次状态更新是一个典型的工作节奏。这确保我们不是为了提供更新而提供更新，而是更有可能包含一些实际有用的信息。这并不是说如果真的有新信息要分享，你不能更频繁地提供更新，但这不应该是一个要求。我们希望尽可能多地解决问题，但我们也希望确保让利益相关者了解情况。这是一个微妙的平衡，很容易出错。
 
-## Assuming silence means no progress.
+## 假设沉默意味着没有进展。
 
-It can be common to assume silence on an incident call means that nothing is being done, however this is rarely the case. When joining a call, be aware that a chatterless session can be acceptable and reasonable. Silence usually means everyone is working on fixing the problem rather than talking and providing updates. We're not playing a game of "Keep Talking and Nobody gets Fired." The Incident Commander is the one who should be doing most of the talking on a call. They will typically fill silence with a status update if appropriate, but others within the organization need to be trained to know that silence on a call isn't a bad thing, and doesn't mean that progress has stalled. Making sure staff are aware of this ahead of time will prevent awkward conversations during an incident call, which would be ultimately distracting from resolving the incident.
+在事件通话中保持沉默可能意味着什么都没做，但这很少是情况。加入通话时，要知道一个没有对话的会议是可以接受的和合理的。沉默通常意味着每个人都在努力解决问题，而不是交谈和提供更新。我们不是在玩“一直说话就不会被解雇”的游戏。事件指挥官应该是在通话中说话最多的人。如果合适，他们通常会用状态更新填补沉默，但组织中的其他人需要被训练知道通话中的沉默不是坏事，也不意味着进展停滞。确保员工事先了解这一点，可以防止在事件通话中出现尴尬的对话，这最终会分散解决事件的注意力。
 
-## Litigating severities during the incident call.
+## 在事件通话中讨论严重性。
 
-The start of a lot of incident calls in PagerDuty's past consisted of a discussion around whether we were really in a SEV-2 situation, or whether it was a smaller issue that could be handled without an incident call. This discussion would usually take up quite a bit of time, as everyone wanted to weigh in. The problem was that while you're having this discussion, the incident is still going on behind the scenes, and by the time you've finished it has become a SEV-1 and you've just wasted 10 minutes discussing severities.
+PagerDuty过去许多事件通话的开始都是关于我们是否真的处于SEV-2情况，或者是否是一个可以在没有事件通话的情况下处理的小问题的讨论。这个讨论通常会占用相当多的时间，因为每个人都想发表意见。问题是，当你进行这个讨论时，事件仍在幕后继续，当你结束讨论时，它已经变成了SEV-1，你刚刚浪费了10分钟讨论严重性。
 
-We now have a rule: **We do not discuss incident severity during an incident call**, we always assume it's the higher severity and treat it as such. So if we're not sure if it's a SEV-2 or SEV-3, we treat it like a SEV-2 and move on. We've already spun up the gears of incident response and paged responders, so even if it turns out to be a SEV-3, we may as well continue with the process and treat it as practice if nothing else.
+我们现在有一条规则：**我们不在事件通话中讨论事件严重性**，我们总是假设它是更高的严重性并这样处理。所以如果我们不确定它是SEV-2还是SEV-3，我们把它当作SEV-2并继续。我们已经启动了事件响应的齿轮并呼叫了响应者，所以即使它最终是SEV-3，我们不妨继续这个过程，如果没有什么别的，就当作练习。
 
-## Hesitating to escalate to other responders.
+## 犹豫不决地升级到其他响应者。
 
-If it's 3am and you're responding to an incident, we have had cases where a Subject Matter Expert (SME) would be stuck attempting to debug an issue, and they would be reluctant to involve another member of their team due to the time of day. This would end up causing our incident to last longer than it needed to.
+如果现在是凌晨3点，你正在响应一个事件，我们有过这样的情况，一个主题专家（SME）会卡在试图调试一个问题上，他们会因为时间的原因不愿意涉及他们的团队成员。这最终导致我们的事件持续时间比需要的更长。
 
-**"Never hesitate to escalate"** is now one of our mantras. If you're stuck on a problem and it's 3am, don't hesitate to page someone more knowledgable to help resolve the situation. Don't go too far with this and page everyone, otherwise you fall into the earlier anti-pattern. But you should never feel like you can't page someone if you need help.
+**“永远不要犹豫升级”**现在是我们的座右铭之一。如果你卡在一个问题上，现在是凌晨3点，不要犹豫呼叫一个更有知识的人来帮助解决问题。不要走得太远呼叫所有人，否则你会陷入早期的反模式。但你应该永远不要觉得如果你需要帮助就不能呼叫某人。
 
-## Discussing process and policy decisions during the incident call.
+## 在事件通话中讨论流程和政策决策。
 
-There are occasions where responders don't agree with the incident response policies and processes we might use. Sometimes this will cause a discussion during the incident call, which ends up derailing the process for everyone and causing the underlying incident to last longer, hindering the response. It is absolutely OK to have disagreements with the process and to want to make changes (in fact, this is something we encourage, as it allows us to iteratively improve our process), however during an incident is not the time to have that discussion.
+有时响应者不同意我们可能使用的应急响应政策和流程。有时这会导致在事件通话中进行讨论，这最终会破坏每个人的流程，并导致潜在的事件持续更长时间，阻碍响应。对流程有异议并希望做出改变是完全OK的（事实上，这是我们鼓励的事情，因为它允许我们迭代改进我们的流程），但在事件期间不是讨论的时候。
 
-**Policy and processes should not be discussed during an incident**, just like with severities. The current process should be followed during an incident, and any concerns should be raised afterwards, either during a post-mortem or directly to the team managing the incident response process.
+**政策和流程不应该在事件期间讨论**，就像严重性一样。在事件期间应遵循当前流程，任何担忧应在事后提出，无论是事后分析还是直接向管理应急响应流程的团队提出。
 
-## Neglecting the postmortem and followup activities.
+## 忽视事后分析和后续活动。
 
-It's tempting once an incident is resolved to not bother with the postmortem. Either you feel like the cause is well known, or you don't feel that it's worth it. Don't fall into this trap! A postmortem is always worthwhile. People were mobilized to respond to an incident, which had a cost associated with it. We want to be sure that we understand why that happened, so we can avoid that cost in future.
+一旦事件解决，很容易忽视事后分析。你可能觉得原因已经很清楚，或者你认为这不值得。不要陷入这个陷阱！事后分析总是值得的。人们被动员起来响应一个事件，这有相关的成本。我们希望确保我们理解为什么会发生这种情况，以便我们将来避免这种成本。
 
-Don't make the mistake of neglecting a postmortem after an incident. Without a postmortem you fail to recognize what you're doing right, where you could improve, and most importantly, how to avoid making the same exact mistakes next time around. A well-designed, blameless postmortem allows teams to continuously learn, and serves as a way to iteratively improve your infrastructure and incident response process.
+不要在事件后忽视事后分析。没有事后分析，你无法认识到你做得对的地方，你可以在哪里改进，最重要的是，如何避免下次犯同样的错误。一个设计良好的、无责备的事后分析允许团队持续学习，并作为一种迭代改进你的基础设施和应急响应流程的方式。
 
-If you mobilize responders and determine it's not a "real" incident, you should still conduct a post-mortem. Because the next time you're going to mobilize responders again and waste time. Find out why incident response was triggered when it may not have been needed, and fix that problem.
+如果你动员了响应者并确定这不是一个“真实”的事件，你仍然应该进行事后分析。因为下次你将再次动员响应者并浪费时间。找出为什么在可能不需要的情况下触发了应急响应，并解决这个问题。
 
-## Being too focussed on the problem in front of you.
+## 过于专注于你面前的问题。
 
-As a responder to an incident, you would typically be focussed on the specific task in front of you. The Incident Commander generally being the person who has the bigger picture of what is going on. There can be a tendency for SME's to become too focussed on the problem they see in front of them, rather than taking the bigger picture into account. This usually presents itself on an incident call with an SME constantly bringing up the same issue without listening to instructions from the Incident Commander, and having tunnel vision for the specific issue on their system.
+作为一个事件的响应者，你通常会专注于你面前的特定任务。事件指挥官通常是那个有更大画面的人。有时会有一种倾向，即SME过于专注于他们面前的问题，而不是考虑更大的画面。这通常在事件通话中表现为SME不断提出同一个问题，不听从事件指挥官的指示，并对他们系统上的特定问题有隧道视野。
 
-Instructions from the Incident Commander should always be followed, as they will typically have more overall context on what is going on. Try not to fall into the trap of being hyper-focused on the problem in front of you, so much so that you derail the process. We want to treat the cause, not a symptom of the incident.
+事件指挥官的指示应该始终被遵循，因为他们通常会有更多的整体上下文。尽量不要陷入过于专注于你面前的问题的陷阱，以至于你破坏了流程。我们希望治疗原因，而不是事件的症状。
 
-## Being averse to policy and process changes.
+## 对政策和流程变化持反感态度。
 
-Once a stable process is in place, and incidents are getting resolved, there can be lots of hesitation and resistance to changing that process. "If it ain't broke don't fix it", etc. As your company grows, your response will need to change. Holding on to your old processes and practices for too long can hinder your incident response going forward. Don't be reckless, of course, but try to introduce sensible changes and **don't be afraid to make changes which might slow things down in the short-term, but will make things faster in the long-run**. These are the hardest changes to make, but usually the most worthwhile.
+一旦一个稳定的流程到位，并且事件得到解决，对于改变那个流程会有很多犹豫和抵制。“如果它没坏，就不要修它”，等等。随着公司的发展，你的响应需要改变。坚持你的旧流程和实践太久会阻碍你未来的应急响应。当然，不要鲁莽，但尝试引入合理的改变，**不要害怕做出可能会在短期内减慢事情，但在长期内会加快速度的改变**。这些是最难做出的改变，但通常是最有价值的。
 
-## Trying to take on multiple roles.
+## 试图承担多个角色。
 
-In past PagerDuty incidents, we've had instances where the Incident Commander has started to assume the Subject Matter Expert role and attempted to solve the problem themselves. This usually happens when the IC is an engineer in their day-to-day role. They are in an incident where the cause appears to be a system they know very well and have the requisite knowledge to fix. Wanting to solve the incident quickly, the IC will start to try and solve the problem. Sometimes you might get lucky and it will resolve the incident, but most of the time the immediately visible issue isn't necessarily the underlying cause of the incident. By the time that becomes apparent, you have an Incident Commander who is not paying attention to the other systems and is just focussed on the one problem in front of them. This effectively means there's no Incident Commander, as they would be busy trying to fix the problem. Inevitably, the problem turns out to be much bigger than anticipated and the response has become completely derailed.
+在过去的PagerDuty事件中，我们有过这样的情况，事件指挥官开始承担主题专家的角色，并试图自己解决问题。这通常发生在IC是他们的日常工作中的工程师时。他们在一个事件中，原因似乎是一个他们非常了解的系统，并且有必要的知识来修复。想要快速解决事件，IC会开始尝试解决问题。有时你可能会幸运，它会解决事件，但大多数时候立即可见的问题不一定是事件的根本原因。当这一点变得明显时，你有一个事件指挥官不再关注其他系统，只是专注于他们面前的一个问题。这意味着实际上没有事件指挥官，因为他们会忙于试图解决问题。不可避免地，问题比预期的要大得多，响应已经完全脱轨。
 
-**You cannot take on another role at the same time as being an Incident Commander**. It can be a difficult to be an IC when you want to jump in as an SME, but you must resist the temptation to abandon the role of IC. If you really are the only person able to solve the problem, you should handover to another Incident Commander and then assume the role of SME. This ensures that the response process remains on track with a dedicated Incident Commander.
+**你不能在担任事件指挥官的同时承担另一个角色**。当你想作为一个SME跳进去时，担任IC可能很困难，但你必须抵制这个诱惑，放弃IC的角色。如果你真的是唯一能解决问题的人，你应该交给另一个事件指挥官，然后承担SME的角色。这确保了响应流程保持轨道，有一个专门的事件指挥官。
 
-Remember that the job of an IC also includes preparing backup plans in case the current action doesn't resolve the incident. If you're acting as an SME fixing on a particular issue, you're not considering the backup plan.
+记住，IC的工作还包括准备备份计划，以防当前行动没有解决事件。如果你作为一个SME在修复特定问题，你没有考虑备份计划。
 
-## Trying to be a hero.
+## 试图成为英雄。
 
-It can be tempting to try and solve every issue yourself if you're acting as a Subject Matter Expert. Every request that comes up, you want to jump on it and say you'll take care of it. You'll be the indispensable one who solves all the problems. As noble as the intent is, it rarely leads to an efficient outcome. You want to avoid as much multi-tasking as possible during an incident, and focus on one problem at a time. **Don't try to solve everything yourself**. If multiple requests are coming up for your area of expertise, delegate them to other experts, even paging backup responders if required.
+如果你作为一个主题专家，试图自己解决每一个问题，这可能很诱人。每一个请求出现，你都想跳上去说你会处理它。你将成为那个解决所有问题的不可或缺的人。尽管意图是高尚的，但它很少导致一个有效的结果。你希望尽可能避免在事件中的多任务处理，并专注于一个问题。**不要试图自己解决所有问题**。如果你的专业领域有多个请求，将它们委托给其他专家，甚至根据需要呼叫备份响应者。
 
-Likewise, if another SME has been assigned a task, don't do the task on their behalf without consulting with them first. While you are trying to help, it will end up hindering the response as you'll have two people working on the same issue, and they may be interfering with each other in unexpected ways.
+同样，如果另一个SME被分配了一个任务，不要未经他们咨询就代表他们做任务。虽然你试图帮助，但它最终会阻碍响应，因为会有两个人在同一个问题上工作，他们可能会以意想不到的方式相互干扰。
 
-## Not disseminating policy changes to responders.
+## 没有向响应者传达政策变化。
 
-We've fallen into the trap in the past of making policy and process changes by simply updating our internal documentation (i.e. this), assuming everyone would read the documentation before an incident. Which of course, never happens.
+我们过去曾陷入这样的陷阱：通过简单地更新我们的内部文档（即这个）来做出政策和流程变化，假设每个人会在事件之前阅读文档。当然，这从未发生过。
 
-**Any policy changes need to be appropriately disseminated to your responders ahead of time** so that there are no surprises during an incident. This can be in the form of an email, or an update into a chat room, but big policy changes should never be a surprise to responders.
+**任何政策变化都需要提前适当地传达给你的响应者**，这样在事件期间就不会有意外。这可以是电子邮件的形式，或者是聊天室的更新，但重大的政策变化永远不应该让响应者感到意外。
 
-## Requiring Incident Commanders to have deep technical knowledge.
+## 要求事件指挥官具有深厚的技术知识。
 
-This is a trap we fell into in our early days of incident response. We had several strong technical requirements for any new Incident Commanders, aiming to only have IC's with deep technical expertise, the intention being that they could diagnose issues very quickly. When it became apparent that we would need a large selection of IC's in order to maintain an effective on-call rotation, we soon realised that we had artificially restricted our pool of potential IC candidates.
+这是我们在应急响应早期陷入的一个陷阱。我们对任何新的事件指挥官有几个强烈的技术要求，目的是只让具有深厚技术专长的IC，意图是他们可以非常快速地诊断问题。当变得明显我们需要大量的IC来维持有效的值班轮换时，我们很快意识到我们人为地限制了我们潜在的IC候选人池。
 
-**Incident Commanders can come from all across your organization, and don't need to be technical experts**. Since Incident Commanders only coordinate the response, they don't need deep technical knowledge of the system in order to perform their role. The Subject Matter Experts are the ones who need the deep technical knowledge. The Incident Commanders only require a high-level knowledge of how the system works. Where data flows in, how systems use it, and where data flows out. The technical details can be left to the SMEs, with the IC asking relevant questions.
+**事件指挥官可以来自你的组织的各个部分，不需要是技术专家**。由于事件指挥官只协调响应，他们不需要对系统有深厚的技术知识来执行他们的角色。主题专家是需要深厚技术知识的人。事件指挥官只需要对系统如何工作有一个高层次的了解。数据从哪里流入，系统如何使用它，以及数据从哪里流出。技术细节可以留给SME，IC可以问相关的问题。
 
-By dropping our strong technical requirements for Incident Commanders, we've been able to dramatically increase our pool of IC's, maintain a high level of quality and efficiency in our response, and help spread empathy for on-call workload to a larger portion of the company.
+通过放弃我们对事件指挥官的强烈技术要求，我们已经能够显著增加我们的IC池，保持我们响应的高质量和效率，并帮助将值班工作量的同理心扩展到公司更大的部分。

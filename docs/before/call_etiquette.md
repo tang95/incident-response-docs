@@ -1,51 +1,51 @@
 ---
-cover: assets/img/covers/call_etiquette.png
-description: You've just joined an incident call, and you've never been on one before. You have no idea what's going on, or what you're supposed to be doing. This page will help you through your first time on an incident call, and will provide a reference for future calls you may be a part of.
+封面: assets/img/covers/call_etiquette.png
+描述: 你刚刚加入了一个事件通话，而你之前从未参与过此类通话。你对正在发生的事情一无所知，也不知道自己应该做什么。本页将帮助你度过第一次参与事件通话的经历，并为将来你可能参与的通话提供参考。
 ---
-You've just joined an incident call and you've never been on one before. You have no idea what's going on or what you're supposed to be doing. This page will help you through your first time on an incident call, and will provide a reference for future calls you may be a part of.
+你刚刚加入了一个事件通话，而你之前从未参与过此类通话。你对正在发生的事情一无所知，也不知道自己应该做什么。本页将帮助你度过第一次参与事件通话的经历，并为将来你可能参与的通话提供参考。
 
-## First Steps
+## 第一步
 
-* If you intend on participating on the incident call you should join both the call, and Slack.
-* Make sure you are in a quiet environment in order to participate on the call. Background noise should be kept to a minimum.
-* Keep your microphone muted until you have something to say.
-* Identify yourself when you join the call; state your name and the system you are the expert for.
-* Speak up and speak clearly.
-* Be direct and factual.
-* Keep conversations/discussions short and to the point.
-* Bring any concerns to the Incident Commander (IC) on the call.
-* Respect time constraints given by the Incident Commander.
+* 如果你打算参与事件通话，你应该同时加入通话和Slack。
+* 确保你处于一个安静的环境中，以便参与通话。背景噪音应保持在最低限度。
+* 在有话要说之前，保持麦克风静音。
+* 加入通话时，请自我介绍；说出你的名字和你所负责的系统。
+* 大声清晰地说话。
+* 直接且实事求是。
+* 保持对话/讨论简短且切中要点。
+* 将任何担忧带到通话中的事件指挥官（IC）那里。
+* 尊重事件指挥官给出的时间限制。
 
-## Lingo
-**Use clear terminology, and avoid using acronyms or abbreviations during a call. Clear and accurate communication is more important than quick communication.**
+## 术语
+**使用清晰的术语，并避免在通话中使用缩略词或缩写。清晰准确的沟通比快速沟通更重要。**
 
-![Communication](../assets/img/misc/communicate.png)
+![沟通](../assets/img/misc/communicate.png)
 
-Standard radio [voice procedure](https://en.wikipedia.org/wiki/Radiotelephony_procedure#Procedure_words) does not need to be followed on calls. However, you should familiarize yourself with the terms, as you may hear them on a call (or need to use them yourself). The ones in more active use on major incident calls are,
+标准无线电[语音程序](https://en.wikipedia.org/wiki/Radiotelephony_procedure#Procedure_words)在通话中不需要遵循。然而，你应该熟悉这些术语，因为你可能在通话中听到它们（或需要自己使用它们）。在主要事件通话中更常用的术语有：
 
-* **Ack/Rog** - "I have received and understood"
-* **Say Again** - "Repeat your last message"
-* **Standby** - "Please wait a moment for the next response"
-* **Wilco** - "Will comply"
+* **Ack/Rog** - "我已收到并理解"
+* **Say Again** - "重复你的最后一条信息"
+* **Standby** - "请稍等片刻，等待下一步回应"
+* **Wilco** - "将遵守"
 
-Do not invent new abbreviations, and always favor being explicit rather than implicit. It is better to make things clearer than to try and save time by abbreviating, only to have a misunderstanding because others didn't know the abbreviation.
+不要创造新的缩写，并且总是倾向于明确而不是含糊。让事情更清晰比试图通过缩写节省时间更好，以免因他人不了解缩写而产生误解。
 
-## The Commander
-The Incident Commander (IC) is the leader of the incident response process and is responsible for bringing the incident to resolution. They will announce themselves at the start of the call and will generally be doing most of the talking.
+## 指挥官
+事件指挥官（IC）是事件响应过程的领导者，负责将事件解决。他们会在通话开始时自我介绍，并且通常会进行大部分的谈话。
 
-* Follow all instructions from the Incident Commander - without exception.
-* Do not perform any actions unless the Incident Commander has told you to do so.
-* The Incident Commander will typically poll for any strong objections before performing a large action. This is your time to raise any objections if you have them.
-* Once the Incident Commander has made a decision, that decision is final and should be followed, even if you disagreed during the poll.
-* Answer any questions the Incident Commander asks you in a clear and concise way.
-    * Answering that you "don't know" something is perfectly acceptable. Do not try to guess.
-* The Incident Commander may ask you to investigate something and get back to them in X minutes. Make sure you are ready with an answer within that time.
-    * Answering that you need more time is perfectly acceptable, but you need to give the Incident Commander an estimate of how much time.
+* 遵循事件指挥官的所有指示 - 无一例外。
+* 除非事件指挥官告诉你这样做，否则不要执行任何行动。
+* 事件指挥官通常会在执行重大行动前征求强烈反对意见。这是你提出任何反对意见的时间。
+* 一旦事件指挥官做出决定，该决定是最终的，应该遵循，即使你在征求意见时表示反对。
+* 以清晰简洁的方式回答事件指挥官问你的任何问题。
+    * 回答你“不知道”某事是完全可接受的。不要试图猜测。
+* 事件指挥官可能会要求你调查某事，并在X分钟后回复他们。确保你在这段时间内准备好答案。
+    * 回答你需要更多时间是完全可接受的，但你需要给事件指挥官一个大致的时间估计。
 
-## Problems?
+## 有问题吗？
 
-#### There's no incident commander on the call! I don't know what to do!
-Ask on the call if an IC is present. If you have no response, type `!ic page` in Slack. This will page the primary and backup IC to the call.
+#### 通话中没有事件指挥官！我不知道该怎么办！
+在通话中询问是否有IC在场。如果没有回应，在Slack中输入`!ic page`。这将呼叫主要和备份IC加入通话。
 
-#### I can join the call or Slack, but not both, what should I do?
-You're welcome to join only one of the channels, however you should not actively participate in the incident response if so as it causes disjointed communication. Liaise with someone who is both in Slack and on the call to provide any input you may have so that they can raise it.
+#### 我只能加入通话或Slack，但不能同时加入，我该怎么办？
+你可以只加入其中一个频道，但如果你这样做，你不应该积极参与事件响应，因为这会导致沟通不连贯。与同时在Slack和通话中的人联系，提供你可能有的任何输入，以便他们可以提出。

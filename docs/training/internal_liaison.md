@@ -1,51 +1,51 @@
 ---
-cover: assets/img/covers/internal_liaison.png
-description: So you want to be an internal liaison? You've come to the right place!
+封面: assets/img/covers/internal_liaison.png
+描述: 想要成为内部联络员吗？你来对地方了！
 ---
-So you want to be an Internal Liaison? You've come to the right place!
+想要成为内部联络员吗？你来对地方了！
 
-## Purpose
-The purpose of the Internal Liaison is to be the primary individual in charge of notifying internal stakeholders of the current conditions, and informing the Incident Commander of any relevant feedback from stakeholders as the incident progresses. They are also responsible for mobilizing additional responders during an incident if requested by the incident commander.
+## 目的
+内部联络员的主要职责是负责向内部利益相关者通报当前状况，并在事件进展过程中向事件指挥官反馈任何相关意见。他们还负责在事件指挥官要求时动员额外的响应人员。
 
-It's important for the rest of the command staff to be able to focus on the problem at hand, rather than worrying about crafting messages to internal teams, or having to find a user's contact information in order to page them.
+对于指挥团队的其余成员来说，重要的是能够专注于眼前的问题，而不必担心向内部团队发送消息，或者不得不查找用户的联系信息以便呼叫他们。
 
-Your job as Internal Liaison is to listen to the call, watch the incident Slack room, and follow instructions from the IC. The Incident Commander will instruct you to notify stakeholders of the incident and keep them updated at various points throughout the call. They will also instruct you to page additional responders should it be necessary.
+作为内部联络员，你的工作是听取通话，关注事件 Slack 房间，并按照事件指挥官的指示行事。事件指挥官会指示你通知利益相关者有关事件的情况，并在通话过程中的不同时间点保持他们的更新。他们还会指示你在必要时呼叫额外的响应人员。
 
-## Prerequisites
-Before you can be an Internal Liaison, it is expected that you meet the following criteria. Don't worry if you don't meet them all yet, you can still continue with training!
+## 先决条件
+在你成为内部联络员之前，我们期望你满足以下条件。如果你还没有完全满足这些条件，别担心，你仍然可以继续培训！
 
-* Excellent verbal and written **communication skills**.
+* 出色的口头和书面**沟通技巧**。
 
-## Responsibilities
-Read up on our [Different Roles for Incidents](../before/different_roles.md) to see what is expected from an Internal Liaison, as well as what we expect from the other roles you'll be interacting with.
+## 职责
+阅读我们的[不同角色在事件中的职责](../before/different_roles.md)，了解内部联络员的期望，以及我们对与你互动的其他角色的期望。
 
-## Training Process
-There is no formal training process for this role, reading this page should be sufficient for most tasks.
+## 培训过程
+这个角色没有正式的培训过程，阅读本页应该足以应对大多数任务。
 
-## Incident Call Procedures and Lingo
-The [Steps for Internal Liaison](../during/during_an_incident.md) provide a detailed description of what you should be doing during an incident.
+## 事件通话程序和术语
+[内部联络员的步骤](../during/during_an_incident.md)提供了在事件期间你应该做的事情的详细描述。
 
-Here are some examples of phrases and patterns you should use during incident calls.
+以下是一些在事件通话中应该使用的短语和模式的例子。
 
-### Keep Track of Responders
-As you listen to the call, you should keep track of the responders to the call as you hear them speak. Make a note on a piece of paper, or use the `!ic responders` to see who they are. The IC may ask you who is on-call for a particular system, and you should know the answer, and be able to page them.
+### 跟踪响应者
+在听取通话时，你应该记录下你听到的响应者。可以在纸上做笔记，或者使用 `!ic responders` 查看他们是谁。事件指挥官可能会问你某个系统的值班人员是谁，你应该知道答案，并能够呼叫他们。
 
-> Do we have a representative from [X] on the call?
+> 我们通话中有来自 [X] 的代表吗？
 
-> (pause)
+> （暂停）
 
-> Hearing no response, Internal Liaison, please page the [X] on-call.
+> 没有听到回应，内部联络员，请呼叫 [X] 的值班人员。
 
-You can page them however you see fit, phone call, etc.
+你可以通过任何你认为合适的方式呼叫他们，比如电话等。
 
-### Mobilizing Additional Responders
-As you listen to the call, the IC may ask you to reach out to another internal team and include them in the response. Teams such as Legal, Marketing, Finance, etc may be called upon. You should be ready to page such teams as necessary.
+### 动员额外的响应者
+在听取通话时，事件指挥官可能会要求你联系另一个内部团队，并让他们加入响应。法律、市场营销、财务等团队可能会被召唤。你应该准备好根据需要呼叫这些团队。
 
-> IC: Internal Liaison, please page the Marketing team and ask them to join the call.
+> 事件指挥官：内部联络员，请呼叫市场营销团队，让他们加入通话。
 
-> IL: Understood, paging Marketing team.
+> 内部联络员：明白，正在呼叫市场营销团队。
 
-### Provide Executive Status Updates
-Provide regular status updates on Slack (roughly every 30mins), giving an executive summary of the current status during SEV-1 incidents. Keep it short and to the point, and use `@here`. Mention the current state, the actions in progress, customer impact, and expected time remaining. It's OK to miss out some of those if the information isn't known.
+### 提供执行状态更新
+在 Slack 上定期提供状态更新（大约每 30 分钟），在 SEV-1 事件期间提供当前状态的执行摘要。保持简短和重点，使用 `@here`。提及当前状态、正在进行的行为、客户影响和预计剩余时间。如果某些信息未知，可以省略。
 
-> @here: We are in SEV-1 due to X. Current actions in progress are to do Y. Expecting 3 mins to complete that action. Once action is complete, system should recover on its own within 5 minutes.
+> @here: 由于 X，我们处于 SEV-1 状态。当前正在进行的行为是 Y。预计 3 分钟完成该行为。一旦行为完成，系统应在 5 分钟内自行恢复。
